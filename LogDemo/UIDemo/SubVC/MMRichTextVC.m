@@ -10,6 +10,9 @@
 
 @interface MMRichTextVC ()
 @property (nonatomic, strong) UILabel *richTextLabel;
+
+@property (nonatomic, strong) UIImageView *testImage;
+
 @end
 
 @implementation MMRichTextVC
@@ -36,6 +39,13 @@
     self.richTextLabel.attributedText = mutAttr;
     CGSize fitSize = [mutAttr boundingRectWithSize:CGSizeMake(300, 0) options:NSStringDrawingUsesLineFragmentOrigin context:nil].size;
     self.richTextLabel.height = fitSize.height;
+    
+    //图片确实是原尺寸 除以 *2 *3 后的。
+    UIImage *img2 = [UIImage imageNamed:@"hotel_logo_booking"];
+    NSLog(@"img2-%@",[NSValue valueWithCGSize:img2.size]);
+    self.testImage.frame = CGRectMake(50, 300, img2.size.width, img2.size.height);
+    [self.view addSubview:self.testImage];
+    
 }
 
 - (UILabel *)richTextLabel {
@@ -47,5 +57,11 @@
     }
     return _richTextLabel;
 }
-
+- (UIImageView *)testImage {
+    if (!_testImage) {
+        UIImageView *img = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"hotel_logo_booking"]];
+        _testImage = img;
+    }
+    return _testImage;
+}
 @end

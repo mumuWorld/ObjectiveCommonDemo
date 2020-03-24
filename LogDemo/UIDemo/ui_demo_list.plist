@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>title</key>
+		<string>TextField</string>
+		<key>url</key>
+		<string>BaseAnimation</string>
+		<key>router</key>
+		<string>MMTextFieldVC</string>
+		<key>text</key>
+		<string>CAReplicatorLayer</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>CollectionView示例</string>
+		<key>url</key>
+		<string>BaseAnimation</string>
+		<key>router</key>
+		<string>MMCollectionLayoutVC</string>
+		<key>text</key>
+		<string>CollectionView</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>旋转屏幕push</string>
+		<key>url</key>
+		<string>BaseAnimation</string>
+		<key>router</key>
+		<string>MMScreenRotateVC</string>
+		<key>text</key>
+		<string>push</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>旋转屏幕present</string>
+		<key>url</key>
+		<string>BaseAnimation</string>
+		<key>router</key>
+		<string>MMScreenRotateVC</string>
+		<key>text</key>
+		<string>present</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>富文本</string>
+		<key>url</key>
+		<string>BaseAnimation</string>
+		<key>router</key>
+		<string>MMRichTextVC</string>
+		<key>text</key>
+		<string>label</string>
+	</dict>
+</array>
+</plist>

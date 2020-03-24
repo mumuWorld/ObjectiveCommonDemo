@@ -1,0 +1,82 @@
+//
+//  MMCollectionShowVC.m
+//  LogDemo
+//
+//  Created by mumu on 2020/1/15.
+//  Copyright © 2020 mumu. All rights reserved.
+//
+
+#import "MMCollectionShowVC.h"
+#import "MMSingleLabelCVCell.h"
+#import "MMCollectionViewAlignmentLayout.h"
+
+@interface MMCollectionShowVC () <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic, strong) UICollectionView *collectionView;
+
+@property (nonatomic, copy) NSArray *listArray;
+@end
+
+@implementation MMCollectionShowVC
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.collectionView.frame = CGRectMake(10, 100, ScreenWidth - 20, 300);
+    [self.view addSubview:self.collectionView];
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    [self.collectionView.collectionViewLayout invalidateLayout];
+}
+
+#pragma mark - collectionView
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 50;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    MMSingleLabelCVCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MMSingleLabelCVCellIDStr forIndexPath:indexPath];
+    cell.contentText = self.listArray[indexPath.row];
+    return cell;
+}
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *title = self.listArray[indexPath.row];
+    CGFloat width = [title boundingRectWithSize:CGSizeZero options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:17]} context:nil].size.width;
+    return CGSizeMake(ceil(width) + 16, 30);
+}
+
+#pragma mark - getter && setter
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        MMCollectionViewAlignmentLayout *layout = [[MMCollectionViewAlignmentLayout alloc] initWithAlignType:MMCollectionAlignCenter];
+//        layout.sectionInset = UIEdgeInsetsMake(50, 50, 50, 50);
+        UICollectionView *collection = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout: layout];
+        
+        collection.delegate = self;
+        collection.dataSource = self;
+        collection.backgroundColor = UIColor.whiteColor;
+        [collection registerNib:[UINib nibWithNibName:MMSingleLabelCVCellIDStr bundle:nil] forCellWithReuseIdentifier:MMSingleLabelCVCellIDStr];
+        _collectionView = collection;
+    }
+    return _collectionView;
+}
+
+- (NSArray *)listArray {
+    if (!_listArray) {
+        NSMutableArray *tmp = [NSMutableArray array];
+        NSArray *titile = @[@"泰国1个字",@"曼谷哈哈",@"西藏布达拉宫s",@"西藏不打啦s",@"西藏不",@"西藏"];
+        for (int i = 0; i < 50; i++) {
+            int random = arc4random() % 6;
+            NSString *obj = [NSString stringWithFormat:@"%@%d",titile[random],i];
+            [tmp addObject:obj];
+        }
+        _listArray = [tmp copy];
+    }
+    return _listArray;
+}
+
+@end

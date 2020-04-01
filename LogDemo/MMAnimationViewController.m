@@ -43,13 +43,12 @@
 //        self.navigationItem.searchController = self.searchController;
         self.navigationItem.hidesSearchBarWhenScrolling = NO;
 //        self.listView.tableHeaderView = self.searchController.searchBar;
-    } else if (@available(iOS 13.0, *)) {
-        self.listView.automaticallyAdjustsScrollIndicatorInsets = false;
     } else {
-        self.automaticallyAdjustsScrollViewInsets =  YES;
+        self.automaticallyAdjustsScrollViewInsets =  false;
     }
-
-    UIView *test = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 300, 200)];
+    self.listView.contentInset = UIEdgeInsetsMake(NavigationBarHeight, 0, 0, 0);
+    
+    UIView *test = [[UIView alloc] initWithFrame:CGRectMake(300, 100, 300, 200)];
     self.searchView = test;
     [self.view addSubview:self.searchView];
     self.searchView = self.searchController.searchBar;

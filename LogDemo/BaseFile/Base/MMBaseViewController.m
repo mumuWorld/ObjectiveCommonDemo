@@ -32,6 +32,7 @@
 - (void)callBasePrivate {
     NSLog(@"BaseViewController=%@",self);
 }
+
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
 //    self.navigationController.interactivePopGestureRecognizer.enabled = NO;

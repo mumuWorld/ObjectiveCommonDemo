@@ -52,6 +52,7 @@
 		B45CF50323A9D47500345FB5 /* MMHomeBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CF50223A9D47500345FB5 /* MMHomeBaseModel.m */; };
 		B45CF50923A9D79D00345FB5 /* MMHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CF50823A9D79D00345FB5 /* MMHomeListModel.m */; };
 		B45CF50B23A9F34300345FB5 /* home_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = B45CF50A23A9F34300345FB5 /* home_list.plist */; };
+		B49BADEF24343DA900A41D14 /* MMKitDynamicAnitationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BADEE24343DA900A41D14 /* MMKitDynamicAnitationVC.m */; };
 		B4BAA364241F62910049DFEE /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BAA355241F62910049DFEE /* SettingView.xib */; };
 		B4BAA365241F62910049DFEE /* L3game_SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BAA356241F62910049DFEE /* L3game_SettingView.m */; };
 		B4BAA366241F62910049DFEE /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BAA358241F62910049DFEE /* WebViewJavascriptBridgeBase.m */; };
@@ -179,6 +180,8 @@
 		B45CF50823A9D79D00345FB5 /* MMHomeListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMHomeListModel.m; sourceTree = "<group>"; };
 		B45CF50A23A9F34300345FB5 /* home_list.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = home_list.plist; sourceTree = "<group>"; };
 		B45CF50D23AA244200345FB5 /* SDWebImage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SDWebImage; path = "../../SDWebImage-5.4.0/SDWebImage"; sourceTree = "<group>"; };
+		B49BADED24343DA900A41D14 /* MMKitDynamicAnitationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MMKitDynamicAnitationVC.h; path = LogDemo/SubVC/SubVC/MMKitDynamicAnitationVC.h; sourceTree = SOURCE_ROOT; };
+		B49BADEE24343DA900A41D14 /* MMKitDynamicAnitationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MMKitDynamicAnitationVC.m; path = LogDemo/SubVC/SubVC/MMKitDynamicAnitationVC.m; sourceTree = SOURCE_ROOT; };
 		B4BAA354241F62910049DFEE /* L3game_SettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L3game_SettingView.h; sourceTree = "<group>"; };
 		B4BAA355241F62910049DFEE /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
 		B4BAA356241F62910049DFEE /* L3game_SettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = L3game_SettingView.m; sourceTree = "<group>"; };
@@ -439,6 +442,8 @@
 			children = (
 				B44E09E723C71A5F001CAFE5 /* MMBaseAnimationViewController.h */,
 				B44E09E823C71A5F001CAFE5 /* MMBaseAnimationViewController.m */,
+				B49BADED24343DA900A41D14 /* MMKitDynamicAnitationVC.h */,
+				B49BADEE24343DA900A41D14 /* MMKitDynamicAnitationVC.m */,
 			);
 			path = SubAnimation;
 			sourceTree = "<group>";
@@ -863,6 +868,7 @@
 				B4BAA379241F7A450049DFEE /* MMRichTextVC.m in Sources */,
 				B44B8B7023CD6B4800B912CB /* UIColor+Tools.m in Sources */,
 				B4F4BA8823CF297F00ACFC52 /* MMCollectionShowVC.m in Sources */,
+				B49BADEF24343DA900A41D14 /* MMKitDynamicAnitationVC.m in Sources */,
 				B42F712523B60CBF003BA22C /* MMLayerTestViewController.m in Sources */,
 				B44B8B7323CD8F4F00B912CB /* MMIndistinctTools.m in Sources */,
 				B45CF50923A9D79D00345FB5 /* MMHomeListModel.m in Sources */,

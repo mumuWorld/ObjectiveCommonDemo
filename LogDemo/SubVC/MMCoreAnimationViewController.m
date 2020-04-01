@@ -24,6 +24,15 @@
 
 - (void)initSubView {
     [self.tableView registerNib:[UINib nibWithNibName:@"MMHomeListTableViewCell" bundle:nil] forCellReuseIdentifier:@"MMHomeListTableViewCell"];
+        if (@available(iOS 11.0, *)) {
+            self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        } else {
+            self.automaticallyAdjustsScrollViewInsets =  false;
+        }
+    //这是滚动条
+    if (@available(iOS 13.0, *)) {
+        self.tableView.automaticallyAdjustsScrollIndicatorInsets = false;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

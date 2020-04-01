@@ -12,5 +12,15 @@
 		<key>text</key>
 		<string>BaseAnimation</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>重力动画</string>
+		<key>url</key>
+		<string>UIKitDynamic</string>
+		<key>router</key>
+		<string>MMKitDynamicAnitationVC</string>
+		<key>text</key>
+		<string>UIKitDynamic</string>
+	</dict>
 </array>
 </plist>

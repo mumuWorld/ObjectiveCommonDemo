@@ -20,10 +20,8 @@
     [self.view addSubview:self.tableView];
     if (@available(iOS 11.0, *)) {
         self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-        //        } else if (@available(iOS 13.0, *)) {
-        //            self.listView.automaticallyAdjustsScrollIndicatorInsets = false;
     } else {
-        self.automaticallyAdjustsScrollViewInsets =  YES;
+        self.automaticallyAdjustsScrollViewInsets =  false;
     }
     if (self.navigationController) {
         self.tableView.contentInset = UIEdgeInsetsMake(NavigationBarHeight, 0, 0, 0);

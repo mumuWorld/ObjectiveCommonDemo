@@ -9,14 +9,23 @@
 #import "MMSimpleUIVC.h"
 
 @interface MMSimpleUIVC ()
-
+@property (nonatomic, strong) UILabel *testLabel;
 @end
 
 @implementation MMSimpleUIVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.testLabel = [[UILabel alloc] init];
+    [self.view addSubview:self.testLabel];
+    
+    self.testLabel.text = @"测试Label";
+    CGSize size = [self.testLabel intrinsicContentSize];
+    self.testLabel.size = CGSizeMake(size.width + 20, size.height + 20);
+    self.testLabel.center = self.view.center;
+    self.testLabel.backgroundColor = UIColor.cyanColor;
+    NSLogSize(size);
+    
 }
 
 /*

@@ -52,5 +52,15 @@
 		<key>text</key>
 		<string>label</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>简单UI示例</string>
+		<key>url</key>
+		<string>BaseAnimation</string>
+		<key>router</key>
+		<string>MMSimpleUIVC</string>
+		<key>text</key>
+		<string>label</string>
+	</dict>
 </array>
 </plist>

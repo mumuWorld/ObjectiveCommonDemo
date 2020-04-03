@@ -21,6 +21,7 @@
 
 - (BOOL)shouldAutorotate {
     NSLog(@"调用是否shouldAutorotate");
+    [NSObject new];
     return self.topViewController.shouldAutorotate;
 }
 

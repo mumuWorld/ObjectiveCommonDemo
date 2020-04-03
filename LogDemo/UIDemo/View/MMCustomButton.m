@@ -10,12 +10,17 @@
 
 @implementation MMCustomButton
 
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    NSLog(@"3");
+}
+
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
 
-    BOOL  flag = [super pointInside:point withEvent:event];
+    BOOL flag = [super pointInside:point withEvent:event];
     if (flag) {
         //圆形点击范围
-        UIBezierPath   *path = [UIBezierPath bezierPathWithOvalInRect:self.bounds];
+        UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:self.bounds];
         if ([path containsPoint:point]) {
             return YES;
         }

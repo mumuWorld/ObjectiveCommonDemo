@@ -158,4 +158,6 @@ UIKeyboardTypeAlphabet = UIKeyboardTypeASCIICapable, // Deprecated
     }
     return _keyboardTypeArr;
 }
+
+
 @end

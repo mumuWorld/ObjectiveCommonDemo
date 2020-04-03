@@ -13,6 +13,7 @@ target 'LogDemo' do
 #  :git => 'git@github.com:SnapKit/Masonry.git'
 #  pod 'pop', '~> 1.0'
   pod 'Masonry'
+  pod 'AFNetworking', :git => 'git@github.com:AFNetworking/AFNetworking.git', :branch => 'master'
   # Pods for LogDemo
 
   target 'LogDemoTests' do

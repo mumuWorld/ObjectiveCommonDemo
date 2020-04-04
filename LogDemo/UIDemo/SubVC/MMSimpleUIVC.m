@@ -34,6 +34,7 @@
     
     [self.view addSubview:self.customBtn];
     self.manager = [[AFHTTPSessionManager alloc] init];
+    self.manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
 
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         [self.manager GET:@"https://www.baidu.com/" parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {

@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationItem.title = @"基础动画";
+    
 }
 
 - (void)initSubView {

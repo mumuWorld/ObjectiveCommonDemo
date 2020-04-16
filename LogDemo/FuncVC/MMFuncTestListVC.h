@@ -8,9 +8,16 @@
 
 #import "MMBaseTableViewController.h"
 
+@protocol Common <NSObject>
+
+@property (nonatomic, strong) NSString *flag;
+
+
+@end
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MMFuncTestListVC : MMBaseTableViewController
+@interface MMFuncTestListVC : MMBaseTableViewController <Common>
 
 @end
 

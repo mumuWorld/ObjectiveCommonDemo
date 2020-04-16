@@ -52,6 +52,7 @@
 		B45CF50323A9D47500345FB5 /* MMHomeBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CF50223A9D47500345FB5 /* MMHomeBaseModel.m */; };
 		B45CF50923A9D79D00345FB5 /* MMHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CF50823A9D79D00345FB5 /* MMHomeListModel.m */; };
 		B45CF50B23A9F34300345FB5 /* home_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = B45CF50A23A9F34300345FB5 /* home_list.plist */; };
+		B46B94A024484BBD00F2F480 /* MMCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B949F24484BBD00F2F480 /* MMCircleView.m */; };
 		B49BADEF24343DA900A41D14 /* MMKitDynamicAnitationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BADEE24343DA900A41D14 /* MMKitDynamicAnitationVC.m */; };
 		B49BADF42434790E00A41D14 /* MMFuncTestListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BADF32434790E00A41D14 /* MMFuncTestListVC.m */; };
 		B49BADF6243479D700A41D14 /* func_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49BADF5243479D700A41D14 /* func_list.plist */; };
@@ -183,6 +184,8 @@
 		B45CF50823A9D79D00345FB5 /* MMHomeListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMHomeListModel.m; sourceTree = "<group>"; };
 		B45CF50A23A9F34300345FB5 /* home_list.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = home_list.plist; sourceTree = "<group>"; };
 		B45CF50D23AA244200345FB5 /* SDWebImage */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SDWebImage; path = "../../SDWebImage-5.4.0/SDWebImage"; sourceTree = "<group>"; };
+		B46B949E24484BBD00F2F480 /* MMCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCircleView.h; sourceTree = "<group>"; };
+		B46B949F24484BBD00F2F480 /* MMCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCircleView.m; sourceTree = "<group>"; };
 		B49BADED24343DA900A41D14 /* MMKitDynamicAnitationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MMKitDynamicAnitationVC.h; path = LogDemo/SubVC/SubVC/MMKitDynamicAnitationVC.h; sourceTree = SOURCE_ROOT; };
 		B49BADEE24343DA900A41D14 /* MMKitDynamicAnitationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MMKitDynamicAnitationVC.m; path = LogDemo/SubVC/SubVC/MMKitDynamicAnitationVC.m; sourceTree = SOURCE_ROOT; };
 		B49BADF22434790E00A41D14 /* MMFuncTestListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMFuncTestListVC.h; sourceTree = "<group>"; };
@@ -353,6 +356,8 @@
 			children = (
 				B42B78A8240EA78C0013AAB9 /* MMCustomButton.h */,
 				B42B78A9240EA78C0013AAB9 /* MMCustomButton.m */,
+				B46B949E24484BBD00F2F480 /* MMCircleView.h */,
+				B46B949F24484BBD00F2F480 /* MMCircleView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -918,6 +923,7 @@
 				401FFC091E11189300E46787 /* main.m in Sources */,
 				B418BB2523D4303800374BEF /* MMCollectionReusableView.m in Sources */,
 				B44E09E323C70F62001CAFE5 /* MMAnimationViewController.m in Sources */,
+				B46B94A024484BBD00F2F480 /* MMCircleView.m in Sources */,
 				B44E09F523C72D23001CAFE5 /* UIBarButtonItem+MMCategory.m in Sources */,
 				B45CF4FB23A9D06C00345FB5 /* MMHomeListTableViewCell.m in Sources */,
 				B4BAA367241F62910049DFEE /* WKWebViewJavascriptBridge.m in Sources */,

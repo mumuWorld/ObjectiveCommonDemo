@@ -9,6 +9,7 @@
 #import "MMSimpleUIVC.h"
 #import "MMCustomButton.h"
 #import <AFNetworking/AFNetworking.h>
+#import "MMCircleView.h"
 
 @interface MMSimpleUIVC ()
 @property (nonatomic, strong) UILabel *testLabel;
@@ -16,6 +17,9 @@
 @property (nonatomic, strong) MMCustomButton *customBtn;
 
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
+
+@property (nonatomic, strong) MMCircleView *circleView;
+
 @end
 
 @implementation MMSimpleUIVC
@@ -44,6 +48,9 @@
         }];
     });
     
+    self.circleView = [[MMCircleView alloc] initWithFrame:CGRectMake(50, 200, 100, 100)];
+    self.circleView.backgroundColor = UIColor.cyanColor;
+    [self.view addSubview:self.circleView];
 }
 
 - (void)viewWillLayoutSubviews {

@@ -73,6 +73,7 @@
 		B4D4DBA823CEC1830093D5DA /* MMBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBA723CEC1830093D5DA /* MMBaseTableViewController.m */; };
 		B4D4DBAB23CEC20F0093D5DA /* MMConstDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBAA23CEC20F0093D5DA /* MMConstDefine.m */; };
 		B4D4DBAE23CEC4D00093D5DA /* MMCoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBAD23CEC4D00093D5DA /* MMCoreAnimationViewController.m */; };
+		B4EF867924498CB20055060E /* MMSimpleFuncVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF867824498CB20055060E /* MMSimpleFuncVC.m */; };
 		B4F4BA7823CEE10000ACFC52 /* core_animation_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4F4BA7723CEE10000ACFC52 /* core_animation_list.plist */; };
 		B4F4BA7C23CEE16400ACFC52 /* MMCAReplicatorLayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4BA7B23CEE16400ACFC52 /* MMCAReplicatorLayerVC.m */; };
 		B4F4BA8223CF28E000ACFC52 /* MMCollectionLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4BA8123CF28E000ACFC52 /* MMCollectionLayoutVC.m */; };
@@ -224,6 +225,8 @@
 		B4D4DBAA23CEC20F0093D5DA /* MMConstDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMConstDefine.m; sourceTree = "<group>"; };
 		B4D4DBAC23CEC4D00093D5DA /* MMCoreAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCoreAnimationViewController.h; sourceTree = "<group>"; };
 		B4D4DBAD23CEC4D00093D5DA /* MMCoreAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCoreAnimationViewController.m; sourceTree = "<group>"; };
+		B4EF867724498CB20055060E /* MMSimpleFuncVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMSimpleFuncVC.h; sourceTree = "<group>"; };
+		B4EF867824498CB20055060E /* MMSimpleFuncVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMSimpleFuncVC.m; sourceTree = "<group>"; };
 		B4F4BA7723CEE10000ACFC52 /* core_animation_list.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = core_animation_list.plist; sourceTree = "<group>"; };
 		B4F4BA7A23CEE16400ACFC52 /* MMCAReplicatorLayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCAReplicatorLayerVC.h; sourceTree = "<group>"; };
 		B4F4BA7B23CEE16400ACFC52 /* MMCAReplicatorLayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCAReplicatorLayerVC.m; sourceTree = "<group>"; };
@@ -552,6 +555,8 @@
 			children = (
 				B49BADF724347A1000A41D14 /* MMOperationViewController.h */,
 				B49BADF824347A1000A41D14 /* MMOperationViewController.m */,
+				B4EF867724498CB20055060E /* MMSimpleFuncVC.h */,
+				B4EF867824498CB20055060E /* MMSimpleFuncVC.m */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -884,6 +889,7 @@
 				B44B8B6723CC95B700B912CB /* UIDevice+MMCategory.m in Sources */,
 				B4F4BA8F23CF2A3600ACFC52 /* MMCollectionBaseLayout.m in Sources */,
 				B42B78A6240EA73D0013AAB9 /* MMSimpleUIVC.m in Sources */,
+				B4EF867924498CB20055060E /* MMSimpleFuncVC.m in Sources */,
 				B49BADF924347A1000A41D14 /* MMOperationViewController.m in Sources */,
 				B4BAA376241F65590049DFEE /* UIDevice+Tools.m in Sources */,
 				B4BAA365241F62910049DFEE /* L3game_SettingView.m in Sources */,

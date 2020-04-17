@@ -10,5 +10,13 @@
 		<key>text</key>
 		<string>NSOperation</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>简单功能</string>
+		<key>router</key>
+		<string>MMSimpleFuncVC</string>
+		<key>text</key>
+		<string>block</string>
+	</dict>
 </array>
 </plist>

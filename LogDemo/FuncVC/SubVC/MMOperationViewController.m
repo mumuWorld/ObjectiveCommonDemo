@@ -17,13 +17,20 @@
 
 @property (nonatomic, strong) NSInvocationOperation *invocationO;
 
+@property (nonatomic, strong) NSObject *obj;
+
+@property (nonatomic, strong) NSCache *cache;
+
 @end
 
 @implementation MMOperationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.obj = [NSObject new];
+    self.cache = [[NSCache alloc] init];
+    [self.cache setObject:self.obj forKey:@"test"];
 }
 
 - (void)initSubView {
@@ -43,6 +50,11 @@
     [self.view addSubview:self.queueBtn];
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.obj = nil;
+    NSLog(@"obj->%@",self.obj);
+    NSLog(@"cache->%@",self.cache);
+}
 - (void)handleBtnClick:(UIButton *)sender {
     switch (sender.tag) {
         case 1:

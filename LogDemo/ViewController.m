@@ -19,7 +19,7 @@
     [self callBasePublic];
     self.view.layer.cornerRadius = 0.5;
     self.view.layer.masksToBounds = YES;
-
+    
 }
 
 - (void)callBasePrivate {

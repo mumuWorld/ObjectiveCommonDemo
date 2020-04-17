@@ -20,6 +20,7 @@
 #import "UIColor+Tools.h"
 #import "UIImageView+MMCategory.h"
 #import "NSString+MMCategory.h"
+#import "NSObject+MMCategory.h"
 
 #import <SDWebImage.h>
 

@@ -1,5 +1,5 @@
 //
-//  MMSimpleFuncVC.h
+//  MMPresentTestVC.h
 //  LogDemo
 //
 //  Created by mumu on 2020/4/17.
@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MMSimpleFuncVC : MMBaseViewController
-- (void)testFuncA;
+@interface MMPresentTestVC : MMBaseViewController
+
 @end
 
 NS_ASSUME_NONNULL_END

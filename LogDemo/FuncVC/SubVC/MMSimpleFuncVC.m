@@ -7,6 +7,7 @@
 //
 
 #import "MMSimpleFuncVC.h"
+#import "MMPresentTestVC.h"
 
 @interface MMSimpleFuncVC ()
 
@@ -16,6 +17,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self testFuncA];
+}
+
+- (void)testBLock {
         int x = 0;
        // ARC 下定义 normalBlock 后再打印其所在的内存地址
     void(^normalBlock)(void) = ^{
@@ -29,14 +35,14 @@
     });
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)testFuncA {
+    NSLog(@"a");
 }
-*/
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    MMPresentTestVC *test = [[MMPresentTestVC alloc] init];
+    test.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self.navigationController presentViewController:test animated:true completion:nil];
+}
 
 @end

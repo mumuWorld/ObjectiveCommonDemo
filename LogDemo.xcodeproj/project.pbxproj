@@ -75,6 +75,10 @@
 		B4D4DBAB23CEC20F0093D5DA /* MMConstDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBAA23CEC20F0093D5DA /* MMConstDefine.m */; };
 		B4D4DBAE23CEC4D00093D5DA /* MMCoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBAD23CEC4D00093D5DA /* MMCoreAnimationViewController.m */; };
 		B4EF867924498CB20055060E /* MMSimpleFuncVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF867824498CB20055060E /* MMSimpleFuncVC.m */; };
+		B4EF867C2449BD640055060E /* MMPresentTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF867B2449BD640055060E /* MMPresentTestVC.m */; };
+		B4EF867F2449D3600055060E /* MMSimpleFuncVC+MMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF867E2449D3600055060E /* MMSimpleFuncVC+MMHook.m */; };
+		B4EF86822449D39D0055060E /* NSObject+MMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF86812449D39D0055060E /* NSObject+MMCategory.m */; };
+		B4EF86852449D55B0055060E /* MMSimpleFuncVC+MMSecHook.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF86842449D55B0055060E /* MMSimpleFuncVC+MMSecHook.m */; };
 		B4F4BA7823CEE10000ACFC52 /* core_animation_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4F4BA7723CEE10000ACFC52 /* core_animation_list.plist */; };
 		B4F4BA7C23CEE16400ACFC52 /* MMCAReplicatorLayerVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4BA7B23CEE16400ACFC52 /* MMCAReplicatorLayerVC.m */; };
 		B4F4BA8223CF28E000ACFC52 /* MMCollectionLayoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4BA8123CF28E000ACFC52 /* MMCollectionLayoutVC.m */; };
@@ -230,6 +234,14 @@
 		B4D4DBAD23CEC4D00093D5DA /* MMCoreAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCoreAnimationViewController.m; sourceTree = "<group>"; };
 		B4EF867724498CB20055060E /* MMSimpleFuncVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMSimpleFuncVC.h; sourceTree = "<group>"; };
 		B4EF867824498CB20055060E /* MMSimpleFuncVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMSimpleFuncVC.m; sourceTree = "<group>"; };
+		B4EF867A2449BD640055060E /* MMPresentTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMPresentTestVC.h; sourceTree = "<group>"; };
+		B4EF867B2449BD640055060E /* MMPresentTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMPresentTestVC.m; sourceTree = "<group>"; };
+		B4EF867D2449D3600055060E /* MMSimpleFuncVC+MMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMSimpleFuncVC+MMHook.h"; sourceTree = "<group>"; };
+		B4EF867E2449D3600055060E /* MMSimpleFuncVC+MMHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MMSimpleFuncVC+MMHook.m"; sourceTree = "<group>"; };
+		B4EF86802449D39D0055060E /* NSObject+MMCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+MMCategory.h"; sourceTree = "<group>"; };
+		B4EF86812449D39D0055060E /* NSObject+MMCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MMCategory.m"; sourceTree = "<group>"; };
+		B4EF86832449D55B0055060E /* MMSimpleFuncVC+MMSecHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMSimpleFuncVC+MMSecHook.h"; sourceTree = "<group>"; };
+		B4EF86842449D55B0055060E /* MMSimpleFuncVC+MMSecHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MMSimpleFuncVC+MMSecHook.m"; sourceTree = "<group>"; };
 		B4F4BA7723CEE10000ACFC52 /* core_animation_list.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = core_animation_list.plist; sourceTree = "<group>"; };
 		B4F4BA7A23CEE16400ACFC52 /* MMCAReplicatorLayerVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCAReplicatorLayerVC.h; sourceTree = "<group>"; };
 		B4F4BA7B23CEE16400ACFC52 /* MMCAReplicatorLayerVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCAReplicatorLayerVC.m; sourceTree = "<group>"; };
@@ -494,6 +506,8 @@
 				B4D4DBA323CDBDB30093D5DA /* UIImageView+MMCategory.m */,
 				B42C1E1923D0582E00D27E62 /* NSString+MMCategory.h */,
 				B42C1E1A23D0582E00D27E62 /* NSString+MMCategory.m */,
+				B4EF86802449D39D0055060E /* NSObject+MMCategory.h */,
+				B4EF86812449D39D0055060E /* NSObject+MMCategory.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -562,6 +576,12 @@
 				B49BADF824347A1000A41D14 /* MMOperationViewController.m */,
 				B4EF867724498CB20055060E /* MMSimpleFuncVC.h */,
 				B4EF867824498CB20055060E /* MMSimpleFuncVC.m */,
+				B4EF867A2449BD640055060E /* MMPresentTestVC.h */,
+				B4EF867B2449BD640055060E /* MMPresentTestVC.m */,
+				B4EF867D2449D3600055060E /* MMSimpleFuncVC+MMHook.h */,
+				B4EF867E2449D3600055060E /* MMSimpleFuncVC+MMHook.m */,
+				B4EF86832449D55B0055060E /* MMSimpleFuncVC+MMSecHook.h */,
+				B4EF86842449D55B0055060E /* MMSimpleFuncVC+MMSecHook.m */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -911,6 +931,7 @@
 				B4BAA379241F7A450049DFEE /* MMRichTextVC.m in Sources */,
 				B44B8B7023CD6B4800B912CB /* UIColor+Tools.m in Sources */,
 				B4F4BA8823CF297F00ACFC52 /* MMCollectionShowVC.m in Sources */,
+				B4EF867F2449D3600055060E /* MMSimpleFuncVC+MMHook.m in Sources */,
 				B49BADEF24343DA900A41D14 /* MMKitDynamicAnitationVC.m in Sources */,
 				B42F712523B60CBF003BA22C /* MMLayerTestViewController.m in Sources */,
 				B44B8B7323CD8F4F00B912CB /* MMIndistinctTools.m in Sources */,
@@ -920,10 +941,12 @@
 				401FFC0C1E11189300E46787 /* AppDelegate.m in Sources */,
 				B4F4BA8C23CF2A0500ACFC52 /* MMCollectionViewAlignmentLayout.m in Sources */,
 				B437064A23D6FC0600BFD166 /* MMScreenRotateVC.m in Sources */,
+				B4EF86822449D39D0055060E /* NSObject+MMCategory.m in Sources */,
 				B4D4DBA423CDBDB30093D5DA /* UIImageView+MMCategory.m in Sources */,
 				B4BAA369241F62910049DFEE /* WebViewJavascriptBridge_JS.m in Sources */,
 				B4BAA36B241F62910049DFEE /* NavViewController.m in Sources */,
 				B42C1E1223D0112500D27E62 /* MMUIDemoTableVC.m in Sources */,
+				B4EF867C2449BD640055060E /* MMPresentTestVC.m in Sources */,
 				B45CF4FF23A9D3C600345FB5 /* MMModelTransform.m in Sources */,
 				B42F3D4523B4502700DAB9E0 /* MMMasonryViewController.m in Sources */,
 				401FFC091E11189300E46787 /* main.m in Sources */,
@@ -932,6 +955,7 @@
 				B46B94A024484BBD00F2F480 /* MMCircleView.m in Sources */,
 				B44E09F523C72D23001CAFE5 /* UIBarButtonItem+MMCategory.m in Sources */,
 				B45CF4FB23A9D06C00345FB5 /* MMHomeListTableViewCell.m in Sources */,
+				B4EF86852449D55B0055060E /* MMSimpleFuncVC+MMSecHook.m in Sources */,
 				B4BAA367241F62910049DFEE /* WKWebViewJavascriptBridge.m in Sources */,
 				B418BB2123D42B9D00374BEF /* MMCollectionDecorationView.m in Sources */,
 				B44E09E923C71A5F001CAFE5 /* MMBaseAnimationViewController.m in Sources */,

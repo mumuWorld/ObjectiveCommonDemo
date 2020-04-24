@@ -20,13 +20,20 @@
 @property (weak, nonatomic) IBOutlet UIButton *btn_C_2;
 @property (weak, nonatomic) IBOutlet UIButton *btn_B_2;
 
+@property (nonatomic, strong) UIView *subview_C_2;
 @end
 
 @implementation MMTouchPriorityVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSArray *arr = @[_bgView_A,_subView_B,_subView_B_2,_subVIew_C];
+    self.subview_C_2 = [[UIView alloc] init];
+    self.subview_C_2.tag = 24;
+    self.subview_C_2.frame = CGRectMake(0, 0, 50, 50);
+    self.subview_C_2.backgroundColor = [UIColor blueColor];
+    [self.btn_B_2 addSubview:self.subview_C_2];
+    
+    NSArray *arr = @[_bgView_A,_subView_B,_subView_B_2,_subVIew_C,_subview_C_2];
     for (UIView *view in arr) {
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGes:)];
         [view addGestureRecognizer:tap];

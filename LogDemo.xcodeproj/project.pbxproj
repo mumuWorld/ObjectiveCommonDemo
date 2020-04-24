@@ -87,6 +87,9 @@
 		B4F4BA8C23CF2A0500ACFC52 /* MMCollectionViewAlignmentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4BA8B23CF2A0500ACFC52 /* MMCollectionViewAlignmentLayout.m */; };
 		B4F4BA8F23CF2A3600ACFC52 /* MMCollectionBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4BA8E23CF2A3600ACFC52 /* MMCollectionBaseLayout.m */; };
 		B4F9F46D2452F1B300097200 /* MMSimpleFuncModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9F46C2452F1B300097200 /* MMSimpleFuncModel.m */; };
+		B4F9F4712453036200097200 /* MMTouchPriorityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9F46F2453036200097200 /* MMTouchPriorityVC.m */; };
+		B4F9F4722453036200097200 /* MMTouchPriorityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F9F4702453036200097200 /* MMTouchPriorityVC.xib */; };
+		B4F9F4752453063B00097200 /* MMTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9F4742453063B00097200 /* MMTouchView.m */; };
 		F65A0185E40634F33D177994 /* libPods-LogDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C6470A7553DA6D1121D34B /* libPods-LogDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -257,6 +260,11 @@
 		B4F4BA8E23CF2A3600ACFC52 /* MMCollectionBaseLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCollectionBaseLayout.m; sourceTree = "<group>"; };
 		B4F9F46B2452F1B300097200 /* MMSimpleFuncModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMSimpleFuncModel.h; sourceTree = "<group>"; };
 		B4F9F46C2452F1B300097200 /* MMSimpleFuncModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMSimpleFuncModel.m; sourceTree = "<group>"; };
+		B4F9F46E2453036200097200 /* MMTouchPriorityVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTouchPriorityVC.h; sourceTree = "<group>"; };
+		B4F9F46F2453036200097200 /* MMTouchPriorityVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTouchPriorityVC.m; sourceTree = "<group>"; };
+		B4F9F4702453036200097200 /* MMTouchPriorityVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMTouchPriorityVC.xib; sourceTree = "<group>"; };
+		B4F9F4732453063B00097200 /* MMTouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTouchView.h; sourceTree = "<group>"; };
+		B4F9F4742453063B00097200 /* MMTouchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTouchView.m; sourceTree = "<group>"; };
 		C2E126922316D93E11BDD483 /* Pods-LogDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogDemoTests.release.xcconfig"; path = "Target Support Files/Pods-LogDemoTests/Pods-LogDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -586,6 +594,9 @@
 				B4EF867E2449D3600055060E /* MMSimpleFuncVC+MMHook.m */,
 				B4EF86832449D55B0055060E /* MMSimpleFuncVC+MMSecHook.h */,
 				B4EF86842449D55B0055060E /* MMSimpleFuncVC+MMSecHook.m */,
+				B4F9F46E2453036200097200 /* MMTouchPriorityVC.h */,
+				B4F9F46F2453036200097200 /* MMTouchPriorityVC.m */,
+				B4F9F4702453036200097200 /* MMTouchPriorityVC.xib */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -735,6 +746,8 @@
 			children = (
 				B4F9F46B2452F1B300097200 /* MMSimpleFuncModel.h */,
 				B4F9F46C2452F1B300097200 /* MMSimpleFuncModel.m */,
+				B4F9F4732453063B00097200 /* MMTouchView.h */,
+				B4F9F4742453063B00097200 /* MMTouchView.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -840,6 +853,7 @@
 				B42C1E1423D011CB00D27E62 /* ui_demo_list.plist in Resources */,
 				B44E09E523C71634001CAFE5 /* animation_list.plist in Resources */,
 				401FFC141E11189300E46787 /* Assets.xcassets in Resources */,
+				B4F9F4722453036200097200 /* MMTouchPriorityVC.xib in Resources */,
 				B45CF50B23A9F34300345FB5 /* home_list.plist in Resources */,
 				B44E09DC23C46C8B001CAFE5 /* 未使用图片.txt in Resources */,
 				B45CF4FC23A9D06C00345FB5 /* MMHomeListTableViewCell.xib in Resources */,
@@ -915,6 +929,7 @@
 			files = (
 				401FFC0F1E11189300E46787 /* ViewController.m in Sources */,
 				B44B8B6023CC88A200B912CB /* MMIndistinctViewController.m in Sources */,
+				B4F9F4752453063B00097200 /* MMTouchView.m in Sources */,
 				B44E09F823C72F77001CAFE5 /* UIButton+MMCategory.m in Sources */,
 				B45CF4F623A9CCB300345FB5 /* MMHomeListViewController.m in Sources */,
 				B445C76A23C340AB005640F7 /* MMCrashTestViewController.m in Sources */,
@@ -973,6 +988,7 @@
 				B4BAA367241F62910049DFEE /* WKWebViewJavascriptBridge.m in Sources */,
 				B418BB2123D42B9D00374BEF /* MMCollectionDecorationView.m in Sources */,
 				B44E09E923C71A5F001CAFE5 /* MMBaseAnimationViewController.m in Sources */,
+				B4F9F4712453036200097200 /* MMTouchPriorityVC.m in Sources */,
 				B42C1E1B23D0582E00D27E62 /* NSString+MMCategory.m in Sources */,
 				B44B8B6A23CC98A800B912CB /* UIView+MMCategory.m in Sources */,
 				401FFC2E1E1118AF00E46787 /* Foundation+Log.m in Sources */,

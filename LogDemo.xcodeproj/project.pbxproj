@@ -86,6 +86,7 @@
 		B4F4BA8823CF297F00ACFC52 /* MMCollectionShowVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4BA8723CF297F00ACFC52 /* MMCollectionShowVC.m */; };
 		B4F4BA8C23CF2A0500ACFC52 /* MMCollectionViewAlignmentLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4BA8B23CF2A0500ACFC52 /* MMCollectionViewAlignmentLayout.m */; };
 		B4F4BA8F23CF2A3600ACFC52 /* MMCollectionBaseLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F4BA8E23CF2A3600ACFC52 /* MMCollectionBaseLayout.m */; };
+		B4F9F46D2452F1B300097200 /* MMSimpleFuncModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9F46C2452F1B300097200 /* MMSimpleFuncModel.m */; };
 		F65A0185E40634F33D177994 /* libPods-LogDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C6470A7553DA6D1121D34B /* libPods-LogDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -254,6 +255,8 @@
 		B4F4BA8B23CF2A0500ACFC52 /* MMCollectionViewAlignmentLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCollectionViewAlignmentLayout.m; sourceTree = "<group>"; };
 		B4F4BA8D23CF2A3600ACFC52 /* MMCollectionBaseLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCollectionBaseLayout.h; sourceTree = "<group>"; };
 		B4F4BA8E23CF2A3600ACFC52 /* MMCollectionBaseLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCollectionBaseLayout.m; sourceTree = "<group>"; };
+		B4F9F46B2452F1B300097200 /* MMSimpleFuncModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMSimpleFuncModel.h; sourceTree = "<group>"; };
+		B4F9F46C2452F1B300097200 /* MMSimpleFuncModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMSimpleFuncModel.m; sourceTree = "<group>"; };
 		C2E126922316D93E11BDD483 /* Pods-LogDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogDemoTests.release.xcconfig"; path = "Target Support Files/Pods-LogDemoTests/Pods-LogDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -572,6 +575,7 @@
 		B49BADF1243478A100A41D14 /* SubVC */ = {
 			isa = PBXGroup;
 			children = (
+				B4F9F46A2452F19E00097200 /* Model */,
 				B49BADF724347A1000A41D14 /* MMOperationViewController.h */,
 				B49BADF824347A1000A41D14 /* MMOperationViewController.m */,
 				B4EF867724498CB20055060E /* MMSimpleFuncVC.h */,
@@ -724,6 +728,15 @@
 				B4F4BA8E23CF2A3600ACFC52 /* MMCollectionBaseLayout.m */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		B4F9F46A2452F19E00097200 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B4F9F46B2452F1B300097200 /* MMSimpleFuncModel.h */,
+				B4F9F46C2452F1B300097200 /* MMSimpleFuncModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E99152F5CDE05C2709EFF368 /* Frameworks */ = {
@@ -947,6 +960,7 @@
 				B4BAA36B241F62910049DFEE /* NavViewController.m in Sources */,
 				B42C1E1223D0112500D27E62 /* MMUIDemoTableVC.m in Sources */,
 				B4EF867C2449BD640055060E /* MMPresentTestVC.m in Sources */,
+				B4F9F46D2452F1B300097200 /* MMSimpleFuncModel.m in Sources */,
 				B45CF4FF23A9D3C600345FB5 /* MMModelTransform.m in Sources */,
 				B42F3D4523B4502700DAB9E0 /* MMMasonryViewController.m in Sources */,
 				401FFC091E11189300E46787 /* main.m in Sources */,

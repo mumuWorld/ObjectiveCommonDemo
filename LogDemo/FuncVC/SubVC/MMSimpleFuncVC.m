@@ -8,6 +8,7 @@
 
 #import "MMSimpleFuncVC.h"
 #import "MMPresentTestVC.h"
+#import "MMSimpleFuncModel.h"
 
 @interface MMSimpleFuncVC ()
 
@@ -18,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self testFuncA];
+//    [self testFuncA];
+    [self test2];
 }
 
 - (void)testBLock {
@@ -45,4 +47,22 @@
     [self.navigationController presentViewController:test animated:true completion:nil];
 }
 
+- (void)test2 {
+    MMSimpleFuncModel *model_1 = [[MMSimpleFuncModel alloc] init];
+    model_1.keyType = @"beddesc";
+    model_1.content = @"c1";
+    MMSimpleFuncModel *model_2 = [[MMSimpleFuncModel alloc] init];
+    model_2.keyType = @"multibed";
+    model_2.content = @"c2";
+    NSArray *array = @[@{@"keyType":@"beddesc",
+                         @"content":@"c1"},
+                       @{@"keyType":@"multibed",
+                         @"content":@"c1"}];
+    NSArray *array_2 = @[model_1,model_2];
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"keyType = %@ || keyType = %@",@"beddesc",@"multibed"];
+    
+    NSArray *result = [array filteredArrayUsingPredicate:pre];
+    NSArray *result_2 = [array_2 filteredArrayUsingPredicate:pre];
+    NSLog(@"%@--%@",result,result_2);
+}
 @end

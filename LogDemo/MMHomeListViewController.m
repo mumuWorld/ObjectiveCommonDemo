@@ -117,21 +117,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     MMHomeListModel *model = self.listArray[indexPath.row % 10];
-    if (indexPath.row == 0) {
+//    if (indexPath.row == 0) {
 //        L3game_WebViewController *webView = [[L3game_WebViewController alloc] initWithDict:@{@"url":@"https://www.baidu.com/"}];
 //        NavViewController *navi = [[NavViewController alloc] initWithRootViewController:webView];
 //        navi.modalPresentationStyle = UIModalPresentationFullScreen;
 //        [self.navigationController presentViewController:navi animated:true completion:nil];
-        
-        MMMasonryViewController *vc = [[MMMasonryViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:true];
-    } else if (indexPath.row == 1) {
-        MMLayerTestViewController *vc = [[MMLayerTestViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:true];
-    } else if (indexPath.row == 2) {
-        MMCrashTestViewController *vc = [[MMCrashTestViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:true];
-    } else if (model.router.length > 0) {
+    if (model.router.length > 0) {
         Class class = NSClassFromString(model.router);
         id target = [[class alloc] init];
         [self.navigationController pushViewController:target animated:true];

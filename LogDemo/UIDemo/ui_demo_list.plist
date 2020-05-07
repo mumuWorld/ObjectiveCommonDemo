@@ -62,5 +62,25 @@
 		<key>text</key>
 		<string>label</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Xib_UI示例</string>
+		<key>url</key>
+		<string>BaseAnimation</string>
+		<key>router</key>
+		<string>MMSImpleXibUIVC</string>
+		<key>text</key>
+		<string>label</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Masonry约束</string>
+		<key>url</key>
+		<string>BaseAnimation</string>
+		<key>router</key>
+		<string>MMMasonryViewController</string>
+		<key>text</key>
+		<string>label</string>
+	</dict>
 </array>
 </plist>

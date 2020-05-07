@@ -59,20 +59,27 @@
                          @"type": @(1)
     },
                        @{@"keyType":@"multibed",
-                         @"content":@"c1"}];
+                         @"content":@"c1",
+                         @"type": @(1)
+                       }];
     NSArray *array_2 = @[model_1,model_2];
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"keyType = %@ || keyType = %@",@"beddesc",@"multibed"];
     
     NSPredicate *pre_2 = [NSPredicate predicateWithFormat:@"type = %d",1];
-    
+    NSPredicate *pre_5 = [NSPredicate predicateWithFormat:@"type == %d",1];
+
 //    NSArray <MMSimpleFuncModel>*array = @[model_1,model_2];
-    NSPredicate *pre_3 = [NSPredicate predicateWithFormat:@"type = %d",2];
-    
+    NSPredicate *pre_3 = [NSPredicate predicateWithFormat:@"type == 1"];
+    NSPredicate *pre_4 = [NSPredicate predicateWithFormat:@"type = 1"];
+
 //    NSArray *result = [self.hotelDetailModel.otherText filteredArrayUsingPredicate:pre];
     
     NSArray *result = [array filteredArrayUsingPredicate:pre];
     NSArray *result_2 = [array_2 filteredArrayUsingPredicate:pre];
     NSArray *result_3 = [array filteredArrayUsingPredicate:pre_2];
+    NSArray *result_4 = [array filteredArrayUsingPredicate:pre_3];
+    NSArray *result_5 = [array filteredArrayUsingPredicate:pre_4];
+    NSArray *result_6 = [array filteredArrayUsingPredicate:pre_5];
 
     NSLog(@"%@--%@",result,result_2);
 }

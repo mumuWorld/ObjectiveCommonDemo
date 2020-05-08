@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSMutableAttributedString *attribute = [[NSMutableAttributedString alloc] initWithString:@"AQCaqf123一二三测试文字"];
+    NSMutableAttributedString *attribute = [[NSMutableAttributedString alloc] initWithString:@"AQCaqf123一二三测试文字￥2330/张"];
     UIFont *font_1 = [UIFont systemFontOfSize:25 weight:UIFontWeightMedium];
     UIFont *font_2 = [UIFont systemFontOfSize:17 weight:UIFontWeightRegular];
 
@@ -41,13 +41,23 @@
         NSUnderlineStyleAttributeName: @(NSUnderlineStyleSingle)
     }
     range:NSMakeRange(9, 3)];
+    [attribute addAttributes:@{
+        NSFontAttributeName: [UIFont boldSystemFontOfSize:24],
+        NSForegroundColorAttributeName: [UIColor redColor],
+    }
+    range:NSMakeRange(16, 5)];
+    [attribute addAttributes:@{
+        NSFontAttributeName: [UIFont boldSystemFontOfSize:12],
+        NSForegroundColorAttributeName: [UIColor grayColor],
+    }
+    range:NSMakeRange(21, 2)];
     CGFloat offset = (font_1.lineHeight - font_2.lineHeight)/2 + ((font_1.descender - font_2.descender));
     NSLog(@"offset=%f",offset);
     //正号 向上偏移
     [attribute addAttributes:@{
         NSFontAttributeName: font_2,
         NSBaselineOffsetAttributeName:@(offset),
-    } range:NSMakeRange(12, 3)];
+    } range:NSMakeRange(12, 4)];
     
     _attributeLabel.attributedText = attribute;
 }

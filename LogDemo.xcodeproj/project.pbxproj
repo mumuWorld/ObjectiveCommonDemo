@@ -72,6 +72,9 @@
 		B4BAA376241F65590049DFEE /* UIDevice+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BAA375241F65590049DFEE /* UIDevice+Tools.m */; };
 		B4BAA379241F7A450049DFEE /* MMRichTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BAA378241F7A450049DFEE /* MMRichTextVC.m */; };
 		B4BADD7A228F33EF003A0219 /* MMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BADD79228F33EF003A0219 /* MMBaseViewController.m */; };
+		B4CB4AD1246D2A1D00E25C74 /* MMGCDTestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4AD0246D2A1D00E25C74 /* MMGCDTestTool.m */; };
+		B4CB4AD5246D2C5F00E25C74 /* MMGCDTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4AD3246D2C5E00E25C74 /* MMGCDTestVC.m */; };
+		B4CB4AD6246D2C5F00E25C74 /* MMGCDTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CB4AD4246D2C5E00E25C74 /* MMGCDTestVC.xib */; };
 		B4D4DBA423CDBDB30093D5DA /* UIImageView+MMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBA323CDBDB30093D5DA /* UIImageView+MMCategory.m */; };
 		B4D4DBA823CEC1830093D5DA /* MMBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBA723CEC1830093D5DA /* MMBaseTableViewController.m */; };
 		B4D4DBAB23CEC20F0093D5DA /* MMConstDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBAA23CEC20F0093D5DA /* MMConstDefine.m */; };
@@ -233,6 +236,11 @@
 		B4BAA378241F7A450049DFEE /* MMRichTextVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMRichTextVC.m; sourceTree = "<group>"; };
 		B4BADD78228F33EF003A0219 /* MMBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseViewController.h; sourceTree = "<group>"; };
 		B4BADD79228F33EF003A0219 /* MMBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMBaseViewController.m; sourceTree = "<group>"; };
+		B4CB4ACF246D2A1C00E25C74 /* MMGCDTestTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMGCDTestTool.h; sourceTree = "<group>"; };
+		B4CB4AD0246D2A1D00E25C74 /* MMGCDTestTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMGCDTestTool.m; sourceTree = "<group>"; };
+		B4CB4AD2246D2C5E00E25C74 /* MMGCDTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMGCDTestVC.h; sourceTree = "<group>"; };
+		B4CB4AD3246D2C5E00E25C74 /* MMGCDTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMGCDTestVC.m; sourceTree = "<group>"; };
+		B4CB4AD4246D2C5E00E25C74 /* MMGCDTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMGCDTestVC.xib; sourceTree = "<group>"; };
 		B4D4DBA223CDBDB30093D5DA /* UIImageView+MMCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MMCategory.h"; sourceTree = "<group>"; };
 		B4D4DBA323CDBDB30093D5DA /* UIImageView+MMCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MMCategory.m"; sourceTree = "<group>"; };
 		B4D4DBA623CEC1830093D5DA /* MMBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseTableViewController.h; sourceTree = "<group>"; };
@@ -593,6 +601,7 @@
 		B49BADF1243478A100A41D14 /* SubVC */ = {
 			isa = PBXGroup;
 			children = (
+				B4CB4ACE246D29E700E25C74 /* Tools */,
 				B4F9F46A2452F19E00097200 /* Model */,
 				B49BADF724347A1000A41D14 /* MMOperationViewController.h */,
 				B49BADF824347A1000A41D14 /* MMOperationViewController.m */,
@@ -607,6 +616,9 @@
 				B4F9F46E2453036200097200 /* MMTouchPriorityVC.h */,
 				B4F9F46F2453036200097200 /* MMTouchPriorityVC.m */,
 				B4F9F4702453036200097200 /* MMTouchPriorityVC.xib */,
+				B4CB4AD2246D2C5E00E25C74 /* MMGCDTestVC.h */,
+				B4CB4AD3246D2C5E00E25C74 /* MMGCDTestVC.m */,
+				B4CB4AD4246D2C5E00E25C74 /* MMGCDTestVC.xib */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -662,6 +674,15 @@
 				B4BAA375241F65590049DFEE /* UIDevice+Tools.m */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		B4CB4ACE246D29E700E25C74 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B4CB4ACF246D2A1C00E25C74 /* MMGCDTestTool.h */,
+				B4CB4AD0246D2A1D00E25C74 /* MMGCDTestTool.m */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 		B4D4DBA523CEC1140093D5DA /* CoreAnimationVC */ = {
@@ -858,6 +879,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				401FFC171E11189300E46787 /* LaunchScreen.storyboard in Resources */,
+				B4CB4AD6246D2C5F00E25C74 /* MMGCDTestVC.xib in Resources */,
 				B42C1E1423D011CB00D27E62 /* ui_demo_list.plist in Resources */,
 				B44E09E523C71634001CAFE5 /* animation_list.plist in Resources */,
 				401FFC141E11189300E46787 /* Assets.xcassets in Resources */,
@@ -940,6 +962,7 @@
 				B44B8B6023CC88A200B912CB /* MMIndistinctViewController.m in Sources */,
 				B4F9F4752453063B00097200 /* MMTouchView.m in Sources */,
 				B44E09F823C72F77001CAFE5 /* UIButton+MMCategory.m in Sources */,
+				B4CB4AD5246D2C5F00E25C74 /* MMGCDTestVC.m in Sources */,
 				B45CF4F623A9CCB300345FB5 /* MMHomeListViewController.m in Sources */,
 				B445C76A23C340AB005640F7 /* MMCrashTestViewController.m in Sources */,
 				B418BB2923D5552200374BEF /* MMSingleLabelCVCell.m in Sources */,
@@ -996,6 +1019,7 @@
 				B45CF4FB23A9D06C00345FB5 /* MMHomeListTableViewCell.m in Sources */,
 				B4EF86852449D55B0055060E /* MMSimpleFuncVC+MMSecHook.m in Sources */,
 				B4BAA367241F62910049DFEE /* WKWebViewJavascriptBridge.m in Sources */,
+				B4CB4AD1246D2A1D00E25C74 /* MMGCDTestTool.m in Sources */,
 				B418BB2123D42B9D00374BEF /* MMCollectionDecorationView.m in Sources */,
 				B44E09E923C71A5F001CAFE5 /* MMBaseAnimationViewController.m in Sources */,
 				B4F9F4712453036200097200 /* MMTouchPriorityVC.m in Sources */,

@@ -20,7 +20,7 @@
     [super viewDidLoad];
 
 //    [self testFuncA];
-    [self test2];
+    [self test3];
 }
 
 - (void)testBLock {
@@ -47,6 +47,7 @@
     [self.navigationController presentViewController:test animated:true completion:nil];
 }
 
+/// 谓词测试
 - (void)test2 {
     MMSimpleFuncModel *model_1 = [[MMSimpleFuncModel alloc] init];
     model_1.keyType = @"beddesc";
@@ -80,7 +81,14 @@
     NSArray *result_4 = [array filteredArrayUsingPredicate:pre_3];
     NSArray *result_5 = [array filteredArrayUsingPredicate:pre_4];
     NSArray *result_6 = [array filteredArrayUsingPredicate:pre_5];
-
     NSLog(@"%@--%@",result,result_2);
+}
+
+- (void)test3 {
+    CFUUIDRef uuidRef = CFUUIDCreate(NULL);
+    CFStringRef uuid = CFUUIDCreateString(NULL, uuidRef);
+    CFRelease(uuidRef);
+    NSString *uuidStr = (__bridge_transfer NSString *)uuid;
+    NSLog(@"uuid-%@",uuidStr);
 }
 @end

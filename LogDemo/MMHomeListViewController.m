@@ -108,7 +108,7 @@
 }
 
 - (void)tableView:(nonnull UITableView *)tableView prefetchRowsAtIndexPaths:(nonnull NSArray<NSIndexPath *> *)indexPaths {
-    NSLog(@"prefetchRows->%@",indexPaths);
+//    NSLog(@"prefetchRows->%@",indexPaths);
 }
 
 - (void)tableView:(UITableView *)tableView cancelPrefetchingForRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths {

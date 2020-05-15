@@ -20,7 +20,7 @@
     [super viewDidLoad];
 
 //    [self testFuncA];
-    [self test3];
+    [self test4];
 }
 
 - (void)testBLock {
@@ -90,5 +90,11 @@
     CFRelease(uuidRef);
     NSString *uuidStr = (__bridge_transfer NSString *)uuid;
     NSLog(@"uuid-%@",uuidStr);
+}
+
+- (void)test4 {
+    char *str = "aabbcc";
+    char *p = str + 2;
+    NSLog(@"%s",p);
 }
 @end

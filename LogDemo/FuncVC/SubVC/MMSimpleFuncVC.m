@@ -11,6 +11,11 @@
 #import "MMSimpleFuncModel.h"
 
 @interface MMSimpleFuncVC ()
+@property (nonatomic, strong) NSArray *strongArray;
+@property (nonatomic, copy) NSArray *cpArray;
+
+@property (nonatomic, strong) NSMutableArray *strongMutableArray;
+@property (nonatomic, strong) NSMutableArray *cpMutableArray;
 
 @end
 
@@ -20,7 +25,7 @@
     [super viewDidLoad];
 
 //    [self testFuncA];
-    [self test4];
+    [self test5];
 }
 
 - (void)testBLock {
@@ -96,5 +101,34 @@
     char *str = "aabbcc";
     char *p = str + 2;
     NSLog(@"%s",p);
+}
+
+- (void)test5 {
+    MMSimpleFuncModel *model_1 = [[MMSimpleFuncModel alloc] init];
+    model_1.keyType = @"beddesc";
+    model_1.content = @"c1";
+    MMSimpleFuncModel *model_2 = [[MMSimpleFuncModel alloc] init];
+    model_2.keyType = @"multibed";
+    model_2.content = @"c2";
+    NSArray *array_2 = @[model_1,model_2];
+    NSMutableArray *array_1 = [NSMutableArray arrayWithArray:array_2];
+
+    self.strongArray = array_1;
+    self.cpArray = array_1;
+    NSLog(@"%p",array_1);
+    NSLog(@"%@,%@, %p,%p",self.strongArray,self.cpArray,self.strongArray,self.cpArray);
+    model_1 = nil;
+    NSLog(@"%p",array_1);
+    NSLog(@"%@,%@, %p,%p",self.strongArray,self.cpArray,self.strongArray,self.cpArray);
+    self.strongArray = [array_1 copy];
+    self.cpArray = [array_1 copy];
+    NSLog(@"%p",array_1);
+    NSLog(@"%@,%@, %p,%p",self.strongArray,self.cpArray,self.strongArray,self.cpArray);
+//    self.strongMutableArray = [array_2 mutableCopy];
+//    self.cpMutableArray = [array_2 copy]; //必崩
+//        NSLog(@"%p",array_2);
+//        NSLog(@"%@,%@, %p,%p",self.strongMutableArray,self.cpMutableArray,self.strongMutableArray,self.cpMutableArray);
+//    [self.cpMutableArray removeLastObject];
+//NSLog(@"%p",array_1);
 }
 @end

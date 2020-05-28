@@ -23,9 +23,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    NSDictionary *dict = @{@"key1": @"value1"};
+    id obj = [dict objectForKey:@"ke1"];
+    NSInteger va1 = [obj integerValue];
+    NSLog(@"val =%zd",va1);
 //    [self testFuncA];
-    [self test5];
+//    [self test5];
 }
 
 - (void)testBLock {

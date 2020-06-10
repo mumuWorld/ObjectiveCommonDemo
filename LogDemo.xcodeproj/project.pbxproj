@@ -22,6 +22,7 @@
 		B418BB2A23D5552200374BEF /* MMSingleLabelCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B418BB2823D5552200374BEF /* MMSingleLabelCVCell.xib */; };
 		B42B78A6240EA73D0013AAB9 /* MMSimpleUIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B78A5240EA73D0013AAB9 /* MMSimpleUIVC.m */; };
 		B42B78AA240EA78C0013AAB9 /* MMCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B78A9240EA78C0013AAB9 /* MMCustomButton.m */; };
+		B42BA76D24913B2500B9E2CD /* MMCustomTableviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B42BA76C24913B2500B9E2CD /* MMCustomTableviewVC.m */; };
 		B42C1E1223D0112500D27E62 /* MMUIDemoTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B42C1E1123D0112500D27E62 /* MMUIDemoTableVC.m */; };
 		B42C1E1423D011CB00D27E62 /* ui_demo_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = B42C1E1323D011CB00D27E62 /* ui_demo_list.plist */; };
 		B42C1E1823D012AF00D27E62 /* MMTextFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B42C1E1723D012AF00D27E62 /* MMTextFieldVC.m */; };
@@ -131,6 +132,8 @@
 		B42B78A5240EA73D0013AAB9 /* MMSimpleUIVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMSimpleUIVC.m; sourceTree = "<group>"; };
 		B42B78A8240EA78C0013AAB9 /* MMCustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCustomButton.h; sourceTree = "<group>"; };
 		B42B78A9240EA78C0013AAB9 /* MMCustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCustomButton.m; sourceTree = "<group>"; };
+		B42BA76B24913B2500B9E2CD /* MMCustomTableviewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCustomTableviewVC.h; sourceTree = "<group>"; };
+		B42BA76C24913B2500B9E2CD /* MMCustomTableviewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCustomTableviewVC.m; sourceTree = "<group>"; };
 		B42C1E1023D0112500D27E62 /* MMUIDemoTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMUIDemoTableVC.h; sourceTree = "<group>"; };
 		B42C1E1123D0112500D27E62 /* MMUIDemoTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMUIDemoTableVC.m; sourceTree = "<group>"; };
 		B42C1E1323D011CB00D27E62 /* ui_demo_list.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ui_demo_list.plist; sourceTree = "<group>"; };
@@ -403,6 +406,8 @@
 				B42B78A5240EA73D0013AAB9 /* MMSimpleUIVC.m */,
 				B4BAA377241F7A450049DFEE /* MMRichTextVC.h */,
 				B4BAA378241F7A450049DFEE /* MMRichTextVC.m */,
+				B42BA76B24913B2500B9E2CD /* MMCustomTableviewVC.h */,
+				B42BA76C24913B2500B9E2CD /* MMCustomTableviewVC.m */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -963,6 +968,7 @@
 				B4F9F46D2452F1B300097200 /* MMSimpleFuncModel.m in Sources */,
 				B45CF4FF23A9D3C600345FB5 /* MMModelTransform.m in Sources */,
 				B42F3D4523B4502700DAB9E0 /* MMMasonryViewController.m in Sources */,
+				B42BA76D24913B2500B9E2CD /* MMCustomTableviewVC.m in Sources */,
 				401FFC091E11189300E46787 /* main.m in Sources */,
 				B418BB2523D4303800374BEF /* MMCollectionReusableView.m in Sources */,
 				B44E09E323C70F62001CAFE5 /* MMAnimationViewController.m in Sources */,

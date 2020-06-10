@@ -62,5 +62,15 @@
 		<key>text</key>
 		<string>label</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Tableview优化</string>
+		<key>url</key>
+		<string>tableview新特性</string>
+		<key>router</key>
+		<string>MMCustomTableviewVC</string>
+		<key>text</key>
+		<string>label</string>
+	</dict>
 </array>
 </plist>

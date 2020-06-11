@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MMSimpleFuncModel : NSObject
+@property (nonatomic, assign) NSInteger type;
 @property (nonatomic, copy) NSString *keyType;
 @property (nonatomic, copy) NSString *content;
 @end

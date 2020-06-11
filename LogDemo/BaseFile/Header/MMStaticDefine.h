@@ -23,7 +23,7 @@
                              [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String],  \
                              __LINE__, __func__);                                                        \
                              (NSLog)((format), ##__VA_ARGS__);                                           \
-                             fprintf(stderr, "-------\n");                                               \
+                                                                                                         \
                            } while (0)
 
 #define NSLogRect(rect) NSLog(@"%s x:%.4f, y:%.4f, w:%.4f, h:%.4f", #rect, rect.origin.x, rect.origin.y, rect.size.width, rect.size.height)

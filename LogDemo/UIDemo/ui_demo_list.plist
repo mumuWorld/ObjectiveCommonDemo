@@ -64,11 +64,29 @@
 	</dict>
 	<dict>
 		<key>title</key>
+		<string>Xib_UI示例</string>
+		<key>url</key>
+		<string>BaseAnimation</string>
+		<key>router</key>
+		<string>MMSImpleXibUIVC</string>
+		<key>text</key>
+		<string>label</string>
+	</dict>
+	<dict>
+		<key>title</key>
 		<string>Tableview优化</string>
 		<key>url</key>
 		<string>tableview新特性</string>
 		<key>router</key>
 		<string>MMCustomTableviewVC</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Masonry约束</string>
+		<key>url</key>
+		<string>BaseAnimation</string>
+		<key>router</key>
+		<string>MMMasonryViewController</string>
 		<key>text</key>
 		<string>label</string>
 	</dict>

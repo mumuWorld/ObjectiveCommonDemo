@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
 }
 
 - (void)crash_01 {
@@ -24,6 +24,10 @@
     id testData = [NSNumber numberWithInt:123];
     id obj = [NSKeyedUnarchiver unarchiveObjectWithData:testData];
     NSLog(@"obj=%@",obj);
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self crash_01];
 }
 /*
 #pragma mark - Navigation

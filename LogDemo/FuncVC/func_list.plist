@@ -18,5 +18,21 @@
 		<key>text</key>
 		<string>block</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>手势优先级测试</string>
+		<key>router</key>
+		<string>MMTouchPriorityVC</string>
+		<key>text</key>
+		<string>block</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>GCD测试</string>
+		<key>router</key>
+		<string>MMGCDTestVC</string>
+		<key>text</key>
+		<string>gcd</string>
+	</dict>
 </array>
 </plist>

@@ -86,52 +86,43 @@
 
 #pragma mark --代理
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSLog(@"numberOfSectionsInTableView");
+//    NSLog(@"numberOfSectionsInTableView");
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"numberOfRowsInSection");
+//    NSLog(@"numberOfRowsInSection");
     return 1000;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"cellForRowAtIndexPath");
+//    NSLog(@"cellForRowAtIndexPath");
     MMHomeListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MMHomeListTableViewCell" forIndexPath:indexPath];
     [cell loadModel:self.listArray[indexPath.row % 10]];
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"heightForRowAtIndexPath");
+//    NSLog(@"heightForRowAtIndexPath");
     return 100;
 }
 
 - (void)tableView:(nonnull UITableView *)tableView prefetchRowsAtIndexPaths:(nonnull NSArray<NSIndexPath *> *)indexPaths {
-    NSLog(@"prefetchRows->%@",indexPaths);
+//    NSLog(@"prefetchRows->%@",indexPaths);
 }
 
 - (void)tableView:(UITableView *)tableView cancelPrefetchingForRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths {
-    NSLog(@"cancelPrefetch->%@",indexPaths);
+//    NSLog(@"cancelPrefetch->%@",indexPaths);
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     MMHomeListModel *model = self.listArray[indexPath.row % 10];
-    if (indexPath.row == 0) {
+//    if (indexPath.row == 0) {
 //        L3game_WebViewController *webView = [[L3game_WebViewController alloc] initWithDict:@{@"url":@"https://www.baidu.com/"}];
 //        NavViewController *navi = [[NavViewController alloc] initWithRootViewController:webView];
 //        navi.modalPresentationStyle = UIModalPresentationFullScreen;
 //        [self.navigationController presentViewController:navi animated:true completion:nil];
-        
-        MMMasonryViewController *vc = [[MMMasonryViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:true];
-    } else if (indexPath.row == 1) {
-        MMLayerTestViewController *vc = [[MMLayerTestViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:true];
-    } else if (indexPath.row == 2) {
-        MMCrashTestViewController *vc = [[MMCrashTestViewController alloc] init];
-        [self.navigationController pushViewController:vc animated:true];
-    } else if (model.router.length > 0) {
+    if (model.router.length > 0) {
         Class class = NSClassFromString(model.router);
         id target = [[class alloc] init];
         [self.navigationController pushViewController:target animated:true];

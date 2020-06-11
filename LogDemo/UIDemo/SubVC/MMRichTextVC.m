@@ -47,6 +47,28 @@
     [self.view addSubview:self.testImage];
     
 }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self testParamFunc];
+}
+- (void)testParamFunc {
+    UIFont *font = [UILabel new].font;
+    CGFloat systemSize = [UIFont systemFontSize];
+    
+    NSLog(@"%f---sys:%f",font.pointSize,systemSize);
+    UIFont *comFont = [UIFont systemFontOfSize:systemSize];
+    NSLog(@"familyName-%@",comFont.familyName);
+    NSLog(@"fontName-%@",comFont.fontName);
+    NSLog(@"pointSize-%f",comFont.pointSize);
+    NSLog(@"ascender-%f",comFont.ascender);
+    NSLog(@"descender-%f",comFont.descender);
+    //大写字符
+    NSLog(@"capHeight-%f",comFont.capHeight);
+    //x 字母
+    NSLog(@"xHeight-%f",comFont.xHeight);
+    NSLog(@"lineHeight-%f",comFont.lineHeight);
+    //行之间的高度
+    NSLog(@"leading-%f",comFont.leading);
+}
 
 - (UILabel *)richTextLabel {
     if (!_richTextLabel) {

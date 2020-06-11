@@ -17,10 +17,13 @@
 @property (nonatomic, strong) NSMutableArray *strongMutableArray;
 @property (nonatomic, strong) NSMutableArray *cpMutableArray;
 
+@property (nonatomic, strong) NSTimer *timer;
 @end
 
 @implementation MMSimpleFuncVC
-
+- (void)dealloc {
+    NSLog(@"dealloc->%@",self.timer);
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSDictionary *dict = @{@"key1": @"value1"};
@@ -28,7 +31,7 @@
     NSInteger va1 = [obj integerValue];
     NSLog(@"val =%zd",va1);
 //    [self testFuncA];
-    [self test2];
+    [self testTimer];
 }
 
 - (void)testBLock {
@@ -50,9 +53,10 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    MMPresentTestVC *test = [[MMPresentTestVC alloc] init];
-    test.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self.navigationController presentViewController:test animated:true completion:nil];
+    [self.timer invalidate];
+//    MMPresentTestVC *test = [[MMPresentTestVC alloc] init];
+//    test.modalPresentationStyle = UIModalPresentationFullScreen;
+//    [self.navigationController presentViewController:test animated:true completion:nil];
 }
 
 /// 谓词测试
@@ -241,4 +245,14 @@
     NSTimeInterval timer = [date timeIntervalSince1970];
     NSLog(@"timer->%f",timer);
 }
+- (void)handleTimerInvoke:(id)sender {
+    NSLog(@"%@",sender);
+}
+- (void)testTimer {
+    self.timer = [NSTimer timerWithTimeInterval:3 target:self selector:@selector(handleTimerInvoke:) userInfo:nil repeats:true];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    [self.timer fire];
+}
+
+
 @end

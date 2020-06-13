@@ -58,6 +58,7 @@
 		B49BADF42434790E00A41D14 /* MMFuncTestListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BADF32434790E00A41D14 /* MMFuncTestListVC.m */; };
 		B49BADF6243479D700A41D14 /* func_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49BADF5243479D700A41D14 /* func_list.plist */; };
 		B49BADF924347A1000A41D14 /* MMOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BADF824347A1000A41D14 /* MMOperationViewController.m */; };
+		B49F8BBA24937D8800D05E43 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49F8BB924937D8800D05E43 /* Property List.plist */; };
 		B4B9BE6B2462B8CD00AD0F9B /* MMSImpleXibUIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B9BE692462B8CD00AD0F9B /* MMSImpleXibUIVC.m */; };
 		B4B9BE6C2462B8CD00AD0F9B /* MMSImpleXibUIVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B9BE6A2462B8CD00AD0F9B /* MMSImpleXibUIVC.xib */; };
 		B4BAA364241F62910049DFEE /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BAA355241F62910049DFEE /* SettingView.xib */; };
@@ -96,6 +97,8 @@
 		B4F9F4712453036200097200 /* MMTouchPriorityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9F46F2453036200097200 /* MMTouchPriorityVC.m */; };
 		B4F9F4722453036200097200 /* MMTouchPriorityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F9F4702453036200097200 /* MMTouchPriorityVC.xib */; };
 		B4F9F4752453063B00097200 /* MMTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9F4742453063B00097200 /* MMTouchView.m */; };
+		B4FF166F2494F15300D5E3C7 /* MMUILabelTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FF166D2494F15300D5E3C7 /* MMUILabelTestVC.m */; };
+		B4FF16702494F15300D5E3C7 /* MMUILabelTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4FF166E2494F15300D5E3C7 /* MMUILabelTestVC.xib */; };
 		F65A0185E40634F33D177994 /* libPods-LogDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C6470A7553DA6D1121D34B /* libPods-LogDemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -211,6 +214,7 @@
 		B49BADF5243479D700A41D14 /* func_list.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = func_list.plist; sourceTree = "<group>"; };
 		B49BADF724347A1000A41D14 /* MMOperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMOperationViewController.h; sourceTree = "<group>"; };
 		B49BADF824347A1000A41D14 /* MMOperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMOperationViewController.m; sourceTree = "<group>"; };
+		B49F8BB924937D8800D05E43 /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		B4B9BE682462B8CD00AD0F9B /* MMSImpleXibUIVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMSImpleXibUIVC.h; sourceTree = "<group>"; };
 		B4B9BE692462B8CD00AD0F9B /* MMSImpleXibUIVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMSImpleXibUIVC.m; sourceTree = "<group>"; };
 		B4B9BE6A2462B8CD00AD0F9B /* MMSImpleXibUIVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMSImpleXibUIVC.xib; sourceTree = "<group>"; };
@@ -282,6 +286,9 @@
 		B4F9F4702453036200097200 /* MMTouchPriorityVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMTouchPriorityVC.xib; sourceTree = "<group>"; };
 		B4F9F4732453063B00097200 /* MMTouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTouchView.h; sourceTree = "<group>"; };
 		B4F9F4742453063B00097200 /* MMTouchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTouchView.m; sourceTree = "<group>"; };
+		B4FF166C2494F15300D5E3C7 /* MMUILabelTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMUILabelTestVC.h; sourceTree = "<group>"; };
+		B4FF166D2494F15300D5E3C7 /* MMUILabelTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMUILabelTestVC.m; sourceTree = "<group>"; };
+		B4FF166E2494F15300D5E3C7 /* MMUILabelTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMUILabelTestVC.xib; sourceTree = "<group>"; };
 		C2E126922316D93E11BDD483 /* Pods-LogDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogDemoTests.release.xcconfig"; path = "Target Support Files/Pods-LogDemoTests/Pods-LogDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -308,6 +315,7 @@
 		401FFBFB1E11189300E46787 = {
 			isa = PBXGroup;
 			children = (
+				B49F8BB924937D8800D05E43 /* Property List.plist */,
 				401FFC061E11189300E46787 /* LogDemo */,
 				401FFC201E11189300E46787 /* LogDemoTests */,
 				401FFC051E11189300E46787 /* Products */,
@@ -436,6 +444,9 @@
 				B4B9BE682462B8CD00AD0F9B /* MMSImpleXibUIVC.h */,
 				B4B9BE692462B8CD00AD0F9B /* MMSImpleXibUIVC.m */,
 				B4B9BE6A2462B8CD00AD0F9B /* MMSImpleXibUIVC.xib */,
+				B4FF166C2494F15300D5E3C7 /* MMUILabelTestVC.h */,
+				B4FF166D2494F15300D5E3C7 /* MMUILabelTestVC.m */,
+				B4FF166E2494F15300D5E3C7 /* MMUILabelTestVC.xib */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -899,12 +910,14 @@
 				B44E09E523C71634001CAFE5 /* animation_list.plist in Resources */,
 				401FFC141E11189300E46787 /* Assets.xcassets in Resources */,
 				B4F9F4722453036200097200 /* MMTouchPriorityVC.xib in Resources */,
+				B49F8BBA24937D8800D05E43 /* Property List.plist in Resources */,
 				B45CF50B23A9F34300345FB5 /* home_list.plist in Resources */,
 				B44E09DC23C46C8B001CAFE5 /* 未使用图片.txt in Resources */,
 				B45CF4FC23A9D06C00345FB5 /* MMHomeListTableViewCell.xib in Resources */,
 				B49BADF6243479D700A41D14 /* func_list.plist in Resources */,
 				B4F4BA7823CEE10000ACFC52 /* core_animation_list.plist in Resources */,
 				B418BB2A23D5552200374BEF /* MMSingleLabelCVCell.xib in Resources */,
+				B4FF16702494F15300D5E3C7 /* MMUILabelTestVC.xib in Resources */,
 				B4B9BE6C2462B8CD00AD0F9B /* MMSImpleXibUIVC.xib in Resources */,
 				B4BAA364241F62910049DFEE /* SettingView.xib in Resources */,
 				B4F4BA8423CF28F900ACFC52 /* collection_layout_list.plist in Resources */,
@@ -978,6 +991,7 @@
 				B4F9F4752453063B00097200 /* MMTouchView.m in Sources */,
 				B44E09F823C72F77001CAFE5 /* UIButton+MMCategory.m in Sources */,
 				B4CB4AD5246D2C5F00E25C74 /* MMGCDTestVC.m in Sources */,
+				B4FF166F2494F15300D5E3C7 /* MMUILabelTestVC.m in Sources */,
 				B45CF4F623A9CCB300345FB5 /* MMHomeListViewController.m in Sources */,
 				B445C76A23C340AB005640F7 /* MMCrashTestViewController.m in Sources */,
 				B418BB2923D5552200374BEF /* MMSingleLabelCVCell.m in Sources */,
@@ -1190,7 +1204,7 @@
 				);
 				INFOPLIST_FILE = LogDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mumu.base.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumu.base.signTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1213,7 +1227,7 @@
 				);
 				INFOPLIST_FILE = LogDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.mumu.base.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mumu.base.signTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

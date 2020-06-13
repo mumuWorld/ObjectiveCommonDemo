@@ -9,5 +9,11 @@
 #import "MMSimpleFuncModel.h"
 
 @implementation MMSimpleFuncModel
-
+- (BOOL)isEqual:(id)object {
+    if (![object isKindOfClass:[MMSimpleFuncModel class]]) {
+        return false;
+    }
+    MMSimpleFuncModel *model = object;
+    return [self.keyType isEqual:model.keyType];
+}
 @end

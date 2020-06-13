@@ -27,14 +27,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.testLabel = [[UILabel alloc] init];
+    self.testLabel.numberOfLines = 0;
     [self.view addSubview:self.testLabel];
     
-    self.testLabel.text = @"测试Label";
+    self.testLabel.text = @"测试Label测试Label测试Label测试Label测试Label测试Label测试Label测试Label测试Label";
     CGSize size = [self.testLabel intrinsicContentSize];
-    self.testLabel.size = CGSizeMake(size.width + 20, size.height + 20);
+//    self.testLabel.size = CGSizeMake(size.width + 20, size.height + 20);
+    self.testLabel.size = size;
     self.testLabel.center = self.view.center;
     self.testLabel.backgroundColor = UIColor.cyanColor;
+//
     NSLogSize(size);
+    
+    //对齐方式测试
+    UILabel *customLabel = [[UILabel alloc] init];
+    customLabel.numberOfLines = 0;
+    customLabel.textAlignment = NSTextAlignmentJustified;
+    customLabel.backgroundColor = UIColor.cyanColor;
+    customLabel.y = self.testLabel.y + 50;
+    customLabel.width = 100;
+    customLabel.x = 100;
+    customLabel.height = 100;
+    customLabel.text = self.testLabel.text;
+    [self.view addSubview:customLabel];
+    
+    
     
     [self.view addSubview:self.customBtn];
     self.manager = [[AFHTTPSessionManager alloc] init];

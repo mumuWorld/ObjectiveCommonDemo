@@ -31,7 +31,7 @@
     NSInteger va1 = [obj integerValue];
     NSLog(@"val =%zd",va1);
 //    [self testFuncA];
-    [self testTimer];
+    [self testEqualArray];
 }
 
 - (void)testBLock {
@@ -52,6 +52,28 @@
     NSLog(@"a");
 }
 
+- (void)testEqualArray {
+    MMSimpleFuncModel *model_1 = [[MMSimpleFuncModel alloc] init];
+    model_1.keyType = @"beddesc";
+    model_1.content = @"c1";
+    MMSimpleFuncModel *model_2 = [[MMSimpleFuncModel alloc] init];
+    model_2.keyType = @"multibed";
+    model_2.content = @"c2";
+    MMSimpleFuncModel *model_3 = [[MMSimpleFuncModel alloc] init];
+    model_3.keyType = @"multibed";
+    model_3.content = @"c2";
+    NSArray *array_1 = @[model_1,model_2];
+    NSArray *array_2 = @[model_1,model_2];
+    NSArray *array_3 = @[model_1,model_3];
+    BOOL equal = [array_1 isEqual:array_2];
+    BOOL equal_2 = [array_1 isEqualToArray:array_2];
+    BOOL equal_3 = array_1 == array_2;
+    
+    BOOL equal_2_1 = [array_1 isEqual:array_3];
+    BOOL equal_2_2 = [array_1 isEqualToArray:array_3];
+    BOOL equal_2_3 = array_1 == array_3;
+    NSLog(@"resutl");
+}
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.timer invalidate];
 //    MMPresentTestVC *test = [[MMPresentTestVC alloc] init];

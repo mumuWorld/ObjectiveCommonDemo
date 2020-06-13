@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>AppIDName</key>
+    <string>XC Wildcard</string>
+    <key>ApplicationIdentifierPrefix</key>
+    <array>
+    <string>T6H68KJ4WD</string>
+    </array>
+    <key>CreationDate</key>
+    <date>2020-06-12T08:54:55Z</date>
+    <key>Platform</key>
+    <array>
+        <string>iOS</string>
+    </array>
+    <key>IsXcodeManaged</key>
+    <true/>
+    <key>DeveloperCertificates</key>
+    <array>
+        <data>MIIFpzCCBI+gAwIBAgIIUIcc9gXJaGcwDQYJKoZIhvcNAQELBQAwgZYxCzAJBgNVBAYTAlVTMRMwEQYDVQQKDApBcHBsZSBJbmMuMSwwKgYDVQQLDCNBcHBsZSBXb3JsZHdpZGUgRGV2ZWxvcGVyIFJlbGF0aW9uczFEMEIGA1UEAww7QXBwbGUgV29ybGR3aWRlIERldmVsb3BlciBSZWxhdGlvbnMgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkwHhcNMjAwNjAzMDg0MjExWhcNMjEwNjAzMDg0MjExWjCBhTEaMBgGCgmSJomT8ixkAQEMClQ2SDY4S0o0V0QxMjAwBgNVBAMMKUFwcGxlIERpc3RyaWJ1dGlvbjogam9lIHlhbmcgKFQ2SDY4S0o0V0QpMRMwEQYDVQQLDApUNkg2OEtKNFdEMREwDwYDVQQKDAhqb2UgeWFuZzELMAkGA1UEBhMCVVMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDBCZ85tKLn9flBwIQongdcTWuqLilX/G/c89TnrymOUZFELfGFaBaLKHgGrcv33AzSwIULd1fgA1zoMGN+IShB/StBvlsWG/ZYwo55y7ckoUJn58g5KJmcs7F/x4oDDJ4uXzcY940bTfdlhSRmfm1ji/I5bRi9CCi8lpQ0WtlI8g4FlBbSfRVjMVxnw7jMOvGwKHWf0wf2vtXTxiSazxGOQL+lt9bLVPuB/6hd+nin0bgJVJ54QcK2elzgfJ14N5HBSyH1stDdh+z2CnQYbEsRqbeQammZgDwZ0gMXO56D7xpIPkfo0uOE2VaNBBh9jvZD9Rmh/lW0JNPItQcqC9ZDAgMBAAGjggIGMIICAjAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFIgnFwmpthhgi+zruvZHWcVSVKO3MD8GCCsGAQUFBwEBBDMwMTAvBggrBgEFBQcwAYYjaHR0cDovL29jc3AuYXBwbGUuY29tL29jc3AwMy13d2RyMjAwggEdBgNVHSAEggEUMIIBEDCCAQwGCSqGSIb3Y2QFATCB/jCBwwYIKwYBBQUHAgIwgbYMgbNSZWxpYW5jZSBvbiB0aGlzIGNlcnRpZmljYXRlIGJ5IGFueSBwYXJ0eSBhc3N1bWVzIGFjY2VwdGFuY2Ugb2YgdGhlIHRoZW4gYXBwbGljYWJsZSBzdGFuZGFyZCB0ZXJtcyBhbmQgY29uZGl0aW9ucyBvZiB1c2UsIGNlcnRpZmljYXRlIHBvbGljeSBhbmQgY2VydGlmaWNhdGlvbiBwcmFjdGljZSBzdGF0ZW1lbnRzLjA2BggrBgEFBQcCARYqaHR0cDovL3d3dy5hcHBsZS5jb20vY2VydGlmaWNhdGVhdXRob3JpdHkvMBYGA1UdJQEB/wQMMAoGCCsGAQUFBwMDMB0GA1UdDgQWBBSnH1N53wCELZsDWuLdl6aNqf0bUDAOBgNVHQ8BAf8EBAMCB4AwEwYKKoZIhvdjZAYBBwEB/wQCBQAwEwYKKoZIhvdjZAYBBAEB/wQCBQAwDQYJKoZIhvcNAQELBQADggEBAE5UZ8+nD1a8GRZpCRIpF0hqN2QAwMv+6wCqrG2lPqia8nMrgEH9vth5BJkjRRPmYtMCeaHksH1iidOKj6f0pPS9DiwbhBJevqLHnh17CwB1B4rEr3KhS1IrlS81fANaeMqeIv9rvldlescKLvzOQY20UiiwbPcIA7cIVyAFJDVRiPAeyw03LYbawRPGxhmMnpvBjBNmirWBjqx3/AunOfGy/Qz+asRKBblYL88aZMET4Mwa5jbL5/z3mLylaXruOae1YM6DzmVk2skJQX8aPiAjRNTkn3Lww4CPC/LLwk4iGJylVQZKhOvljlRCHfBVC6cce8ESfUnqI6pWaEDl9KA=</data>
+    </array>
+
+
+    <key>Entitlements</key>
+    <dict>
+        <key>beta-reports-active</key>
+        <true/>
+
+                <key>application-identifier</key>
+        <string>T6H68KJ4WD.*</string>
+
+                <key>keychain-access-groups</key>
+        <array>
+                <string>T6H68KJ4WD.*</string>
+        </array>
+
+                <key>get-task-allow</key>
+        <false/>
+
+                <key>com.apple.developer.team-identifier</key>
+        <string>T6H68KJ4WD</string>
+
+    </dict>
+    <key>ExpirationDate</key>
+    <date>2021-06-03T08:42:11Z</date>
+    <key>Name</key>
+    <string>iOS Team Store Provisioning Profile: *</string>
+    <key>TeamIdentifier</key>
+    <array>
+        <string>T6H68KJ4WD</string>
+    </array>
+    <key>TeamName</key>
+    <string>joe yang</string>
+    <key>TimeToLive</key>
+    <integer>355</integer>
+    <key>UUID</key>
+    <string>898e8dc3-bbe9-4ef8-b64b-91f9df6f02fd</string>
+    <key>Version</key>
+    <integer>1</integer>
+</dict>
+</plist>

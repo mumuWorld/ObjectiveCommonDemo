@@ -31,7 +31,8 @@
 #define NSLogPoint(point) NSLog(@"%s x:%.4f, y:%.4f", #point, point.x, point.y)
 
 #else // 生产
-#define NSLog(format, ...) ""
+#define NSLog(format, ...)
+#define NSLogSize(size)
 #endif
 
 #import "MMConstDefine.h"

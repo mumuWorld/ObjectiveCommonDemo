@@ -10,6 +10,7 @@
 #import "MMCustomButton.h"
 #import <AFNetworking/AFNetworking.h>
 #import "MMCircleView.h"
+#import "UIView+MMCategory.h"
 
 @interface MMSimpleUIVC ()
 @property (nonatomic, strong) UILabel *testLabel;
@@ -20,6 +21,7 @@
 
 @property (nonatomic, strong) MMCircleView *circleView;
 
+@property (nonatomic, strong) UIView *bottomView;
 @end
 
 @implementation MMSimpleUIVC
@@ -68,6 +70,14 @@
     self.circleView = [[MMCircleView alloc] initWithFrame:CGRectMake(50, 200, 100, 100)];
     self.circleView.backgroundColor = UIColor.cyanColor;
     [self.view addSubview:self.circleView];
+    
+    UIView *bottom = [[UIView alloc] initWithFrame:CGRectMake(0, 500, ScreenWidth, 200)];
+    bottom.backgroundColor = UIColor.clearColor;
+    UIColor *firstColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.0f];
+    UIColor *endColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:1];
+    [bottom setColors:@[firstColor, endColor] withDirectionType:kGradientColorDirectionTypeVertical];
+    self.bottomView = bottom;
+    [self.view addSubview:bottom];
 }
 
 - (void)viewWillLayoutSubviews {

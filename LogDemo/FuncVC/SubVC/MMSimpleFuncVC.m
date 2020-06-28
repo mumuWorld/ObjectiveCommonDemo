@@ -9,6 +9,7 @@
 #import "MMSimpleFuncVC.h"
 #import "MMPresentTestVC.h"
 #import "MMSimpleFuncModel.h"
+#import "MMGCDTestTool.h"
 
 @interface MMSimpleFuncVC ()
 @property (nonatomic, strong) NSArray *strongArray;
@@ -26,12 +27,19 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *dict = @{@"key1": @"value1"};
-    id obj = [dict objectForKey:@"ke1"];
-    NSInteger va1 = [obj integerValue];
-    NSLog(@"val =%zd",va1);
+    NSDictionary *dict = @{@"key1": @"value1",
+                           @"key2": @"value2"
+    };
+//    NSDictionary *dict2 = [NSDictionary dictionaryWithDictionary:dict];
+//    id obj = [dict objectForKey:@"ke1"];
+//    NSInteger va1 = [obj integerValue];
+//    NSLog(@"val =%zd",va1);
+//
+//    [dict2 setValue:@"value_test" forKey:@"key2"];
+    
 //    [self testFuncA];
-    [self testEqualArray];
+//    [self testEqualArray];
+    [MMGCDTestTool test];
 }
 
 - (void)testBLock {
@@ -62,9 +70,12 @@
     MMSimpleFuncModel *model_3 = [[MMSimpleFuncModel alloc] init];
     model_3.keyType = @"multibed";
     model_3.content = @"c2";
+    MMSimpleFuncModel *model_4 = [model_1 copy];
     NSArray *array_1 = @[model_1,model_2];
     NSArray *array_2 = @[model_1,model_2];
     NSArray *array_3 = @[model_1,model_3];
+    NSArray *array_4 = [array_1 copy];
+    NSArray *array_5 = array_1;
     BOOL equal = [array_1 isEqual:array_2];
     BOOL equal_2 = [array_1 isEqualToArray:array_2];
     BOOL equal_3 = array_1 == array_2;

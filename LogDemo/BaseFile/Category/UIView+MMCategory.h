@@ -33,4 +33,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+//渐变的方向
+typedef NS_ENUM(NSUInteger,kGradientColorDirectionType) {
+    kGradientColorDirectionTypeVertical, // 垂直竖向
+    kGradientColorDirectionTypeHorizontal, // 水平横向
+};
+
+@interface UIView (MMGradientLayer)
+- (void)setColors:(NSArray *)colors withDirectionType:(kGradientColorDirectionType)directionType;
+@end
 NS_ASSUME_NONNULL_END

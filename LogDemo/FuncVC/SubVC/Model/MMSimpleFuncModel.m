@@ -16,4 +16,20 @@
     MMSimpleFuncModel *model = object;
     return [self.keyType isEqual:model.keyType];
 }
+
+//- (id)copy {
+//    MMSimpleFuncModel *model = [MMSimpleFuncModel new];
+//    model.keyType = _keyType;
+//    model.type = _type;
+//    model.content = _content;
+//    return model;
+//}
+
+- (id)copyWithZone:(NSZone *)zone {
+    MMSimpleFuncModel *model = [MMSimpleFuncModel new];
+    model.keyType = _keyType;
+    model.type = _type;
+    model.content = _content;
+    return model;
+}
 @end

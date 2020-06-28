@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MMGCDTestTool : NSObject
 + (void)gcd_groupTest1;
+
++ (void)test;
 @end
 
 NS_ASSUME_NONNULL_END

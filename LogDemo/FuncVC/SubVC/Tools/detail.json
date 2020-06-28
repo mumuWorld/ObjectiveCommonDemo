@@ -1,0 +1,2721 @@
+
+{
+  "ErrorCode": "",
+  "ErrorMessage": "",
+  "IsError": false,
+  "address": "万德庄大街1号",
+  "appNewMemberLoginBanner": [],
+  "areaName": "滨江道/小白楼/五大道风景区",
+  "baseAttributes": {
+    "orderFrom": "58057"
+  },
+  "bigOperatingTip": {
+    "appLoginTipType": 0,
+    "bgPicActionLink": "",
+    "bgPicActionType": 0,
+    "bgPicAspectRatio": "0.136",
+    "bgPicColor": "#FFF9F2",
+    "bgPicRadius": "8",
+    "bgPicUrl": "",
+    "buttonActionLink": "https://mp.elong.com/mobilepromotion/dynamicgrasp/index/?newactivityid=925b9362-4004-4187-a6e7-28c1f82d03e7&if=20255",
+    "buttonActionType": 2,
+    "buttonBgColor": "",
+    "buttonBorderColor": "#C39F77",
+    "buttonShowType": 0,
+    "buttonWord": "查看",
+    "buttonWordColor": "#915E27",
+    "buttonWordFont": "24",
+    "firstFont": "26",
+    "firstNormalColor": "#333333",
+    "firstSpecialColor": "#FF5555",
+    "firstTitle": "[单单有礼]：本单享新客专属红包福利",
+    "frequencyType": 3,
+    "iconUrl": "http://m.elongstatic.com/mobileapi/hotel/operatingtip/order_reward@3x.png",
+    "id": "tc123order",
+    "isCanClose": false,
+    "priority": 979,
+    "secondFont": "",
+    "secondNormalColor": "",
+    "secondSpecialColor": "",
+    "secondTitle": "",
+    "type": 6,
+    "updateCacheTime": false
+  },
+  "bookingTip": "",
+  "cityId": "0301",
+  "cityName": "天津市",
+  "collectionPrice": 381,
+  "comment": {
+    "BadCommentCount": 4,
+    "CommentDes": "棒极啦",
+    "CommentScore": 4.8,
+    "GoodCommentCount": 175,
+    "hotelDetailPageTags": [
+      {
+        "commentCount": 19,
+        "mainTagId": "10080",
+        "mainTagName": "地理位置好",
+        "polarity": 1,
+        "type": 0
+      },
+      {
+        "commentCount": 9,
+        "mainTagId": "10079",
+        "mainTagName": "交通便利",
+        "polarity": 1,
+        "type": 0
+      },
+      {
+        "commentCount": 11,
+        "mainTagId": "10012",
+        "mainTagName": "出行方便",
+        "polarity": 1,
+        "type": 0
+      },
+      {
+        "commentCount": 6,
+        "mainTagId": "10089",
+        "mainTagName": "停车方便",
+        "polarity": 1,
+        "type": 0
+      }
+    ],
+    "totalCount": 179
+  },
+  "commentDes": "棒极啦",
+  "commentPoint": 0.98,
+  "commentScore": 4.79999999999999982236431605997495353221893310546875,
+  "commonKV": {
+    "facilityInfoAbTest": "A",
+    "salesinkAB": true,
+    "detailRevisionAB": "A"
+  },
+  "currentTime": 1591973113799,
+  "decorateType": 0,
+  "enHanceType": 0,
+  "enhanceDes": [],
+  "exposedFastFilterInfos": [
+    {
+      "Count": 1,
+      "Id": 0,
+      "KeyWord_cn": "房型筛选",
+      "TypeId": 1100,
+      "hasProduct": false,
+      "hasSubNode": true,
+      "selectMode": false,
+      "subFastFilterIns": [
+        {
+          "Count": 0,
+          "Id": 0,
+          "KeyWord_cn": "支付方式",
+          "TypeId": 0,
+          "hasProduct": false,
+          "hasSubNode": true,
+          "selectMode": true,
+          "subFastFilterIns": [
+            {
+              "Count": 1,
+              "Id": 100000001,
+              "KeyWord_cn": "在线付",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 29
+            },
+            {
+              "Count": 1,
+              "Id": 100000002,
+              "KeyWord_cn": "到店付",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 30
+            }
+          ],
+          "uniqueID": 0
+        },
+        {
+          "Count": 0,
+          "Id": 0,
+          "KeyWord_cn": "服务(可多选)",
+          "TypeId": 0,
+          "hasProduct": false,
+          "hasSubNode": true,
+          "selectMode": false,
+          "subFastFilterIns": [
+            {
+              "Count": 1,
+              "Id": 139,
+              "KeyWord_cn": "免费取消",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 101
+            },
+            {
+              "Count": 1,
+              "Id": 138,
+              "KeyWord_cn": "同程艺龙直销",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 103
+            },
+            {
+              "Count": 1,
+              "Id": 141,
+              "KeyWord_cn": "立即确认",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 102
+            }
+          ],
+          "uniqueID": 0
+        }
+      ],
+      "uniqueID": 0
+    }
+  ],
+  "facilities": [
+    {
+      "faciltyId": 0,
+      "isProvide": true,
+      "name": "WiFi",
+      "sort": 1.0,
+      "type": 110
+    },
+    {
+      "faciltyId": 0,
+      "isProvide": true,
+      "name": "免费停车",
+      "sort": 2.0,
+      "type": 120
+    },
+    {
+      "faciltyId": 0,
+      "isProvide": true,
+      "name": "餐厅",
+      "sort": 4.0,
+      "type": 140
+    },
+    {
+      "faciltyId": 0,
+      "isProvide": true,
+      "name": "商务中心",
+      "sort": 16.0,
+      "type": 260
+    },
+    {
+      "faciltyId": 0,
+      "isProvide": true,
+      "name": "唤醒服务",
+      "sort": 17.0,
+      "type": 270
+    },
+    {
+      "faciltyId": 0,
+      "isProvide": true,
+      "name": "电梯",
+      "sort": 18.0,
+      "type": 280
+    },
+    {
+      "faciltyId": 0,
+      "isProvide": true,
+      "name": "行李寄存",
+      "sort": 19.0,
+      "type": 290
+    },
+    {
+      "faciltyId": 0,
+      "isProvide": true,
+      "name": "24小时前台",
+      "sort": 20.0,
+      "type": 300
+    }
+  ],
+  "fastFilterInfo": [
+    {
+      "Count": 1,
+      "Id": 0,
+      "KeyWord_cn": "房型筛选",
+      "TypeId": 1100,
+      "hasProduct": false,
+      "hasSubNode": true,
+      "selectMode": false,
+      "subFastFilterIns": [
+        {
+          "Count": 0,
+          "Id": 0,
+          "KeyWord_cn": "早餐",
+          "TypeId": 0,
+          "hasProduct": false,
+          "hasSubNode": true,
+          "selectMode": true,
+          "subFastFilterIns": [
+            {
+              "Count": 1,
+              "Id": 100000043,
+              "KeyWord_cn": "不含早",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 100
+            },
+            {
+              "Count": 1,
+              "Id": 100000041,
+              "KeyWord_cn": "含单早",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 36
+            },
+            {
+              "Count": 1,
+              "Id": 100000040,
+              "KeyWord_cn": "含双早",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 35
+            },
+            {
+              "Count": 1,
+              "Id": 100000042,
+              "KeyWord_cn": "含三早及以上",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 37
+            }
+          ],
+          "uniqueID": 0
+        },
+        {
+          "Count": 0,
+          "Id": 0,
+          "KeyWord_cn": "支付方式",
+          "TypeId": 0,
+          "hasProduct": false,
+          "hasSubNode": true,
+          "selectMode": true,
+          "subFastFilterIns": [
+            {
+              "Count": 1,
+              "Id": 100000001,
+              "KeyWord_cn": "在线付",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 29
+            },
+            {
+              "Count": 1,
+              "Id": 100000002,
+              "KeyWord_cn": "到店付",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 30
+            }
+          ],
+          "uniqueID": 0
+        },
+        {
+          "Count": 0,
+          "Id": 0,
+          "KeyWord_cn": "服务(可多选)",
+          "TypeId": 0,
+          "hasProduct": false,
+          "hasSubNode": true,
+          "selectMode": false,
+          "subFastFilterIns": [
+            {
+              "Count": 1,
+              "Id": 139,
+              "KeyWord_cn": "免费取消",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 101
+            },
+            {
+              "Count": 1,
+              "Id": 138,
+              "KeyWord_cn": "同程艺龙直销",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 103
+            },
+            {
+              "Count": 1,
+              "Id": 141,
+              "KeyWord_cn": "立即确认",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 102
+            },
+            {
+              "Count": 1,
+              "Id": 140,
+              "KeyWord_cn": "含礼包",
+              "TypeId": 1100,
+              "hasProduct": false,
+              "hasSubNode": false,
+              "selectMode": false,
+              "uniqueID": 104
+            }
+          ],
+          "uniqueID": 0
+        }
+      ],
+      "uniqueID": 0
+    }
+  ],
+  "flags": 60,
+  "gradeFacility": [
+    {
+      "faciltyId": 197,
+      "isProvide": true,
+      "name": "免费停车",
+      "sort": 0.0,
+      "type": 13
+    },
+    {
+      "faciltyId": 1311,
+      "isProvide": true,
+      "name": "餐厅",
+      "sort": 0.0,
+      "type": 19
+    },
+    {
+      "faciltyId": 24,
+      "isProvide": true,
+      "name": "24小时前台",
+      "sort": 0.0,
+      "type": 22
+    },
+    {
+      "faciltyId": 17,
+      "isProvide": true,
+      "name": "行李寄存",
+      "sort": 0.0,
+      "type": 29
+    },
+    {
+      "faciltyId": 10,
+      "isProvide": true,
+      "name": "叫醒服务",
+      "sort": 0.0,
+      "type": 30
+    },
+    {
+      "faciltyId": 201,
+      "isProvide": true,
+      "name": "电梯",
+      "sort": 0.0,
+      "type": 38
+    },
+    {
+      "faciltyId": 207,
+      "isProvide": true,
+      "name": "商务服务",
+      "sort": 0.0,
+      "type": 41
+    }
+  ],
+  "hasVideo": false,
+  "hotelBadge": 3,
+  "hotelBrandInfo": {
+    "brandDesc": "爱自己 住全季\r\n全季酒店是华住旗下针对中档酒店市场的有限服务酒店，以简约而富有品质的设计风格，深受客户喜爱的酒店设施，恰到好处的优质服务，致力于为智慧、练达的精英型商旅客人提供最优质地段的选择。全季酒店选址在中国一、二线城市的商业中心，让客人无需支付五星级酒店的价格，即可享受五星级酒店的地段优势。",
+    "brandId": 29323,
+    "brandName": "全季",
+    "corpId": 34,
+    "corpName": "华住酒店集团"
+  },
+  "hotelDetailRedPacketJson": "{\"hasProductRedPacket\":true}",
+  "hotelFilterRemakeInfo": {
+    "goodsFastFilter": [
+      {
+        "describe": "早餐",
+        "disable": false,
+        "filterId": 1041,
+        "filterIdV4": 1041,
+        "filterList": [
+          {
+            "describe": "含早餐",
+            "disable": false,
+            "filterId": 44,
+            "filterIdV4": 44,
+            "filterName": "含早餐",
+            "filterNameEn": "含早餐",
+            "grey": false,
+            "innerCount": 0,
+            "level": 0,
+            "multi": 2,
+            "order": 520,
+            "typeId": 1041,
+            "uniqueId": 0,
+            "weight": 0
+          }
+        ],
+        "filterName": "早餐",
+        "filterNameEn": "早餐",
+        "grey": false,
+        "innerCount": 0,
+        "level": 0,
+        "multi": 1,
+        "order": 500,
+        "typeId": 1041,
+        "uniqueId": 0,
+        "weight": 0
+      },
+      {
+        "describe": "支付方式",
+        "disable": false,
+        "filterId": 1042,
+        "filterIdV4": 1042,
+        "filterList": [
+          {
+            "describe": "到店付",
+            "disable": false,
+            "filterId": 2,
+            "filterIdV4": 2,
+            "filterName": "到店付",
+            "filterNameEn": "到店付",
+            "grey": false,
+            "innerCount": 0,
+            "level": 0,
+            "multi": 2,
+            "order": 500,
+            "typeId": 1042,
+            "uniqueId": 0,
+            "weight": 0
+          }
+        ],
+        "filterName": "支付方式",
+        "filterNameEn": "支付方式",
+        "grey": false,
+        "innerCount": 0,
+        "level": 0,
+        "multi": 2,
+        "order": 499,
+        "typeId": 1042,
+        "uniqueId": 0,
+        "weight": 0
+      },
+      {
+        "describe": "服务",
+        "disable": false,
+        "filterId": 1100,
+        "filterIdV4": 1100,
+        "filterList": [
+          {
+            "describe": "免费取消",
+            "disable": false,
+            "filterId": 139,
+            "filterIdV4": 139,
+            "filterName": "免费取消",
+            "filterNameEn": "免费取消",
+            "grey": false,
+            "innerCount": 0,
+            "level": 0,
+            "multi": 1,
+            "order": 500,
+            "typeId": 1100,
+            "uniqueId": 0,
+            "weight": 0
+          }
+        ],
+        "filterName": "服务",
+        "filterNameEn": "服务",
+        "grey": false,
+        "innerCount": 0,
+        "level": 0,
+        "multi": 1,
+        "order": 498,
+        "typeId": 1100,
+        "uniqueId": 0,
+        "weight": 0
+      },
+      {
+        "describe": "优惠",
+        "disable": false,
+        "filterId": 1013,
+        "filterIdV4": 1013,
+        "filterList": [
+          {
+            "describe": "含有优惠",
+            "disable": false,
+            "filterId": 10032,
+            "filterIdV4": 10032,
+            "filterName": "含有优惠",
+            "filterNameEn": "含有优惠",
+            "grey": false,
+            "innerCount": 0,
+            "level": 0,
+            "multi": 1,
+            "order": 500,
+            "typeId": 1013,
+            "uniqueId": 0,
+            "weight": 0
+          }
+        ],
+        "filterName": "优惠",
+        "filterNameEn": "优惠",
+        "grey": false,
+        "innerCount": 0,
+        "level": 0,
+        "multi": 1,
+        "order": 497,
+        "typeId": 1013,
+        "uniqueId": 0,
+        "weight": 0
+      }
+    ],
+    "goodsFilter": [
+      {
+        "describe": "床型",
+        "disable": false,
+        "filterId": 1040,
+        "filterIdV4": 0,
+        "filterList": [
+          {
+            "describe": "大床",
+            "disable": false,
+            "filterId": 36,
+            "filterIdV4": 0,
+            "filterName": "大床",
+            "filterNameEn": "大床",
+            "grey": false,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 2,
+            "order": 501,
+            "typeId": 1040,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "双床",
+            "disable": false,
+            "filterId": 37,
+            "filterIdV4": 0,
+            "filterName": "双床",
+            "filterNameEn": "双床",
+            "grey": false,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 2,
+            "order": 500,
+            "typeId": 1040,
+            "uniqueId": 0,
+            "weight": 0
+          }
+        ],
+        "filterName": "床型",
+        "filterNameEn": "床型",
+        "grey": false,
+        "innerCount": 0,
+        "level": 1,
+        "multi": 2,
+        "order": 520,
+        "typeId": 1040,
+        "uniqueId": 0,
+        "weight": 0
+      },
+      {
+        "describe": "早餐",
+        "disable": false,
+        "filterId": 1041,
+        "filterIdV4": 0,
+        "filterList": [
+          {
+            "describe": "含早餐",
+            "disable": false,
+            "filterId": 44,
+            "filterIdV4": 0,
+            "filterName": "含早餐",
+            "filterNameEn": "含早餐",
+            "grey": false,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 2,
+            "order": 504,
+            "typeId": 1041,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "单人早餐",
+            "disable": false,
+            "filterId": 41,
+            "filterIdV4": 0,
+            "filterName": "单人早餐",
+            "filterNameEn": "单人早餐",
+            "grey": true,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 503,
+            "typeId": 1041,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "双人早餐",
+            "disable": false,
+            "filterId": 40,
+            "filterIdV4": 0,
+            "filterName": "双人早餐",
+            "filterNameEn": "双人早餐",
+            "grey": false,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 502,
+            "typeId": 1041,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "不含早",
+            "disable": false,
+            "filterId": 43,
+            "filterIdV4": 0,
+            "filterName": "不含早",
+            "filterNameEn": "不含早",
+            "grey": false,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 501,
+            "typeId": 1041,
+            "uniqueId": 0,
+            "weight": 0
+          }
+        ],
+        "filterName": "早餐",
+        "filterNameEn": "早餐",
+        "grey": false,
+        "innerCount": 0,
+        "level": 1,
+        "multi": 1,
+        "order": 519,
+        "typeId": 1041,
+        "uniqueId": 0,
+        "weight": 0
+      },
+      {
+        "describe": "服务",
+        "disable": false,
+        "filterId": 1100,
+        "filterIdV4": 0,
+        "filterList": [
+          {
+            "describe": "免费取消",
+            "disable": false,
+            "filterId": 139,
+            "filterIdV4": 0,
+            "filterName": "免费取消",
+            "filterNameEn": "免费取消",
+            "grey": false,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 503,
+            "typeId": 1100,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "立即确认",
+            "disable": false,
+            "filterId": 141,
+            "filterIdV4": 0,
+            "filterName": "立即确认",
+            "filterNameEn": "立即确认",
+            "grey": true,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 502,
+            "typeId": 1100,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "同程艺龙直销",
+            "disable": false,
+            "filterId": 138,
+            "filterIdV4": 0,
+            "filterName": "同程艺龙直销",
+            "filterNameEn": "同程艺龙直销",
+            "grey": false,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 500,
+            "typeId": 1100,
+            "uniqueId": 0,
+            "weight": 0
+          }
+        ],
+        "filterName": "服务",
+        "filterNameEn": "服务",
+        "grey": false,
+        "innerCount": 0,
+        "level": 1,
+        "multi": 1,
+        "order": 518,
+        "typeId": 1100,
+        "uniqueId": 0,
+        "weight": 0
+      },
+      {
+        "describe": "支付",
+        "disable": false,
+        "filterId": 1042,
+        "filterIdV4": 0,
+        "filterList": [
+          {
+            "describe": "在线付",
+            "disable": false,
+            "filterId": 1,
+            "filterIdV4": 0,
+            "filterName": "在线付",
+            "filterNameEn": "在线付",
+            "grey": false,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 2,
+            "order": 501,
+            "typeId": 1042,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "到店付",
+            "disable": false,
+            "filterId": 2,
+            "filterIdV4": 0,
+            "filterName": "到店付",
+            "filterNameEn": "到店付",
+            "grey": false,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 2,
+            "order": 500,
+            "typeId": 1042,
+            "uniqueId": 0,
+            "weight": 0
+          }
+        ],
+        "filterName": "支付",
+        "filterNameEn": "支付",
+        "grey": false,
+        "innerCount": 0,
+        "level": 1,
+        "multi": 2,
+        "order": 517,
+        "typeId": 1042,
+        "uniqueId": 0,
+        "weight": 0
+      },
+      {
+        "describe": "优惠",
+        "disable": false,
+        "filterId": 1013,
+        "filterIdV4": 0,
+        "filterList": [
+          {
+            "describe": "含有优惠",
+            "disable": false,
+            "filterId": 10032,
+            "filterIdV4": 0,
+            "filterName": "含有优惠",
+            "filterNameEn": "含有优惠",
+            "grey": false,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 520,
+            "typeId": 1013,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "新会员专享价，专属折扣",
+            "disable": false,
+            "filterId": 10007,
+            "filterIdV4": 0,
+            "filterName": "新客折扣",
+            "filterNameEn": "新客折扣",
+            "grey": true,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 519,
+            "typeId": 1013,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "先付后返，返现金额可提现",
+            "disable": false,
+            "filterId": 10006,
+            "filterIdV4": 0,
+            "filterName": "有返现",
+            "filterNameEn": "有返现",
+            "grey": true,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 518,
+            "typeId": 1013,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "指定酒店真抵现",
+            "disable": false,
+            "filterId": 10005,
+            "filterIdV4": 0,
+            "filterName": "可用红包",
+            "filterNameEn": "可用红包",
+            "grey": true,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 517,
+            "typeId": 1013,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "订酒店，满额立减或返现",
+            "disable": false,
+            "filterId": 10013,
+            "filterIdV4": 0,
+            "filterName": "可用券",
+            "filterNameEn": "可用券",
+            "grey": false,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 2,
+            "order": 516,
+            "typeId": 1013,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "会员特权立减优惠",
+            "disable": false,
+            "filterId": 100000002,
+            "filterIdV4": 0,
+            "filterName": "会员特权",
+            "filterNameEn": "会员特权",
+            "grey": true,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 515,
+            "typeId": 1013,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "里程兑换",
+            "disable": false,
+            "filterId": 10018,
+            "filterIdV4": 0,
+            "filterName": "里程兑换",
+            "filterNameEn": "里程兑换",
+            "grey": true,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 512,
+            "typeId": 1013,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "超6万家酒店，本店新客享75折起",
+            "disable": false,
+            "filterId": 3,
+            "filterIdV4": 0,
+            "filterName": "门店新客",
+            "filterNameEn": "门店新客",
+            "grey": true,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 2,
+            "order": 511,
+            "typeId": 1013,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "天天特价",
+            "disable": false,
+            "filterId": 2,
+            "filterIdV4": 0,
+            "filterName": "天天特价",
+            "filterNameEn": "天天特价",
+            "grey": true,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 2,
+            "order": 510,
+            "typeId": 1013,
+            "uniqueId": 0,
+            "weight": 0
+          },
+          {
+            "describe": "商旅酒店，出行85折起",
+            "disable": false,
+            "filterId": 84,
+            "filterIdV4": 0,
+            "filterName": "商务特惠",
+            "filterNameEn": "商务特惠",
+            "grey": true,
+            "innerCount": 0,
+            "level": 2,
+            "multi": 1,
+            "order": 509,
+            "typeId": 1013,
+            "uniqueId": 0,
+            "weight": 0
+          }
+        ],
+        "filterName": "优惠",
+        "filterNameEn": "优惠",
+        "grey": false,
+        "innerCount": 0,
+        "level": 1,
+        "multi": 1,
+        "order": 516,
+        "typeId": 1013,
+        "uniqueId": 0,
+        "weight": 0
+      }
+    ]
+  },
+  "hotelNewCustomer": false,
+  "hotelWendaInfo": {
+    "moduleTitle": "问答",
+    "noQaInfo": {
+      "tagContent": "有问题问大家？快来抢沙发",
+      "tagCount": 0,
+      "tagIcon": "http://pic5.40017.cn/01/001/5d/25/rBANC1oD7lqALxdUAAAC5QzBWiw748.png",
+      "tagJumpName": "快来提问吧",
+      "tagJumpUrl": "tctclient://ask/list?projectTag=jiudian&productId=93634340",
+      "tagPercent": 0.0,
+      "tagSort": 0
+    },
+    "topButton": {
+      "tagCount": 0,
+      "tagJumpUrl": "tctclient://ask/list?projectTag=jiudian&productId=93634340",
+      "tagPercent": 0.0,
+      "tagSort": 0
+    }
+  },
+  "hourRoomTypes": [],
+  "id": "93634340",
+  "imagesCount": 70,
+  "imgList": [
+    {
+      "ImageId": "ae80a2f23bce43538e7645cfd25eeff0",
+      "ImageUrl": "http://pavo.elongstatic.com/i/mobile750_448/nw_000gLWCR.webp",
+      "isAbCoverImage": true
+    },
+    {
+      "ImageId": "b28364b78e9a4d41868fd07cafbfbfd9",
+      "ImageUrl": "http://pavo.elongstatic.com/i/mobile750_448/nw_000gLWD3.webp",
+      "isAbCoverImage": false
+    },
+    {
+      "ImageId": "f047f884539c48d282ac3472984bc580",
+      "ImageUrl": "http://pavo.elongstatic.com/i/mobile750_448/nw_OGvyfGFrl6.webp",
+      "isAbCoverImage": false
+    },
+    {
+      "ImageId": "cd6f73339403482e9d959d0ea3a1451f",
+      "ImageUrl": "http://pavo.elongstatic.com/i/mobile750_448/nw_OGvsRlbpfy.webp",
+      "isAbCoverImage": false
+    },
+    {
+      "ImageId": "992f3c0c51a34f2482050eb27397670f",
+      "ImageUrl": "http://pavo.elongstatic.com/i/mobile750_448/nw_OGvovy21hK.webp",
+      "isAbCoverImage": false
+    },
+    {
+      "ImageId": "7f533089e4e94642906fb65c0c5c16ba",
+      "ImageUrl": "http://pavo.elongstatic.com/i/mobile750_448/nw_OGvmeqgMN2.webp",
+      "isAbCoverImage": false
+    },
+    {
+      "ImageId": "99eec9e1007d42ceb5be0118b55081f6",
+      "ImageUrl": "http://pavo.elongstatic.com/i/mobile750_448/nw_OGvDHQBSSs.webp",
+      "isAbCoverImage": false
+    },
+    {
+      "ImageId": "5228754994dd49408cc714bca3ece5fe",
+      "ImageUrl": "http://pavo.elongstatic.com/i/mobile750_448/nw_OGvzLhLkE8.webp",
+      "isAbCoverImage": false
+    },
+    {
+      "ImageId": "54a05f5d4a4042bcbe2f8904a2c8db32",
+      "ImageUrl": "http://pavo.elongstatic.com/i/mobile750_448/nw_OGvF30dEic.webp",
+      "isAbCoverImage": false
+    },
+    {
+      "ImageId": "2739aedf6acd433cba9a791d01d0528f",
+      "ImageUrl": "http://pavo.elongstatic.com/i/mobile750_448/nw_OGvJcecGiY.webp",
+      "isAbCoverImage": false
+    }
+  ],
+  "limitingCondition": {
+    "createOrderFailTimes": 10,
+    "refreshIntervalTime": 3600
+  },
+  "location": {
+    "latbd09": 39.1270740000,
+    "latgcj02": 39.1214200000,
+    "latwgs84": 39.1203489908,
+    "lngbd09": 117.1833010000,
+    "lnggcj02": 117.1766840000,
+    "lngwgs84": 117.1703393161
+  },
+  "modelInfos": [
+    {
+      "hidden": 0,
+      "modelId": 6,
+      "name": "本单可享",
+      "status": 0
+    },
+    {
+      "hidden": 0,
+      "modelId": 4,
+      "name": "更多服务",
+      "status": 0
+    },
+    {
+      "hidden": 0,
+      "modelId": 5,
+      "name": "服务保障",
+      "status": 0
+    },
+    {
+      "hidden": 0,
+      "modelId": 2,
+      "name": "超值选购",
+      "status": 2
+    }
+  ],
+  "moreRoomTypes": [],
+  "name": "全季酒店(天津海光寺店)",
+  "nearByTrafficInfos": [
+    {
+      "id": 60000624,
+      "name": "海光寺地铁站",
+      "trafficDesc": "距海光寺地铁站直线0.2公里,步行约0.6公里,预计9分钟",
+      "type": 4
+    },
+    {
+      "id": 60000630,
+      "name": "鞍山道地铁站",
+      "trafficDesc": "距鞍山道地铁站直线1.0公里,步行约1.1公里,预计15分钟",
+      "type": 4
+    }
+  ],
+  "openDate": 1543593600000,
+  "phone": "022-87908888",
+  "policies": [
+    {
+      "name": "入离店时间",
+      "type": 1,
+      "value": "入住时间14:00以后 离店时间12:00以前"
+    }
+  ],
+  "preProducts": [],
+  "prerogativeRule": "6,0,1,2,3,5,4",
+  "products": [
+    {
+      "additionList": [
+        {
+          "content": "23",
+          "key": "areaValue"
+        },
+        {
+          "content": "23平米",
+          "key": "area"
+        },
+        {
+          "content": "2",
+          "key": "bedValue"
+        },
+        {
+          "content": "9",
+          "key": "windowValue"
+        },
+        {
+          "content": "有窗",
+          "key": "window"
+        },
+        {
+          "content": "免费无线",
+          "key": "network"
+        },
+        {
+          "content": "4-8层(普通楼层)",
+          "key": "floor"
+        },
+        {
+          "content": "可入住2人",
+          "key": "personnum"
+        },
+        {
+          "content": "2",
+          "key": "psnnum"
+        },
+        {
+          "content": "无早",
+          "key": "breakfast"
+        },
+        {
+          "content": "",
+          "key": "roomtype"
+        },
+        {
+          "content": "大床",
+          "detailContent": "大床1.8米",
+          "key": "bed"
+        }
+      ],
+      "advantage": [
+        "限时取消"
+      ],
+      "available": true,
+      "bedInfo": "不提供加床服务",
+      "breInfo": "不含早",
+      "breNum": 0,
+      "brightDesc": "免费取消",
+      "cancelType": 1,
+      "compositeInfo": {
+        "DayRoomInfos": [
+          {
+            "CheckInDate": "2020.06.13",
+            "PromotionRoomInfo": [
+              {
+                "OwnerRoom": 1,
+                "PromotionInfo": {
+                  "FullCutDesc": {
+                    "CutAmount": 0,
+                    "FullAmount": 0,
+                    "OffAmount": 10,
+                    "UpperLimit": 0
+                  },
+                  "Id": 2020020833,
+                  "IsLimitInventory": false,
+                  "LeftInventory": 0,
+                  "Priority": 20,
+                  "TrueUpperlimit": 10.0,
+                  "Type": 11,
+                  "TypeMsg": {
+                    "IsEeffectivePrice": true,
+                    "IsSpecial": false,
+                    "Priority": 1,
+                    "Type": 11
+                  },
+                  "UpperLimit": 10.0,
+                  "promotionDescriptions": [
+                    {
+                      "key": "tag",
+                      "value": "1000"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "ProductType": 1
+      },
+      "dayPrices": [
+        {
+          "BreakFastNumber": 0,
+          "Date": "2020-06-13",
+          "HasBreakFast": false,
+          "Price": 391.00,
+          "RmbPrice": 391.00,
+          "addBedPriceOrigin": 0.0,
+          "bonusSaleCost": 332.35,
+          "breakFastDescribe": "无早",
+          "currency": "RMB",
+          "isAddBed": false,
+          "saleCost": 332.35,
+          "salePriceWithDrrSubCoupon": 381.0,
+          "status": 1
+        }
+      ],
+      "depositMoney": 0.0,
+      "derivativeType": 0,
+      "disPercent": 0,
+      "expandForRoomNight": "{\"CTRIP_GROUP_PRODUCT\":3}",
+      "extraCouponType": 0,
+      "flags": 4588672,
+      "group": {
+        "GroupID": 0,
+        "IsBind": false
+      },
+      "holdingTime": [],
+      "invoiceContents": [],
+      "invoiceMode": 1,
+      "invoiceType": [
+        "0",
+        "1"
+      ],
+      "invoiceTypeDes": [
+        "纸质普票",
+        "电子普票"
+      ],
+      "invoiceTypes": [],
+      "maJiaID": "0_0_0_00#00_daf52a557e728bc14d0f6f1f6d6965d6&22:45:13",
+      "maxBookingNum": 10,
+      "memberLevel": 1039,
+      "minCheckIn": 1,
+      "minRooms": 1,
+      "minStocks": -1,
+      "mroomId": "0001",
+      "name": "标准价",
+      "newCancelDesc": [
+        "限时取消"
+      ],
+      "newCancelType": [
+        3
+      ],
+      "onTimeAmount": 0,
+      "payType": 1,
+      "payTypeDesc": "预订该产品需提前在线支付房费，到店办理入住时无需付款。",
+      "prepayRules": [
+        {
+          "Description": "取消规则：\n您可以在2020年6月13日18:00前免费取消或变更订单；在2020年6月13日18:00之后变更或取消，将收取全额房费作为罚金。",
+          "ShortDescription": "20年6月13日18:00前可免费取消"
+        }
+      ],
+      "prepayRulesNonCancel": [
+        {
+          "Description": "取消规则：\n您可以在2020年6月13日18:00前免费取消或变更订单；在2020年6月13日18:00之后变更或取消，将收取全额房费作为罚金。",
+          "ShortDescription": "20年6月13日18:00前可免费取消"
+        }
+      ],
+      "price": {
+        "currency": "RMB",
+        "firstDayPrice": 391.00,
+        "firstDayPriceRmb": 391.00,
+        "guestType": 1,
+        "originalPrice": 0.0,
+        "originalRmb": 0.0,
+        "price": 391.00,
+        "priceRmb": 391.00,
+        "saleCost": 332.3500000000000227373675443232059478759765625,
+        "subPrice": 381.00,
+        "subTotal": 381.00,
+        "totalPrice": 391.00,
+        "totalRmb": 391.00
+      },
+      "productId": "93634340_0002_36450066",
+      "promotionTags": [],
+      "promotions": [
+        {
+          "FullCutDesc": {
+            "CutAmount": 0,
+            "FullAmount": 0,
+            "OffAmount": 10,
+            "UpperLimit": 0
+          },
+          "Id": 2020020833,
+          "IsLimitInventory": false,
+          "LeftInventory": 0,
+          "Priority": 20,
+          "TrueUpperlimit": 10.0,
+          "Type": 11,
+          "TypeMsg": {
+            "IsEeffectivePrice": true,
+            "IsSpecial": false,
+            "Priority": 1,
+            "Type": 11
+          },
+          "UpperLimit": 10.0,
+          "promotionDescriptions": [
+            {
+              "key": "tag",
+              "value": "1000"
+            }
+          ]
+        }
+      ],
+      "rebateTotal": 10.00,
+      "recHongBao": {
+        "CanUse": true,
+        "FullReturnRule": {
+          "Description": "10",
+          "leftValue": 349.0,
+          "rightValue": 10.0
+        },
+        "IncomeIdStr": "7000005054711730",
+        "Priority": 0,
+        "TrueUseAmount": 10.0,
+        "activityId": 2020020833,
+        "faceValue": 10.0,
+        "flag": 1000,
+        "incomeId": 7000005054711730,
+        "isRecommend": false,
+        "ladderRedPacket": false,
+        "promotionFlag": 0,
+        "promotionId": 0,
+        "promotionType": 11,
+        "rechargeType": 0,
+        "recordId": 0,
+        "selectedDiscount": 0,
+        "ticketFlag": 0,
+        "ticketMaxAmount": 0.0,
+        "validDate": "2020-07-03 23:59:59"
+      },
+      "recText": "可享¥10元优惠",
+      "recType": 1,
+      "resaleSrcOrderId": 0,
+      "resaleTips": "",
+      "roomId": "0002",
+      "roomOptions": [
+        {
+          "isNeedVouch": false,
+          "roomNumber": 1
+        },
+        {
+          "isNeedVouch": false,
+          "roomNumber": 2
+        },
+        {
+          "isNeedVouch": false,
+          "roomNumber": 3
+        },
+        {
+          "isNeedVouch": false,
+          "roomNumber": 4
+        },
+        {
+          "isNeedVouch": false,
+          "roomNumber": 5
+        },
+        {
+          "isNeedVouch": false,
+          "roomNumber": 6
+        },
+        {
+          "isNeedVouch": false,
+          "roomNumber": 7
+        },
+        {
+          "isNeedVouch": false,
+          "roomNumber": 8
+        },
+        {
+          "isNeedVouch": false,
+          "roomNumber": 9
+        },
+        {
+          "isNeedVouch": false,
+          "roomNumber": 10
+        }
+      ],
+      "roomTypeName": "高级大床房",
+      "rpId": 36450066,
+      "rpInfo": {
+        "accidentInsurance": false,
+        "areaAdvantage": "",
+        "breName": "不含早",
+        "cancelRule": {
+          "cancelRuleTables": [
+            {
+              "amount": "取消&修改费用",
+              "ruleTime": "北京时间"
+            },
+            {
+              "amount": "免费取消",
+              "clolor": "#43C19E",
+              "ruleTime": "06-13 18:00 前"
+            },
+            {
+              "amount": "不可取消",
+              "ruleTime": "06-13 18:00 后"
+            }
+          ],
+          "cancelRuleTitle": "限时取消",
+          "freeCancelRuleShowDesc": "6月13日18点前可免费取消",
+          "showDescColorIndex": "#43C19E"
+        },
+        "cancelRuleDown": true,
+        "dot": 3,
+        "elongIntegralType": 0,
+        "excitationText": [
+          {
+            "color": "#EF7539",
+            "des": "优惠¥10",
+            "sort": 0,
+            "type": 3
+          },
+          {
+            "color": "#333333",
+            "des": "非常划算哦！",
+            "sort": 0,
+            "type": 3
+          }
+        ],
+        "goodsUniqId": "93634388A2A36450066A0Ac6ca3f6bb65862f7ddc70745c1689af3",
+        "integral": 205,
+        "invoiceType": 1,
+        "maxCheckInNumberTip": "每间最多住2人",
+        "otherTags": [
+          {
+            "available": false,
+            "id": 0,
+            "type": 0
+          }
+        ],
+        "pass": {
+          "canUseMileage": 1,
+          "commonFlags": 0,
+          "commonKeyValue": [
+            {
+              "key": 3,
+              "value": "0"
+            },
+            {
+              "key": 1,
+              "value": "0"
+            },
+            {
+              "key": 2,
+              "value": "0"
+            },
+            {
+              "key": 7,
+              "value": "0"
+            },
+            {
+              "key": 12,
+              "value": "0"
+            },
+            {
+              "key": 8,
+              "value": "0"
+            },
+            {
+              "key": 18,
+              "value": "0"
+            },
+            {
+              "key": 19,
+              "value": "32"
+            },
+            {
+              "key": 4,
+              "value": "151330"
+            },
+            {
+              "key": 9,
+              "value": "301"
+            },
+            {
+              "key": 11,
+              "value": "0"
+            },
+            {
+              "key": 13,
+              "value": "0"
+            },
+            {
+              "key": 15,
+              "value": "0"
+            },
+            {
+              "key": 16,
+              "value": "1073741872"
+            },
+            {
+              "key": 17,
+              "value": "1"
+            }
+          ],
+          "hongBaoIdMappingName": {
+            "7000005054711730": "酒店10元红包"
+          },
+          "isNewAppMember": true,
+          "ladderVouch": false,
+          "maskCampaignHitId": 0,
+          "memberLevel": "V2",
+          "oneTwoThird": 0,
+          "payType": 1,
+          "prepayPolicyToGuestList": [
+            {
+              "beginDate": "1970-01-01 00:00:00",
+              "endDate": "2020-06-13 18:00:00",
+              "money": 0.00,
+              "moneyRMB": 0.00,
+              "point": 0,
+              "rate": 1.00,
+              "type": 0
+            },
+            {
+              "beginDate": "2020-06-13 18:00:00",
+              "endDate": "2099-12-31 00:00:00",
+              "money": 391.00,
+              "moneyRMB": 391.00,
+              "point": 0,
+              "rate": 1.00,
+              "type": 2
+            }
+          ],
+          "weChatUnionId": "ohmdTtwluyaSBTMnfBiG65eR6_Tw"
+        },
+        "personalizedType": 0,
+        "prePayRules": {
+          "cancelTimeLeft": 1592042400,
+          "cancelTimeRight": 1592042400,
+          "cutType": 2,
+          "cutValue": 100
+        },
+        "promotions": {
+          "compatibleGroups": [
+            {
+              "compatibleGroup": 4611686018427387904,
+              "priority": 0,
+              "recommend": true
+            }
+          ],
+          "dayProductPromotions": [
+            {
+              "costPrice": 0.0,
+              "date": "2020.06.13",
+              "dayProductPromotionItems": [
+                {
+                  "discountRate": 0.0,
+                  "hasEeffectivePrice": true,
+                  "hasInvLimit": false,
+                  "hasSpecial": false,
+                  "hongBaoTickets": [
+                    {
+                      "activityId": 2020020833,
+                      "faceValue": 10.0,
+                      "fullBack": {
+                        "backAmount": 10.0,
+                        "fullAmount": 349.0
+                      },
+                      "incomeId": "7000005054711730",
+                      "incomeIdStr": "7000005054711730",
+                      "rechargeType": 0,
+                      "recordId": 0,
+                      "redPacketTypeEnum": "RED_PACKET",
+                      "tag": 1000,
+                      "ticketMaxAmount": 0.0,
+                      "validDate": "2020-07-03 23:59:59"
+                    }
+                  ],
+                  "invLeft": 0,
+                  "priority": 2020020833,
+                  "promotionCalcType": 63,
+                  "promotionDescriptions": [
+                    {
+                      "key": "tag",
+                      "value": "1000"
+                    },
+                    {
+                      "key": "cost_body",
+                      "value": "0"
+                    },
+                    {
+                      "key": "promotion_carrier",
+                      "value": "1"
+                    },
+                    {
+                      "key": "promotion_method",
+                      "value": "2"
+                    }
+                  ],
+                  "promotionId": 2020020833,
+                  "promotionMethod": 2,
+                  "promotionType": 11,
+                  "tagId": 1000,
+                  "typePriority": 20,
+                  "upperLimit": 10.0
+                }
+              ],
+              "salePrice": 0.0,
+              "salePriceBeforeCtripPromotion": 0.0
+            }
+          ],
+          "singleNightExclusiveGroup": 0,
+          "usedPromotionValues": {
+            "63": 10.0
+          }
+        },
+        "rpLayerTags": [
+          {
+            "available": true,
+            "borderColor": "#FFA199",
+            "color": "#FF4414",
+            "desc": "已满349下单立减10元",
+            "id": 19,
+            "name": "可用红包",
+            "type": 0
+          }
+        ],
+        "subTitle": [],
+        "tags": [
+          {
+            "available": true,
+            "borderColor": "#FFA199",
+            "color": "#FF4414",
+            "desc": "已满349下单立减10元",
+            "id": 19,
+            "name": "可用红包",
+            "type": 0
+          }
+        ],
+        "tipsB": "仅接待大陆和港澳台客人",
+        "unionId": "ohmdTtwluyaSBTMnfBiG65eR6_Tw"
+      },
+      "sHotelId": "93634388",
+      "show": [
+        {
+          "desc": "减￥10",
+          "high": false,
+          "originDesc": false,
+          "rebate": 10,
+          "rebateDesc": "-￥10",
+          "rebateName": "优惠券"
+        }
+      ],
+      "showTags": [],
+      "showTotal": [
+        {
+          "desc": "原价￥391",
+          "high": false,
+          "originDesc": false,
+          "original": 391.00
+        },
+        {
+          "ctrip": [
+            {
+              "color": "#3D5878",
+              "des": "红包可",
+              "sort": 0,
+              "type": 0
+            },
+            {
+              "color": "#16BF90",
+              "des": "减￥10",
+              "sort": 0,
+              "type": 0
+            }
+          ],
+          "desc": "红包可减￥10",
+          "high": false,
+          "originDesc": false,
+          "original": 391.00,
+          "rebate": 10.00,
+          "rebateDesc": "-￥10",
+          "rebateName": "红包"
+        }
+      ],
+      "structureName": "不含早",
+      "supplierId": "151330",
+      "supplierName": "同程艺龙",
+      "tags": [],
+      "tipsList": [
+        {
+          "TipContent": "空调,沙发,24小时热水,智能门锁",
+          "TipName": "客房设施"
+        },
+        {
+          "TipContent": "室内洗浴间",
+          "TipName": "浴室"
+        },
+        {
+          "TipContent": "电热水壶,瓶装水,咖啡机/茶具",
+          "TipName": "食品饮品"
+        },
+        {
+          "TipContent": "客房WIFI覆盖免费",
+          "TipName": "媒体科技"
+        },
+        {
+          "TipContent": "城景",
+          "TipName": "景观"
+        }
+      ],
+      "uniqueId": "93634340:0002:36450066:0_0_0_00#00:1",
+      "vouchResult": {
+        "cancelRule": "取消规则：\n订单提交后可随时免费取消/变更。",
+        "currency": "RMB",
+        "exchangeRate": 1.0,
+        "isNeedVouch": false,
+        "vouchMoney": 0,
+        "vouchMoneyRMB": 0,
+        "vouchMoneyType": 0,
+        "vouchType": 16
+      },
+      "vouchUnify": {
+        "prepayPolicyInfoList": [
+          {
+            "changeRuleToCustomer": {
+              "cutTypeAfter": 2,
+              "cutTypeBefore": 3,
+              "deductNumAfter": 100.00,
+              "deductNumBefore": -1.00,
+              "hourNum": 6,
+              "hourNum2": 0,
+              "isDeductFeesAfter": 1,
+              "isDeductFeesBefore": 0,
+              "ladderPolicyList": [],
+              "prepayRule": 2,
+              "ruleTarget": 2
+            },
+            "dateType": 2,
+            "endDate": 1593360000000,
+            "startDate": 1590940800000,
+            "weekDays": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          },
+          {
+            "changeRuleToCustomer": {
+              "cutTypeAfter": 2,
+              "cutTypeBefore": 3,
+              "deductNumAfter": 100.00,
+              "deductNumBefore": -1.00,
+              "hourNum": 6,
+              "hourNum2": 0,
+              "isDeductFeesAfter": 1,
+              "isDeductFeesBefore": 0,
+              "ladderPolicyList": [],
+              "prepayRule": 2,
+              "ruleTarget": 1
+            },
+            "dateType": 2,
+            "endDate": 1593360000000,
+            "startDate": 1590940800000,
+            "weekDays": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ]
+          }
+        ],
+        "vouchPolicyInfoList": []
+      }
+    }
+  ],
+  "roomTypes": [
+    {
+      "additionList": [
+        {
+          "content": "21",
+          "key": "areaValue"
+        },
+        {
+          "content": "21平米",
+          "key": "area"
+        },
+        {
+          "content": "2",
+          "key": "bedValue"
+        },
+        {
+          "content": "9",
+          "key": "windowValue"
+        },
+        {
+          "content": "有窗",
+          "key": "window"
+        },
+        {
+          "content": "免费无线",
+          "key": "network"
+        },
+        {
+          "content": "4-7层(普通楼层)",
+          "key": "floor"
+        },
+        {
+          "content": "可入住2人",
+          "key": "personnum"
+        },
+        {
+          "content": "2",
+          "key": "psnnum"
+        },
+        {
+          "content": "双早",
+          "key": "breakfast"
+        },
+        {
+          "content": "",
+          "key": "roomtype"
+        },
+        {
+          "content": "大床",
+          "detailContent": "大床1.5米",
+          "key": "bed"
+        }
+      ],
+      "areaAdvantage": "",
+      "available": false,
+      "breType": -1,
+      "breakfastNum": 0,
+      "coverImg": "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvDHQBSSs.webp",
+      "currency": "RMB",
+      "id": "0005",
+      "imgList": [
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvDHQBSSs.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvJcecGiY.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_000gLWCr.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_000gLWCu.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeHjX7hVm.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeJkpn1Pa.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeLaZ4p1K.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvC8eibmM.jpg"
+      ],
+      "mId": "0005",
+      "minNRate": "",
+      "name": "大床房",
+      "needDrawPrice": false,
+      "price": 352.00,
+      "products": [],
+      "rpTotal": 0,
+      "smallImgs": [
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvDHQBSSs.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvJcecGiY.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_000gLWCr.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_000gLWCu.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeHjX7hVm.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeJkpn1Pa.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeLaZ4p1K.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvC8eibmM.jpg"
+      ],
+      "subPrice": 342.00,
+      "tags": [
+        {
+          "available": true,
+          "borderColor": "#FFA199",
+          "color": "#FF4414",
+          "desc": "已满349下单立减10元",
+          "id": 19,
+          "name": "可用红包",
+          "type": 0
+        }
+      ],
+      "type": 0,
+      "typeDesc": "",
+      "visible": false
+    },
+    {
+      "additionList": [
+        {
+          "content": "23",
+          "key": "areaValue"
+        },
+        {
+          "content": "23平米",
+          "key": "area"
+        },
+        {
+          "content": "3",
+          "key": "bedValue"
+        },
+        {
+          "content": "9",
+          "key": "windowValue"
+        },
+        {
+          "content": "有窗",
+          "key": "window"
+        },
+        {
+          "content": "免费无线",
+          "key": "network"
+        },
+        {
+          "content": "4-8层(普通楼层)",
+          "key": "floor"
+        },
+        {
+          "content": "可入住2人",
+          "key": "personnum"
+        },
+        {
+          "content": "2",
+          "key": "psnnum"
+        },
+        {
+          "content": "双早",
+          "key": "breakfast"
+        },
+        {
+          "content": "",
+          "key": "roomtype"
+        },
+        {
+          "content": "双床",
+          "detailContent": "双床1.1米",
+          "key": "bed"
+        }
+      ],
+      "areaAdvantage": "",
+      "available": false,
+      "breType": -1,
+      "breakfastNum": 0,
+      "coverImg": "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvmeqgMN2.webp",
+      "currency": "RMB",
+      "id": "0002",
+      "imgList": [
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvmeqgMN2.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvnNMoNMY.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeJMHhUrK.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeGH6CRfW.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeKvrXr0s.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeIz6AVOw.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeHW0dvXy.jpg"
+      ],
+      "mId": "0002",
+      "minNRate": "",
+      "name": "双床房",
+      "needDrawPrice": false,
+      "price": 371.00,
+      "products": [],
+      "rpTotal": 0,
+      "smallImgs": [
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvmeqgMN2.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvnNMoNMY.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeJMHhUrK.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeGH6CRfW.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeKvrXr0s.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeIz6AVOw.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeHW0dvXy.jpg"
+      ],
+      "subPrice": 361.00,
+      "tags": [
+        {
+          "available": true,
+          "borderColor": "#FFA199",
+          "color": "#FF4414",
+          "desc": "已满349下单立减10元",
+          "id": 19,
+          "name": "可用红包",
+          "type": 0
+        }
+      ],
+      "type": 0,
+      "typeDesc": "",
+      "visible": false
+    },
+    {
+      "additionList": [
+        {
+          "content": "23",
+          "key": "areaValue"
+        },
+        {
+          "content": "23平米",
+          "key": "area"
+        },
+        {
+          "content": "2",
+          "key": "bedValue"
+        },
+        {
+          "content": "9",
+          "key": "windowValue"
+        },
+        {
+          "content": "有窗",
+          "key": "window"
+        },
+        {
+          "content": "免费无线",
+          "key": "network"
+        },
+        {
+          "content": "4-8层(普通楼层)",
+          "key": "floor"
+        },
+        {
+          "content": "可入住2人",
+          "key": "personnum"
+        },
+        {
+          "content": "2",
+          "key": "psnnum"
+        },
+        {
+          "content": "双早",
+          "key": "breakfast"
+        },
+        {
+          "content": "",
+          "key": "roomtype"
+        },
+        {
+          "content": "大床",
+          "detailContent": "大床1.8米",
+          "key": "bed"
+        }
+      ],
+      "areaAdvantage": "",
+      "available": false,
+      "breType": -1,
+      "breakfastNum": 0,
+      "coverImg": "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvF30dEic.webp",
+      "currency": "RMB",
+      "id": "0001",
+      "imgList": [
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvF30dEic.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvL6YuD0k.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvLMiPEaI.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeJMHhUrK.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeKvrXr0s.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvElUjsUU.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeIz6AVOw.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeHW0dvXy.jpg"
+      ],
+      "mId": "0001",
+      "minNRate": "",
+      "name": "高级大床房",
+      "needDrawPrice": false,
+      "price": 371.00,
+      "products": [],
+      "rpTotal": 0,
+      "smallImgs": [
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvF30dEic.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvL6YuD0k.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvLMiPEaI.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeJMHhUrK.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeKvrXr0s.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvElUjsUU.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeIz6AVOw.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeHW0dvXy.jpg"
+      ],
+      "subPrice": 361.00,
+      "tags": [
+        {
+          "available": true,
+          "borderColor": "#FFA199",
+          "color": "#FF4414",
+          "desc": "已满349下单立减10元",
+          "id": 19,
+          "name": "可用红包",
+          "type": 0
+        }
+      ],
+      "type": 0,
+      "typeDesc": "",
+      "visible": false
+    },
+    {
+      "additionList": [
+        {
+          "content": "23",
+          "key": "areaValue"
+        },
+        {
+          "content": "23平米",
+          "key": "area"
+        },
+        {
+          "content": "2",
+          "key": "bedValue"
+        },
+        {
+          "content": "9",
+          "key": "windowValue"
+        },
+        {
+          "content": "有窗",
+          "key": "window"
+        },
+        {
+          "content": "免费无线",
+          "key": "network"
+        },
+        {
+          "content": "4-8层(普通楼层)",
+          "key": "floor"
+        },
+        {
+          "content": "可入住2人",
+          "key": "personnum"
+        },
+        {
+          "content": "2",
+          "key": "psnnum"
+        },
+        {
+          "content": "双早",
+          "key": "breakfast"
+        },
+        {
+          "content": "",
+          "key": "roomtype"
+        },
+        {
+          "content": "大床",
+          "detailContent": "大床1.8米",
+          "key": "bed"
+        }
+      ],
+      "areaAdvantage": "",
+      "available": false,
+      "breType": -1,
+      "breakfastNum": 0,
+      "coverImg": "http://pavo.elongstatic.com/i/mobile216_216/nw_000gLWBv.webp",
+      "currency": "RMB",
+      "id": "0003",
+      "imgList": [
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_000gLWBv.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_000gLWBz.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_000gzQJv.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeJMHhUrK.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeGH6CRfW.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeHjX7hVm.jpg"
+      ],
+      "mId": "0003",
+      "minNRate": "",
+      "name": "零压-高级大床房",
+      "needDrawPrice": false,
+      "price": 390.00,
+      "products": [],
+      "rpTotal": 0,
+      "smallImgs": [
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_000gLWBv.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_000gLWBz.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_000gzQJv.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeJMHhUrK.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeGH6CRfW.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeHjX7hVm.jpg"
+      ],
+      "subPrice": 380.00,
+      "tags": [
+        {
+          "available": true,
+          "borderColor": "#FFA199",
+          "color": "#FF4414",
+          "desc": "已满349下单立减10元",
+          "id": 19,
+          "name": "可用红包",
+          "type": 0
+        }
+      ],
+      "type": 0,
+      "typeDesc": "",
+      "visible": false
+    },
+    {
+      "additionList": [
+        {
+          "content": "23",
+          "key": "areaValue"
+        },
+        {
+          "content": "23平米",
+          "key": "area"
+        },
+        {
+          "content": "3",
+          "key": "bedValue"
+        },
+        {
+          "content": "9",
+          "key": "windowValue"
+        },
+        {
+          "content": "有窗",
+          "key": "window"
+        },
+        {
+          "content": "免费无线",
+          "key": "network"
+        },
+        {
+          "content": "4-8层(普通楼层)",
+          "key": "floor"
+        },
+        {
+          "content": "可入住2人",
+          "key": "personnum"
+        },
+        {
+          "content": "2",
+          "key": "psnnum"
+        },
+        {
+          "content": "双早",
+          "key": "breakfast"
+        },
+        {
+          "content": "",
+          "key": "roomtype"
+        },
+        {
+          "content": "双床",
+          "detailContent": "双床1.1米",
+          "key": "bed"
+        }
+      ],
+      "areaAdvantage": "",
+      "available": false,
+      "breType": -1,
+      "breakfastNum": 0,
+      "coverImg": "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvzLhLkE8.webp",
+      "currency": "RMB",
+      "id": "0004",
+      "imgList": [
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvzLhLkE8.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvyLw0NBC.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvuXPz0Gs.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeJMHhUrK.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeGH6CRfW.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeHjX7hVm.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeKvrXr0s.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeJkpn1Pa.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeLaZ4p1K.jpg"
+      ],
+      "mId": "0004",
+      "minNRate": "",
+      "name": "零压-双床房",
+      "needDrawPrice": false,
+      "price": 390.00,
+      "products": [],
+      "rpTotal": 0,
+      "smallImgs": [
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvzLhLkE8.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvyLw0NBC.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvuXPz0Gs.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeJMHhUrK.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeGH6CRfW.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeHjX7hVm.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeKvrXr0s.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeJkpn1Pa.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeLaZ4p1K.jpg"
+      ],
+      "subPrice": 380.00,
+      "tags": [
+        {
+          "available": true,
+          "borderColor": "#FFA199",
+          "color": "#FF4414",
+          "desc": "已满349下单立减10元",
+          "id": 19,
+          "name": "可用红包",
+          "type": 0
+        }
+      ],
+      "type": 0,
+      "typeDesc": "",
+      "visible": false
+    },
+    {
+      "additionList": [
+        {
+          "content": "35",
+          "key": "areaValue"
+        },
+        {
+          "content": "35平米",
+          "key": "area"
+        },
+        {
+          "content": "2",
+          "key": "bedValue"
+        },
+        {
+          "content": "9",
+          "key": "windowValue"
+        },
+        {
+          "content": "有窗",
+          "key": "window"
+        },
+        {
+          "content": "免费无线",
+          "key": "network"
+        },
+        {
+          "content": "4-8层(普通楼层)",
+          "key": "floor"
+        },
+        {
+          "content": "可入住2人",
+          "key": "personnum"
+        },
+        {
+          "content": "2",
+          "key": "psnnum"
+        },
+        {
+          "content": "双早",
+          "key": "breakfast"
+        },
+        {
+          "content": "",
+          "key": "roomtype"
+        },
+        {
+          "content": "大床",
+          "detailContent": "大床2米",
+          "key": "bed"
+        }
+      ],
+      "areaAdvantage": "",
+      "available": false,
+      "breType": -1,
+      "breakfastNum": 0,
+      "coverImg": "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvHcNfupy.webp",
+      "currency": "RMB",
+      "id": "0006",
+      "imgList": [
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvHcNfupy.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_000gLWCg.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvHQwOEpy.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvIDtLN9m.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvKA4JGoM.jpg"
+      ],
+      "mId": "0006",
+      "minNRate": "",
+      "name": "高级特大房",
+      "needDrawPrice": false,
+      "price": 418.00,
+      "products": [],
+      "rpTotal": 0,
+      "smallImgs": [
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvHcNfupy.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_000gLWCg.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvHQwOEpy.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvIDtLN9m.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvKA4JGoM.jpg"
+      ],
+      "subPrice": 408.00,
+      "tags": [
+        {
+          "available": true,
+          "borderColor": "#FFA199",
+          "color": "#FF4414",
+          "desc": "已满349下单立减10元",
+          "id": 19,
+          "name": "可用红包",
+          "type": 0
+        }
+      ],
+      "type": 0,
+      "typeDesc": "",
+      "visible": false
+    },
+    {
+      "additionList": [
+        {
+          "content": "50",
+          "key": "areaValue"
+        },
+        {
+          "content": "50平米",
+          "key": "area"
+        },
+        {
+          "content": "2",
+          "key": "bedValue"
+        },
+        {
+          "content": "9",
+          "key": "windowValue"
+        },
+        {
+          "content": "有窗",
+          "key": "window"
+        },
+        {
+          "content": "免费无线",
+          "key": "network"
+        },
+        {
+          "content": "8层(普通楼层)",
+          "key": "floor"
+        },
+        {
+          "content": "可入住2人",
+          "key": "personnum"
+        },
+        {
+          "content": "2",
+          "key": "psnnum"
+        },
+        {
+          "content": "无早",
+          "key": "breakfast"
+        },
+        {
+          "content": "",
+          "key": "roomtype"
+        },
+        {
+          "content": "大床",
+          "detailContent": "大床1.8米",
+          "key": "bed"
+        }
+      ],
+      "areaAdvantage": "",
+      "available": false,
+      "breType": -1,
+      "breakfastNum": 0,
+      "coverImg": "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvovy21hK.webp",
+      "currency": "RMB",
+      "id": "0007",
+      "imgList": [
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvovy21hK.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvgs7nR1S.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_MOHtuWeoa4.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeJMHhUrK.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OGvppuIeM8.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeKvrXr0s.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeIz6AVOw.jpg",
+        "http://pavo.elongstatic.com/i/Mobile750_750/nw_OFeHW0dvXy.jpg"
+      ],
+      "mId": "0007",
+      "minNRate": "",
+      "name": "套房",
+      "needDrawPrice": false,
+      "price": 446.00,
+      "products": [],
+      "rpTotal": 0,
+      "smallImgs": [
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvovy21hK.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvgs7nR1S.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_MOHtuWeoa4.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeJMHhUrK.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OGvppuIeM8.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeKvrXr0s.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeIz6AVOw.jpg",
+        "http://pavo.elongstatic.com/i/mobile216_216/nw_OFeHW0dvXy.jpg"
+      ],
+      "subPrice": 436.00,
+      "tags": [
+        {
+          "available": true,
+          "borderColor": "#FFA199",
+          "color": "#FF4414",
+          "desc": "已满349下单立减10元",
+          "id": 19,
+          "name": "可用红包",
+          "type": 0
+        }
+      ],
+      "type": 0,
+      "typeDesc": "",
+      "visible": false
+    }
+  ],
+  "sessionId": "6ff4d88e-3976-4ba0-a2c3-fba601a6847b",
+  "star": 3,
+  "starDes": "舒适型",
+  "supplier": [
+    {
+      "licenseUrl": "http://pavo.elongstatic.com/i/mobile_1080_1080/JhkyZMbo8E.jpg",
+      "shortName": "ZJ全季天津海光寺酒店",
+      "supplierId": 329104,
+      "supplierLicenseId": "JhkyZMbo8E"
+    }
+  ],
+  "tcHongBaoList": [
+    {
+      "ActiveTime": 1591972318000,
+      "ActivityName": "酒店10元红包",
+      "Balance": 0,
+      "BatchId": 0,
+      "BatchNo": "2020020833",
+      "BatchType": "CashBack",
+      "BeginTime": 1591200000000,
+      "CouponNo": "7000005054711730",
+      "ElBatchId": "2020020833",
+      "EndTime": 1593791999000,
+      "FaceValueType": 0,
+      "IsCost": 0,
+      "IsLimitResource": false,
+      "MemberId": 0,
+      "ParValue": 10,
+      "ParamList": [
+        {
+          "factor_code": 31,
+          "left_value": "0",
+          "right_value": ""
+        },
+        {
+          "factor_code": 36,
+          "left_value": "0",
+          "right_value": ""
+        },
+        {
+          "factor_code": 37,
+          "left_value": "2",
+          "right_value": ""
+        },
+        {
+          "factor_code": 38,
+          "left_value": "1",
+          "right_value": ""
+        },
+        {
+          "factor_code": 32,
+          "left_value": "2020-06-04 00:00:00",
+          "right_value": ""
+        },
+        {
+          "factor_code": 33,
+          "left_value": "0",
+          "right_value": ""
+        },
+        {
+          "factor_code": 23,
+          "left_value": "1",
+          "right_value": ""
+        },
+        {
+          "factor_code": 22,
+          "left_value": "58059",
+          "right_value": ""
+        },
+        {
+          "factor_code": 22,
+          "left_value": "58058",
+          "right_value": ""
+        },
+        {
+          "factor_code": 22,
+          "left_value": "58057",
+          "right_value": ""
+        },
+        {
+          "factor_code": 25,
+          "left_value": "0",
+          "right_value": "普通红包"
+        },
+        {
+          "factor_code": 17,
+          "left_value": "3",
+          "right_value": ""
+        },
+        {
+          "factor_code": 26,
+          "left_value": "349",
+          "right_value": "10"
+        },
+        {
+          "factor_code": 41,
+          "left_value": "0",
+          "right_value": ""
+        },
+        {
+          "factor_code": 42,
+          "left_value": "0",
+          "right_value": ""
+        },
+        {
+          "factor_code": 44,
+          "left_value": "0",
+          "right_value": ""
+        },
+        {
+          "factor_code": 47,
+          "left_value": "0",
+          "right_value": ""
+        },
+        {
+          "factor_code": 45,
+          "left_value": "1",
+          "right_value": "基础"
+        },
+        {
+          "factor_code": 46,
+          "left_value": "0",
+          "right_value": "0"
+        },
+        {
+          "factor_code": 51,
+          "left_value": "0",
+          "right_value": ""
+        },
+        {
+          "factor_code": 29,
+          "left_value": "1",
+          "right_value": ""
+        }
+      ],
+      "SmallAmount": 349,
+      "Status": "Binded",
+      "TrueUseAmount": 0.0,
+      "Type": 0
+    }
+  ],
+  "totalComment": 179,
+  "traceToken": "|*|qId:f90168ae-16d6-4be8-ab26-ed1a620e74d7|*|Tp:default|*|",
+  "trafficInfo": "距海光寺地铁站直线0.2公里,步行约0.6公里,预计9分钟",
+  "userComment": {
+    "hotelUserCommentInfo": {
+      "commentContent": "服务超级棒，带着孩子十一小长假入住，办理手续的时候一看带着孩子马上就给了一副小朋友的拖鞋和牙具，真是超级贴心，环境优美，服务周到，超级推荐",
+      "commentDateTime": "2019/10/05点评",
+      "commentScore": {
+        "commentDes": "棒极啦",
+        "facilityScore": 4.8,
+        "positionScore": 4.8,
+        "sanitationScore": 4.8,
+        "score": 4.8,
+        "serviceScore": 4.8
+      },
+      "roomTypeName": "双床房",
+      "travelType": 1,
+      "travelTypeDesc": "家庭亲子",
+      "userName": "511F995A5C16F85F",
+      "userScore": 5.0
+    },
+    "moduleTitle": "住客评论",
+    "totalCountTip": "179条点评"
+  }
+}

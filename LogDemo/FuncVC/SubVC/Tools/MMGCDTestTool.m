@@ -40,4 +40,13 @@ void testFunc(void *context) {
     int *number = context;
     NSLog(@"testFunc-%d",*number);
 }
+
+
++ (void)test {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"detail" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSError *error;
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    NSLog(@"dict=%@",dict);
+}
 @end

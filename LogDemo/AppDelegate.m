@@ -18,9 +18,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     // Override point for customization after application launch.
-    int test = ceil(5 / 2) ;
-    int test2 = ceil(5.0 / 2);
-    NSLog(@"pri===%d",test);
     return YES;
 }
 

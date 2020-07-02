@@ -49,4 +49,18 @@ void testFunc(void *context) {
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
     NSLog(@"dict=%@",dict);
 }
+
++ (BOOL)testPoint:(NSString **)str {
+//    NSString *strTMp;
+    @autoreleasepool {
+//        strTMp = [[NSMutableString alloc] initWithString:@"change"];
+//        NSMutableString *mStr = [[NSMutableString alloc] initWithString:@"change"];
+//        *str = mStr;
+//        *str = [[NSMutableString alloc] initWithString:@"change"];
+        *str = @"change";
+    }
+    NSLog(@"p2->%@",*str);
+//    NSLog(@"p2->%@,%@",*str,strTMp);
+    return true;
+}
 @end

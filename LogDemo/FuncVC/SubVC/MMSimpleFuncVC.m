@@ -28,8 +28,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSDictionary *dict = @{@"key1": @"value1",
-                           @"key2": @"value2"
+                           @"key2": @(3),
+                           @"key3": @(true),
+                           
     };
+    
+    id isTrue = [dict objectForKey:@"ke1"];
+    BOOL value = [isTrue boolValue];
+    id key2 = [dict objectForKey:@"ke2"];
+    NSInteger value2 = [key2 integerValue];
+        NSLog(@"p->%@",isTrue);
+
 //    NSDictionary *dict2 = [NSDictionary dictionaryWithDictionary:dict];
 //    id obj = [dict objectForKey:@"ke1"];
 //    NSInteger va1 = [obj integerValue];
@@ -39,7 +48,10 @@
     
 //    [self testFuncA];
 //    [self testEqualArray];
-    [MMGCDTestTool test];
+//    [MMGCDTestTool test];
+//    NSString *str = @"test";
+//    [MMGCDTestTool testPoint:&str];
+//    [MMGCDTestTool testPoint:(NSString *__autoreleasing *)]
 }
 
 - (void)testBLock {

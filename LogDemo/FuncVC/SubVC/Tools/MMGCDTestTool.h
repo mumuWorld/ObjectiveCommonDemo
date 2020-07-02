@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)gcd_groupTest1;
 
 + (void)test;
+
++ (BOOL)testPoint:(NSString **)str;
 @end
 
 NS_ASSUME_NONNULL_END

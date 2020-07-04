@@ -13,8 +13,9 @@
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 
-#define NavigationBarHeight [UIDevice isStraightBangsScreen] ? 88 : 64
+#define NavigationBarHeight [UIDevice isIPhoneXSeries] ? 88 : 64
 
+#define BottomSafeAreaHeight [UIDevice isIPhoneXSeries] ? 34.f : 0.f
 
 #ifdef DEBUG // 开发
 

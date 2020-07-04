@@ -14,33 +14,47 @@ static BOOL isStraightBangsScreen = false;
 
 @implementation UIDevice (MMCategory)
 
-+ (BOOL)isStraightBangsScreen {
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-         struct utsname systemInfo;
-           uname(&systemInfo);
-           NSString *identifier = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
-           if ([identifier isEqualToString:@"i386"] || [identifier isEqualToString:@"x86_64"]) {
-               identifier = [NSProcessInfo processInfo].environment[@"SIMULATOR_MODEL_IDENTIFIER"];
-           }
-           
-           if ([identifier isEqualToString:@"iPhone10,3"] || // iPhone X
-               [identifier isEqualToString:@"iPhone10,6"] || // iPhone X
-               [identifier isEqualToString:@"iPhone11,8"] || // iPhone XR
-               [identifier isEqualToString:@"iPhone11,2"] || // iPhone XS
-               [identifier isEqualToString:@"iPhone11,4"] || // iPhone XS Max
-               [identifier isEqualToString:@"iPhone11,6"] || // iPhone XS Max
-               [identifier isEqualToString:@"iPhone12,1"] || // iPhone 11
-               [identifier isEqualToString:@"iPhone12,3"] || // iPhone 11 Pro
-               [identifier isEqualToString:@"iPhone12,5"]    // iPhone 11 Pro Max
-               ) {
-               isStraightBangsScreen = true;
-           }
-           else {
-               isStraightBangsScreen = false;
-           }
-    });
+//+ (BOOL)isStraightBangsScreen {
+//    static dispatch_once_t onceToken;
+//    dispatch_once(&onceToken, ^{
+//         struct utsname systemInfo;
+//           uname(&systemInfo);
+//           NSString *identifier = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
+//           if ([identifier isEqualToString:@"i386"] || [identifier isEqualToString:@"x86_64"]) {
+//               identifier = [NSProcessInfo processInfo].environment[@"SIMULATOR_MODEL_IDENTIFIER"];
+//           }
+//           
+//           if ([identifier isEqualToString:@"iPhone10,3"] || // iPhone X
+//               [identifier isEqualToString:@"iPhone10,6"] || // iPhone X
+//               [identifier isEqualToString:@"iPhone11,8"] || // iPhone XR
+//               [identifier isEqualToString:@"iPhone11,2"] || // iPhone XS
+//               [identifier isEqualToString:@"iPhone11,4"] || // iPhone XS Max
+//               [identifier isEqualToString:@"iPhone11,6"] || // iPhone XS Max
+//               [identifier isEqualToString:@"iPhone12,1"] || // iPhone 11
+//               [identifier isEqualToString:@"iPhone12,3"] || // iPhone 11 Pro
+//               [identifier isEqualToString:@"iPhone12,5"]    // iPhone 11 Pro Max
+//               ) {
+//               isStraightBangsScreen = true;
+//           }
+//           else {
+//               isStraightBangsScreen = false;
+//           }
+//    });
+//    return isStraightBangsScreen;
+//}
+
++ (BOOL)isIPhoneXSeries {
+    if ([UIApplication sharedApplication].keyWindow) {
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            if (@available(iOS 11.0, *)) {
+                isStraightBangsScreen = [UIApplication sharedApplication].keyWindow.safeAreaInsets.top > 20;
+            }
+        });
+    }else {
+        isStraightBangsScreen = [UIApplication sharedApplication].statusBarFrame.size.height > 20;
+    }
+    
     return isStraightBangsScreen;
 }
-
 @end

@@ -79,15 +79,28 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="fno-kB-E4z">
-                    <rect key="frame" x="20" y="637" width="148" height="212"/>
+                    <rect key="frame" x="22" y="633" width="76" height="125"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="100" id="Tsj-OU-VI6"/>
                         <constraint firstAttribute="width" constant="150" id="jNm-CA-B4A"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cI-ij-nBY">
+                    <rect key="frame" x="22" y="835" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="sdfsdfdsfsdfsddsfsdfdssdfsdfdsdfsdfsdfsdfsdfdsf" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igQ-JS-LED">
+                    <rect key="frame" x="74" y="835" width="330" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="igQ-JS-LED" firstAttribute="bottom" secondItem="9cI-ij-nBY" secondAttribute="bottom" id="5Iq-Ve-F2u"/>
                 <constraint firstItem="QUE-JQ-qPJ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="8" id="5jN-XI-Lu5"/>
                 <constraint firstItem="Ske-j7-HSm" firstAttribute="top" secondItem="j16-F6-Zef" secondAttribute="bottom" constant="20" id="6mU-ki-JUi"/>
                 <constraint firstItem="wmy-qz-j2x" firstAttribute="leading" secondItem="QUE-JQ-qPJ" secondAttribute="trailing" constant="8" id="AIo-ye-9fB"/>
@@ -100,9 +113,14 @@
                 <constraint firstItem="H75-Wn-cPh" firstAttribute="leading" secondItem="cWx-j7-Bxg" secondAttribute="trailing" constant="8" id="TYE-9j-9cp"/>
                 <constraint firstItem="50f-yU-7Ai" firstAttribute="leading" secondItem="szK-UW-haf" secondAttribute="trailing" constant="8" id="Vut-mX-LIP"/>
                 <constraint firstItem="szK-UW-haf" firstAttribute="leading" secondItem="QUE-JQ-qPJ" secondAttribute="leading" id="WuR-Qo-gFV"/>
+                <constraint firstItem="9cI-ij-nBY" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="22" id="Ywf-gZ-yU5"/>
                 <constraint firstItem="QUE-JQ-qPJ" firstAttribute="top" secondItem="Ske-j7-HSm" secondAttribute="bottom" constant="52" id="ZEw-yr-Kr4"/>
+                <constraint firstAttribute="bottom" secondItem="9cI-ij-nBY" secondAttribute="bottom" constant="40" id="fzY-CA-aj1"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="igQ-JS-LED" secondAttribute="trailing" constant="10" id="hGB-ug-068"/>
                 <constraint firstItem="Ske-j7-HSm" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="j9c-Jg-IfW"/>
                 <constraint firstItem="50f-yU-7Ai" firstAttribute="centerY" secondItem="szK-UW-haf" secondAttribute="centerY" id="jYa-7A-DjY"/>
+                <constraint firstItem="igQ-JS-LED" firstAttribute="leading" secondItem="9cI-ij-nBY" secondAttribute="trailing" constant="10" id="k5R-IJ-vmW"/>
+                <constraint firstItem="igQ-JS-LED" firstAttribute="top" secondItem="9cI-ij-nBY" secondAttribute="top" id="pJ0-kz-ad7"/>
                 <constraint firstItem="H75-Wn-cPh" firstAttribute="centerY" secondItem="cWx-j7-Bxg" secondAttribute="centerY" id="qiU-Al-EQU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

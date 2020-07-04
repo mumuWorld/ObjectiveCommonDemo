@@ -7,11 +7,14 @@
 //
 
 #import "MMRichTextVC.h"
+#import <Masonry.h>
 
-@interface MMRichTextVC ()
+@interface MMRichTextVC ()<UITextFieldDelegate>
 @property (nonatomic, strong) UILabel *richTextLabel;
 
 @property (nonatomic, strong) UIImageView *testImage;
+
+@property (nonatomic, strong) UITextField *inputField;
 
 @end
 
@@ -46,27 +49,41 @@
     self.testImage.frame = CGRectMake(50, 300, img2.size.width, img2.size.height);
     [self.view addSubview:self.testImage];
     
+    NSLog(@"fff=%f",BottomSafeAreaHeight);
+    [self.view addSubview:self.inputField];
+    [self.inputField mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(600);
+        make.left.mas_equalTo(self.view).offset(10);
+        make.right.mas_equalTo(self.view).offset(-10);
+        make.height.mas_equalTo(30);
+    }];
+    
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self testParamFunc];
+    [self testParamFunc:self.inputField.text ? [self.inputField.text floatValue] : 17];
 }
-- (void)testParamFunc {
+- (void)testParamFunc:(CGFloat)fontSize {
     UIFont *font = [UILabel new].font;
     CGFloat systemSize = [UIFont systemFontSize];
     
     NSLog(@"%f---sys:%f",font.pointSize,systemSize);
-    UIFont *comFont = [UIFont systemFontOfSize:systemSize];
+//    UIFont *comFont = [UIFont systemFontOfSize:systemSize];
+    UIFont * comFont = [UIFont systemFontOfSize:fontSize weight:UIFontWeightMedium];
     NSLog(@"familyName-%@",comFont.familyName);
     NSLog(@"fontName-%@",comFont.fontName);
+    //字体大小数值
     NSLog(@"pointSize-%f",comFont.pointSize);
+    //基准线到顶部
     NSLog(@"ascender-%f",comFont.ascender);
+    //基准线到底部  负数
     NSLog(@"descender-%f",comFont.descender);
     //大写字符
     NSLog(@"capHeight-%f",comFont.capHeight);
     //x 字母
     NSLog(@"xHeight-%f",comFont.xHeight);
     NSLog(@"lineHeight-%f",comFont.lineHeight);
-    //行之间的高度
+    //行之间的高度  leading指的是如果有多行的话，两个baseline之间的距离，如果只有一行，那么这个值就是0.
+
     NSLog(@"leading-%f",comFont.leading);
 }
 
@@ -85,5 +102,15 @@
         _testImage = img;
     }
     return _testImage;
+}
+- (UITextField *)inputField {
+    if (!_inputField) {
+        UITextField *field = [[UITextField alloc] init];
+        field.backgroundColor = UIColor.cyanColor;
+        field.placeholder = @"保持";
+        field.delegate = self;
+        _inputField = field;
+    }
+    return _inputField;
 }
 @end

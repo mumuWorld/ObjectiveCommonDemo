@@ -23,6 +23,7 @@
 #import "NSObject+MMCategory.h"
 
 #import <SDWebImage.h>
+#import <Masonry.h>
 
 #import "MMStaticDefine.h"
 

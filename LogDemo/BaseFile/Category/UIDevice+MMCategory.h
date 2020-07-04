@@ -14,8 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIDevice (MMCategory)
 
-+ (BOOL)isStraightBangsScreen;
+//+ (BOOL)isStraightBangsScreen;
 
++ (BOOL)isIPhoneXSeries;
 @end
 
 NS_ASSUME_NONNULL_END

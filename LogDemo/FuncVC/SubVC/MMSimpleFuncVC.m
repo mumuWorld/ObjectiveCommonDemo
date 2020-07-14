@@ -10,6 +10,7 @@
 #import "MMPresentTestVC.h"
 #import "MMSimpleFuncModel.h"
 #import "MMGCDTestTool.h"
+#import "MMSimpleFuncTestTool.h"
 
 @interface MMSimpleFuncVC ()
 @property (nonatomic, strong) NSArray *strongArray;
@@ -27,18 +28,24 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *dict = @{@"key1": @"value1",
-                           @"key2": @(3),
-                           @"key3": @(true),
-                           
-    };
+//    NSDictionary *dict = @{@"key1": @"value1",
+//                           @"key2": @(3),
+//                           @"key3": @(true),
+//
+//    };
+//
+//    id isTrue = [dict objectForKey:@"ke1"];
+//    BOOL value = [isTrue boolValue];
+//    id key2 = [dict objectForKey:@"ke2"];
+//    NSInteger value2 = [key2 integerValue];
+//        NSLog(@"p->%@",isTrue);
+//
+//    [MMSimpleFuncTestTool addTargetVC:self];
+    //1
+//    NSLog(@"%d",3/2);
+//    [MMGCDTestTool gcd_groupTest2];
+    [MMSimpleFuncTestTool utfCode];
     
-    id isTrue = [dict objectForKey:@"ke1"];
-    BOOL value = [isTrue boolValue];
-    id key2 = [dict objectForKey:@"ke2"];
-    NSInteger value2 = [key2 integerValue];
-        NSLog(@"p->%@",isTrue);
-
 //    NSDictionary *dict2 = [NSDictionary dictionaryWithDictionary:dict];
 //    id obj = [dict objectForKey:@"ke1"];
 //    NSInteger va1 = [obj integerValue];
@@ -52,6 +59,8 @@
 //    NSString *str = @"test";
 //    [MMGCDTestTool testPoint:&str];
 //    [MMGCDTestTool testPoint:(NSString *__autoreleasing *)]
+    
+    
 }
 
 - (void)testBLock {

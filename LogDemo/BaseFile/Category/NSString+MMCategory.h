@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// 根据规则匹配字符串
 /// @param regularStr 正则规则
 - (NSArray *)matchStringWithRegularRule:(NSString *)regularStr;
+
+- (NSString *)utf8String;
 @end
 
 NS_ASSUME_NONNULL_END

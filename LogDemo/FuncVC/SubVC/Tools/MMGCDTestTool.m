@@ -8,6 +8,7 @@
 
 #import "MMGCDTestTool.h"
 
+
 @implementation MMGCDTestTool
 
 /// 0 2  3 func 5 5.1 7 1 4 6
@@ -41,26 +42,25 @@ void testFunc(void *context) {
     NSLog(@"testFunc-%d",*number);
 }
 
-
-+ (void)test {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"detail" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSError *error;
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    NSLog(@"dict=%@",dict);
-}
-
-+ (BOOL)testPoint:(NSString **)str {
-//    NSString *strTMp;
-    @autoreleasepool {
-//        strTMp = [[NSMutableString alloc] initWithString:@"change"];
-//        NSMutableString *mStr = [[NSMutableString alloc] initWithString:@"change"];
-//        *str = mStr;
-//        *str = [[NSMutableString alloc] initWithString:@"change"];
-        *str = @"change";
-    }
-    NSLog(@"p2->%@",*str);
-//    NSLog(@"p2->%@,%@",*str,strTMp);
-    return true;
+/// 0 - 1[main]  - 6/ 2/3 -  5- 4
++ (void)gcd_groupTest2 {
+    dispatch_queue_t custom = dispatch_queue_create("mm.custom", DISPATCH_QUEUE_CONCURRENT);
+    NSLog(@"0-%@",[NSThread currentThread]);
+    dispatch_sync(custom, ^{
+        NSLog(@"1-%@",[NSThread currentThread]);
+        dispatch_async(custom, ^{
+            NSLog(@"2-%@",[NSThread currentThread]);
+        });
+        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+            NSLog(@"3-%@",[NSThread currentThread]);
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), custom, ^{
+            NSLog(@"4-%@",[NSThread currentThread]);
+        });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC) , dispatch_get_main_queue(), ^{
+            NSLog(@"5-%@",[NSThread currentThread]);
+        });
+    });
+    NSLog(@"6-%@",[NSThread currentThread]);
 }
 @end

@@ -30,4 +30,10 @@
     return [array copy];
 }
 
+- (NSString *)utf8String {
+    if (self.length == 0) {
+        return self;
+    }
+    return [self stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+}
 @end

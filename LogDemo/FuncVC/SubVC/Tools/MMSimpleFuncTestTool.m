@@ -116,7 +116,6 @@ static NSHashTable *table = nil;
 }
 
 + (NSString *)md5HashToLower32Bit:(NSString *)source {
-    
     const char *input = [source UTF8String];
     unsigned char result[CC_MD5_DIGEST_LENGTH];
     CC_MD5(input, (CC_LONG)strlen(input), result);
@@ -125,7 +124,7 @@ static NSHashTable *table = nil;
     for (NSInteger i = 0; i < CC_MD5_DIGEST_LENGTH; i++) {
         [digest appendFormat:@"%02x", result[i]];
     }
-//    NSLog(@"digest=%@",digest);
+    
     return digest;
 }
 

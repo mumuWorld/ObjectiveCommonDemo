@@ -7,9 +7,12 @@
 //
 
 #import "MMSImpleXibUIVC.h"
+#import "UIView+MMCategory.h"
 
 @interface MMSImpleXibUIVC ()
 @property (weak, nonatomic) IBOutlet UILabel *attributeLabel;
+@property (weak, nonatomic) IBOutlet UIView *grayView;
+@property (weak, nonatomic) IBOutlet UIView *purView;
 
 @end
 
@@ -60,6 +63,11 @@
     } range:NSMakeRange(12, 4)];
     
     _attributeLabel.attributedText = attribute;
+    //AF52DE
+//    [_grayView setColors:@[[UIColor mm_colorWithHex:0xf8f8f8],[UIColor mm_colorWithHex:0xf8f8f8],[UIColor mm_colorWithHex:0xffffff]] locations:@[@(0.3),@(0.6),@(1.0)] withDirectionType:kGradientColorDirectionTypeHorizontal];
+//     [_purView setColors:@[[UIColor mm_colorWithHex:0xAF52DE],[UIColor mm_colorWithHex:0xAF52DE],[UIColor mm_colorWithHex:0xffffff]] locations:@[@(0.3),@(0.6),@(1.0)] withDirectionType:kGradientColorDirectionTypeHorizontal];
+    [_grayView setColors:@[[UIColor mm_colorWithHex:0xf8f8f8],[UIColor mm_colorWithHex:0xffffff]] locations:@[@(0.6),@(1.0)] withDirectionType:kGradientColorDirectionTypeHorizontal];
+    [_purView setColors:@[[UIColor mm_colorWithHex:0xAF52DE],[UIColor mm_colorWithHex:0xffffff]] locations:@[@(0.6),@(1.0)] withDirectionType:kGradientColorDirectionTypeHorizontal];
 }
 
 /*

@@ -52,8 +52,8 @@ static NSHashTable *table = nil;
 + (void)utfCode {
     NSString *str = @"文若";
     NSString *urlCode = @"&#x6587;&#x82E5;";
-    NSString *XunYou = @"公达";
-    NSString *JiaXu = @"文和";
+    NSString *XunYou = @"公达"; //&#x516C;&#x8FBE;
+    NSString *JiaXu = @"文和"; //&#x6587;&#x548C;
     NSString *hString = [str stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
 
     NSString *XunYouUft = [XunYou stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];

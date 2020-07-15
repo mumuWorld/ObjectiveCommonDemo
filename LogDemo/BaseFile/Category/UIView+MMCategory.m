@@ -96,7 +96,7 @@
     return (CAGradientLayer *)self.layer;
 }
 
-- (void)setColors:(NSArray *)colors withDirectionType:(kGradientColorDirectionType)directionType{
+- (void)setColors:(NSArray *)colors withDirectionType:(kGradientColorDirectionType)directionType {
     NSMutableArray *cgColors = [NSMutableArray array];
     for (UIColor *color in colors) {
         [cgColors addObject:(__bridge id)color.CGColor];
@@ -110,4 +110,22 @@
     }
     self.gradientLayer.colors = cgColors;
 }
+
+- (void)setColors:(NSArray *)colors locations:(NSArray *)locations withDirectionType:(kGradientColorDirectionType)directionType {
+    NSMutableArray *cgColors = [NSMutableArray array];
+    for (UIColor *color in colors) {
+        [cgColors addObject:(__bridge id)color.CGColor];
+    }
+    
+    if (directionType == kGradientColorDirectionTypeVertical) {
+        self.gradientLayer.startPoint = CGPointMake(0, 0);
+        self.gradientLayer.endPoint = CGPointMake(0, 1);
+    }else if (kGradientColorDirectionTypeHorizontal){
+        self.gradientLayer.startPoint = CGPointMake(0, 0);
+        self.gradientLayer.endPoint = CGPointMake(1, 0);
+    }
+    self.gradientLayer.locations = locations;
+    self.gradientLayer.colors = cgColors;
+}
+
 @end

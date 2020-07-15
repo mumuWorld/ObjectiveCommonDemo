@@ -41,5 +41,8 @@ typedef NS_ENUM(NSUInteger,kGradientColorDirectionType) {
 
 @interface UIView (MMGradientLayer)
 - (void)setColors:(NSArray *)colors withDirectionType:(kGradientColorDirectionType)directionType;
+
+- (void)setColors:(NSArray *)colors locations:(NSArray *)locations withDirectionType:(kGradientColorDirectionType)directionType;
+
 @end
 NS_ASSUME_NONNULL_END

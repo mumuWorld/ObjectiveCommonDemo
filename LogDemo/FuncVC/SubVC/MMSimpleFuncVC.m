@@ -41,8 +41,9 @@
 //        NSLog(@"p->%@",isTrue);
 //
 //    [MMSimpleFuncTestTool addTargetVC:self];
-    //1
-//    NSLog(@"%d",3/2);
+    //0x7fe5e0524e40
+    NSInteger tmp = (NSInteger)[NSString stringWithFormat:@"%p",self];
+    NSLog(@"%@",tmp);
 //    [MMGCDTestTool gcd_groupTest2];
     [MMSimpleFuncTestTool utfCode];
     

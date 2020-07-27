@@ -42,10 +42,17 @@
 //
 //    [MMSimpleFuncTestTool addTargetVC:self];
     //0x7fe5e0524e40
-    NSInteger tmp = (NSInteger)[NSString stringWithFormat:@"%p",self];
-    NSLog(@"%@",tmp);
-//    [MMGCDTestTool gcd_groupTest2];
-    [MMSimpleFuncTestTool utfCode];
+//    char a = 'a';
+//    char b = 'b';
+//    NSInteger tmp_1 = a - b;
+//    NSString *cloudStr = @"0123456"; //7
+//    cloudStr = [cloudStr substringToIndex:cloudStr.length - 1];
+//    NSInteger tmp = (NSInteger)[NSString stringWithFormat:@"%p",self];
+//    MMSimpleFuncModel *modle;
+//    NSDictionary *dict = @{@"key": @(modle.type)};
+//    NSLog(@"%@",tmp);
+////    [MMGCDTestTool gcd_groupTest2];
+//    [MMSimpleFuncTestTool utfCode];
     
 //    NSDictionary *dict2 = [NSDictionary dictionaryWithDictionary:dict];
 //    id obj = [dict objectForKey:@"ke1"];
@@ -60,7 +67,6 @@
 //    NSString *str = @"test";
 //    [MMGCDTestTool testPoint:&str];
 //    [MMGCDTestTool testPoint:(NSString *__autoreleasing *)]
-    
     
 }
 
@@ -108,7 +114,8 @@
     NSLog(@"resutl");
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self.timer invalidate];
+//    [self.timer invalidate];
+    [MMSimpleFuncTestTool invokeGCDTest];
 //    MMPresentTestVC *test = [[MMPresentTestVC alloc] init];
 //    test.modalPresentationStyle = UIModalPresentationFullScreen;
 //    [self.navigationController presentViewController:test animated:true completion:nil];

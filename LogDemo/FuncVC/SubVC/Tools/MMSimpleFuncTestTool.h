@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)utfCode;
 + (NSString *)md5HashToLower32Bit:(NSString *)source;
+
++ (void)invokeGCDTest;
 @end
 
 NS_ASSUME_NONNULL_END

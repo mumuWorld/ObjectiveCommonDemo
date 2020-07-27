@@ -83,6 +83,8 @@
 		B4D4DBA823CEC1830093D5DA /* MMBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBA723CEC1830093D5DA /* MMBaseTableViewController.m */; };
 		B4D4DBAB23CEC20F0093D5DA /* MMConstDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBAA23CEC20F0093D5DA /* MMConstDefine.m */; };
 		B4D4DBAE23CEC4D00093D5DA /* MMCoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBAD23CEC4D00093D5DA /* MMCoreAnimationViewController.m */; };
+		B4EBD92424CF394C006AF0E6 /* MMUIDynamicVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EBD92224CF394C006AF0E6 /* MMUIDynamicVC.m */; };
+		B4EBD92524CF394C006AF0E6 /* MMUIDynamicVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4EBD92324CF394C006AF0E6 /* MMUIDynamicVC.xib */; };
 		B4EF867924498CB20055060E /* MMSimpleFuncVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF867824498CB20055060E /* MMSimpleFuncVC.m */; };
 		B4EF867C2449BD640055060E /* MMPresentTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF867B2449BD640055060E /* MMPresentTestVC.m */; };
 		B4EF867F2449D3600055060E /* MMSimpleFuncVC+MMHook.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EF867E2449D3600055060E /* MMSimpleFuncVC+MMHook.m */; };
@@ -262,6 +264,9 @@
 		B4D4DBAA23CEC20F0093D5DA /* MMConstDefine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMConstDefine.m; sourceTree = "<group>"; };
 		B4D4DBAC23CEC4D00093D5DA /* MMCoreAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCoreAnimationViewController.h; sourceTree = "<group>"; };
 		B4D4DBAD23CEC4D00093D5DA /* MMCoreAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCoreAnimationViewController.m; sourceTree = "<group>"; };
+		B4EBD92124CF394C006AF0E6 /* MMUIDynamicVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMUIDynamicVC.h; sourceTree = "<group>"; };
+		B4EBD92224CF394C006AF0E6 /* MMUIDynamicVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMUIDynamicVC.m; sourceTree = "<group>"; };
+		B4EBD92324CF394C006AF0E6 /* MMUIDynamicVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMUIDynamicVC.xib; sourceTree = "<group>"; };
 		B4EF867724498CB20055060E /* MMSimpleFuncVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMSimpleFuncVC.h; sourceTree = "<group>"; };
 		B4EF867824498CB20055060E /* MMSimpleFuncVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMSimpleFuncVC.m; sourceTree = "<group>"; };
 		B4EF867A2449BD640055060E /* MMPresentTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMPresentTestVC.h; sourceTree = "<group>"; };
@@ -452,6 +457,9 @@
 				B4FF166C2494F15300D5E3C7 /* MMUILabelTestVC.h */,
 				B4FF166D2494F15300D5E3C7 /* MMUILabelTestVC.m */,
 				B4FF166E2494F15300D5E3C7 /* MMUILabelTestVC.xib */,
+				B4EBD92124CF394C006AF0E6 /* MMUIDynamicVC.h */,
+				B4EBD92224CF394C006AF0E6 /* MMUIDynamicVC.m */,
+				B4EBD92324CF394C006AF0E6 /* MMUIDynamicVC.xib */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -928,6 +936,7 @@
 				B4FF16702494F15300D5E3C7 /* MMUILabelTestVC.xib in Resources */,
 				B4B9BE6C2462B8CD00AD0F9B /* MMSImpleXibUIVC.xib in Resources */,
 				B4BAA364241F62910049DFEE /* SettingView.xib in Resources */,
+				B4EBD92524CF394C006AF0E6 /* MMUIDynamicVC.xib in Resources */,
 				B4F4BA8423CF28F900ACFC52 /* collection_layout_list.plist in Resources */,
 				B499FFDF249BA65C006C3274 /* detail.json in Resources */,
 				401FFC121E11189300E46787 /* Main.storyboard in Resources */,
@@ -1049,6 +1058,7 @@
 				B4EF867C2449BD640055060E /* MMPresentTestVC.m in Sources */,
 				B4F9F46D2452F1B300097200 /* MMSimpleFuncModel.m in Sources */,
 				B45CF4FF23A9D3C600345FB5 /* MMModelTransform.m in Sources */,
+				B4EBD92424CF394C006AF0E6 /* MMUIDynamicVC.m in Sources */,
 				B42F3D4523B4502700DAB9E0 /* MMMasonryViewController.m in Sources */,
 				B42BA76D24913B2500B9E2CD /* MMCustomTableviewVC.m in Sources */,
 				401FFC091E11189300E46787 /* main.m in Sources */,

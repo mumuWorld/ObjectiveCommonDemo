@@ -14,6 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) NSInteger type;
 @property (nonatomic, copy) NSString *keyType;
 @property (nonatomic, copy) NSString *content;
+
+@property (nonatomic, copy) NSArray *testArray;
+@property (nonatomic, copy) NSDictionary *testDictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END

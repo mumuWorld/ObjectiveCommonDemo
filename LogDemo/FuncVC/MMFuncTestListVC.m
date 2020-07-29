@@ -24,7 +24,7 @@
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [MMSimpleFuncTestTool printTable];
+//    [MMSimpleFuncTestTool printTable];
 }
 - (void)initSubView {
      [self.tableView registerNib:[UINib nibWithNibName:@"MMHomeListTableViewCell" bundle:nil] forCellReuseIdentifier:@"MMHomeListTableViewCell"]; 

@@ -46,12 +46,14 @@
 //    self.view2.backgroundColor = [UIColor blueColor];
 //    [self.someView addSubview:self.view2];
     
-    NSLog(@"tmp=%ld", nil < 1);
+    //tmp = 1
+//    NSLog(@"tmp=%ld", nil < 1);
     
     
     NSString *max = @"\nabc\n";
+    //abc
     NSString *min = [self getFitContentStr:max];
-    NSLog(@"--%@",min);
+//    NSLog(@"--%@",min);
 }
 
 - (void)initSubView {

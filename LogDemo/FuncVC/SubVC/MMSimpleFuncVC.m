@@ -11,6 +11,7 @@
 #import "MMSimpleFuncModel.h"
 #import "MMGCDTestTool.h"
 #import "MMSimpleFuncTestTool.h"
+#import "MMGenerateObjTool.h"
 
 @interface MMSimpleFuncVC ()
 @property (nonatomic, strong) NSArray *strongArray;
@@ -28,6 +29,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [MMGenerateObjTool generateJson:[MMSimpleFuncModel class]];
+//    [MMGenerateObjTool generateJson:[[MMSimpleFuncTestTool new] class]];
+
 //    NSDictionary *dict = @{@"key1": @"value1",
 //                           @"key2": @(3),
 //                           @"key3": @(true),

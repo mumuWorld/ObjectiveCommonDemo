@@ -21,6 +21,7 @@
 		B418BB2923D5552200374BEF /* MMSingleLabelCVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B418BB2723D5552200374BEF /* MMSingleLabelCVCell.m */; };
 		B418BB2A23D5552200374BEF /* MMSingleLabelCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B418BB2823D5552200374BEF /* MMSingleLabelCVCell.xib */; };
 		B41A542924BC0771006570BB /* MMSimpleFuncTestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B41A542824BC0771006570BB /* MMSimpleFuncTestTool.m */; };
+		B41D1C0E24D11ADE00F0E4C0 /* MMGenerateObjTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B41D1C0D24D11ADE00F0E4C0 /* MMGenerateObjTool.m */; };
 		B42B78A6240EA73D0013AAB9 /* MMSimpleUIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B78A5240EA73D0013AAB9 /* MMSimpleUIVC.m */; };
 		B42B78AA240EA78C0013AAB9 /* MMCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B42B78A9240EA78C0013AAB9 /* MMCustomButton.m */; };
 		B42BA76D24913B2500B9E2CD /* MMCustomTableviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B42BA76C24913B2500B9E2CD /* MMCustomTableviewVC.m */; };
@@ -146,6 +147,8 @@
 		B418BB2823D5552200374BEF /* MMSingleLabelCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMSingleLabelCVCell.xib; sourceTree = "<group>"; };
 		B41A542724BC0771006570BB /* MMSimpleFuncTestTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMSimpleFuncTestTool.h; sourceTree = "<group>"; };
 		B41A542824BC0771006570BB /* MMSimpleFuncTestTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMSimpleFuncTestTool.m; sourceTree = "<group>"; };
+		B41D1C0C24D11ADE00F0E4C0 /* MMGenerateObjTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMGenerateObjTool.h; sourceTree = "<group>"; };
+		B41D1C0D24D11ADE00F0E4C0 /* MMGenerateObjTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMGenerateObjTool.m; sourceTree = "<group>"; };
 		B42B78A4240EA73D0013AAB9 /* MMSimpleUIVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMSimpleUIVC.h; sourceTree = "<group>"; };
 		B42B78A5240EA73D0013AAB9 /* MMSimpleUIVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMSimpleUIVC.m; sourceTree = "<group>"; };
 		B42B78A8240EA78C0013AAB9 /* MMCustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCustomButton.h; sourceTree = "<group>"; };
@@ -723,6 +726,8 @@
 				B499FFDE249BA65C006C3274 /* detail.json */,
 				B41A542724BC0771006570BB /* MMSimpleFuncTestTool.h */,
 				B41A542824BC0771006570BB /* MMSimpleFuncTestTool.m */,
+				B41D1C0C24D11ADE00F0E4C0 /* MMGenerateObjTool.h */,
+				B41D1C0D24D11ADE00F0E4C0 /* MMGenerateObjTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1056,6 +1061,7 @@
 				B4BAA36B241F62910049DFEE /* NavViewController.m in Sources */,
 				B42C1E1223D0112500D27E62 /* MMUIDemoTableVC.m in Sources */,
 				B4EF867C2449BD640055060E /* MMPresentTestVC.m in Sources */,
+				B41D1C0E24D11ADE00F0E4C0 /* MMGenerateObjTool.m in Sources */,
 				B4F9F46D2452F1B300097200 /* MMSimpleFuncModel.m in Sources */,
 				B45CF4FF23A9D3C600345FB5 /* MMModelTransform.m in Sources */,
 				B4EBD92424CF394C006AF0E6 /* MMUIDynamicVC.m in Sources */,

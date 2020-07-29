@@ -90,5 +90,15 @@
 		<key>text</key>
 		<string>label</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>重力效果</string>
+		<key>url</key>
+		<string>UIDynamic</string>
+		<key>router</key>
+		<string>MMUIDynamicVC</string>
+		<key>text</key>
+		<string>UIDynamic</string>
+	</dict>
 </array>
 </plist>

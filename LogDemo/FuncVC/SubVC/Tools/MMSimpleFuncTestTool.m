@@ -8,6 +8,7 @@
 
 #import "MMSimpleFuncTestTool.h"
 #import <CommonCrypto/CommonDigest.h>
+#import "MMGCDTestTool.h"
 
 static NSHashTable *table = nil;
 
@@ -53,6 +54,13 @@ static NSHashTable *table = nil;
     NSLog(@"table =%@",table);
 }
 
++ (void)invokeGCDTest {
+    MMGCDTestTool *tool = [[MMGCDTestTool alloc] init];
+    [tool testInvoke:^(int type, NSString * _Nonnull msg) {
+        NSLog(@"收到回调-%@",msg);
+    }];
+    NSLog(@"发送消息");
+}
 
 + (void)utfCode {
     NSString *str = @"文若";

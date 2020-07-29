@@ -63,4 +63,11 @@ void testFunc(void *context) {
     });
     NSLog(@"6-%@",[NSThread currentThread]);
 }
+
+- (void)testInvoke:(void (^)(int type, NSString * msg))back {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_global_queue(0, 0), ^{
+        back(1, @"回吊了");
+    });
+    NSLog(@"函数执行完成");
+}
 @end

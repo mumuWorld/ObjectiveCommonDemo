@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)gcd_groupTest1;
 
 + (void)gcd_groupTest2;
+
+- (void)testInvoke:(void (^)(int type, NSString * msg))back;
 @end
 
 NS_ASSUME_NONNULL_END

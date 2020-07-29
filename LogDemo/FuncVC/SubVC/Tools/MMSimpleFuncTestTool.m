@@ -40,6 +40,11 @@ static NSHashTable *table = nil;
     return true;
 }
 
++ (void)dictTest {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    dict[@"test"] = nil;
+}
+
 + (void)addTargetVC:(UIViewController *)target {
     [table addObject:target];
 }

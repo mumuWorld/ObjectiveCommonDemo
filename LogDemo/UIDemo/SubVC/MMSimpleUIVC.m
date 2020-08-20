@@ -11,6 +11,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "MMCircleView.h"
 #import "UIView+MMCategory.h"
+#import "TimeProfiler.h"
 
 @interface MMSimpleUIVC ()
 @property (nonatomic, strong) UILabel *testLabel;
@@ -31,7 +32,8 @@
     self.testLabel = [[UILabel alloc] init];
     self.testLabel.numberOfLines = 0;
     [self.view addSubview:self.testLabel];
-    
+    self.testLabel.layer.cornerRadius = 20;
+    self.testLabel.layer.masksToBounds = 20;
     self.testLabel.text = @"测试Label测试Label测试Label测试Label测试Label测试Label测试Label测试Label测试Label";
     CGSize size = [self.testLabel intrinsicContentSize];
 //    self.testLabel.size = CGSizeMake(size.width + 20, size.height + 20);
@@ -51,6 +53,8 @@
     customLabel.x = 100;
     customLabel.height = 100;
     customLabel.text = self.testLabel.text;
+    customLabel.layer.cornerRadius = 20;
+    customLabel.layer.masksToBounds = true;
     [self.view addSubview:customLabel];
     
     
@@ -78,6 +82,9 @@
     [bottom setColors:@[firstColor, endColor] withDirectionType:kGradientColorDirectionTypeVertical];
     self.bottomView = bottom;
     [self.view addSubview:bottom];
+    
+//    [[TimeProfiler shareInstance] TPStopTrace];
+
 }
 
 - (void)viewWillLayoutSubviews {

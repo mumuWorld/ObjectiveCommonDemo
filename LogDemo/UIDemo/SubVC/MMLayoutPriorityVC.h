@@ -1,8 +1,8 @@
 //
-//  MMUIDynamicVC.h
+//  MMLayoutPriorityVC.h
 //  LogDemo
 //
-//  Created by World on 2020/7/28.
+//  Created by mumu on 2020/8/11.
 //  Copyright © 2020 mumu. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MMUIDynamicVC : MMBaseViewController
+@interface MMLayoutPriorityVC : MMBaseViewController
 
 @end
 

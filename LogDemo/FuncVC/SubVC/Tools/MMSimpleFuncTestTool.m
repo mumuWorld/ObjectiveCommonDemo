@@ -27,6 +27,17 @@ static NSHashTable *table = nil;
     NSLog(@"dict=%@",dict);
 }
 
++ (void)htmlStr {
+    NSString *source = @"<ol><li>仅限本人使用；</li><li>适用于总房费￥200元以内在线付中国大陆酒店，可对房费进行全额抵扣，房券不找零；</li><li>至少提前4天预定，如周一预定周五入住的酒店；</li><li>工作日、周六日可用，其他法定节假日均不可用；</li><li>预定时每天只能使用一张，一张订单只能使用一张房券；</li><li>房券自购买日的次日生效，有效期为90天，过期作废；</li><li>使用房券预定酒店后取消订单，根据酒店取消规则，可免费取消的房券退还用户账户；不可免费取消的，房券不退换。</li></ol><p><br></p>";
+    NSDictionary* options = @{
+        NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType
+    };
+    
+    NSMutableAttributedString* attrs = [[NSMutableAttributedString alloc] initWithData:[source dataUsingEncoding:NSUnicodeStringEncoding] options:options documentAttributes:nil error:nil];
+    NSString *result = attrs.string;
+    NSLog(@"result=%@",result);
+}
+
 + (BOOL)testPoint:(NSString **)str {
 //    NSString *strTMp;
     @autoreleasepool {

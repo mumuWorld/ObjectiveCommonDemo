@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TimeProfiler.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-//    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//[[TimeProfiler shareInstance] TPStartTrace:"大卡页的viewDidLoad函数"];
+    //    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     // Override point for customization after application launch.
     return YES;
 }

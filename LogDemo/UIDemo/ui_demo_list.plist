@@ -100,5 +100,25 @@
 		<key>text</key>
 		<string>UIDynamic</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>约束优先级</string>
+		<key>url</key>
+		<string>priority</string>
+		<key>router</key>
+		<string>MMLayoutPriorityVC</string>
+		<key>text</key>
+		<string>priority</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>UIlabel</string>
+		<key>url</key>
+		<string>priority</string>
+		<key>router</key>
+		<string>MMUILabelTestVC</string>
+		<key>text</key>
+		<string>MMUILabelTestVC</string>
+	</dict>
 </array>
 </plist>

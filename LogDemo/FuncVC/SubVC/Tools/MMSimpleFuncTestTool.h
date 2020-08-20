@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MMSimpleFuncTestTool : NSObject
 + (void)test;
 
++ (void)htmlStr;
+
 + (BOOL)testPoint:(NSString **)str;
 
 + (void)addTargetVC:(UIViewController *)target;

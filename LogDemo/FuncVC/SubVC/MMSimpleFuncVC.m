@@ -29,7 +29,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [MMGenerateObjTool generateJson:[MMSimpleFuncModel class]];
+    [MMSimpleFuncTestTool htmlStr];
+//    [MMGenerateObjTool generateJson:[MMSimpleFuncModel class]];
 //    [MMGenerateObjTool generateJson:[[MMSimpleFuncTestTool new] class]];
 
 //    NSDictionary *dict = @{@"key1": @"value1",

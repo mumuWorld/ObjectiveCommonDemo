@@ -120,5 +120,15 @@
 		<key>text</key>
 		<string>MMUILabelTestVC</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>CALayer</string>
+		<key>url</key>
+		<string>priority</string>
+		<key>router</key>
+		<string>MMLayerTestVC</string>
+		<key>text</key>
+		<string>CALayer</string>
+	</dict>
 </array>
 </plist>

@@ -14,4 +14,6 @@
 + (NSString *)URLEncodedString:(NSString *)str;
 //url解码
 + (NSString *)URLDecodedString:(NSString *)str;
+
+- (NSString *(^)(id obj))appendObj;
 @end

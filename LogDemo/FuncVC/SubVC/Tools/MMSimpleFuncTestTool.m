@@ -23,8 +23,8 @@ static NSHashTable *table = nil;
     NSString *path = [[NSBundle mainBundle] pathForResource:@"detail" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSError *error;
-    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
-    NSLog(@"dict=%@",dict);
+    NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    NSLog(@"dict=%@",jsonDict);
 }
 
 + (void)htmlStr {

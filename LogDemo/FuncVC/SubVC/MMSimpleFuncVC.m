@@ -12,6 +12,7 @@
 #import "MMGCDTestTool.h"
 #import "MMSimpleFuncTestTool.h"
 #import "MMGenerateObjTool.h"
+#import "NSString+MMString.h"
 
 @interface MMSimpleFuncVC ()
 @property (nonatomic, strong) NSArray *strongArray;
@@ -30,6 +31,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [MMSimpleFuncTestTool htmlStr];
+    NSString *test = @"1".appendObj(@(2)).appendObj(@"test").appendObj(@(true));
+    NSLog(@"joeLog->test=%@",test);
 //    [MMGenerateObjTool generateJson:[MMSimpleFuncModel class]];
 //    [MMGenerateObjTool generateJson:[[MMSimpleFuncTestTool new] class]];
 

@@ -75,6 +75,8 @@
 		B49BADF42434790E00A41D14 /* MMFuncTestListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BADF32434790E00A41D14 /* MMFuncTestListVC.m */; };
 		B49BADF6243479D700A41D14 /* func_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49BADF5243479D700A41D14 /* func_list.plist */; };
 		B49BADF924347A1000A41D14 /* MMOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BADF824347A1000A41D14 /* MMOperationViewController.m */; };
+		B49F268724EF97D800EAA9D1 /* MMLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F268524EF97D800EAA9D1 /* MMLayerTestVC.m */; };
+		B49F268824EF97D800EAA9D1 /* MMLayerTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49F268624EF97D800EAA9D1 /* MMLayerTestVC.xib */; };
 		B49F8BBA24937D8800D05E43 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49F8BB924937D8800D05E43 /* Property List.plist */; };
 		B49FE16C24ED48E1007DA261 /* MMRunLooper.m in Sources */ = {isa = PBXBuildFile; fileRef = B49FE16B24ED48E1007DA261 /* MMRunLooper.m */; };
 		B4A0C26624EB746C00B63F64 /* ELHotelEsayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0C26524EB746C00B63F64 /* ELHotelEsayButton.m */; };
@@ -264,6 +266,9 @@
 		B49BADF5243479D700A41D14 /* func_list.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = func_list.plist; sourceTree = "<group>"; };
 		B49BADF724347A1000A41D14 /* MMOperationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMOperationViewController.h; sourceTree = "<group>"; };
 		B49BADF824347A1000A41D14 /* MMOperationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMOperationViewController.m; sourceTree = "<group>"; };
+		B49F268424EF97D800EAA9D1 /* MMLayerTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMLayerTestVC.h; sourceTree = "<group>"; };
+		B49F268524EF97D800EAA9D1 /* MMLayerTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMLayerTestVC.m; sourceTree = "<group>"; };
+		B49F268624EF97D800EAA9D1 /* MMLayerTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMLayerTestVC.xib; sourceTree = "<group>"; };
 		B49F8BB924937D8800D05E43 /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		B49FE16A24ED48E1007DA261 /* MMRunLooper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMRunLooper.h; sourceTree = "<group>"; };
 		B49FE16B24ED48E1007DA261 /* MMRunLooper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMRunLooper.m; sourceTree = "<group>"; };
@@ -513,6 +518,9 @@
 				B499F99E24E2650A0050B2A6 /* MMLayoutPriorityVC.h */,
 				B499F99F24E2650A0050B2A6 /* MMLayoutPriorityVC.m */,
 				B499F9A024E2650A0050B2A6 /* MMLayoutPriorityVC.xib */,
+				B49F268424EF97D800EAA9D1 /* MMLayerTestVC.h */,
+				B49F268524EF97D800EAA9D1 /* MMLayerTestVC.m */,
+				B49F268624EF97D800EAA9D1 /* MMLayerTestVC.xib */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -1048,6 +1056,7 @@
 				B4BAA364241F62910049DFEE /* SettingView.xib in Resources */,
 				B4EBD92524CF394C006AF0E6 /* MMUIDynamicVC.xib in Resources */,
 				B499F9A224E2650A0050B2A6 /* MMLayoutPriorityVC.xib in Resources */,
+				B49F268824EF97D800EAA9D1 /* MMLayerTestVC.xib in Resources */,
 				B4F4BA8423CF28F900ACFC52 /* collection_layout_list.plist in Resources */,
 				B499FFDF249BA65C006C3274 /* detail.json in Resources */,
 				401FFC121E11189300E46787 /* Main.storyboard in Resources */,
@@ -1183,6 +1192,7 @@
 				B42F3D4523B4502700DAB9E0 /* MMMasonryViewController.m in Sources */,
 				B42BA76D24913B2500B9E2CD /* MMCustomTableviewVC.m in Sources */,
 				B498BAA324EE6BC900090564 /* TimeProfiler.m in Sources */,
+				B49F268724EF97D800EAA9D1 /* MMLayerTestVC.m in Sources */,
 				401FFC091E11189300E46787 /* main.m in Sources */,
 				B418BB2523D4303800374BEF /* MMCollectionReusableView.m in Sources */,
 				B44E09E323C70F62001CAFE5 /* MMAnimationViewController.m in Sources */,

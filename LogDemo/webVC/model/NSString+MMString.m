@@ -27,4 +27,9 @@
     
     return decodedString;
 }
+- (NSString *(^)(id obj))appendObj {
+    return ^NSString *(id obj){
+        return [NSString stringWithFormat:@"%@%@",self,obj];
+    };
+}
 @end

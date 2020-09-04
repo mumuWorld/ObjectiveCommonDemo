@@ -18,21 +18,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="700" verticalHuggingPriority="251" text="leftLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNV-zy-x3c">
-                    <rect key="frame" x="20" y="126" width="234" height="20.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="leftLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNV-zy-x3c">
+                    <rect key="frame" x="20" y="126" width="66.5" height="20.5"/>
                     <color key="backgroundColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="0.62077268839999999" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" priority="100" constant="300" id="SrV-de-ygX"/>
+                        <constraint firstAttribute="width" priority="250" constant="300" id="SrV-de-ygX"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RightLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dX2-B7-2Zl">
-                    <rect key="frame" x="264" y="126" width="100" height="20.5"/>
+                    <rect key="frame" x="96.5" y="126" width="100" height="20.5"/>
                     <color key="backgroundColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="0.64977525680000003" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="width" priority="750" constant="100" id="Cby-KS-UWs"/>
+                        <constraint firstAttribute="width" constant="100" id="Cby-KS-UWs"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -41,7 +41,7 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="dX2-B7-2Zl" secondAttribute="trailing" constant="50" id="2HU-4V-Kbq"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dX2-B7-2Zl" secondAttribute="trailing" constant="50" id="2HU-4V-Kbq"/>
                 <constraint firstItem="sNV-zy-x3c" firstAttribute="top" secondItem="dX2-B7-2Zl" secondAttribute="top" id="ZYW-SW-NVH"/>
                 <constraint firstItem="sNV-zy-x3c" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="dZY-dq-NOQ"/>
                 <constraint firstItem="dX2-B7-2Zl" firstAttribute="leading" secondItem="sNV-zy-x3c" secondAttribute="trailing" constant="10" id="dxp-oj-SUh"/>

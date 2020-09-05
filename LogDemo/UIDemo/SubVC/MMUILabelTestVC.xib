@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -54,13 +54,44 @@
                         <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lK3-tT-g28">
+                    <rect key="frame" x="33" y="140" width="348" height="50"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="testetsetestsetsetestse水电费水电费水" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hqh-dJ-zHJ">
+                            <rect key="frame" x="8" y="8" width="278" height="34"/>
+                            <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzQ-ai-puq">
+                            <rect key="frame" x="294" y="10" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="V0e-1d-c2R"/>
+                                <constraint firstAttribute="height" constant="30" id="rYG-uZ-WHS"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="hqh-dJ-zHJ" firstAttribute="leading" secondItem="lK3-tT-g28" secondAttribute="leading" constant="8" id="1i9-i3-SRs"/>
+                        <constraint firstItem="NzQ-ai-puq" firstAttribute="centerY" secondItem="lK3-tT-g28" secondAttribute="centerY" id="JdA-Pi-G8d"/>
+                        <constraint firstAttribute="height" constant="50" id="U32-uS-hi3"/>
+                        <constraint firstItem="hqh-dJ-zHJ" firstAttribute="centerY" secondItem="lK3-tT-g28" secondAttribute="centerY" id="V00-k0-Mm2"/>
+                        <constraint firstItem="NzQ-ai-puq" firstAttribute="leading" secondItem="hqh-dJ-zHJ" secondAttribute="trailing" constant="8" id="bqQ-yE-B8m"/>
+                        <constraint firstAttribute="trailing" secondItem="NzQ-ai-puq" secondAttribute="trailing" constant="8" id="tRq-nj-Cfe"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="cjQ-fU-7lc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Omp-EI-p9n"/>
                 <constraint firstItem="AWl-MJ-zcD" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="UFh-tq-D0h"/>
                 <constraint firstItem="cjQ-fU-7lc" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="amY-Kt-ZrJ"/>
+                <constraint firstItem="lK3-tT-g28" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="33" id="gaH-nd-xBZ"/>
                 <constraint firstItem="AWl-MJ-zcD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hyG-R6-pGe"/>
+                <constraint firstItem="lK3-tT-g28" firstAttribute="top" secondItem="AWl-MJ-zcD" secondAttribute="bottom" constant="34" id="mrM-Qt-XWi"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="lK3-tT-g28" secondAttribute="trailing" constant="33" id="pKD-1n-3Vw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="131.8840579710145" y="80.357142857142847"/>

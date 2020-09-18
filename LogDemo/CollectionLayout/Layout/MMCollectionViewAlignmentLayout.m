@@ -8,12 +8,16 @@
 
 #import "MMCollectionViewAlignmentLayout.h"
 
+@interface MMCollectionViewAlignmentLayout ()
+@property (nonatomic, strong) NSMutableDictionary *cacheAttr;
+@end
 @implementation MMCollectionViewAlignmentLayout {
     CGFloat lineCellWidthSum;
 }
 
 - (instancetype)init {
    if (self = [super init]) {
+       _cacheAttr = [NSMutableDictionary dictionary];
     }
     return self;
 }
@@ -21,6 +25,7 @@
 - (instancetype)initWithAlignType:(MMCollectionAlignType)align {
     if (self = [super init]) {
         self.alignType = align;
+        _cacheAttr = [NSMutableDictionary dictionary];
     }
     return self;
 }
@@ -117,7 +122,7 @@
     UICollectionViewLayoutAttributes* att = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:elementKind withIndexPath:indexPath];
     att.frame = CGRectMake(0, (125*indexPath.section)/2.0, width, 125);
     att.zIndex = -1;
-
+    
     return att;
 }
 
@@ -130,7 +135,7 @@
 
 
 - (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds {
-    return true;
+    return false;
 }
 
 - (UICollectionViewLayoutInvalidationContext *)invalidationContextForBoundsChange:(CGRect)newBounds API_AVAILABLE(ios(7.0)) {

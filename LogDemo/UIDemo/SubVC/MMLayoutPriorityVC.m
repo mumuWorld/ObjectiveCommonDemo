@@ -9,6 +9,8 @@
 #import "MMLayoutPriorityVC.h"
 
 @interface MMLayoutPriorityVC ()
+@property (weak, nonatomic) IBOutlet UIView *organgeView;
+@property (weak, nonatomic) IBOutlet UIView *purpleView;
 
 @end
 
@@ -16,9 +18,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    CGRect orgage = self.organgeView.frame;
+    CGRect purple = self.purpleView.frame;
+    CGRect purpose = [self.organgeView convertRect:self.purpleView.frame toView:self.view.window];
+    CGRect purpose_2 = [self.organgeView convertRect:self.purpleView.bounds toView:self.view.window];
+    CGRect purpose_3 = [self.organgeView.window convertRect:self.purpleView.frame fromView:self.organgeView];
+    CGRect purpose_4 = [self.organgeView.window convertRect:self.purpleView.bounds fromView:self.organgeView];
+    
+    CGRect purpose_5 = [self.view convertRect:self.purpleView.frame toView:self.view.window];
+    
+    NSLog(@"joeLog->test=%@",self);
+}
 /*
 #pragma mark - Navigation
 

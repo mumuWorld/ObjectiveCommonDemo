@@ -36,6 +36,7 @@
     NSArray *arr = @[_bgView_A,_subView_B,_subView_B_2,_subVIew_C,_subview_C_2];
     for (UIView *view in arr) {
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGes:)];
+        tap.delegate = self;
         [view addGestureRecognizer:tap];
     }
 }

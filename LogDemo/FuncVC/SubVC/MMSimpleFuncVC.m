@@ -13,6 +13,7 @@
 #import "MMSimpleFuncTestTool.h"
 #import "MMGenerateObjTool.h"
 #import "NSString+MMString.h"
+#import "MMUIKitTool.h"
 
 @interface MMSimpleFuncVC ()
 @property (nonatomic, strong) NSArray *strongArray;
@@ -30,9 +31,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [MMSimpleFuncTestTool htmlStr];
-    NSString *test = @"1".appendObj(@(2)).appendObj(@"test").appendObj(@(true));
-    NSLog(@"joeLog->test=%@",test);
+//    [MMSimpleFuncTestTool htmlStr];
+//    NSString *test = @"".appendObj(@(2)).appendObj(@"test").appendObj(@(true));
+//    NSLog(@"joeLog->test=%@",test);
 //    [MMGenerateObjTool generateJson:[MMSimpleFuncModel class]];
 //    [MMGenerateObjTool generateJson:[[MMSimpleFuncTestTool new] class]];
 
@@ -75,7 +76,29 @@
 //    NSString *str = @"test";
 //    [MMGCDTestTool testPoint:&str];
 //    [MMGCDTestTool testPoint:(NSString *__autoreleasing *)]
+    [MMUIKitTool differentWindowScreen];
+}
+- (void)gcdfunc {
+    NSThread *thread = [[NSThread alloc] init];
+//    [self performSelector:@selector(testThread1:) onThread:thread withObject:@{@"key":@(1)} waitUntilDone:true];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self performSelector:@selector(testThread1:) onThread:thread withObject:@{@"key":@(2)} waitUntilDone:true];
+    });
+    [self performSelector:@selector(testThread1:) onThread:thread withObject:@{@"key":@(3)} waitUntilDone:false];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self performSelector:@selector(testThread1:) onThread:thread withObject:@{@"key":@(4)} waitUntilDone:false];
+    });
     
+    //- (void)viewDidLoad {
+    
+    [self performSelector:@selector(testThread1:) withObject:@{@"key":@(5)} afterDelay:2];
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self performSelector:@selector(testThread1:) withObject:@{@"key":@(6)} afterDelay:3];
+    });
+}
+
+- (void)testThread1:(NSDictionary *)obj {
+    NSLog(@"joeLog->obj=%@,thread=%@,obj=%@",self,[NSThread currentThread],obj);
 }
 
 - (void)testBLock {

@@ -45,7 +45,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:true];
-    [self.textField removeFromSuperview];
+//    [self.textField removeFromSuperview];
     NSLog(@"text->%@",self.textField);
 }
 
@@ -118,6 +118,7 @@
 - (UITextField *)textField {
     if (!_textField) {
         UITextField *text = [[UITextField alloc] init];
+        text.backgroundColor = UIColor.lightGrayColor;
         text.borderStyle = UITextBorderStyleLine;
         text.placeholder = @"testPlace";
         text.delegate = self;

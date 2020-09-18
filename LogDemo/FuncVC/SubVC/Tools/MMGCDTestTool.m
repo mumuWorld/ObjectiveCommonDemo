@@ -70,4 +70,8 @@ void testFunc(void *context) {
     });
     NSLog(@"函数执行完成");
 }
+
++ (void)threadTest {
+    
+}
 @end

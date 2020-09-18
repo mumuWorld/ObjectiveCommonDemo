@@ -26,6 +26,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self.collectionView.collectionViewLayout invalidateLayout];
+    [self.collectionView setContentOffset:CGPointMake(0, 500) animated:true];
 }
 
 #pragma mark - collectionView
@@ -34,7 +35,7 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 50;
+    return self.listArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -49,6 +50,19 @@
     return CGSizeMake(ceil(width) + 16, 30);
 }
 
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"joeLog->EndDecelerating");
+}
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
+
+    NSLog(@"joeLog->ContentOffset=%@",[NSValue valueWithCGPoint:*targetContentOffset]);
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    NSLog(@"joeLog->willDecelerate=%d",decelerate);
+}
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    NSLog(@"joeLog->EndScrollingAnimation");
+}
 #pragma mark - getter && setter
 - (UICollectionView *)collectionView {
     if (!_collectionView) {
@@ -58,6 +72,7 @@
         
         collection.delegate = self;
         collection.dataSource = self;
+        collection.pagingEnabled = false;
         collection.backgroundColor = UIColor.whiteColor;
         [collection registerNib:[UINib nibWithNibName:MMSingleLabelCVCellIDStr bundle:nil] forCellWithReuseIdentifier:MMSingleLabelCVCellIDStr];
         _collectionView = collection;
@@ -69,7 +84,7 @@
     if (!_listArray) {
         NSMutableArray *tmp = [NSMutableArray array];
         NSArray *titile = @[@"泰国1个字",@"曼谷哈哈",@"西藏布达拉宫s",@"西藏不打啦s",@"西藏不",@"西藏"];
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 1000; i++) {
             int random = arc4random() % 6;
             NSString *obj = [NSString stringWithFormat:@"%@%d",titile[random],i];
             [tmp addObject:obj];

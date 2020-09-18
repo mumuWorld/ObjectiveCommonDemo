@@ -10,12 +10,18 @@
 
 @implementation MMTouchView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    NSLog(@"tag=%zd",self.tag);
+
+//    if (self.tag != 20) {
+//        return [super hitTest:point withEvent:event];
+//    }
+//    NSLog(@"tag=%zd",self.tag);
+//    UIView *tag21View = [self viewWithTag:21];
+//    if ([tag21View pointInside:point withEvent:event]) {
+//        return tag21View;
+//    }
+    return [super hitTest:point withEvent:event];
 }
-*/
 
 @end

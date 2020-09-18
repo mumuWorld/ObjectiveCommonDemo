@@ -80,6 +80,7 @@
 		B49F8BBA24937D8800D05E43 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49F8BB924937D8800D05E43 /* Property List.plist */; };
 		B49FE16C24ED48E1007DA261 /* MMRunLooper.m in Sources */ = {isa = PBXBuildFile; fileRef = B49FE16B24ED48E1007DA261 /* MMRunLooper.m */; };
 		B4A0C26624EB746C00B63F64 /* ELHotelEsayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0C26524EB746C00B63F64 /* ELHotelEsayButton.m */; };
+		B4A158342514822200B55826 /* MMUIKitTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A158332514822200B55826 /* MMUIKitTool.m */; };
 		B4B9BE6B2462B8CD00AD0F9B /* MMSImpleXibUIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B9BE692462B8CD00AD0F9B /* MMSImpleXibUIVC.m */; };
 		B4B9BE6C2462B8CD00AD0F9B /* MMSImpleXibUIVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4B9BE6A2462B8CD00AD0F9B /* MMSImpleXibUIVC.xib */; };
 		B4BAA364241F62910049DFEE /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4BAA355241F62910049DFEE /* SettingView.xib */; };
@@ -274,6 +275,8 @@
 		B49FE16B24ED48E1007DA261 /* MMRunLooper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMRunLooper.m; sourceTree = "<group>"; };
 		B4A0C26424EB746C00B63F64 /* ELHotelEsayButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELHotelEsayButton.h; sourceTree = "<group>"; };
 		B4A0C26524EB746C00B63F64 /* ELHotelEsayButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELHotelEsayButton.m; sourceTree = "<group>"; };
+		B4A158322514822200B55826 /* MMUIKitTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMUIKitTool.h; sourceTree = "<group>"; };
+		B4A158332514822200B55826 /* MMUIKitTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMUIKitTool.m; sourceTree = "<group>"; };
 		B4B9BE682462B8CD00AD0F9B /* MMSImpleXibUIVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMSImpleXibUIVC.h; sourceTree = "<group>"; };
 		B4B9BE692462B8CD00AD0F9B /* MMSImpleXibUIVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMSImpleXibUIVC.m; sourceTree = "<group>"; };
 		B4B9BE6A2462B8CD00AD0F9B /* MMSImpleXibUIVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMSImpleXibUIVC.xib; sourceTree = "<group>"; };
@@ -840,6 +843,8 @@
 				B41D1C0D24D11ADE00F0E4C0 /* MMGenerateObjTool.m */,
 				B49FE16A24ED48E1007DA261 /* MMRunLooper.h */,
 				B49FE16B24ED48E1007DA261 /* MMRunLooper.m */,
+				B4A158322514822200B55826 /* MMUIKitTool.h */,
+				B4A158332514822200B55826 /* MMUIKitTool.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1204,6 +1209,7 @@
 				B4CB4AD1246D2A1D00E25C74 /* MMGCDTestTool.m in Sources */,
 				B498BAA124EE6BC900090564 /* TPModel.m in Sources */,
 				B418BB2123D42B9D00374BEF /* MMCollectionDecorationView.m in Sources */,
+				B4A158342514822200B55826 /* MMUIKitTool.m in Sources */,
 				B44E09E923C71A5F001CAFE5 /* MMBaseAnimationViewController.m in Sources */,
 				B4F9F4712453036200097200 /* MMTouchPriorityVC.m in Sources */,
 				B498BAA024EE6BC900090564 /* TimeProfilerVC.m in Sources */,

@@ -7,11 +7,14 @@
 //
 
 #import "MMLayerTestViewController.h"
+#import "MMContentView.h"
 
 @interface MMLayerTestViewController () 
 @property (nonatomic, strong) UIView *topView;
 
 @property (nonatomic, strong) CAShapeLayer *shapeLayer;
+
+@property (nonatomic, strong) MMContentView *contentView;
 
 @end
 
@@ -41,7 +44,14 @@
     self.shapeLayer.borderWidth = 5;
     NSLog(@"%@",self.shapeLayer);
     
-
+    self.contentView = [[MMContentView alloc] init];
+//    self.contentView.backgroundColor = UIColor.blueColor;
+    MMRadiusConfigure *configure = [[MMRadiusConfigure alloc] init];
+    configure.rectCorner = UIRectCornerTopLeft | UIRectCornerTopRight;
+    configure.cornerRaidus = 8;
+    self.contentView.frame = CGRectMake(100, 300, 100, 100);
+    self.contentView.configure = configure;
+    [self.view addSubview:self.contentView];
 }
 
 

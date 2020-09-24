@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     CGRect bounds = _view_1.bounds;
     CGSize size = _view_1.bounds.size;
     _view_1.layer.contentsScale = UIScreen.mainScreen.scale;

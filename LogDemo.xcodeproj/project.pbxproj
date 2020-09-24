@@ -41,6 +41,8 @@
 		B44B8B6D23CD64CD00B912CB /* MMIndistinctView.m in Sources */ = {isa = PBXBuildFile; fileRef = B44B8B6C23CD64CD00B912CB /* MMIndistinctView.m */; };
 		B44B8B7023CD6B4800B912CB /* UIColor+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = B44B8B6F23CD6B4800B912CB /* UIColor+Tools.m */; };
 		B44B8B7323CD8F4F00B912CB /* MMIndistinctTools.m in Sources */ = {isa = PBXBuildFile; fileRef = B44B8B7223CD8F4F00B912CB /* MMIndistinctTools.m */; };
+		B44D5F62251CE83900703ACA /* MMContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = B44D5F61251CE83900703ACA /* MMContentView.m */; };
+		B44D5F65251CE8C300703ACA /* MMDisplayLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B44D5F64251CE8C300703ACA /* MMDisplayLayer.m */; };
 		B44E09DC23C46C8B001CAFE5 /* 未使用图片.txt in Resources */ = {isa = PBXBuildFile; fileRef = B44E09DB23C46C8B001CAFE5 /* 未使用图片.txt */; };
 		B44E09E323C70F62001CAFE5 /* MMAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44E09E223C70F62001CAFE5 /* MMAnimationViewController.m */; };
 		B44E09E523C71634001CAFE5 /* animation_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = B44E09E423C71634001CAFE5 /* animation_list.plist */; };
@@ -205,6 +207,10 @@
 		B44B8B6F23CD6B4800B912CB /* UIColor+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Tools.m"; sourceTree = "<group>"; };
 		B44B8B7123CD8F4F00B912CB /* MMIndistinctTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMIndistinctTools.h; sourceTree = "<group>"; };
 		B44B8B7223CD8F4F00B912CB /* MMIndistinctTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMIndistinctTools.m; sourceTree = "<group>"; };
+		B44D5F60251CE83900703ACA /* MMContentView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMContentView.h; sourceTree = "<group>"; };
+		B44D5F61251CE83900703ACA /* MMContentView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMContentView.m; sourceTree = "<group>"; };
+		B44D5F63251CE8C300703ACA /* MMDisplayLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMDisplayLayer.h; sourceTree = "<group>"; };
+		B44D5F64251CE8C300703ACA /* MMDisplayLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMDisplayLayer.m; sourceTree = "<group>"; };
 		B44E09DB23C46C8B001CAFE5 /* 未使用图片.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "未使用图片.txt"; sourceTree = "<group>"; };
 		B44E09E123C70F62001CAFE5 /* MMAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMAnimationViewController.h; sourceTree = "<group>"; };
 		B44E09E223C70F62001CAFE5 /* MMAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMAnimationViewController.m; sourceTree = "<group>"; };
@@ -472,6 +478,7 @@
 		B42B78A7240EA76A0013AAB9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B44D5F5F251CE7FB00703ACA /* BaseView */,
 				B42B78A8240EA78C0013AAB9 /* MMCustomButton.h */,
 				B42B78A9240EA78C0013AAB9 /* MMCustomButton.m */,
 				B46B949E24484BBD00F2F480 /* MMCircleView.h */,
@@ -569,6 +576,17 @@
 				B45CF50523A9D59400345FB5 /* MMHomeProtocol.h */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		B44D5F5F251CE7FB00703ACA /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				B44D5F60251CE83900703ACA /* MMContentView.h */,
+				B44D5F61251CE83900703ACA /* MMContentView.m */,
+				B44D5F63251CE8C300703ACA /* MMDisplayLayer.h */,
+				B44D5F64251CE8C300703ACA /* MMDisplayLayer.m */,
+			);
+			path = BaseView;
 			sourceTree = "<group>";
 		};
 		B44E09DD23C5E62A001CAFE5 /* Flutter_Test */ = {
@@ -1153,6 +1171,7 @@
 				B4EF867924498CB20055060E /* MMSimpleFuncVC.m in Sources */,
 				B49BADF924347A1000A41D14 /* MMOperationViewController.m in Sources */,
 				B4A0C26624EB746C00B63F64 /* ELHotelEsayButton.m in Sources */,
+				B44D5F65251CE8C300703ACA /* MMDisplayLayer.m in Sources */,
 				B4BAA376241F65590049DFEE /* UIDevice+Tools.m in Sources */,
 				B4BAA365241F62910049DFEE /* L3game_SettingView.m in Sources */,
 				B4D4DBA823CEC1830093D5DA /* MMBaseTableViewController.m in Sources */,
@@ -1171,6 +1190,7 @@
 				B4EF867F2449D3600055060E /* MMSimpleFuncVC+MMHook.m in Sources */,
 				B49BADEF24343DA900A41D14 /* MMKitDynamicAnitationVC.m in Sources */,
 				B42F712523B60CBF003BA22C /* MMLayerTestViewController.m in Sources */,
+				B44D5F62251CE83900703ACA /* MMContentView.m in Sources */,
 				B44B8B7323CD8F4F00B912CB /* MMIndistinctTools.m in Sources */,
 				B498BA9F24EE6BC900090564 /* TPRecordModel.m in Sources */,
 				B45CF50923A9D79D00345FB5 /* MMHomeListModel.m in Sources */,

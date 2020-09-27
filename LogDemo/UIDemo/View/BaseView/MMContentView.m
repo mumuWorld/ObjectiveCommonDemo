@@ -22,7 +22,7 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         _contentsScale = [UIScreen mainScreen].scale;
-        self.opaque = NO;
+        self.opaque = true;
         self.backgroundColor = [UIColor clearColor];
         _configure = [[MMRadiusConfigure alloc] init];
         _configure.rectCorner = 0;
@@ -42,28 +42,40 @@
 }
 
 - (void)setConfigure:(MMRadiusConfigure *)configure {
-    self.layer.contents = nil;
     if (configure.rectCorner != _configure.rectCorner && configure.cornerRaidus != _configure.cornerRaidus) {
        
         [self _clearContents];
         _configure = configure;
         [self.layer setNeedsDisplay];
-        
     }
 }
 
 - (void)display:(CGContextRef)context size:(CGSize)size {
+    CGContextSaveGState(context);
     CGContextSetFillColorWithColor(context, UIColor.redColor.CGColor);
 
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:_configure.rectCorner cornerRadii:CGSizeMake(_configure.cornerRaidus, _configure.cornerRaidus)];
+    
+    CGContextAddPath(context, path.CGPath);
 
-    [path closePath];
     CGContextFillPath(context);
-    CGContextEOClip(context);
-    
-    //        CGPathAddEllipseInRect(path, NULL, bounds);//这句话就是剪辑作用
-    
+    CGContextRestoreGState(context);
+
+    CGContextSaveGState(context);
+    CGContextSetStrokeColorWithColor(context, UIColor.greenColor.CGColor);
+       CGContextSetLineWidth(context, 2);
+    CGContextSetLineJoin(context, kCGLineJoinRound);
+    CGContextAddPath(context, path.CGPath);
+    CGContextStrokePath(context);
+    CGContextClosePath(context);
     CGContextClip(context);
+
+    CGContextRestoreGState(context);
+    
+//    CGContextEOClip(context);
+    
+    CGPathAddEllipseInRect(path.CGPath, NULL, self.bounds);//这句话就是剪辑作用
+    
 }
 
 @end

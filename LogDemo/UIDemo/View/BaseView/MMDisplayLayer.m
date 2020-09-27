@@ -21,7 +21,7 @@
         CGSize size = self.bounds.size;
         size.width *= self.contentsScale;
         size.height *= self.contentsScale;
-        
+
         CGContextSaveGState(context);
         {
             if (!self.backgroundColor || CGColorGetAlpha(self.backgroundColor) < 1) {

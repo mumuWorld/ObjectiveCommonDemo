@@ -52,6 +52,15 @@
     self.contentView.frame = CGRectMake(100, 300, 100, 100);
     self.contentView.configure = configure;
     [self.view addSubview:self.contentView];
+    
+    UIView *top = [[UIView alloc] init];
+    top.frame = CGRectMake(50, 0, 100, 100);
+    top.backgroundColor = UIColor.blueColor;
+    [self.contentView addSubview:top];
+    self.contentView.layer.masksToBounds = true;
+    
+    configure.cornerRaidus = 50;
+    self.contentView.configure = configure;
 }
 
 

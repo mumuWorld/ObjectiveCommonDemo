@@ -12,5 +12,15 @@
 		<key>text</key>
 		<string>CAReplicatorLayer</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>CAReplicatorLayer</string>
+		<key>url</key>
+		<string>BaseAnimation</string>
+		<key>router</key>
+		<string>MMTimeOffsetViewController</string>
+		<key>text</key>
+		<string>图层时间</string>
+	</dict>
 </array>
 </plist>

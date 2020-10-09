@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSString *)md5HashToLower32Bit:(NSString *)source;
 
 + (void)invokeGCDTest;
+
++ (void)dateTest;
 @end
 
 NS_ASSUME_NONNULL_END

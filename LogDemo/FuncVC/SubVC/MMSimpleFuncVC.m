@@ -14,6 +14,7 @@
 #import "MMGenerateObjTool.h"
 #import "NSString+MMString.h"
 #import "MMUIKitTool.h"
+#import "ELHotelDispatchTimer.h"
 
 @interface MMSimpleFuncVC ()
 @property (nonatomic, strong) NSArray *strongArray;
@@ -23,6 +24,8 @@
 @property (nonatomic, strong) NSMutableArray *cpMutableArray;
 
 @property (nonatomic, strong) NSTimer *timer;
+
+@property (nonatomic, copy) NSString *timerName;
 @end
 
 @implementation MMSimpleFuncVC
@@ -31,7 +34,7 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    [MMSimpleFuncTestTool htmlStr];
+    [MMSimpleFuncTestTool dateTest];
 //    NSString *test = @"".appendObj(@(2)).appendObj(@"test").appendObj(@(true));
 //    NSLog(@"joeLog->test=%@",test);
 //    [MMGenerateObjTool generateJson:[MMSimpleFuncModel class]];
@@ -76,7 +79,12 @@
 //    NSString *str = @"test";
 //    [MMGCDTestTool testPoint:&str];
 //    [MMGCDTestTool testPoint:(NSString *__autoreleasing *)]
-    [MMUIKitTool differentWindowScreen];
+//    [MMGCDTestTool threadTest];
+//    [MMUIKitTool differentWindowScreen];
+    
+//    self.timerName = [ELHotelDispatchTimer excuTimerTask:^(NSString * _Nonnull timer) {
+//        NSLog(@"timer=%@",timer);
+//    } andStart:3 interval:2 repeats:true async:NO];
 }
 - (void)gcdfunc {
     NSThread *thread = [[NSThread alloc] init];

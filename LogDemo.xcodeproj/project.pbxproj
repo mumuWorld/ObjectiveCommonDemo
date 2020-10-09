@@ -50,6 +50,7 @@
 		B44E09F023C71D1F001CAFE5 /* MMBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B44E09EF23C71D1F001CAFE5 /* MMBaseNavigationController.m */; };
 		B44E09F523C72D23001CAFE5 /* UIBarButtonItem+MMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B44E09F423C72D23001CAFE5 /* UIBarButtonItem+MMCategory.m */; };
 		B44E09F823C72F77001CAFE5 /* UIButton+MMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B44E09F723C72F77001CAFE5 /* UIButton+MMCategory.m */; };
+		B457146925304CA5009F28CC /* ELHotelDispatchTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = B457146825304CA5009F28CC /* ELHotelDispatchTimer.m */; };
 		B45CF4F623A9CCB300345FB5 /* MMHomeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CF4F523A9CCB300345FB5 /* MMHomeListViewController.m */; };
 		B45CF4FB23A9D06C00345FB5 /* MMHomeListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CF4F923A9D06C00345FB5 /* MMHomeListTableViewCell.m */; };
 		B45CF4FC23A9D06C00345FB5 /* MMHomeListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B45CF4FA23A9D06C00345FB5 /* MMHomeListTableViewCell.xib */; };
@@ -79,6 +80,8 @@
 		B49BADF924347A1000A41D14 /* MMOperationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49BADF824347A1000A41D14 /* MMOperationViewController.m */; };
 		B49F268724EF97D800EAA9D1 /* MMLayerTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F268524EF97D800EAA9D1 /* MMLayerTestVC.m */; };
 		B49F268824EF97D800EAA9D1 /* MMLayerTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49F268624EF97D800EAA9D1 /* MMLayerTestVC.xib */; };
+		B49F738125220219003FEF8C /* MMTimeOffsetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B49F737F25220219003FEF8C /* MMTimeOffsetViewController.m */; };
+		B49F738225220219003FEF8C /* MMTimeOffsetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49F738025220219003FEF8C /* MMTimeOffsetViewController.xib */; };
 		B49F8BBA24937D8800D05E43 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49F8BB924937D8800D05E43 /* Property List.plist */; };
 		B49FE16C24ED48E1007DA261 /* MMRunLooper.m in Sources */ = {isa = PBXBuildFile; fileRef = B49FE16B24ED48E1007DA261 /* MMRunLooper.m */; };
 		B4A0C26624EB746C00B63F64 /* ELHotelEsayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0C26524EB746C00B63F64 /* ELHotelEsayButton.m */; };
@@ -224,6 +227,8 @@
 		B44E09F423C72D23001CAFE5 /* UIBarButtonItem+MMCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+MMCategory.m"; sourceTree = "<group>"; };
 		B44E09F623C72F77001CAFE5 /* UIButton+MMCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+MMCategory.h"; sourceTree = "<group>"; };
 		B44E09F723C72F77001CAFE5 /* UIButton+MMCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+MMCategory.m"; sourceTree = "<group>"; };
+		B457146725304CA5009F28CC /* ELHotelDispatchTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELHotelDispatchTimer.h; sourceTree = "<group>"; };
+		B457146825304CA5009F28CC /* ELHotelDispatchTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELHotelDispatchTimer.m; sourceTree = "<group>"; };
 		B45CF4F423A9CCB300345FB5 /* MMHomeListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMHomeListViewController.h; sourceTree = "<group>"; };
 		B45CF4F523A9CCB300345FB5 /* MMHomeListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMHomeListViewController.m; sourceTree = "<group>"; };
 		B45CF4F823A9D06C00345FB5 /* MMHomeListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMHomeListTableViewCell.h; sourceTree = "<group>"; };
@@ -276,6 +281,9 @@
 		B49F268424EF97D800EAA9D1 /* MMLayerTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMLayerTestVC.h; sourceTree = "<group>"; };
 		B49F268524EF97D800EAA9D1 /* MMLayerTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMLayerTestVC.m; sourceTree = "<group>"; };
 		B49F268624EF97D800EAA9D1 /* MMLayerTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMLayerTestVC.xib; sourceTree = "<group>"; };
+		B49F737E25220219003FEF8C /* MMTimeOffsetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTimeOffsetViewController.h; sourceTree = "<group>"; };
+		B49F737F25220219003FEF8C /* MMTimeOffsetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTimeOffsetViewController.m; sourceTree = "<group>"; };
+		B49F738025220219003FEF8C /* MMTimeOffsetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMTimeOffsetViewController.xib; sourceTree = "<group>"; };
 		B49F8BB924937D8800D05E43 /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		B49FE16A24ED48E1007DA261 /* MMRunLooper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMRunLooper.h; sourceTree = "<group>"; };
 		B49FE16B24ED48E1007DA261 /* MMRunLooper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMRunLooper.m; sourceTree = "<group>"; };
@@ -852,6 +860,8 @@
 		B4CB4ACE246D29E700E25C74 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				B457146725304CA5009F28CC /* ELHotelDispatchTimer.h */,
+				B457146825304CA5009F28CC /* ELHotelDispatchTimer.m */,
 				B4CB4ACF246D2A1C00E25C74 /* MMGCDTestTool.h */,
 				B4CB4AD0246D2A1D00E25C74 /* MMGCDTestTool.m */,
 				B499FFDE249BA65C006C3274 /* detail.json */,
@@ -902,6 +912,9 @@
 			children = (
 				B4F4BA7A23CEE16400ACFC52 /* MMCAReplicatorLayerVC.h */,
 				B4F4BA7B23CEE16400ACFC52 /* MMCAReplicatorLayerVC.m */,
+				B49F737E25220219003FEF8C /* MMTimeOffsetViewController.h */,
+				B49F737F25220219003FEF8C /* MMTimeOffsetViewController.m */,
+				B49F738025220219003FEF8C /* MMTimeOffsetViewController.xib */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -1072,6 +1085,7 @@
 				B44E09DC23C46C8B001CAFE5 /* 未使用图片.txt in Resources */,
 				B45CF4FC23A9D06C00345FB5 /* MMHomeListTableViewCell.xib in Resources */,
 				B49BADF6243479D700A41D14 /* func_list.plist in Resources */,
+				B49F738225220219003FEF8C /* MMTimeOffsetViewController.xib in Resources */,
 				B4F4BA7823CEE10000ACFC52 /* core_animation_list.plist in Resources */,
 				B418BB2A23D5552200374BEF /* MMSingleLabelCVCell.xib in Resources */,
 				B4FF16702494F15300D5E3C7 /* MMUILabelTestVC.xib in Resources */,
@@ -1171,6 +1185,7 @@
 				B4EF867924498CB20055060E /* MMSimpleFuncVC.m in Sources */,
 				B49BADF924347A1000A41D14 /* MMOperationViewController.m in Sources */,
 				B4A0C26624EB746C00B63F64 /* ELHotelEsayButton.m in Sources */,
+				B49F738125220219003FEF8C /* MMTimeOffsetViewController.m in Sources */,
 				B44D5F65251CE8C300703ACA /* MMDisplayLayer.m in Sources */,
 				B4BAA376241F65590049DFEE /* UIDevice+Tools.m in Sources */,
 				B4BAA365241F62910049DFEE /* L3game_SettingView.m in Sources */,
@@ -1185,6 +1200,7 @@
 				B49BADF42434790E00A41D14 /* MMFuncTestListVC.m in Sources */,
 				B4BAA373241F63B80049DFEE /* NSObject+model.m in Sources */,
 				B4BAA379241F7A450049DFEE /* MMRichTextVC.m in Sources */,
+				B457146925304CA5009F28CC /* ELHotelDispatchTimer.m in Sources */,
 				B44B8B7023CD6B4800B912CB /* UIColor+Tools.m in Sources */,
 				B4F4BA8823CF297F00ACFC52 /* MMCollectionShowVC.m in Sources */,
 				B4EF867F2449D3600055060E /* MMSimpleFuncVC+MMHook.m in Sources */,

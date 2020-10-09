@@ -7,7 +7,7 @@
 //
 
 #import "MMGCDTestTool.h"
-
+#import <AVFoundation/AVFoundation.h>
 
 @implementation MMGCDTestTool
 
@@ -72,6 +72,14 @@ void testFunc(void *context) {
 }
 
 + (void)threadTest {
-    
+    [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
+        NSLog(@"current=%@",[NSThread currentThread]);
+//        if (granted) {
+//            [self requestSpeechRecognizedPermission];
+//        } else {
+//            elongAlertAction *action = [elongAlertAction actionWithTitle:@"知道了" style:ElongAlertActionStyle_Cancel handler:nil];
+//            [eLongHotelAlertTool showAlertWithTitle:@"未开启麦克风使用权限" message:[NSString stringWithFormat:@"请进入“设置-隐私-麦克风”打开%@的麦克风授权",APP_NAME] alertActions:@[action]];
+//        }
+    }];
 }
 @end

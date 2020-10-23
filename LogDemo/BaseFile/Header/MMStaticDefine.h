@@ -13,7 +13,11 @@
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 
-#define NavigationBarHeight [UIDevice isIPhoneXSeries] ? 88 : 64
+#define StatusBarHeight ceil(UIApplication.sharedApplication.statusBarFrame.size.height)
+
+#define NavigationBarViewHeight 44.0
+
+#define NavigationBarHeight StatusBarHeight + NavigationBarViewHeight
 
 #define BottomSafeAreaHeight [UIDevice isIPhoneXSeries] ? 34.f : 0.f
 

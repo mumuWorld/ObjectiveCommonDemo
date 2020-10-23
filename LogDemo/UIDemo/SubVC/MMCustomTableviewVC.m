@@ -18,22 +18,57 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.frame = self.view.bounds;
+    self.tableView.frame = CGRectMake(50, 100, ScreenWidth - 100, 400);
     [self.view addSubview:self.tableView];
+    
+    UIView *header = [[UIView alloc] init];
+    header.size = CGSizeMake(ScreenWidth - 200, 50);
+    header.backgroundColor = UIColor.greenColor;
+    
+    UIView *footer = [[UIView alloc] init];
+    footer.size = CGSizeMake(ScreenWidth - 100, 50);
+    footer.backgroundColor = UIColor.blueColor;
+    
+    self.tableView.tableHeaderView = header;
+    self.tableView.tableFooterView = footer;
+    
+    [self.tableView reloadData];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIView *maskView = [UIView new];
+        maskView.frame = CGRectMake(0, 400, ScreenWidth, 20);
+        maskView.backgroundColor = UIColor.greenColor;
+        [self.tableView addSubview:maskView];
+    });
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.tableView reloadData];
+    NSArray *arr = [self.tableView visibleCells];
+    NSLog(@"重载");
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 10;
+    return 5;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 100;
+    return 2;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DefaultEmptyCellReuseIdentifier forIndexPath:indexPath];
+    cell.textLabel.text = [NSString stringWithFormat:@"%zd-%zd",indexPath.section,indexPath.row];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 44;
+    return 200;
+}
+
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    NSLog(@"%@",[NSValue valueWithCGPoint:scrollView.contentOffset]);
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"停止滚动");
 }
 #pragma mark - getter && setter
 - (NSArray *)listArray {
@@ -52,6 +87,7 @@
             listView.dataSource = self;
             UIView *empty = [UIView new];
             listView.tableFooterView = empty;
+            listView.contentInset = UIEdgeInsetsMake(100, 0, 0, 0);
             _tableView = listView;
         } else {
             

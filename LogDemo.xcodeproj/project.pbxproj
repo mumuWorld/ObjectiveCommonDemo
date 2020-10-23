@@ -84,6 +84,8 @@
 		B49F738225220219003FEF8C /* MMTimeOffsetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B49F738025220219003FEF8C /* MMTimeOffsetViewController.xib */; };
 		B49F8BBA24937D8800D05E43 /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = B49F8BB924937D8800D05E43 /* Property List.plist */; };
 		B49FE16C24ED48E1007DA261 /* MMRunLooper.m in Sources */ = {isa = PBXBuildFile; fileRef = B49FE16B24ED48E1007DA261 /* MMRunLooper.m */; };
+		B4A011772536A9B5001C10E7 /* NSDate+Tools.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A011752536A9B4001C10E7 /* NSDate+Tools.m */; };
+		B4A0117C2536A9CB001C10E7 /* MMDateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0117B2536A9CB001C10E7 /* MMDateTest.m */; };
 		B4A0C26624EB746C00B63F64 /* ELHotelEsayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0C26524EB746C00B63F64 /* ELHotelEsayButton.m */; };
 		B4A158342514822200B55826 /* MMUIKitTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A158332514822200B55826 /* MMUIKitTool.m */; };
 		B4B9BE6B2462B8CD00AD0F9B /* MMSImpleXibUIVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B9BE692462B8CD00AD0F9B /* MMSImpleXibUIVC.m */; };
@@ -287,6 +289,10 @@
 		B49F8BB924937D8800D05E43 /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		B49FE16A24ED48E1007DA261 /* MMRunLooper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMRunLooper.h; sourceTree = "<group>"; };
 		B49FE16B24ED48E1007DA261 /* MMRunLooper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMRunLooper.m; sourceTree = "<group>"; };
+		B4A011752536A9B4001C10E7 /* NSDate+Tools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Tools.m"; sourceTree = "<group>"; };
+		B4A011762536A9B5001C10E7 /* NSDate+Tools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Tools.h"; sourceTree = "<group>"; };
+		B4A0117A2536A9CB001C10E7 /* MMDateTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMDateTest.h; sourceTree = "<group>"; };
+		B4A0117B2536A9CB001C10E7 /* MMDateTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMDateTest.m; sourceTree = "<group>"; };
 		B4A0C26424EB746C00B63F64 /* ELHotelEsayButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ELHotelEsayButton.h; sourceTree = "<group>"; };
 		B4A0C26524EB746C00B63F64 /* ELHotelEsayButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELHotelEsayButton.m; sourceTree = "<group>"; };
 		B4A158322514822200B55826 /* MMUIKitTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMUIKitTool.h; sourceTree = "<group>"; };
@@ -455,6 +461,8 @@
 		401FFC2C1E1118A000E46787 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				B4A011762536A9B5001C10E7 /* NSDate+Tools.h */,
+				B4A011752536A9B4001C10E7 /* NSDate+Tools.m */,
 				401FFC2D1E1118AF00E46787 /* Foundation+Log.m */,
 			);
 			name = Category;
@@ -873,6 +881,8 @@
 				B49FE16B24ED48E1007DA261 /* MMRunLooper.m */,
 				B4A158322514822200B55826 /* MMUIKitTool.h */,
 				B4A158332514822200B55826 /* MMUIKitTool.m */,
+				B4A0117A2536A9CB001C10E7 /* MMDateTest.h */,
+				B4A0117B2536A9CB001C10E7 /* MMDateTest.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1200,6 +1210,7 @@
 				B49BADF42434790E00A41D14 /* MMFuncTestListVC.m in Sources */,
 				B4BAA373241F63B80049DFEE /* NSObject+model.m in Sources */,
 				B4BAA379241F7A450049DFEE /* MMRichTextVC.m in Sources */,
+				B4A011772536A9B5001C10E7 /* NSDate+Tools.m in Sources */,
 				B457146925304CA5009F28CC /* ELHotelDispatchTimer.m in Sources */,
 				B44B8B7023CD6B4800B912CB /* UIColor+Tools.m in Sources */,
 				B4F4BA8823CF297F00ACFC52 /* MMCollectionShowVC.m in Sources */,
@@ -1255,6 +1266,7 @@
 				401FFC2E1E1118AF00E46787 /* Foundation+Log.m in Sources */,
 				B4F4BA8223CF28E000ACFC52 /* MMCollectionLayoutVC.m in Sources */,
 				B498BA9E24EE6BC900090564 /* TPMainVC.m in Sources */,
+				B4A0117C2536A9CB001C10E7 /* MMDateTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

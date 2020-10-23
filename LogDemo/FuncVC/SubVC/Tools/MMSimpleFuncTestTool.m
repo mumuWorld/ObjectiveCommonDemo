@@ -207,7 +207,7 @@ return string;
     gettimeofday(&now, &tz);
     //2020-10-09 08:12:32 +0000
     NSDate* date = [NSDate date];
-    //(CGFloat) date_time = 1602231152.400984
+    //(CGFloat) date_time = 1602231152.400984  -> 1602646709.042289
     CGFloat date_time = [date timeIntervalSince1970];
     //(CGFloat) date_time_now = -0.0000069141387939453125
     CGFloat date_time_now = [date timeIntervalSinceNow];
@@ -215,4 +215,34 @@ return string;
     NSLog(@"test");
 }
 
++ (void)interTest {
+    NSInteger bitSwitch = 16;
+    if (bitSwitch & 1) {
+        NSLog(@"开1");
+    }
+    if ((bitSwitch & 2) == 2) {
+        NSLog(@"开2");
+    }
+    
+    NSInteger test = bitSwitch & 4;
+    
+    NSInteger test2 = bitSwitch & 2;
+    
+    NSLog(@"开3");
+}
+
+
++ (void)crashTest {
+    NSString *normalStr = @"test";
+    
+    normalStr = [NSString stringWithFormat:@"%@(%@)",nil,@""];
+    
+    NSRange rang = [normalStr rangeOfString:@""];
+    normalStr = nil;
+    NSRange rang_3 = [normalStr rangeOfString:@""];
+
+    NSRange rang_2 = [normalStr rangeOfString:nil];
+    
+    NSLog(@"test");
+}
 @end

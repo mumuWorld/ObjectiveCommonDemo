@@ -23,6 +23,8 @@
 @property (nonatomic, strong) MMCircleView *circleView;
 
 @property (nonatomic, strong) UIView *bottomView;
+
+@property (nonatomic, strong) UIStackView *stackView;
 @end
 
 @implementation MMSimpleUIVC
@@ -84,7 +86,69 @@
     [self.view addSubview:bottom];
     
 //    [[TimeProfiler shareInstance] TPStopTrace];
+    
+    self.view.backgroundColor = UIColor.brownColor;
+    
+    UIStackView *stackView = [[UIStackView alloc] init];
+    stackView.axis = UILayoutConstraintAxisHorizontal;
+    stackView.alignment = UIStackViewAlignmentCenter;
+    stackView.distribution = UIStackViewDistributionEqualCentering;
+    stackView.spacing = 10;
+    stackView.backgroundColor = UIColor.lightGrayColor;
+    [self.view addSubview:stackView];
+    _stackView  = stackView;
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:@"左边btn" forState:UIControlStateNormal];
+    [btn setBackgroundColor:UIColor.greenColor];
+    [_stackView addArrangedSubview:btn];
+    
+    UILabel *label = [UILabel new];
+    label.backgroundColor = UIColor.redColor;
+    label.text = @"这是label";
+    [_stackView addArrangedSubview:label];
+    
+    UIButton *btn_2 = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn_2 setTitle:@"右边btn" forState:UIControlStateNormal];
+    [btn_2 setBackgroundColor:UIColor.orangeColor];
+    [_stackView addArrangedSubview:btn_2];
+    
+    UIView *view = [UIView new];
+    view.backgroundColor = UIColor.blueColor;
+    [_stackView addArrangedSubview:view];
+    
+    [self.stackView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.view).offset(8);
+        make.right.mas_lessThanOrEqualTo(self.view).offset(-8);
+        make.top.mas_equalTo(NavigationBarHeight);
+        make.height.mas_equalTo(50);
+    }];
+    
+    [label setContentHuggingPriority:600 forAxis:UILayoutConstraintAxisHorizontal];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(80);
+    }];
+    
+    [view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(20);
+        make.height.mas_offset(10);
+    }];
+    [btn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(100);
+    }];
+    [btn_2 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.mas_equalTo(50);
+    }];
+}
 
+static int test = 0;
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    if (test >= 5) {
+        test = 0;
+    }
+    self.stackView.distribution = test++;
+    NSLog(@"test=%i",test);
 }
 
 - (void)viewWillLayoutSubviews {

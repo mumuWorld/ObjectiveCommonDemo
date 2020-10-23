@@ -34,7 +34,9 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [MMSimpleFuncTestTool dateTest];
+    
+    
+    [MMSimpleFuncTestTool crashTest];
 //    NSString *test = @"".appendObj(@(2)).appendObj(@"test").appendObj(@(true));
 //    NSLog(@"joeLog->test=%@",test);
 //    [MMGenerateObjTool generateJson:[MMSimpleFuncModel class]];
@@ -154,7 +156,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self.timer invalidate];
-    [MMSimpleFuncTestTool invokeGCDTest];
+    [MMSimpleFuncTestTool dateTest];
 //    MMPresentTestVC *test = [[MMPresentTestVC alloc] init];
 //    test.modalPresentationStyle = UIModalPresentationFullScreen;
 //    [self.navigationController presentViewController:test animated:true completion:nil];

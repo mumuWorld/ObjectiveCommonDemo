@@ -35,6 +35,11 @@
     self.addSubVCBtn.y = 300;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"self=%@",self);
+}
+
 - (void)sendClick:(UIButton *)sender {
     if (sender.tag == 11) {
         
@@ -72,6 +77,7 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"%@",self);
+    self.callBack();
 }
 
 - (UIButton *)tmpBtn {

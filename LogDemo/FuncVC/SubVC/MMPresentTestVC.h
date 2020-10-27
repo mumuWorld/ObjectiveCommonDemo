@@ -10,8 +10,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MMPresentTestVC : MMBaseViewController
+typedef void(^CallBack)(void);
 
+@interface MMPresentTestVC : MMBaseViewController
+@property (nonatomic, copy) CallBack callBack;
 @end
 
 NS_ASSUME_NONNULL_END

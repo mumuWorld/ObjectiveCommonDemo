@@ -9,6 +9,7 @@
 #import "MMUILabelTestVC.h"
 
 @interface MMUILabelTestVC ()
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
 
@@ -16,7 +17,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+//    self.titleLabel.width = 200;
+    CGSize fitSize = [self.titleLabel intrinsicContentSize];
+    
+    CGSize fitSize_2 = [self.titleLabel.text boundingRectWithSize:CGSizeMake(200, 0) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.titleLabel.font} context:nil].size;
+    
+    CGSize fitSize_3 = [self.titleLabel sizeThatFits:CGSizeMake(200, 0)];
+    
+    [self.titleLabel sizeToFit];
+    CGSize fitSize_4 = self.titleLabel.size;
+    NSLog(@"size");
 }
 
 /*

@@ -15,6 +15,8 @@
 #import "NSString+MMString.h"
 #import "MMUIKitTool.h"
 #import "ELHotelDispatchTimer.h"
+#import "MMPresentTestVC.h"
+#import "MMGCDTestVC.h"
 
 @interface MMSimpleFuncVC ()
 @property (nonatomic, strong) NSArray *strongArray;
@@ -26,17 +28,24 @@
 @property (nonatomic, strong) NSTimer *timer;
 
 @property (nonatomic, copy) NSString *timerName;
+
+@property (nonatomic, strong) UIWindow *window;
 @end
 
 @implementation MMSimpleFuncVC
 - (void)dealloc {
     NSLog(@"dealloc->%@",self.timer);
 }
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"self=%@",self);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    [MMSimpleFuncTestTool crashTest];
+    [self windowTest];
+//    [self test6];
+//    [MMSimpleFuncTestTool crashTest];
 //    NSString *test = @"".appendObj(@(2)).appendObj(@"test").appendObj(@(true));
 //    NSLog(@"joeLog->test=%@",test);
 //    [MMGenerateObjTool generateJson:[MMSimpleFuncModel class]];
@@ -239,6 +248,27 @@
     NSLog(@"%s",p);
 }
 
+- (void)windowTest {
+    UIWindow *topWindow = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+    MMPresentTestVC *pre = [MMPresentTestVC new];
+    __weak typeof(self) ws = self;
+    __weak typeof(pre) ws_pre = pre;
+
+    pre.callBack = ^{
+        MMPresentTestVC *test = [[MMPresentTestVC alloc] init];
+        [ws_pre.navigationController pushViewController:test animated:YES];
+
+        MMGCDTestVC *test_2 = [[MMGCDTestVC alloc] init];
+        [ws.navigationController pushViewController:test_2 animated:YES];
+    };
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:pre];
+    topWindow.rootViewController = navi;
+    
+    topWindow.windowLevel = 100;
+    topWindow.hidden = false;
+    self.window = topWindow;
+    
+}
 - (void)test5 {
     MMSimpleFuncModel *model_1 = [[MMSimpleFuncModel alloc] init];
     model_1.keyType = @"beddesc";
@@ -268,40 +298,123 @@
 //NSLog(@"%p",array_1);
 }
 - (void)test6 { //更改文件名
-     NSString *lastPathComponent = @"/Users/mumu/Documents/EL&TC_Pro/resource/设计稿/国内酒店迭代/967/详情页点评模块引入动态点评/assets/t";
-    NSString *path2 = @"/Users/mumu/Documents/EL&TC_Pro/resource/设计稿/国内酒店迭代/967/详情页点评模块引入动态点评/assets";
-//    [self p_setupFileRename:path2];
+//     NSString *lastPathComponent = @"/Users/mumu/Documents/EL&TC_Pro/resource/设计稿/国内酒店迭代/967/详情页点评模块引入动态点评/assets/t";
+    NSString *path2 = @"/Users/mumu/Documents/EL&TC_Pro/resource/设计稿/国内酒店迭代/973/酒店详情页头部设施icon";
+    [self p_setupFileRename:path2];
 //    [self p_setupFileRename:lastPathComponent];
-    [self getAllPngName:lastPathComponent];
-    [self getAllPngName:path2];
+//    [self getAllPngName:lastPathComponent];
+//    [self getAllPngName:path2];
 }
 
 
 - (NSString *)fitNameWith:(NSString *)original {
     BOOL is2x = [original containsString:@"@2x"];
     NSString *fit = @"";
-    NSString *common = @"hoteldetail_tips_icon_";
-    if ([original containsString:@"点评"]) {
-        fit = @"comment";
-    } else if ([original containsString:@"美食"]) {
-        fit = @"food";
-    } else if ([original containsString:@"交通"]) {
-        fit = @"transport";
-    } else if ([original containsString:@"亲子"]) {
-        fit = @"parenting";
-    } else if ([original containsString:@"情侣"]) {
-        fit = @"lovers";
-    } else if ([original containsString:@"设施"]) {
-        fit = @"facilities";
-    } else if ([original containsString:@"通用"]) {
-        fit = @"common";
-    } else if ([original containsString:@"网红"]) {
-        fit = @"celebrity";
+    NSString *common = @"hotelDetail_facility_entrance_";
+    if ([original containsString:@"接送机"]) {
+        fit = @"airport_transfer";
+    } else if ([original containsString:@"儿童设施"]) {
+        fit = @"child_facility";
+    } else if ([original containsString:@"温泉"]) {
+        fit = @"hot_spring";
+    } else if ([original containsString:@"沙滩"]) {
+        fit = @"private_sandbeach";
+    } else if ([original containsString:@"滑雪"]) {
+        fit = @"skiing";
+    } else if ([original containsString:@"高尔夫"]) {
+        fit = @"golf";
+    } else if ([original containsString:@"潜水"]) {
+        fit = @"dive";
+    } else if ([original containsString:@"水上运动"]) {
+        fit = @"water_sport";
+    } else if ([original containsString:@"海边娱乐"]) {
+        fit = @"sea_happy";
+    } else if ([original containsString:@"泳池"]) {
+        fit = @"swimming_pool";
+    } else if ([original containsString:@"健身中心"]) {
+        fit = @"gym";
+    } else if ([original containsString:@"景观"]) {
+        fit = @"scenery";
+    } else if ([original containsString:@"免费停车"]) {
+        fit = @"park";
+    } else if ([original containsString:@"智能家具"]) {
+        fit = @"smart_home";
+    } else if ([original containsString:@"免费携带宠物"]) {
+        fit = @"pet";
+    } else if ([original containsString:@"spa"]) {
+        fit = @"spa";
+    } else if ([original containsString:@"会议室"]) {
+        fit = @"meeting_room";
+    } else if ([original containsString:@"行政酒廊"]) {
+        fit = @"executive_lounge";
+    } else if ([original containsString:@"餐厅"]) {
+        fit = @"restaurant";
+    } else if ([original containsString:@"接站服务"]) {
+        fit = @"pickup_station";
+    } else if ([original containsString:@"WIFI"]) {
+        fit = @"wifi";
+    } else if ([original containsString:@"24小时前台"]) {
+        fit = @"24hour_receptionist_service";
+    } else if ([original containsString:@"篮球场"]) {
+        fit = @"basketball_court";
+    } else if ([original containsString:@"茶室"]) {
+        fit = @"tea_room";
+    } else if ([original containsString:@"欢迎礼品"]) {
+        fit = @"wellcom_gift";
+    } else if ([original containsString:@"酒吧"]) {
+        fit = @"bar";
+    } else if ([original containsString:@"乒乓球"]) {
+        fit = @"pingpang";
+    } else if ([original containsString:@"休闲会所"]) {
+        fit = @"lie_club";
+    } else if ([original containsString:@"行李寄存"]) {
+        fit = @"baggage";
+    } else if ([original containsString:@"叫醒服务"]) {
+        fit = @"wakeup_service";
+    } else if ([original containsString:@"叫车服务"]) {
+        fit = @"car_service";
+    } else if ([original containsString:@"免费洗漱用品"]) {
+        fit = @"wash";
+    } else if ([original containsString:@"洗衣服务"]) {
+        fit = @"washcloth";
+    } else if ([original containsString:@"24小时热水"]) {
+        fit = @"24th_hotwater";
+    } else if ([original containsString:@"电梯"]) {
+        fit = @"elevator";
+    } else if ([original containsString:@"旅游服务"]) {
+        fit = @"tour";
+    } else if ([original containsString:@"外币兑换"]) {
+        fit = @"foreign_currency";
+    } else if ([original containsString:@"商务"]) {
+        fit = @"business_center";
+    } else if ([original containsString:@"入住测温"]) {
+        fit = @"moveinto_temperature";
+    } else if ([original containsString:@"员工测温"]) {
+        fit = @"staff_temperature";
+    } else if ([original containsString:@"14天无病"]) {
+        fit = @"no_patient";
+    } else if ([original containsString:@"每日消毒"]) {
+        fit = @"everyday_disinfect";
+    } else if ([original containsString:@"配备消毒设施"]) {
+        fit = @"have_facility";
+    } else if ([original containsString:@"咖啡厅"]) {
+        fit = @"coffee_house";
+    } else if ([original containsString:@"桑拿"]) {
+        fit = @"sauna";
+    } else if ([original containsString:@"足浴"]) {
+        fit = @"foot_bath";
     }
     if(fit.length < 1) {
         return @"";
     }
-    fit = [NSString stringWithFormat:@"%@%@%@.png",common,fit,is2x ? @"@2x":@"@3x"];
+    if (is2x) {
+        fit = [NSString stringWithFormat:@"%@%@_header.png",fit,common];
+    } else {
+        return nil;
+    }
+    
+
+//    fit = [NSString stringWithFormat:@"%@%@_header%@.png",common,fit,is2x ? @"@2x":@"@3x"];
     return fit;
 }
 

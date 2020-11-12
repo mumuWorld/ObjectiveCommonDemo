@@ -10,6 +10,15 @@
 
 @implementation MMCircleView
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    NSLog(@"%@",self);
+    if (frame.size.width == 0 && frame.size.height == 0) {
+            frame.size = CGSizeMake(100, 100);
+        }
+    self = [super initWithFrame:frame];
+    NSLog(@"%@",self);
+    return self;
+}
 
 - (void)drawRect:(CGRect)rect {
     

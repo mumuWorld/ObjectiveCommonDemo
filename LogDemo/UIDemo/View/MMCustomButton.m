@@ -12,7 +12,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    NSLog(@"3");
+    NSLog(@"3=%@",self);
 }
 
 - (BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{

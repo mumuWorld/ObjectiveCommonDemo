@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MMUIKitTool : NSObject
 + (void)differentWindowScreen;
+
+- (void)viewAnimationTest;
 @end
 
 NS_ASSUME_NONNULL_END

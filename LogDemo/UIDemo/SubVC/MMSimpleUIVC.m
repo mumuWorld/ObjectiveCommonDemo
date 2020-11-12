@@ -12,11 +12,14 @@
 #import "MMCircleView.h"
 #import "UIView+MMCategory.h"
 #import "TimeProfiler.h"
+#import "MMSImpleXibUIVC.h"
 
 @interface MMSimpleUIVC ()
 @property (nonatomic, strong) UILabel *testLabel;
 
 @property (nonatomic, strong) MMCustomButton *customBtn;
+
+@property (nonatomic, strong) MMCustomButton *customeBtn_sub;
 
 @property (nonatomic, strong) AFHTTPSessionManager *manager;
 
@@ -59,9 +62,14 @@
     customLabel.layer.masksToBounds = true;
     [self.view addSubview:customLabel];
     
-    
+    _customeBtn_sub = [MMCustomButton new];
+    _customeBtn_sub.frame = CGRectMake(10, 10, 40, 40);
+    _customeBtn_sub.backgroundColor = UIColor.redColor;
     
     [self.view addSubview:self.customBtn];
+    [self.customBtn addSubview:_customeBtn_sub];
+    
+    
     self.manager = [[AFHTTPSessionManager alloc] init];
     self.manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript", @"text/html", nil];
 
@@ -73,7 +81,7 @@
         }];
     });
     
-    self.circleView = [[MMCircleView alloc] initWithFrame:CGRectMake(50, 200, 100, 100)];
+    self.circleView = [[MMCircleView alloc] initWithFrame:CGRectMake(50, 200, 0, 0)];
     self.circleView.backgroundColor = UIColor.cyanColor;
     [self.view addSubview:self.circleView];
     
@@ -88,6 +96,72 @@
 //    [[TimeProfiler shareInstance] TPStopTrace];
     
     self.view.backgroundColor = UIColor.brownColor;
+    
+
+}
+
+static int test = 0;
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    if (test >= 5) {
+//        test = 0;
+//    }
+//    self.stackView.distribution = test++;
+//    NSLog(@"test=%i",test);
+//    if (test == 0) {
+//        self.customeBtn_sub.width = 30;
+//        test += 1;
+//    } else {
+//        self.customBtn.width += 50;
+//    }
+    if (test == 8) {
+        test = 0;
+    }
+    MMSImpleXibUIVC *controller = [MMSImpleXibUIVC new];
+    controller.modalPresentationStyle = test;
+    NSLog(@"test=%zd",controller.modalPresentationStyle);
+
+    [self.navigationController presentViewController:controller animated:YES completion:nil];
+    test += 1;
+}
+
+- (void)p_handleBtnClick:(UIButton *)sender {
+    MMSImpleXibUIVC *controller = [MMSImpleXibUIVC new];
+    controller.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self.navigationController presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    NSLog(@"1");
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    NSLog(@"2");
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"4");
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"5");
+}
+- (MMCustomButton *)customBtn {
+    if (!_customBtn) {
+        MMCustomButton *btn = [[MMCustomButton alloc] initWithFrame:CGRectMake(10, 100, 100, 50)];
+        [btn setTitle:@"测试按钮" forState:UIControlStateNormal];
+        [btn addTarget:self action:@selector(p_handleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        _customBtn = btn;
+    }
+    return _customBtn;
+}
+
+
+- (void)stackViewTest {
     
     UIStackView *stackView = [[UIStackView alloc] init];
     stackView.axis = UILayoutConstraintAxisHorizontal;
@@ -139,43 +213,5 @@
     [btn_2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(50);
     }];
-}
-
-static int test = 0;
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    if (test >= 5) {
-        test = 0;
-    }
-    self.stackView.distribution = test++;
-    NSLog(@"test=%i",test);
-}
-
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    NSLog(@"1");
-}
-
-- (void)viewDidLayoutSubviews {
-    [super viewDidLayoutSubviews];
-    NSLog(@"2");
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    NSLog(@"4");
-}
-
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-    NSLog(@"5");
-}
-- (MMCustomButton *)customBtn {
-    if (!_customBtn) {
-        MMCustomButton *btn = [[MMCustomButton alloc] initWithFrame:CGRectMake(10, 100, 100, 50)];
-        [btn setTitle:@"测试按钮" forState:UIControlStateNormal];
-        _customBtn = btn;
-    }
-    return _customBtn;
 }
 @end

@@ -25,6 +25,7 @@
     [self.view addSubview:self.topView];
     [self.view addSubview:self.botView];
     [self addConstaint];
+    [self.view layoutIfNeeded];
 }
 
 - (void)dealloc {
@@ -41,7 +42,7 @@
         self.botView_top = make.top.equalTo(self.topView).offset(60);
         make.left.equalTo(self.view).offset(20);
         make.right.equalTo(self.view).offset(-20);
-        make.height.equalTo(@(50));
+        make.height.equalTo(@(0)).offset(50.5);
     }];
 }
 

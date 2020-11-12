@@ -10,6 +10,14 @@
 
 @implementation MMTouchView
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (frame.size.width == 0 && frame.size.height == 0) {
+            frame.size = CGSizeMake(100, 100);
+        }
+    self = [super initWithFrame:frame];
+    return self;
+}
+
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     NSLog(@"tag=%zd",self.tag);
 

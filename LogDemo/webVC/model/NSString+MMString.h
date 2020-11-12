@@ -16,4 +16,6 @@
 + (NSString *)URLDecodedString:(NSString *)str;
 
 - (NSString *(^)(id obj))appendObj;
+
+- (NSString *(^)(id obj,...))appendObjs ;
 @end

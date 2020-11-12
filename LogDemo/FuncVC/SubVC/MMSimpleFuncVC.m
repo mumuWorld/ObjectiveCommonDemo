@@ -33,6 +33,7 @@
 @end
 
 @implementation MMSimpleFuncVC
+
 - (void)dealloc {
     NSLog(@"dealloc->%@",self.timer);
 }
@@ -43,11 +44,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self windowTest];
+//    [self windowTest];
 //    [self test6];
-//    [MMSimpleFuncTestTool crashTest];
-//    NSString *test = @"".appendObj(@(2)).appendObj(@"test").appendObj(@(true));
-//    NSLog(@"joeLog->test=%@",test);
+    [MMSimpleFuncTestTool test];
+    NSString *test = @"".appendObj(@(2)).appendObj(@"test").appendObj(@(true));
+    NSString *test_2 = @"".appendObjs(@(3),@"hello",@(YES),nil);
+    NSLog(@"joeLog->test=%@",test);
 //    [MMGenerateObjTool generateJson:[MMSimpleFuncModel class]];
 //    [MMGenerateObjTool generateJson:[[MMSimpleFuncTestTool new] class]];
 
@@ -91,6 +93,9 @@
 //    [MMGCDTestTool testPoint:&str];
 //    [MMGCDTestTool testPoint:(NSString *__autoreleasing *)]
 //    [MMGCDTestTool threadTest];
+    MMUIKitTool *kitTool = [[MMUIKitTool alloc] init];
+    [kitTool viewAnimationTest];
+    
 //    [MMUIKitTool differentWindowScreen];
     
 //    self.timerName = [ELHotelDispatchTimer excuTimerTask:^(NSString * _Nonnull timer) {
@@ -165,7 +170,7 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self.timer invalidate];
-    [MMSimpleFuncTestTool dateTest];
+    [self test2];
 //    MMPresentTestVC *test = [[MMPresentTestVC alloc] init];
 //    test.modalPresentationStyle = UIModalPresentationFullScreen;
 //    [self.navigationController presentViewController:test animated:true completion:nil];
@@ -181,6 +186,10 @@
     model_2.keyType = @"multibed";
     model_2.content = @"c2";
     model_2.type = 2;
+    MMSimpleFuncModel *model_3 = [[MMSimpleFuncModel alloc] init];
+    model_2.keyType = @"beddesc";
+    model_2.content = @"c3";
+    model_2.type = 3;
     NSArray *array = @[@{@"keyType":@"beddesc",
                          @"content":@"c1",
                          @"type": @(1)
@@ -189,8 +198,10 @@
                          @"content":@"c1",
                          @"type": @(1)
                        }];
-    NSArray *array_2 = @[model_1,model_2];
+    NSArray *array_2 = @[model_1,model_2,model_3];
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"keyType = %@ || keyType = %@",@"beddesc",@"multibed"];
+    //错误写法
+    NSPredicate *pre_1 = [NSPredicate predicateWithFormat:@"keyType = beddesc"];
     
     NSPredicate *pre_2 = [NSPredicate predicateWithFormat:@"type = %d",1];
     NSPredicate *pre_5 = [NSPredicate predicateWithFormat:@"type == %d",1];
@@ -202,9 +213,14 @@
 //    NSArray *result = [self.hotelDetailModel.otherText filteredArrayUsingPredicate:pre];
     
     NSArray *result = [array filteredArrayUsingPredicate:pre];
-//    NSArray *result_2 = [array_2 filteredArrayUsingPredicate:pre];
-    NSArray *result_2 = [array filteredArrayUsingPredicate:pre_2];
+    NSArray *result_2 = [array filteredArrayUsingPredicate:pre_1];
+    
     NSArray *result_2_1 = [array_2 filteredArrayUsingPredicate:pre_2];
+    
+    NSArray *result_2_result_1 = [array_2 filteredArrayUsingPredicate:pre];
+    //错误用法
+    NSArray *result_2_result_2 = [array_2 filteredArrayUsingPredicate:pre_1];
+
     
     NSArray *result_4 = [array filteredArrayUsingPredicate:pre_3];
     NSArray *result_4_2 = [array_2 filteredArrayUsingPredicate:pre_3];

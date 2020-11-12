@@ -22,10 +22,12 @@ static NSHashTable *table = nil;
 
 
 + (void)test {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"detail" ofType:@"json"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"string" ofType:@"json"];
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSError *error;
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
+    NSString *tStr = [jsonDict objectForKey:@"t"];
+    NSString *sStr = [jsonDict objectForKey:@"s"];
     NSLog(@"dict=%@",jsonDict);
 }
 

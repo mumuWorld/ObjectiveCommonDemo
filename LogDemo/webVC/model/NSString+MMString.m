@@ -32,4 +32,36 @@
         return [NSString stringWithFormat:@"%@%@",self,obj];
     };
 }
+//
+- (NSString *(^)(va_list list))appendObjs2 {
+    return ^NSString *(va_list list){
+////        va_list args;
+        NSMutableString *mutStr = [NSMutableString stringWithFormat:@"self"];
+//        id tmpObj = nil;
+//            va_start(list, tmpObj);
+//            while ((tmpObj = va_arg(list, id))) {
+//                [mutStr appendFormat:@"%@",tmpObj];
+//            }
+//            va_end(list);
+//        }
+        return [mutStr copy];
+    };
+}
+
+
+- (NSString *(^)(id obj,...))appendObjs {
+    return ^NSString *(id obj,...){
+        va_list args;
+        NSMutableString *mutStr = [NSMutableString stringWithFormat:@"%@%@",self,obj?:@""];
+        if (obj) {
+            va_start(args, obj);
+            id tmpObj = nil;
+            while ((tmpObj = va_arg(args, id))) {
+                [mutStr appendFormat:@"%@",tmpObj];
+            }
+            va_end(args);
+        }
+        return [mutStr copy];
+    };
+}
 @end

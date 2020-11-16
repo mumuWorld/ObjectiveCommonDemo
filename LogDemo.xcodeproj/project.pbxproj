@@ -133,6 +133,7 @@
 		B4F9F4712453036200097200 /* MMTouchPriorityVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9F46F2453036200097200 /* MMTouchPriorityVC.m */; };
 		B4F9F4722453036200097200 /* MMTouchPriorityVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4F9F4702453036200097200 /* MMTouchPriorityVC.xib */; };
 		B4F9F4752453063B00097200 /* MMTouchView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4F9F4742453063B00097200 /* MMTouchView.m */; };
+		B4FB76E3255D566600C15495 /* MMCustomTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FB76E2255D566600C15495 /* MMCustomTextAttachment.m */; };
 		B4FF166F2494F15300D5E3C7 /* MMUILabelTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4FF166D2494F15300D5E3C7 /* MMUILabelTestVC.m */; };
 		B4FF16702494F15300D5E3C7 /* MMUILabelTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4FF166E2494F15300D5E3C7 /* MMUILabelTestVC.xib */; };
 		F65A0185E40634F33D177994 /* libPods-LogDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C6470A7553DA6D1121D34B /* libPods-LogDemoTests.a */; };
@@ -385,6 +386,8 @@
 		B4F9F4702453036200097200 /* MMTouchPriorityVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMTouchPriorityVC.xib; sourceTree = "<group>"; };
 		B4F9F4732453063B00097200 /* MMTouchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTouchView.h; sourceTree = "<group>"; };
 		B4F9F4742453063B00097200 /* MMTouchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTouchView.m; sourceTree = "<group>"; };
+		B4FB76E1255D566600C15495 /* MMCustomTextAttachment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCustomTextAttachment.h; sourceTree = "<group>"; };
+		B4FB76E2255D566600C15495 /* MMCustomTextAttachment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCustomTextAttachment.m; sourceTree = "<group>"; };
 		B4FF166C2494F15300D5E3C7 /* MMUILabelTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMUILabelTestVC.h; sourceTree = "<group>"; };
 		B4FF166D2494F15300D5E3C7 /* MMUILabelTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMUILabelTestVC.m; sourceTree = "<group>"; };
 		B4FF166E2494F15300D5E3C7 /* MMUILabelTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMUILabelTestVC.xib; sourceTree = "<group>"; };
@@ -521,6 +524,8 @@
 				B4B51608255BE6C1006DE90F /* MMCornerImgCell.h */,
 				B4B51609255BE6C1006DE90F /* MMCornerImgCell.m */,
 				B4B5160A255BE6C1006DE90F /* MMCornerImgCell.xib */,
+				B4FB76E1255D566600C15495 /* MMCustomTextAttachment.h */,
+				B4FB76E2255D566600C15495 /* MMCustomTextAttachment.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1254,6 +1259,7 @@
 				B4F4BA8C23CF2A0500ACFC52 /* MMCollectionViewAlignmentLayout.m in Sources */,
 				B437064A23D6FC0600BFD166 /* MMScreenRotateVC.m in Sources */,
 				B4EF86822449D39D0055060E /* NSObject+MMCategory.m in Sources */,
+				B4FB76E3255D566600C15495 /* MMCustomTextAttachment.m in Sources */,
 				B4D4DBA423CDBDB30093D5DA /* UIImageView+MMCategory.m in Sources */,
 				B499F9A124E2650A0050B2A6 /* MMLayoutPriorityVC.m in Sources */,
 				B498BA9C24EE6BC900090564 /* TPCallTrace.c in Sources */,

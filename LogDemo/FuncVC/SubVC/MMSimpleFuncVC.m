@@ -17,6 +17,7 @@
 #import "ELHotelDispatchTimer.h"
 #import "MMPresentTestVC.h"
 #import "MMGCDTestVC.h"
+#import "MMSimpleFuncModel+MMExtension.h"
 
 @interface MMSimpleFuncVC ()
 @property (nonatomic, strong) NSArray *strongArray;
@@ -30,6 +31,8 @@
 @property (nonatomic, copy) NSString *timerName;
 
 @property (nonatomic, strong) UIWindow *window;
+
+@property (nonatomic, strong) MMSimpleFuncModel *funcModel;
 @end
 
 @implementation MMSimpleFuncVC
@@ -93,15 +96,24 @@
 //    [MMGCDTestTool testPoint:&str];
 //    [MMGCDTestTool testPoint:(NSString *__autoreleasing *)]
 //    [MMGCDTestTool threadTest];
-    MMUIKitTool *kitTool = [[MMUIKitTool alloc] init];
-    [kitTool viewAnimationTest];
+//    MMUIKitTool *kitTool = [[MMUIKitTool alloc] init];
+//    [kitTool viewAnimationTest];
+    self.funcModel = [MMSimpleFuncModel new];
+    self.funcModel.disasterCity = YES;
     
+    
+    BOOL value = self.funcModel.disasterCity;
+    
+    NSLog(@"value=%d",value);
+//    [self.funcModel resgister];
 //    [MMUIKitTool differentWindowScreen];
     
 //    self.timerName = [ELHotelDispatchTimer excuTimerTask:^(NSString * _Nonnull timer) {
 //        NSLog(@"timer=%@",timer);
 //    } andStart:3 interval:2 repeats:true async:NO];
 }
+
+
 - (void)gcdfunc {
     NSThread *thread = [[NSThread alloc] init];
 //    [self performSelector:@selector(testThread1:) onThread:thread withObject:@{@"key":@(1)} waitUntilDone:true];
@@ -170,7 +182,8 @@
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self.timer invalidate];
-    [self test2];
+//    [self test2];
+    [self.funcModel postNotify];
 //    MMPresentTestVC *test = [[MMPresentTestVC alloc] init];
 //    test.modalPresentationStyle = UIModalPresentationFullScreen;
 //    [self.navigationController presentViewController:test animated:true completion:nil];

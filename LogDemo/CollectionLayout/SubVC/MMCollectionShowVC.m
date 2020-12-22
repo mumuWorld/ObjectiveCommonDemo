@@ -23,10 +23,13 @@
     [super viewDidLoad];
     self.collectionView.frame = CGRectMake(10, 100, ScreenWidth - 20, 300);
     [self.view addSubview:self.collectionView];
+    
 }
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
 //    [self.collectionView.collectionViewLayout invalidateLayout];
-    [self.collectionView setContentOffset:CGPointMake(0, 500) animated:true];
+//    [self.collectionView setContentOffset:CGPointMake(0, 500) animated:true];
+    
+    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:30 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:true];
 }
 
 #pragma mark - collectionView
@@ -55,7 +58,7 @@
 }
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset {
 
-    NSLog(@"joeLog->ContentOffset=%@",[NSValue valueWithCGPoint:*targetContentOffset]);
+//    NSLog(@"joeLog->ContentOffset=%@",[NSValue valueWithCGPoint:*targetContentOffset]);
 }
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
     NSLog(@"joeLog->willDecelerate=%d",decelerate);
@@ -63,6 +66,7 @@
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
     NSLog(@"joeLog->EndScrollingAnimation");
 }
+
 #pragma mark - getter && setter
 - (UICollectionView *)collectionView {
     if (!_collectionView) {

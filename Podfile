@@ -14,6 +14,11 @@ target 'LogDemo' do
 #  pod 'pop', '~> 1.0'
   pod 'Masonry'
   pod 'AFNetworking', :git => 'git@github.com:AFNetworking/AFNetworking.git', :branch => 'master'
+  pod 'eLongModelPlugInStatic', :git =>'http://git.17usoft.com/iosstaticframework/elongmodelpluginstatic.git'
+  pod 'eLongFrameworkStatic', :git => 'http://git.17usoft.com/iosstaticframework/elongframeworkstatic.git'
+
+  pod 'TCELHourlyHotel', :path => '../../../EL&TC_Pro/ELHourlyHotel'
+
   # Pods for LogDemo
 
   target 'LogDemoTests' do

@@ -14,6 +14,7 @@
 #import "TimeProfiler.h"
 #import "MMSImpleXibUIVC.h"
 #import "MMCustomTextAttachment.h"
+#import "MMTestView.h"
 
 @interface MMSimpleUIVC ()
 @property (nonatomic, strong) UILabel *testLabel;
@@ -29,6 +30,10 @@
 @property (nonatomic, strong) UIView *bottomView;
 
 @property (nonatomic, strong) UIStackView *stackView;
+
+@property (nonatomic, strong) MMTestView *guideView;
+@property (nonatomic, strong) UIView *maskView;
+
 @end
 
 @implementation MMSimpleUIVC
@@ -71,7 +76,7 @@
 //    _customeBtn_sub.frame = CGRectMake(10, 10, 40, 40);
 //    _customeBtn_sub.backgroundColor = UIColor.redColor;
 //
-//    [self.view addSubview:self.customBtn];
+    [self.view addSubview:self.customBtn];
 //    [self.customBtn addSubview:_customeBtn_sub];
     
     
@@ -102,9 +107,30 @@
     
     self.view.backgroundColor = UIColor.brownColor;
     
-
+//    [self addguide];
 }
 
+- (void)addguide {
+    UIWindow *window = self.view.window;
+//    UIApplication.sharedApplication.delegate.window;
+    window = UIApplication.sharedApplication.keyWindow;
+    self.guideView.frame = window.bounds;
+    [window addSubview:self.guideView];
+
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:window.bounds];
+    [path appendPath:[UIBezierPath bezierPathWithRoundedRect:CGRectMake(100, 100, 100, 100) cornerRadius:0]];
+    path.usesEvenOddFillRule = true;
+//    [path appendPath:[UIBezierPath bezierPathWithArcCenter:CGPointMake(100, 100) radius:20 startAngle:0 endAngle:2 * M_PI clockwise:false]];
+    
+    CAShapeLayer *shaper = [CAShapeLayer layer];
+    shaper.cornerRadius = 10;
+    shaper.path = path.CGPath;
+    shaper.fillRule = kCAFillRuleEvenOdd;
+
+//    shaper.frame = CGRectMake(100, 100, 100, 100);
+//    shaper.backgroundColor = UIColor.clearColor.CGColor;
+    self.guideView.layer.mask = shaper;
+}
 static int test = 0;
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -196,7 +222,12 @@ static int test = 0;
     if (!_customBtn) {
         MMCustomButton *btn = [[MMCustomButton alloc] initWithFrame:CGRectMake(10, 100, 100, 50)];
         [btn setTitle:@"测试按钮" forState:UIControlStateNormal];
+        btn.backgroundColor = UIColor.redColor;
+        btn.layer.cornerRadius = 20;
         [btn addTarget:self action:@selector(p_handleBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+        [btn setBackgroundImage:[UIImage imageNamed:@"1"] forState:UIControlStateNormal];
+        btn.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        btn.layer.masksToBounds = true;
         _customBtn = btn;
     }
     return _customBtn;
@@ -255,5 +286,28 @@ static int test = 0;
     [btn_2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(50);
     }];
+}
+
+- (void)handleGesture:(UITapGestureRecognizer *)sender {
+    NSLog(@"点击");
+}
+- (MMTestView *)guideView {
+    if (!_guideView) {
+        MMTestView *view = [MMTestView new];
+//        view.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+        view.backgroundColor = [UIColor mm_colorWithHex:0x000000 alpha:0.5];
+        self.maskView = [[UIView alloc] init];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+        [view addGestureRecognizer:tap];
+//        CAShapeLayer *shaper = [CAShapeLayer layer];
+//        shaper.cornerRadius = 10;
+//        shaper.frame = CGRectMake(100, 100, 100, 100);
+//        shaper.backgroundColor = UIColor.clearColor.CGColor;
+//        view.layer.mask = shaper;
+//        [view.layer addSublayer:shaper];
+        _guideView = view;
+    }
+    return _guideView;
 }
 @end

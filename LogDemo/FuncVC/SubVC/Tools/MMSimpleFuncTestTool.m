@@ -11,6 +11,7 @@
 #import "MMGCDTestTool.h"
 #include <mach/mach_time.h>
 #include <sys/time.h>
+#import "MMSimpleFuncModel.h"
 
 static NSHashTable *table = nil;
 
@@ -246,5 +247,35 @@ return string;
     NSRange rang_2 = [normalStr rangeOfString:nil];
     
     NSLog(@"test");
+}
+
++ (void)arraySortTest {
+    NSArray *array = @[@(1),@(4),@(5),@(2),@(3)];
+    
+    NSArray *tmp = [array sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 integerValue] > [obj2 integerValue];
+    }];
+    
+    NSLog(@"%@",tmp);
+}
+
++ (void)sizeTest {
+    NSObject *obj = [NSObject new];
+    MMSimpleFuncModel *model = [MMSimpleFuncModel new];
+    int a = 0;
+    NSString *str = @"test";
+    SEL sel = NSSelectorFromString(@"sizeTest");
+    // 8
+    int size_obj = sizeof(obj);
+    // 4
+    int size_a = sizeof(a);
+    //8
+    int size_model = sizeof(model);
+    // 8
+    int size_strl = sizeof(str);
+    // 8
+    int size_sel = sizeof(sel);
+
+    NSLog(@"%d",size_strl);
 }
 @end

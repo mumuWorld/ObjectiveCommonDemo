@@ -11,6 +11,7 @@
 @interface MMLayoutPriorityVC ()
 @property (weak, nonatomic) IBOutlet UIView *organgeView;
 @property (weak, nonatomic) IBOutlet UIView *purpleView;
+@property (weak, nonatomic) IBOutlet UIButton *simpleBtn;
 
 @end
 

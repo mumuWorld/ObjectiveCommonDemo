@@ -104,6 +104,7 @@
     
     BOOL value = self.funcModel.disasterCity;
     
+    [MMSimpleFuncTestTool sizeTest];
     NSLog(@"value=%d",value);
 //    [self.funcModel resgister];
 //    [MMUIKitTool differentWindowScreen];

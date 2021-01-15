@@ -89,6 +89,7 @@
 		B4A0117C2536A9CB001C10E7 /* MMDateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0117B2536A9CB001C10E7 /* MMDateTest.m */; };
 		B4A0C26624EB746C00B63F64 /* ELHotelEsayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0C26524EB746C00B63F64 /* ELHotelEsayButton.m */; };
 		B4A158342514822200B55826 /* MMUIKitTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A158332514822200B55826 /* MMUIKitTool.m */; };
+		B4AF348D25A48E8200A8B9F0 /* MMTimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AF348C25A48E8200A8B9F0 /* MMTimeTest.m */; };
 		B4B515FE255B7FA2006DE90F /* string.json in Resources */ = {isa = PBXBuildFile; fileRef = B4B515FD255B7FA2006DE90F /* string.json */; };
 		B4B51605255BE638006DE90F /* MMCornerRaidusTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B51604255BE638006DE90F /* MMCornerRaidusTableVC.m */; };
 		B4B5160B255BE6C1006DE90F /* MMCornerImgCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B51609255BE6C1006DE90F /* MMCornerImgCell.m */; };
@@ -308,6 +309,8 @@
 		B4A0C26524EB746C00B63F64 /* ELHotelEsayButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELHotelEsayButton.m; sourceTree = "<group>"; };
 		B4A158322514822200B55826 /* MMUIKitTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMUIKitTool.h; sourceTree = "<group>"; };
 		B4A158332514822200B55826 /* MMUIKitTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMUIKitTool.m; sourceTree = "<group>"; };
+		B4AF348B25A48E8200A8B9F0 /* MMTimeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTimeTest.h; sourceTree = "<group>"; };
+		B4AF348C25A48E8200A8B9F0 /* MMTimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTimeTest.m; sourceTree = "<group>"; };
 		B4B515FD255B7FA2006DE90F /* string.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = string.json; sourceTree = "<group>"; };
 		B4B51603255BE638006DE90F /* MMCornerRaidusTableVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCornerRaidusTableVC.h; sourceTree = "<group>"; };
 		B4B51604255BE638006DE90F /* MMCornerRaidusTableVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCornerRaidusTableVC.m; sourceTree = "<group>"; };
@@ -757,6 +760,8 @@
 			children = (
 				B498BA8124EE6BC800090564 /* TimeProfiler */,
 				B498BA4024EE49B700090564 /* HookmsgSend */,
+				B4AF348B25A48E8200A8B9F0 /* MMTimeTest.h */,
+				B4AF348C25A48E8200A8B9F0 /* MMTimeTest.m */,
 			);
 			path = 3thLib;
 			sourceTree = "<group>";
@@ -1227,6 +1232,7 @@
 				B4B9BE6B2462B8CD00AD0F9B /* MMSImpleXibUIVC.m in Sources */,
 				B4D4DBAE23CEC4D00093D5DA /* MMCoreAnimationViewController.m in Sources */,
 				B4C4C29325751C4B0096CCC0 /* MMSimpleFuncModel+MMExtension.m in Sources */,
+				B4AF348D25A48E8200A8B9F0 /* MMTimeTest.m in Sources */,
 				B42C1E1823D012AF00D27E62 /* MMTextFieldVC.m in Sources */,
 				B4BAA368241F62910049DFEE /* WebViewJavascriptBridge.m in Sources */,
 				B45CF50323A9D47500345FB5 /* MMHomeBaseModel.m in Sources */,

@@ -26,6 +26,8 @@
     
     [self.titleLabel sizeToFit];
     CGSize fitSize_4 = self.titleLabel.size;
+    _titleLabel.layer.cornerRadius = 10;
+    _titleLabel.layer.masksToBounds = true;
     NSLog(@"size");
 }
 

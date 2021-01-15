@@ -32,6 +32,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)interTest;
 
 + (void)crashTest;
+
++ (void)arraySortTest;
+
++ (void)sizeTest;
 @end
 
 NS_ASSUME_NONNULL_END

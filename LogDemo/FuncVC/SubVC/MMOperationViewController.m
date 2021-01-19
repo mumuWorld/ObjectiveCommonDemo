@@ -31,6 +31,12 @@
     self.obj = [NSObject new];
     self.cache = [[NSCache alloc] init];
     [self.cache setObject:self.obj forKey:@"test"];
+    [self.cache setObject:self forKey:self.obj];
+
+    id o_1 = [self.cache objectForKey:self.obj];
+    self.obj = nil;
+    id o_2 = [self.cache objectForKey:@"test"];
+    NSLog(@"%@",o_2);
 }
 
 - (void)initSubView {

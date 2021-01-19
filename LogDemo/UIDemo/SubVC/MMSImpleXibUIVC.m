@@ -19,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *testBtn;
 @property (weak, nonatomic) IBOutlet UIView *superAlphaView;
 
+@property (weak, nonatomic) IBOutlet UIButton *enableBtn;
+
 @end
 
 @implementation MMSImpleXibUIVC
@@ -121,6 +123,10 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self dismissViewControllerAnimated:YES completion:nil];
+    self.enableBtn.enabled = true;
+}
+- (IBAction)handleClick:(UIButton *)sender {
+    sender.enabled = false;
 }
 
 @end

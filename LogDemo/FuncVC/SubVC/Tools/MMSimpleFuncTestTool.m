@@ -278,4 +278,60 @@ return string;
 
     NSLog(@"%d",size_strl);
 }
+
++ (void)allTest {
+    
+    //    [MMGenerateObjTool generateJson:[MMSimpleFuncModel class]];
+    //    [MMGenerateObjTool generateJson:[[MMSimpleFuncTestTool new] class]];
+
+    //    NSDictionary *dict = @{@"key1": @"value1",
+    //                           @"key2": @(3),
+    //                           @"key3": @(true),
+    //
+    //    };
+    //
+    //    id isTrue = [dict objectForKey:@"ke1"];
+    //    BOOL value = [isTrue boolValue];
+    //    id key2 = [dict objectForKey:@"ke2"];
+    //    NSInteger value2 = [key2 integerValue];
+    //        NSLog(@"p->%@",isTrue);
+    //
+    //    [MMSimpleFuncTestTool addTargetVC:self];
+        //0x7fe5e0524e40
+    //    char a = 'a';
+    //    char b = 'b';
+    //    NSInteger tmp_1 = a - b;
+    //    NSString *cloudStr = @"0123456"; //7
+    //    cloudStr = [cloudStr substringToIndex:cloudStr.length - 1];
+    //    NSInteger tmp = (NSInteger)[NSString stringWithFormat:@"%p",self];
+    //    MMSimpleFuncModel *modle;
+    //    NSDictionary *dict = @{@"key": @(modle.type)};
+    //    NSLog(@"%@",tmp);
+    ////    [MMGCDTestTool gcd_groupTest2];
+    //    [MMSimpleFuncTestTool utfCode];
+        
+    //    NSDictionary *dict2 = [NSDictionary dictionaryWithDictionary:dict];
+    //    id obj = [dict objectForKey:@"ke1"];
+    //    NSInteger va1 = [obj integerValue];
+    //    NSLog(@"val =%zd",va1);
+    //
+    //    [dict2 setValue:@"value_test" forKey:@"key2"];
+        
+    //    [self testFuncA];
+    //    [self testEqualArray];
+    //    [MMGCDTestTool test];
+    //    NSString *str = @"test";
+    //    [MMGCDTestTool testPoint:&str];
+    //    [MMGCDTestTool testPoint:(NSString *__autoreleasing *)]
+    //    [MMGCDTestTool threadTest];
+    //    MMUIKitTool *kitTool = [[MMUIKitTool alloc] init];
+    //    [kitTool viewAnimationTest];
+
+    //    [self.funcModel resgister];
+    //    [MMUIKitTool differentWindowScreen];
+        
+    //    self.timerName = [ELHotelDispatchTimer excuTimerTask:^(NSString * _Nonnull timer) {
+    //        NSLog(@"timer=%@",timer);
+    //    } andStart:3 interval:2 repeats:true async:NO];
+}
 @end

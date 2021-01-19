@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MMSImpleXibUIVC">
             <connections>
                 <outlet property="attributeLabel" destination="Ske-j7-HSm" id="Rc4-Ub-QKm"/>
+                <outlet property="enableBtn" destination="Wq9-Ly-n3Z" id="JLn-8t-1MA"/>
                 <outlet property="grayView" destination="tqE-03-b3G" id="8VE-wr-h0s"/>
                 <outlet property="grayViewSubImg" destination="Whs-b3-HQM" id="OaV-L3-Bhd"/>
                 <outlet property="grayView_2" destination="H7W-jF-YkY" id="O3d-eo-nRt"/>
@@ -164,6 +165,18 @@
                         <color key="titleColor" red="0.96470588239999999" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </state>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wq9-Ly-n3Z">
+                    <rect key="frame" x="174" y="242" width="66" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="AtD-wY-mig"/>
+                        <constraint firstAttribute="width" constant="66" id="GkE-vq-Dcv"/>
+                    </constraints>
+                    <state key="normal" image="hotel_fill_add"/>
+                    <state key="disabled" image="hotel_fill_add_disable"/>
+                    <connections>
+                        <action selector="handleClick:" destination="-1" eventType="touchUpInside" id="9mY-w8-xo0"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -181,6 +194,7 @@
                 <constraint firstItem="szK-UW-haf" firstAttribute="top" secondItem="QUE-JQ-qPJ" secondAttribute="bottom" constant="8" id="L0z-9J-BPA"/>
                 <constraint firstItem="cWx-j7-Bxg" firstAttribute="top" secondItem="szK-UW-haf" secondAttribute="bottom" constant="8" id="LYo-BC-qJh"/>
                 <constraint firstItem="j16-F6-Zef" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="MRs-Gb-fXN"/>
+                <constraint firstItem="Wq9-Ly-n3Z" firstAttribute="top" secondItem="ifh-Kk-tN4" secondAttribute="bottom" constant="25" id="Nnk-Hr-wb4"/>
                 <constraint firstItem="YgF-zO-71x" firstAttribute="height" secondItem="tqE-03-b3G" secondAttribute="height" id="Swu-jd-KOy"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="ifh-Kk-tN4" secondAttribute="trailing" constant="27" id="T7c-CJ-l7t"/>
                 <constraint firstItem="H75-Wn-cPh" firstAttribute="leading" secondItem="cWx-j7-Bxg" secondAttribute="trailing" constant="8" id="TYE-9j-9cp"/>
@@ -204,6 +218,7 @@
                 <constraint firstItem="YgF-zO-71x" firstAttribute="leading" secondItem="fno-kB-E4z" secondAttribute="trailing" constant="8" id="q3L-gf-b5Y"/>
                 <constraint firstItem="H75-Wn-cPh" firstAttribute="centerY" secondItem="cWx-j7-Bxg" secondAttribute="centerY" id="qiU-Al-EQU"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="YgF-zO-71x" secondAttribute="trailing" constant="8" id="rNm-Yv-pBV"/>
+                <constraint firstItem="Wq9-Ly-n3Z" firstAttribute="leading" secondItem="Ske-j7-HSm" secondAttribute="trailing" constant="25.5" id="vMH-qC-Wkg"/>
                 <constraint firstItem="DPM-uS-E3v" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="wOz-Yw-B1h"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="89.732142857142847"/>
@@ -218,6 +233,8 @@
     </objects>
     <resources>
         <image name="2" width="640" height="1136"/>
+        <image name="hotel_fill_add" width="12" height="12"/>
+        <image name="hotel_fill_add_disable" width="12" height="12"/>
         <image name="氛围升级" width="58" height="15"/>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -15,6 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)gcd_groupTest2;
 
++ (void)gcd_barrier_test;
+
++ (void)gcd_barrier_test_2;
+
 - (void)testInvoke:(void (^)(int type, NSString * msg))back;
 
 + (void)threadTest;

@@ -11,6 +11,7 @@
 
 @implementation MMGCDTestTool
 
+#pragma mark - dispatch_group_t
 /// 0 2  3 func 5 5.1 7 1 4 6
 + (void)gcd_groupTest1 {
     dispatch_group_t group = dispatch_group_create();
@@ -40,6 +41,53 @@
 void testFunc(void *context) {
     int *number = context;
     NSLog(@"testFunc-%d",*number);
+}
+
+#pragma mark - gcd_barrier
+//1/3/2/4[主]/5/6【主】/7/8【主】/9
++ (void)gcd_barrier_test {
+    dispatch_queue_t con_q = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
+    NSLog(@"1");
+    dispatch_async(con_q, ^{
+        NSLog(@"2");
+    });
+    NSLog(@"3");
+    dispatch_sync(con_q, ^{
+        NSLog(@"4=%@",[NSThread currentThread]);
+    });
+    NSLog(@"5");
+    dispatch_sync(con_q, ^{
+        NSLog(@"6=%@",[NSThread currentThread]);
+    });
+    NSLog(@"7");
+    dispatch_barrier_sync(con_q, ^{
+        //主线程
+        NSLog(@"8=%@",[NSThread currentThread]);
+    });
+    NSLog(@"9");
+}
+
+/// 1、3、2、4、5、7、6、9、8
++ (void)gcd_barrier_test_2 {
+    dispatch_queue_t con_q = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
+    NSLog(@"1");
+    dispatch_async(con_q, ^{
+        NSLog(@"2");
+    });
+    NSLog(@"3");
+    dispatch_sync(con_q, ^{
+        NSLog(@"4"); //主线程
+    });
+    NSLog(@"5");
+    dispatch_async(con_q, ^{
+        NSLog(@"6");
+    });
+    NSLog(@"7");
+    dispatch_barrier_async(con_q, ^{
+        //子线程
+        NSLog(@"8=%@",[NSThread currentThread]);
+    });
+    NSLog(@"9");
 }
 
 /// 0 - 1[main]  - 6/ 2/3 -  5- 4

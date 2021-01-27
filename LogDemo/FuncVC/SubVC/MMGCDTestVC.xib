@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,18 +20,46 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" tag="10" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqU-1u-0Jd">
-                    <rect key="frame" x="21" y="78" width="33" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqU-1u-0Jd">
+                    <rect key="frame" x="20" y="78" width="33" height="30"/>
                     <state key="normal" title="test1"/>
                     <connections>
                         <action selector="handleBtnClick:" destination="-1" eventType="touchUpInside" id="sFO-li-Joe"/>
                     </connections>
                 </button>
+                <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCT-VT-ZvM">
+                    <rect key="frame" x="63" y="78" width="80" height="30"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <state key="normal" title="gcd_barrier"/>
+                    <connections>
+                        <action selector="handleBtnClick:" destination="-1" eventType="touchUpInside" id="Q2K-GX-7EB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7c-OQ-TKK">
+                    <rect key="frame" x="153" y="78" width="97" height="30"/>
+                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                    <state key="normal" title="gcd_barrier_2"/>
+                    <connections>
+                        <action selector="handleBtnClick:" destination="-1" eventType="touchUpInside" id="QZ5-RK-9qK"/>
+                    </connections>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="L7c-OQ-TKK" firstAttribute="top" secondItem="SCT-VT-ZvM" secondAttribute="top" id="1xm-Z8-5lr"/>
+                <constraint firstItem="L7c-OQ-TKK" firstAttribute="leading" secondItem="SCT-VT-ZvM" secondAttribute="trailing" constant="10" id="baN-TZ-hbB"/>
+                <constraint firstItem="SCT-VT-ZvM" firstAttribute="top" secondItem="AqU-1u-0Jd" secondAttribute="top" id="bzf-Jh-Wcy"/>
+                <constraint firstItem="AqU-1u-0Jd" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="jVp-2q-90Z"/>
+                <constraint firstItem="SCT-VT-ZvM" firstAttribute="leading" secondItem="AqU-1u-0Jd" secondAttribute="trailing" constant="10" id="pgB-By-ctZ"/>
+                <constraint firstItem="AqU-1u-0Jd" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="34" id="zNl-Eu-pN0"/>
+            </constraints>
             <point key="canvasLocation" x="132" y="102"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

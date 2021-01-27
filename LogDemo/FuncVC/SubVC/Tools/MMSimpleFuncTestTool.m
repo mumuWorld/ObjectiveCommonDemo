@@ -12,6 +12,7 @@
 #include <mach/mach_time.h>
 #include <sys/time.h>
 #import "MMSimpleFuncModel.h"
+#import "MMUIKitTool.h"
 
 static NSHashTable *table = nil;
 
@@ -333,5 +334,10 @@ return string;
     //    self.timerName = [ELHotelDispatchTimer excuTimerTask:^(NSString * _Nonnull timer) {
     //        NSLog(@"timer=%@",timer);
     //    } andStart:3 interval:2 repeats:true async:NO];
+}
+
++ (void)animationBlockTest {
+        MMUIKitTool *kitTool = [[MMUIKitTool alloc] init];
+        [kitTool viewAnimationTest];
 }
 @end

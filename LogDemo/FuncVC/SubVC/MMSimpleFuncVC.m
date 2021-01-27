@@ -65,6 +65,7 @@ __weak id reference = nil;
         reference = obj;
     NSLog(@"reference=%@", reference); // Console: (null)
 
+    [MMSimpleFuncTestTool animationBlockTest];
 }
 
 

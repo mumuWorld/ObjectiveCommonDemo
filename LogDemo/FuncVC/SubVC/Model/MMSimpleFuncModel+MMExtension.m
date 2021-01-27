@@ -12,7 +12,9 @@
 static const void *DisasterCityKey = &DisasterCityKey;
 
 @implementation MMSimpleFuncModel (MMExtension)
-
++ (void)load {
+    NSLog(@"%@",self);
+}
 - (void)setDisasterCity:(BOOL)disasterCity {
     objc_setAssociatedObject(self, DisasterCityKey, @(disasterCity), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }

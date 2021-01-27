@@ -89,6 +89,9 @@
 		B4A0117C2536A9CB001C10E7 /* MMDateTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0117B2536A9CB001C10E7 /* MMDateTest.m */; };
 		B4A0C26624EB746C00B63F64 /* ELHotelEsayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0C26524EB746C00B63F64 /* ELHotelEsayButton.m */; };
 		B4A158342514822200B55826 /* MMUIKitTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A158332514822200B55826 /* MMUIKitTool.m */; };
+		B4ADCB1225C1478300B540F0 /* MMRuntimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ADCB1125C1478300B540F0 /* MMRuntimeTest.m */; };
+		B4ADCB1825C14AF700B540F0 /* MMRuntimeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4ADCB1625C14AF700B540F0 /* MMRuntimeTestViewController.m */; };
+		B4ADCB1925C14AF700B540F0 /* MMRuntimeTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4ADCB1725C14AF700B540F0 /* MMRuntimeTestViewController.xib */; };
 		B4AF348D25A48E8200A8B9F0 /* MMTimeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B4AF348C25A48E8200A8B9F0 /* MMTimeTest.m */; };
 		B4B515FE255B7FA2006DE90F /* string.json in Resources */ = {isa = PBXBuildFile; fileRef = B4B515FD255B7FA2006DE90F /* string.json */; };
 		B4B51605255BE638006DE90F /* MMCornerRaidusTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4B51604255BE638006DE90F /* MMCornerRaidusTableVC.m */; };
@@ -309,6 +312,11 @@
 		B4A0C26524EB746C00B63F64 /* ELHotelEsayButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ELHotelEsayButton.m; sourceTree = "<group>"; };
 		B4A158322514822200B55826 /* MMUIKitTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMUIKitTool.h; sourceTree = "<group>"; };
 		B4A158332514822200B55826 /* MMUIKitTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMUIKitTool.m; sourceTree = "<group>"; };
+		B4ADCB1025C1478300B540F0 /* MMRuntimeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMRuntimeTest.h; sourceTree = "<group>"; };
+		B4ADCB1125C1478300B540F0 /* MMRuntimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMRuntimeTest.m; sourceTree = "<group>"; };
+		B4ADCB1525C14AF700B540F0 /* MMRuntimeTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMRuntimeTestViewController.h; sourceTree = "<group>"; };
+		B4ADCB1625C14AF700B540F0 /* MMRuntimeTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMRuntimeTestViewController.m; sourceTree = "<group>"; };
+		B4ADCB1725C14AF700B540F0 /* MMRuntimeTestViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMRuntimeTestViewController.xib; sourceTree = "<group>"; };
 		B4AF348B25A48E8200A8B9F0 /* MMTimeTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTimeTest.h; sourceTree = "<group>"; };
 		B4AF348C25A48E8200A8B9F0 /* MMTimeTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTimeTest.m; sourceTree = "<group>"; };
 		B4B515FD255B7FA2006DE90F /* string.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = string.json; sourceTree = "<group>"; };
@@ -842,6 +850,9 @@
 				B4CB4AD2246D2C5E00E25C74 /* MMGCDTestVC.h */,
 				B4CB4AD3246D2C5E00E25C74 /* MMGCDTestVC.m */,
 				B4CB4AD4246D2C5E00E25C74 /* MMGCDTestVC.xib */,
+				B4ADCB1525C14AF700B540F0 /* MMRuntimeTestViewController.h */,
+				B4ADCB1625C14AF700B540F0 /* MMRuntimeTestViewController.m */,
+				B4ADCB1725C14AF700B540F0 /* MMRuntimeTestViewController.xib */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -926,6 +937,8 @@
 				B4A0117A2536A9CB001C10E7 /* MMDateTest.h */,
 				B4A0117B2536A9CB001C10E7 /* MMDateTest.m */,
 				B4B515FD255B7FA2006DE90F /* string.json */,
+				B4ADCB1025C1478300B540F0 /* MMRuntimeTest.h */,
+				B4ADCB1125C1478300B540F0 /* MMRuntimeTest.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1150,6 +1163,7 @@
 				B4BAA364241F62910049DFEE /* SettingView.xib in Resources */,
 				B4EBD92524CF394C006AF0E6 /* MMUIDynamicVC.xib in Resources */,
 				B499F9A224E2650A0050B2A6 /* MMLayoutPriorityVC.xib in Resources */,
+				B4ADCB1925C14AF700B540F0 /* MMRuntimeTestViewController.xib in Resources */,
 				B49F268824EF97D800EAA9D1 /* MMLayerTestVC.xib in Resources */,
 				B4F4BA8423CF28F900ACFC52 /* collection_layout_list.plist in Resources */,
 				B499FFDF249BA65C006C3274 /* detail.json in Resources */,
@@ -1249,7 +1263,9 @@
 				B44D5F65251CE8C300703ACA /* MMDisplayLayer.m in Sources */,
 				B4BAA376241F65590049DFEE /* UIDevice+Tools.m in Sources */,
 				B4BAA365241F62910049DFEE /* L3game_SettingView.m in Sources */,
+				B4ADCB1825C14AF700B540F0 /* MMRuntimeTestViewController.m in Sources */,
 				B4D4DBA823CEC1830093D5DA /* MMBaseTableViewController.m in Sources */,
+				B4ADCB1225C1478300B540F0 /* MMRuntimeTest.m in Sources */,
 				B44B8B6D23CD64CD00B912CB /* MMIndistinctView.m in Sources */,
 				B44E09F023C71D1F001CAFE5 /* MMBaseNavigationController.m in Sources */,
 				B44627AE23BE1AF70061642E /* MMPredicateTest.m in Sources */,

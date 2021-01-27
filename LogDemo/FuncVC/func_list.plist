@@ -34,5 +34,13 @@
 		<key>text</key>
 		<string>gcd</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>Runtime测试</string>
+		<key>router</key>
+		<string>MMRuntimeTestViewController</string>
+		<key>text</key>
+		<string>Runtime</string>
+	</dict>
 </array>
 </plist>

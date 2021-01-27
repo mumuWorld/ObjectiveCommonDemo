@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIView *organgeView;
 @property (weak, nonatomic) IBOutlet UIView *purpleView;
 @property (weak, nonatomic) IBOutlet UIButton *simpleBtn;
+@property (weak, nonatomic) IBOutlet UILabel *leftlable;
 
 @end
 
@@ -33,6 +34,8 @@
     CGRect purpose_5 = [self.view convertRect:self.purpleView.frame toView:self.view.window];
     
     NSLog(@"joeLog->test=%@",self);
+    
+    _leftlable.text = @"";
 }
 /*
 #pragma mark - Navigation

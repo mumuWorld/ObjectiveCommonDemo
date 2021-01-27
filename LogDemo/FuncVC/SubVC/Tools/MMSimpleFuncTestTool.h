@@ -36,6 +36,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)arraySortTest;
 
 + (void)sizeTest;
+
++ (void)animationBlockTest;
 @end
 
 NS_ASSUME_NONNULL_END

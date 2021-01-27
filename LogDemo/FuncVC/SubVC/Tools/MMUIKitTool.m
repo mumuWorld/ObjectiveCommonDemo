@@ -47,15 +47,20 @@
 
 - (void)viewAnimationTest {
     UIView *view  = UIView.new;
-    [UIView animateWithDuration:1 animations:^{
+    view.frame = CGRectMake(0, 0, 50, 50);
+    view.backgroundColor = UIColor.redColor;
+    UIWindow *window = UIApplication.sharedApplication.delegate.window;
+    [window addSubview:view];
+    NSLog(@"log0");
+    [UIView animateWithDuration:50.0 animations:^{
         /*
          thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 19.1
           * frame #0: 0x000000010d70f6de LogDemo`__32-[MMUIKitTool viewAnimationTest]_block_invoke(.block_descriptor=0x00007ffee2533a50) at MMUIKitTool.m:44:9
             frame #1: 0x00007fff24bc507a UIKitCore`+[UIView _setupAnimationWithDuration:delay:view:options:factory:animations:start:animationStateGenerator:completion:] + 573
             frame #2: 0x00007fff24bc55b8 UIKitCore`+[UIView(UIViewAnimationWithBlocks) animateWithDuration:animations:completion:] + 74
          */
-        NSLog(@"log1");
-        view.frame = CGRectMake(0, 0, 0, 1);
+        NSLog(@"log1=%@,",[NSThread currentThread]);
+        view.origin = CGPointMake(100, 100);
     } completion:^(BOOL finished) {
         /*
          frame #0: 0x000000010d70f89f LogDemo`__32-[MMUIKitTool viewAnimationTest]_block_invoke.30(.block_descriptor=0x000000010d7d73a0, finished=NO) at MMUIKitTool.m:47:9
@@ -63,13 +68,16 @@
          frame #2: 0x00007fff24b9562f UIKitCore`-[UIViewAnimationState sendDelegateAnimationDidStop:finished:] + 268
          * frame #3: 0x00007fff24b95ba1 UIKitCore`-[UIViewAnimationState animationDidStop:finished:] + 259
          */
-        NSLog(@"log3");
+        NSLog(@"log3=%@,",[NSThread currentThread]);
+//        view.frame = CGRectMake(0, 0, 1, 1);
     }];
     NSLog(@"log2");
-    [UIView animateWithDuration:1 delay:100000 options:0 animations:^{
-        NSLog(@"log4");
+    [UIView animateWithDuration:50.0 delay:100000.0 options:0 animations:^{
+        NSLog(@"log4=%@,",[NSThread currentThread]);
+        view.origin = CGPointMake(200, 200);
     } completion:^(BOOL finished) {
-        NSLog(@"log5");
+//        view.frame = CGRectMake(1, 1, 1, 1);
+        NSLog(@"log5=%@,",[NSThread currentThread]);
     }];
     NSLog(@"log6");
 }

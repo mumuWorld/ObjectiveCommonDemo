@@ -79,13 +79,14 @@ void mm_exchangeClassMethod(Class originalCls,Class swizzledCls,SEL originalSele
     
     //获取元类对象
     object_getClass([originalCls class]);
+    class_getClassMethod(originalCls, swizzledSelector);
     
     BOOL didAddMethod = class_addMethod(originalCls,
                                         swizzledSelector,
                                         method_getImplementation(swizzledMethod),
-                                        method_exchangeImplementa
                                         method_getTypeEncoding(swizzledMethod));
-    if (didAddMethod) {tions(originalMethod, class_getClassMethod(originalCls, swizzledSelector));
+    if (didAddMethod) {
+        method_exchangeImplementations(originalMethod, class_getInstanceMethod(originalCls, swizzledSelector));
     } else {
         
     }

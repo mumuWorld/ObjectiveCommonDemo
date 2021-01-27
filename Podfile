@@ -14,7 +14,8 @@ target 'LogDemo' do
 #  :git => 'git@github.com:SnapKit/Masonry.git'
 #  pod 'pop', '~> 1.0'
   pod 'Masonry'
-  # pod 'AFNetworking', :git => 'git@github.com:AFNetworking/AFNetworking.git', :branch => 'master'
+   pod 'AFNetworking'
+#  :git => 'git@github.com:AFNetworking/AFNetworking.git', :branch => 'master'
   # pod 'eLongModelPlugInStatic', :git =>'http://git.17usoft.com/iosstaticframework/elongmodelpluginstatic.git'
   # pod 'eLongFrameworkStatic', :git => 'http://git.17usoft.com/iosstaticframework/elongframeworkstatic.git'
 

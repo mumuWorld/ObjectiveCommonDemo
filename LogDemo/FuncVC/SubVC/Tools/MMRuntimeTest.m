@@ -25,7 +25,7 @@
 }
 
 - (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector {
-    NSMethodSignature *sign = [[NSMethodSignature alloc] init];
+    NSMethodSignature * sign = [NSMethodSignature signatureWithObjCTypes:"v16@0:8"];
     return sign;
 }
 

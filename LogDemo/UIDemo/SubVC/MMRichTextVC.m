@@ -16,6 +16,9 @@
 
 @property (nonatomic, strong) UITextField *inputField;
 
+@property (nonatomic, strong) UILabel *twoLabelTextLabel;
+
+
 @end
 
 @implementation MMRichTextVC
@@ -56,6 +59,24 @@
         make.left.mas_equalTo(self.view).offset(10);
         make.right.mas_equalTo(self.view).offset(-10);
         make.height.mas_equalTo(30);
+    }];
+    
+    UIFont *font = [UIFont systemFontOfSize:16 weight:UIFontWeightBold];
+
+    _twoLabelTextLabel = [UILabel new];
+    _twoLabelTextLabel.numberOfLines = 2;
+    _twoLabelTextLabel.font = font;
+    [self.view addSubview:_twoLabelTextLabel];
+    _twoLabelTextLabel.text = @"测试测试速度符是的范德萨发生发撒的发大水胜多负少";
+    
+    CGFloat height = font.lineHeight * 2;
+
+    NSLog(@"l-%f,p-%f, 2-%f",font.lineHeight, font.pointSize,height);
+    
+    [_twoLabelTextLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view).offset(300);
+        make.left.mas_equalTo(self.view).offset(100);
+        make.width.mas_equalTo(50);
     }];
     
 }

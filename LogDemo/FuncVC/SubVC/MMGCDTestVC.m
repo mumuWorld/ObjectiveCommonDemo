@@ -27,6 +27,10 @@
         [MMGCDTestTool gcd_barrier_test];
     } else if (sender.tag == 12) { //栅栏
         [MMGCDTestTool gcd_barrier_test_2];
+    } else if (sender.tag == 13) { //wait
+        [MMGCDTestTool waitTest];
+    } else if (sender.tag == 14) { //create
+        [MMGCDTestTool queueCreateTest];
     }
 }
 

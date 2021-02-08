@@ -67,4 +67,8 @@
      NSLog(@"view.tag-%zd",view.tag);
 }
 
+- (UIResponder *)nextResponder {
+    UIResponder *respon = [super nextResponder];
+    return self.navigationController;
+}
 @end

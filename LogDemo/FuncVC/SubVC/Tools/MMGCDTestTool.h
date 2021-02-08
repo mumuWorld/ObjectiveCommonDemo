@@ -22,6 +22,10 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)testInvoke:(void (^)(int type, NSString * msg))back;
 
 + (void)threadTest;
+
++ (void)waitTest;
+
++ (void)queueCreateTest;
 @end
 
 NS_ASSUME_NONNULL_END

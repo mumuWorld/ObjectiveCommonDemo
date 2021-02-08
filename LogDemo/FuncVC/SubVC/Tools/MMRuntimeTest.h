@@ -10,7 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MMRuntimeTest : NSObject
+@protocol MMProTest <NSObject>
+
+@property (nonatomic, copy) NSString *test;
+
+@end
+
+@interface MMRuntimeTest : NSObject <MMProTest>
 
 - (void)unImplementMethod;
 

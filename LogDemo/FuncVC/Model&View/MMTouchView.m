@@ -32,4 +32,7 @@
     return [super hitTest:point withEvent:event];
 }
 
+- (void)handleGesture:(UIGestureRecognizer *)sender {
+    NSLog(@"view.tag=%zd, state=%zd",sender.view.tag, sender.state);
+}
 @end

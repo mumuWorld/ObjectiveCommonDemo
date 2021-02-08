@@ -63,4 +63,8 @@
     NSLog(@"%@",sender);
     
 }
+
+- (void)dealloc {
+    NSLog(@"%@",[NSThread currentThread]);
+}
 @end

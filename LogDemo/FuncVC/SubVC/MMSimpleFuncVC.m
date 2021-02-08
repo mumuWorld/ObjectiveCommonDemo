@@ -37,37 +37,56 @@
 
 @implementation MMSimpleFuncVC
 
-- (void)dealloc {
-    NSLog(@"dealloc->%@",self.timer);
-}
+//- (void)dealloc {
+//    NSLog(@"dealloc->%@",self.timer);
+//}
 __weak id reference = nil;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSLog(@"reference=%@",reference);
+//    NSLog(@"reference=%@",reference);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"reference=%@", reference); // Console: (null)
+//    NSLog(@"reference=%@", reference); // Console: (null)
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 //    [self windowTest];
 //    [self test6];
-    CGFloat test = 10;
-    test -= 10 + 12;
+    
 //    NSString *obj = [NSString stringWithFormat:@"sunnyxx-%@",@"test"];
     NSArray *obj = [NSArray arrayWithObject:@"test"];
 //    NSObject *obj = [NSObject new];
     // str是一个autorelease对象，设置一个weak的引用来观察它
         reference = obj;
-    NSLog(@"reference=%@", reference); // Console: (null)
+//    NSLog(@"reference=%@", reference); // Console: (null)
 
+  
+}
+
+- (void)releaseTest {
+    [self preforTest];
+    
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        [self preforTest];
+    });
+}
+
+- (void)animationBLockTest {
     [MMSimpleFuncTestTool animationBlockTest];
 }
 
+- (void)test8 {
+    CGFloat test = 10;
+    test -= 10 + 12; // -12
+    CGFloat test_2 = 10;
+    test_2 += 10 - 12; // 8
+    CGFloat test_3 = 10;
+    test_3 -= 10 - 12; // 12
+}
 
 - (void)gcdfunc {
     NSThread *thread = [[NSThread alloc] init];
@@ -108,6 +127,10 @@ __weak id reference = nil;
 
 - (void)testFuncA {
     NSLog(@"a");
+}
+
+- (void)preforTest {
+    MMSimpleFuncModel *model = [MMSimpleFuncModel new];
 }
 
 - (void)testEqualArray {

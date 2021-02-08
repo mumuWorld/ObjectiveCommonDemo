@@ -18,13 +18,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    MMRuntimeTest *test = [MMRuntimeTest new];
+    test.test = @"tesst";
     // Do any additional setup after loading the view from its nib.
 }
 
 
 - (IBAction)handleBtnClick:(UIButton *)sender {
     if (sender.tag == 10) { //未实现方法
+//        @autoreleasepool {
         [self.testModel unImplementMethod];
+//        }
 //        [MMGCDTestTool gcd_groupTest1];
     } else if (sender.tag == 11) { //栅栏
 //        [MMGCDTestTool gcd_barrier_test];

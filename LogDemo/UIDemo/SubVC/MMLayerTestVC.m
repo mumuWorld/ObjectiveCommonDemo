@@ -11,6 +11,9 @@
 @interface MMLayerTestVC ()
 @property (weak, nonatomic) IBOutlet UIView *view_1;
 
+/// mastLayer
+@property (weak, nonatomic) IBOutlet UIView *view_2;
+
 @end
 
 @implementation MMLayerTestVC
@@ -40,16 +43,58 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     _view_1.layer.contents = (__bridge id)image.CGImage;
+    
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event  {
+    
+    
+    
 }
-*/
 
+- (void)maskTest {
+    //    UIBezierPath *path = [UIBezierPath bezierPathWithRect:_view_2.bounds ];
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:_view_2.bounds cornerRadius:10];
+
+    //    UIBezierPath *alpha = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(10, 20, 50, 50) cornerRadius:5];
+    //    [path appendPath:alpha];
+    //    path.usesEvenOddFillRule = YES;
+        
+        CAShapeLayer *shaper = [CAShapeLayer layer];
+        shaper.path = path.CGPath;
+        //奇偶规则 奇数填充 偶数不填充
+        shaper.fillRule = kCAFillRuleEvenOdd;
+        
+        _view_2.layer.mask = shaper;
+}
+
+- (void)pointChangeTest {
+    NSLogPoint(_view_2.layer.anchorPoint);
+    NSLogRect(_view_2.frame);
+    NSLogRect(_view_2.layer.frame);
+
+    NSLogRect(_view_2.bounds);
+    NSLogRect(_view_2.layer.bounds);
+
+    NSLogPoint(_view_2.center);
+    NSLogPoint(_view_2.layer.position);
+    
+//    CGPoint originalPoistion = _view_2.center;
+//    _view_2.center = CGPointMake(originalPoistion.x -10, originalPoistion.y-10);
+    
+    
+    CGPoint originalP = _view_2.layer.anchorPoint;
+    _view_2.layer.anchorPoint = CGPointMake(0, 0);
+    
+    NSLogPoint(_view_2.layer.anchorPoint);
+    NSLogRect(_view_2.frame);
+    NSLogRect(_view_2.layer.frame);
+
+    NSLogRect(_view_2.bounds);
+    NSLogRect(_view_2.layer.bounds);
+
+    NSLogPoint(_view_2.center);
+    NSLogPoint(_view_2.layer.position);
+}
 @end

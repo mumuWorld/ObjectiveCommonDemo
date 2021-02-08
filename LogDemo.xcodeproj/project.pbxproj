@@ -59,6 +59,7 @@
 		B45CF50923A9D79D00345FB5 /* MMHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CF50823A9D79D00345FB5 /* MMHomeListModel.m */; };
 		B45CF50B23A9F34300345FB5 /* home_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = B45CF50A23A9F34300345FB5 /* home_list.plist */; };
 		B46B94A024484BBD00F2F480 /* MMCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B949F24484BBD00F2F480 /* MMCircleView.m */; };
+		B493353E25C2655F0091F672 /* MMRunHelpTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B493353D25C2655F0091F672 /* MMRunHelpTest.m */; };
 		B498BA8024EE6B7200090564 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B498BA7F24EE6B7200090564 /* UIKit.framework */; };
 		B498BA9924EE6BC900090564 /* TPRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B498BA8724EE6BC800090564 /* TPRecordCell.m */; };
 		B498BA9A24EE6BC900090564 /* hookObjcMsgSend-arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = B498BA8924EE6BC800090564 /* hookObjcMsgSend-arm64.s */; };
@@ -113,6 +114,10 @@
 		B4BAA379241F7A450049DFEE /* MMRichTextVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BAA378241F7A450049DFEE /* MMRichTextVC.m */; };
 		B4BADD7A228F33EF003A0219 /* MMBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4BADD79228F33EF003A0219 /* MMBaseViewController.m */; };
 		B4C4C29325751C4B0096CCC0 /* MMSimpleFuncModel+MMExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C4C29225751C4B0096CCC0 /* MMSimpleFuncModel+MMExtension.m */; };
+		B4C8F44A25D10935004B9696 /* MMGestureVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C8F44825D10935004B9696 /* MMGestureVC.m */; };
+		B4C8F44B25D10935004B9696 /* MMGestureVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4C8F44925D10935004B9696 /* MMGestureVC.xib */; };
+		B4C8F45025D11126004B9696 /* MMTouchControl.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C8F44F25D11126004B9696 /* MMTouchControl.m */; };
+		B4C8F45525D1115F004B9696 /* MMTouchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C8F45425D1115F004B9696 /* MMTouchButton.m */; };
 		B4CB4AD1246D2A1D00E25C74 /* MMGCDTestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4AD0246D2A1D00E25C74 /* MMGCDTestTool.m */; };
 		B4CB4AD5246D2C5F00E25C74 /* MMGCDTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4AD3246D2C5E00E25C74 /* MMGCDTestVC.m */; };
 		B4CB4AD6246D2C5F00E25C74 /* MMGCDTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CB4AD4246D2C5E00E25C74 /* MMGCDTestVC.xib */; };
@@ -259,6 +264,8 @@
 		B45CF50A23A9F34300345FB5 /* home_list.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = home_list.plist; sourceTree = "<group>"; };
 		B46B949E24484BBD00F2F480 /* MMCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCircleView.h; sourceTree = "<group>"; };
 		B46B949F24484BBD00F2F480 /* MMCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCircleView.m; sourceTree = "<group>"; };
+		B493353C25C2655F0091F672 /* MMRunHelpTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMRunHelpTest.h; sourceTree = "<group>"; };
+		B493353D25C2655F0091F672 /* MMRunHelpTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMRunHelpTest.m; sourceTree = "<group>"; };
 		B498BA7F24EE6B7200090564 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B498BA8224EE6BC800090564 /* TimeProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeProfiler.h; sourceTree = "<group>"; };
 		B498BA8424EE6BC800090564 /* TPRecordHierarchyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRecordHierarchyModel.h; sourceTree = "<group>"; };
@@ -357,6 +364,13 @@
 		B4C1256925807A7700452E0E /* NSObject+TestExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+TestExtension.h"; sourceTree = "<group>"; };
 		B4C4C29125751C4B0096CCC0 /* MMSimpleFuncModel+MMExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMSimpleFuncModel+MMExtension.h"; sourceTree = "<group>"; };
 		B4C4C29225751C4B0096CCC0 /* MMSimpleFuncModel+MMExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MMSimpleFuncModel+MMExtension.m"; sourceTree = "<group>"; };
+		B4C8F44725D10935004B9696 /* MMGestureVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMGestureVC.h; sourceTree = "<group>"; };
+		B4C8F44825D10935004B9696 /* MMGestureVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMGestureVC.m; sourceTree = "<group>"; };
+		B4C8F44925D10935004B9696 /* MMGestureVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMGestureVC.xib; sourceTree = "<group>"; };
+		B4C8F44E25D11126004B9696 /* MMTouchControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTouchControl.h; sourceTree = "<group>"; };
+		B4C8F44F25D11126004B9696 /* MMTouchControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTouchControl.m; sourceTree = "<group>"; };
+		B4C8F45325D1115F004B9696 /* MMTouchButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTouchButton.h; sourceTree = "<group>"; };
+		B4C8F45425D1115F004B9696 /* MMTouchButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTouchButton.m; sourceTree = "<group>"; };
 		B4CB4ACF246D2A1C00E25C74 /* MMGCDTestTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMGCDTestTool.h; sourceTree = "<group>"; };
 		B4CB4AD0246D2A1D00E25C74 /* MMGCDTestTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMGCDTestTool.m; sourceTree = "<group>"; };
 		B4CB4AD2246D2C5E00E25C74 /* MMGCDTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMGCDTestVC.h; sourceTree = "<group>"; };
@@ -595,6 +609,9 @@
 				B49F268624EF97D800EAA9D1 /* MMLayerTestVC.xib */,
 				B4B51603255BE638006DE90F /* MMCornerRaidusTableVC.h */,
 				B4B51604255BE638006DE90F /* MMCornerRaidusTableVC.m */,
+				B4C8F44725D10935004B9696 /* MMGestureVC.h */,
+				B4C8F44825D10935004B9696 /* MMGestureVC.m */,
+				B4C8F44925D10935004B9696 /* MMGestureVC.xib */,
 			);
 			path = SubVC;
 			sourceTree = "<group>";
@@ -821,6 +838,7 @@
 		B49BADF02434788A00A41D14 /* FuncVC */ = {
 			isa = PBXGroup;
 			children = (
+				B4F9F46A2452F19E00097200 /* Model&View */,
 				B49BADF22434790E00A41D14 /* MMFuncTestListVC.h */,
 				B49BADF32434790E00A41D14 /* MMFuncTestListVC.m */,
 				B49BADF1243478A100A41D14 /* SubVC */,
@@ -833,7 +851,6 @@
 			isa = PBXGroup;
 			children = (
 				B4CB4ACE246D29E700E25C74 /* Tools */,
-				B4F9F46A2452F19E00097200 /* Model */,
 				B49BADF724347A1000A41D14 /* MMOperationViewController.h */,
 				B49BADF824347A1000A41D14 /* MMOperationViewController.m */,
 				B4EF867724498CB20055060E /* MMSimpleFuncVC.h */,
@@ -939,6 +956,8 @@
 				B4B515FD255B7FA2006DE90F /* string.json */,
 				B4ADCB1025C1478300B540F0 /* MMRuntimeTest.h */,
 				B4ADCB1125C1478300B540F0 /* MMRuntimeTest.m */,
+				B493353C25C2655F0091F672 /* MMRunHelpTest.h */,
+				B493353D25C2655F0091F672 /* MMRunHelpTest.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -1031,7 +1050,7 @@
 			path = Layout;
 			sourceTree = "<group>";
 		};
-		B4F9F46A2452F19E00097200 /* Model */ = {
+		B4F9F46A2452F19E00097200 /* Model&View */ = {
 			isa = PBXGroup;
 			children = (
 				B4F9F46B2452F1B300097200 /* MMSimpleFuncModel.h */,
@@ -1040,8 +1059,12 @@
 				B4F9F4742453063B00097200 /* MMTouchView.m */,
 				B4C4C29125751C4B0096CCC0 /* MMSimpleFuncModel+MMExtension.h */,
 				B4C4C29225751C4B0096CCC0 /* MMSimpleFuncModel+MMExtension.m */,
+				B4C8F44E25D11126004B9696 /* MMTouchControl.h */,
+				B4C8F44F25D11126004B9696 /* MMTouchControl.m */,
+				B4C8F45325D1115F004B9696 /* MMTouchButton.h */,
+				B4C8F45425D1115F004B9696 /* MMTouchButton.m */,
 			);
-			path = Model;
+			path = "Model&View";
 			sourceTree = "<group>";
 		};
 		E99152F5CDE05C2709EFF368 /* Frameworks */ = {
@@ -1153,6 +1176,7 @@
 				B4B5160C255BE6C1006DE90F /* MMCornerImgCell.xib in Resources */,
 				B45CF50B23A9F34300345FB5 /* home_list.plist in Resources */,
 				B44E09DC23C46C8B001CAFE5 /* 未使用图片.txt in Resources */,
+				B4C8F44B25D10935004B9696 /* MMGestureVC.xib in Resources */,
 				B45CF4FC23A9D06C00345FB5 /* MMHomeListTableViewCell.xib in Resources */,
 				B49BADF6243479D700A41D14 /* func_list.plist in Resources */,
 				B49F738225220219003FEF8C /* MMTimeOffsetViewController.xib in Resources */,
@@ -1250,6 +1274,7 @@
 				B42C1E1823D012AF00D27E62 /* MMTextFieldVC.m in Sources */,
 				B4BAA368241F62910049DFEE /* WebViewJavascriptBridge.m in Sources */,
 				B45CF50323A9D47500345FB5 /* MMHomeBaseModel.m in Sources */,
+				B493353E25C2655F0091F672 /* MMRunHelpTest.m in Sources */,
 				B4BAA372241F63B80049DFEE /* NSString+MMString.m in Sources */,
 				B41A542924BC0771006570BB /* MMSimpleFuncTestTool.m in Sources */,
 				B44B8B6723CC95B700B912CB /* UIDevice+MMCategory.m in Sources */,
@@ -1320,6 +1345,7 @@
 				B49EB9C72550FC60001C03F3 /* MMCustomScrollView.m in Sources */,
 				B46B94A024484BBD00F2F480 /* MMCircleView.m in Sources */,
 				B44E09F523C72D23001CAFE5 /* UIBarButtonItem+MMCategory.m in Sources */,
+				B4C8F45025D11126004B9696 /* MMTouchControl.m in Sources */,
 				B45CF4FB23A9D06C00345FB5 /* MMHomeListTableViewCell.m in Sources */,
 				B4EF86852449D55B0055060E /* MMSimpleFuncVC+MMSecHook.m in Sources */,
 				B4BAA367241F62910049DFEE /* WKWebViewJavascriptBridge.m in Sources */,
@@ -1331,6 +1357,8 @@
 				B4F9F4712453036200097200 /* MMTouchPriorityVC.m in Sources */,
 				B498BAA024EE6BC900090564 /* TimeProfilerVC.m in Sources */,
 				B42C1E1B23D0582E00D27E62 /* NSString+MMCategory.m in Sources */,
+				B4C8F44A25D10935004B9696 /* MMGestureVC.m in Sources */,
+				B4C8F45525D1115F004B9696 /* MMTouchButton.m in Sources */,
 				B44B8B6A23CC98A800B912CB /* UIView+MMCategory.m in Sources */,
 				B498BA9B24EE6BC900090564 /* UIWindow+CallRecordShake.m in Sources */,
 				401FFC2E1E1118AF00E46787 /* Foundation+Log.m in Sources */,

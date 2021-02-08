@@ -130,5 +130,15 @@
 		<key>text</key>
 		<string>CALayer</string>
 	</dict>
+	<dict>
+		<key>title</key>
+		<string>手势和触摸</string>
+		<key>url</key>
+		<string>priority</string>
+		<key>router</key>
+		<string>MMGestureVC</string>
+		<key>text</key>
+		<string>Gesture</string>
+	</dict>
 </array>
 </plist>

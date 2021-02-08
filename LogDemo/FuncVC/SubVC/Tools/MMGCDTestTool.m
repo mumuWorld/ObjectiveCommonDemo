@@ -46,7 +46,7 @@ void testFunc(void *context) {
 #pragma mark - gcd_barrier
 //1/3/2/4[主]/5/6【主】/7/8【主】/9
 + (void)gcd_barrier_test {
-    dispatch_queue_t con_q = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_queue_t con_q = dispatch_queue_create("test", DISPATCH_QUEUE_SERIAL);
     NSLog(@"1");
     dispatch_async(con_q, ^{
         NSLog(@"2");
@@ -119,6 +119,16 @@ void testFunc(void *context) {
     NSLog(@"函数执行完成");
 }
 
++ (void)queueCreateTest {
+    char *name = "com.mumu.queue";
+    for (int i = 0; i< 10; i++) {
+        //创建一个串行队列。
+        dispatch_queue_attr_t attr = dispatch_queue_attr_make_with_qos_class(DISPATCH_QUEUE_SERIAL, QOS_CLASS_USER_INITIATED, 0);
+        dispatch_queue_t queue = dispatch_queue_create(name, attr);
+        NSLog(@"%@-%p",queue,queue);
+    }
+}
+
 + (void)threadTest {
     [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
         NSLog(@"current=%@",[NSThread currentThread]);
@@ -132,4 +142,23 @@ void testFunc(void *context) {
 }
 
 
++ (void)waitTest {
+    dispatch_group_t group = dispatch_group_create();
+    dispatch_queue_t que = dispatch_queue_create("test", DISPATCH_QUEUE_CONCURRENT);
+    NSLog(@"0");
+    dispatch_group_async(group, que, ^{
+        NSLog(@"1");
+    });
+    NSLog(@"2");
+    dispatch_group_enter(group);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), que, ^{
+        NSLog(@"4");
+        dispatch_group_leave(group);
+    });
+    NSLog(@"5");
+    //直接卡死在这步
+    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+    
+    NSLog(@"6");
+}
 @end

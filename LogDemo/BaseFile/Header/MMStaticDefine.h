@@ -38,6 +38,8 @@
 #else // 生产
 #define NSLog(format, ...)
 #define NSLogSize(size)
+#define NSLogPoint(point)
+#define NSLogRect(rect)
 #endif
 
 #import "MMConstDefine.h"

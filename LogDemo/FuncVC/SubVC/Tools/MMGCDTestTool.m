@@ -129,6 +129,46 @@ void testFunc(void *context) {
     }
 }
 
++ (void)conditionLockTest {
+    //主线程中
+    NSConditionLock *lock = [[NSConditionLock alloc] initWithCondition:0];
+    
+    //线程1
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [lock lockWhenCondition:4];
+        NSLog(@"线程1");
+        sleep(2);
+        [lock unlockWithCondition:5];
+    });
+    
+    //线程2
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [lock lockWhenCondition:0];
+        NSLog(@"线程2");
+        sleep(3);
+        NSLog(@"线程2解锁成功");
+        [lock unlockWithCondition:2];
+    });
+    
+    //线程3
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [lock lockWhenCondition:2];
+        NSLog(@"线程3");
+        sleep(3);
+        NSLog(@"线程3解锁成功");
+        [lock unlockWithCondition:3];
+    });
+    
+    //线程4
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [lock lockWhenCondition:3];
+        NSLog(@"线程4");
+        sleep(2);
+        NSLog(@"线程4解锁成功");
+        [lock unlockWithCondition:4];
+    });
+
+}
 + (void)threadTest {
     [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
         NSLog(@"current=%@",[NSThread currentThread]);

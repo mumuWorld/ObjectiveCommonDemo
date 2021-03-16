@@ -26,6 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)waitTest;
 
 + (void)queueCreateTest;
+
++ (void)conditionLockTest;
 @end
 
 NS_ASSUME_NONNULL_END

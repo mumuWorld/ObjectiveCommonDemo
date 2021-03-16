@@ -31,6 +31,8 @@
         [MMGCDTestTool waitTest];
     } else if (sender.tag == 14) { //create
         [MMGCDTestTool queueCreateTest];
+    } else if (sender.tag == 15) { //create
+        [MMGCDTestTool conditionLockTest];
     }
 }
 

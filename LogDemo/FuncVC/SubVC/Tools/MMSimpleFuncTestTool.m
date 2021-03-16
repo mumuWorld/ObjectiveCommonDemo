@@ -16,12 +16,21 @@
 
 static NSHashTable *table = nil;
 
+static MMSimpleFuncTestTool *_share = nil;
+
 @implementation MMSimpleFuncTestTool
 
 + (void)initialize {
     table = [NSHashTable hashTableWithOptions:NSPointerFunctionsWeakMemory];
 }
 
++ (instancetype)shareInstance {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _share = [[MMSimpleFuncTestTool alloc] init];
+    });
+    return _share;
+}
 
 + (void)test {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"string" ofType:@"json"];
@@ -340,4 +349,84 @@ return string;
         MMUIKitTool *kitTool = [[MMUIKitTool alloc] init];
         [kitTool viewAnimationTest];
 }
+
+- (void)kvoRegister {
+    [self.simpleModel addObserver:self forKeyPath:@"readStr" options:NSKeyValueObservingOptionNew context:nil];
+}
+- (void)kvoTest {
+//    self.simpleModel.readStr = @"test";
+//    [self.simpleModel setValue:@"kvoSet" forKeyPath:@"readStr"];
+    //未实现
+    SEL sel = NSSelectorFromString(@"setReadStr:");
+    NSLog(@"%d",[self.simpleModel respondsToSelector:sel]);
+}
+
+- (void)kvoSet {
+    [self.simpleModel testSetReadStr];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
+    NSLog(@"key=%@,obj=%@, change=%@, context=%@",keyPath,object,change,context);
+}
+
+- (MMSimpleFuncModel *)simpleModel {
+    if (!_simpleModel) {
+        _simpleModel = [MMSimpleFuncModel new];
+    }
+    return _simpleModel;
+}
+
+//外部调动
+- (void)taskTest {
+    [MMSimpleFuncTestTool requestStart];
+    
+    [MMSimpleFuncTestTool addRequest:^(void * _Nonnull notify) {
+        sleep(1);
+        notifyFinish();
+    }];
+    [MMSimpleFuncTestTool addRequest:^(void * _Nonnull notify) {
+        sleep(3);
+        notifyFinish();
+    }];
+    [MMSimpleFuncTestTool addRequest:^(void * _Nonnull notify) {
+        sleep(2);
+        notifyFinish();
+    }];
+    [MMSimpleFuncTestTool requestEnd:^{
+        //刷新view
+    }];
+}
+
+//内部处理
+static dispatch_queue_t reqQueue = nil;
+static dispatch_group_t reqGroup = nil;
+
+void notifyFinish() {
+    NSLog(@"notify");
+    dispatch_group_leave(reqGroup);
+}
+
++ (void)requestStart {
+    reqGroup = dispatch_group_create();
+    reqQueue = dispatch_queue_create("hotel_request_concurrent", DISPATCH_QUEUE_CONCURRENT);
+}
+
++ (void)addRequest:(void(^)(void *notify))finish {
+    dispatch_group_enter(reqGroup);
+    dispatch_async(reqQueue, ^{
+        finish(notifyFinish);
+    });
+}
+
+
++ (void)requestEnd:(dispatch_block_t)finish {
+    NSLog(@"通知完成-%@",[NSThread currentThread]);
+    dispatch_group_notify(reqGroup, reqQueue, ^{
+       //刷新
+        NSLog(@"刷新view");
+        finish();
+    });
+    NSLog(@"执行后续-%@",[NSThread currentThread]);
+}
+
 @end

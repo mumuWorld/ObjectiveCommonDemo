@@ -121,6 +121,7 @@
 		B4CB4AD1246D2A1D00E25C74 /* MMGCDTestTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4AD0246D2A1D00E25C74 /* MMGCDTestTool.m */; };
 		B4CB4AD5246D2C5F00E25C74 /* MMGCDTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B4CB4AD3246D2C5E00E25C74 /* MMGCDTestVC.m */; };
 		B4CB4AD6246D2C5F00E25C74 /* MMGCDTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CB4AD4246D2C5E00E25C74 /* MMGCDTestVC.xib */; };
+		B4CE051825E4A62A0086DDD0 /* MMSimpleFuncVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4CE051725E4A62A0086DDD0 /* MMSimpleFuncVC.xib */; };
 		B4D4DBA423CDBDB30093D5DA /* UIImageView+MMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBA323CDBDB30093D5DA /* UIImageView+MMCategory.m */; };
 		B4D4DBA823CEC1830093D5DA /* MMBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBA723CEC1830093D5DA /* MMBaseTableViewController.m */; };
 		B4D4DBAB23CEC20F0093D5DA /* MMConstDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D4DBAA23CEC20F0093D5DA /* MMConstDefine.m */; };
@@ -376,6 +377,7 @@
 		B4CB4AD2246D2C5E00E25C74 /* MMGCDTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMGCDTestVC.h; sourceTree = "<group>"; };
 		B4CB4AD3246D2C5E00E25C74 /* MMGCDTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMGCDTestVC.m; sourceTree = "<group>"; };
 		B4CB4AD4246D2C5E00E25C74 /* MMGCDTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMGCDTestVC.xib; sourceTree = "<group>"; };
+		B4CE051725E4A62A0086DDD0 /* MMSimpleFuncVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MMSimpleFuncVC.xib; sourceTree = "<group>"; };
 		B4D4DBA223CDBDB30093D5DA /* UIImageView+MMCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+MMCategory.h"; sourceTree = "<group>"; };
 		B4D4DBA323CDBDB30093D5DA /* UIImageView+MMCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+MMCategory.m"; sourceTree = "<group>"; };
 		B4D4DBA623CEC1830093D5DA /* MMBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMBaseTableViewController.h; sourceTree = "<group>"; };
@@ -855,6 +857,7 @@
 				B49BADF824347A1000A41D14 /* MMOperationViewController.m */,
 				B4EF867724498CB20055060E /* MMSimpleFuncVC.h */,
 				B4EF867824498CB20055060E /* MMSimpleFuncVC.m */,
+				B4CE051725E4A62A0086DDD0 /* MMSimpleFuncVC.xib */,
 				B4EF867A2449BD640055060E /* MMPresentTestVC.h */,
 				B4EF867B2449BD640055060E /* MMPresentTestVC.m */,
 				B4EF867D2449D3600055060E /* MMSimpleFuncVC+MMHook.h */,
@@ -1165,6 +1168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4CE051825E4A62A0086DDD0 /* MMSimpleFuncVC.xib in Resources */,
 				401FFC171E11189300E46787 /* LaunchScreen.storyboard in Resources */,
 				B4CB4AD6246D2C5F00E25C74 /* MMGCDTestVC.xib in Resources */,
 				B4B515FE255B7FA2006DE90F /* string.json in Resources */,
@@ -1246,7 +1250,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

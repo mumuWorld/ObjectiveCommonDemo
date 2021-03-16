@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17700" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,6 +19,7 @@
                 <outlet property="subVIew_C" destination="Uq7-vC-TcQ" id="WSM-fX-t23"/>
                 <outlet property="subView_B" destination="K0p-oq-tK9" id="9uo-1l-M9D"/>
                 <outlet property="subView_B_2" destination="14P-B8-0jZ" id="hEA-Vu-Cg3"/>
+                <outlet property="twoGestureView" destination="Hgz-zS-a0W" id="A7N-EQ-7cW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -162,15 +163,34 @@
                         <constraint firstAttribute="trailing" secondItem="8UJ-eA-eIQ" secondAttribute="trailing" id="z5y-G9-rpp"/>
                     </constraints>
                 </view>
+                <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hgz-zS-a0W">
+                    <rect key="frame" x="10" y="290" width="200" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="双击_单击_20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svv-Nd-Fjr">
+                            <rect key="frame" x="0.0" y="79" width="109" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="81r-7r-NnN"/>
+                        <constraint firstAttribute="height" constant="100" id="Emo-f7-Lq0"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="gcb-2B-3Dp"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Hgz-zS-a0W" firstAttribute="top" secondItem="ewI-ZA-i9G" secondAttribute="bottom" constant="70" id="3wF-jR-8J9"/>
                 <constraint firstItem="ewI-ZA-i9G" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="F9z-vC-59Z"/>
                 <constraint firstAttribute="trailing" secondItem="8UJ-eA-eIQ" secondAttribute="trailing" id="O5s-fN-Twm"/>
                 <constraint firstItem="8UJ-eA-eIQ" firstAttribute="top" secondItem="N5Z-nA-mbp" secondAttribute="bottom" constant="2" id="P1E-KG-ePc"/>
                 <constraint firstItem="ewI-ZA-i9G" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="VPe-jL-V3Y"/>
                 <constraint firstAttribute="trailing" secondItem="ewI-ZA-i9G" secondAttribute="trailing" id="iSn-Lc-Qiw"/>
+                <constraint firstItem="Hgz-zS-a0W" firstAttribute="leading" secondItem="gcb-2B-3Dp" secondAttribute="leading" constant="10" id="oPT-dh-T8X"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="95.758928571428569"/>
         </view>

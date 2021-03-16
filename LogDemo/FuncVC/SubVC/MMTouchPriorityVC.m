@@ -9,7 +9,8 @@
 #import "MMTouchPriorityVC.h"
 #import "MMTouchView.h"
 
-@interface MMTouchPriorityVC ()
+@interface MMTouchPriorityVC () <UIGestureRecognizerDelegate>
+
 @property (weak, nonatomic) IBOutlet MMTouchView *bgView_A;
 @property (weak, nonatomic) IBOutlet MMTouchView *subView_B;
 @property (weak, nonatomic) IBOutlet MMTouchView *subView_B_2;
@@ -19,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *btn_C;
 @property (weak, nonatomic) IBOutlet UIButton *btn_C_2;
 @property (weak, nonatomic) IBOutlet UIButton *btn_B_2;
+
+@property (weak, nonatomic) IBOutlet UIView *twoGestureView;
 
 @property (nonatomic, strong) UIView *subview_C_2;
 
@@ -44,11 +47,21 @@
     NSArray *arr = @[_bgView_A,_subView_B,_subView_B_2,_subVIew_C,_subview_C_2];
     for (UIView *view in arr) {
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGes:)];
-        tap.delegate = self;
         [view addGestureRecognizer:tap];
     }
+    [self addTwogesture];
 }
 
+- (void)addTwogesture {
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGes:)];
+    tap.delegate = self;
+    [self.twoGestureView addGestureRecognizer:tap];
+    
+    UITapGestureRecognizer *twoTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTwoTapGes:)];
+    twoTap.numberOfTapsRequired = 2;
+    [self.twoGestureView addGestureRecognizer:twoTap];
+}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"touchesBegan");
@@ -67,8 +80,13 @@
      NSLog(@"view.tag-%zd",view.tag);
 }
 
-- (UIResponder *)nextResponder {
-    UIResponder *respon = [super nextResponder];
-    return self.navigationController;
+- (void)handleTwoTapGes:(UITapGestureRecognizer *)tap {
+    UIView *view = tap.view;
+     NSLog(@"view.tag-%zd",view.tag);
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    NSLog(@"view1_%zd,view2_%zd",gestureRecognizer.view.tag, otherGestureRecognizer.view.tag);
+    return true;
 }
 @end

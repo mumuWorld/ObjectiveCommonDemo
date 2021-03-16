@@ -52,7 +52,8 @@
     UIWindow *window = UIApplication.sharedApplication.delegate.window;
     [window addSubview:view];
     NSLog(@"log0");
-    [UIView animateWithDuration:50.0 animations:^{
+    //动画block 立即执行。
+    [UIView animateWithDuration:5.0 animations:^{
         /*
          thread #1, queue = 'com.apple.main-thread', stop reason = breakpoint 19.1
           * frame #0: 0x000000010d70f6de LogDemo`__32-[MMUIKitTool viewAnimationTest]_block_invoke(.block_descriptor=0x00007ffee2533a50) at MMUIKitTool.m:44:9
@@ -72,7 +73,7 @@
 //        view.frame = CGRectMake(0, 0, 1, 1);
     }];
     NSLog(@"log2");
-    [UIView animateWithDuration:50.0 delay:100000.0 options:0 animations:^{
+    [UIView animateWithDuration:5.0 delay:10.0 options:0 animations:^{
         NSLog(@"log4=%@,",[NSThread currentThread]);
         view.origin = CGPointMake(200, 200);
     } completion:^(BOOL finished) {

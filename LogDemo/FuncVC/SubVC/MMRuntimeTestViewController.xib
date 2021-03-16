@@ -20,7 +20,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="66p-ze-T4q">
-                    <rect key="frame" x="0.0" y="54" width="92" height="30"/>
+                    <rect key="frame" x="0.0" y="54" width="170" height="30"/>
                     <subviews>
                         <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jiu-Vg-QqL">
                             <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
@@ -28,6 +28,14 @@
                             <state key="normal" title="runtime_流程"/>
                             <connections>
                                 <action selector="handleBtnClick:" destination="-1" eventType="touchUpInside" id="2Wj-5T-TZ3"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IGv-9D-7nM">
+                            <rect key="frame" x="102" y="0.0" width="68" height="30"/>
+                            <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            <state key="normal" title="kind_测试"/>
+                            <connections>
+                                <action selector="handleBtnClick:" destination="-1" eventType="touchUpInside" id="tcj-F4-TpI"/>
                             </connections>
                         </button>
                     </subviews>

@@ -53,4 +53,19 @@
 - (void)setTest:(NSString *)test {
     NSLog(@"1");
 }
+
+#pragma mark - 测试2 isKindOf
+- (void)kindTest {
+    id runClass = [[MMRuntimeTest new] class];
+    id objClass = [NSObject class];
+    //NO
+    BOOL a = [runClass isKindOfClass:[MMRuntimeTest class]];
+    //no
+    BOOL b = [objClass isMemberOfClass:[MMRuntimeTest class]];
+    
+    NSLog(@"BOOL a = [runClass isKindOfClass:[MMRuntimeTest class]];");
+    NSLog(@"BOOL b = [objClass isMemberOfClass:[MMRuntimeTest class]];");
+
+    NSLog(@"result= a:%d,b:%d",a,b);
+}
 @end

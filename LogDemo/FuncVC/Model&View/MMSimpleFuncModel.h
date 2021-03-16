@@ -18,11 +18,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSArray *testArray;
 @property (nonatomic, copy) NSDictionary *testDictionary;
 
+@property (nonatomic, copy, readonly) NSString *readStr;
+
 - (void)postNotify;
 
 - (void)receviewNofitfy:(id)sender;
 
 - (void)resgister;
+
+- (void)testSetReadStr;
 @end
 
 

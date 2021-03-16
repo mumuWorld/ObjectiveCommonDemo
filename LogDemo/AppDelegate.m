@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TimeProfiler.h"
+#import "ELHotelDispatchTimer.h"
 
 @interface AppDelegate ()
 
@@ -47,6 +48,10 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     NSLog(@"%@",application);
+    static int value = 0;
+    [ELHotelDispatchTimer excuTimerTask:^(NSString * _Nonnull timer) {
+            NSLog(@"value=%d",value);
+    } andStart:0 interval:0.1 repeats:YES async:NO];
 }
 
 

@@ -9,6 +9,7 @@
 #import "MMSimpleFuncModel.h"
 
 @implementation MMSimpleFuncModel
+
 - (BOOL)isEqual:(id)object {
     if (![object isKindOfClass:[MMSimpleFuncModel class]]) {
         return false;
@@ -32,6 +33,7 @@
     model.content = _content;
     return model;
 }
+
 - (void)resgister {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receviewNofitfy:) name:@"test" object:nil];
 //    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(receviewNofitfy:) name:@"test" object:@{@"send_key":@"send_value"}];
@@ -64,7 +66,18 @@
     
 }
 
+- (void)testSetReadStr {
+    _readStr = @"test";
+}
+
+//- (void)setReadStr:(NSString * _Nonnull)readStr {
+//    _readStr = readStr;
+//    NSLog(@"read=%@",readStr);
+//}
+
 - (void)dealloc {
     NSLog(@"%@",[NSThread currentThread]);
 }
+
+
 @end

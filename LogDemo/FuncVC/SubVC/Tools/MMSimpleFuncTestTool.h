@@ -7,10 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MMSimpleFuncModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MMSimpleFuncTestTool : NSObject
+
+@property (nonatomic, strong) MMSimpleFuncModel *simpleModel;
+
++ (instancetype)shareInstance;
+
 + (void)test;
 
 + (void)htmlStr;
@@ -38,6 +44,18 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)sizeTest;
 
 + (void)animationBlockTest;
+
+- (void)kvoRegister;
+- (void)kvoTest;
+- (void)kvoSet;
+
+- (void)taskTest;
+
+extern void notifyFinish();
+
++ (void)requestStart;
++ (void)addRequest:(void(^)(void *notify))finish;
+
 @end
 
 NS_ASSUME_NONNULL_END

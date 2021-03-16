@@ -15,6 +15,11 @@ static const void *DisasterCityKey = &DisasterCityKey;
 + (void)load {
     NSLog(@"%@",self);
 }
+
++ (void)initialize {
+    NSLog(@"b");
+}
+
 - (void)setDisasterCity:(BOOL)disasterCity {
     objc_setAssociatedObject(self, DisasterCityKey, @(disasterCity), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }

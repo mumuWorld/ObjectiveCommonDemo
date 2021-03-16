@@ -22,7 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UITapGestureRecognizer *tap_0 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+//    UITapGestureRecognizer *tap_0 = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
+    UIPanGestureRecognizer *tap_0 = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handleGesture:)];
     [self.view addGestureRecognizer:tap_0];
     
     //判断手势和target的优先级
@@ -63,5 +64,13 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"%@",event);
 }
-
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%zd",event.type);
+}
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%zd",event.type);
+}
+- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"%zd",event.type);
+}
 @end

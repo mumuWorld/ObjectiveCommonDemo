@@ -31,9 +31,8 @@
 //        }
 //        [MMGCDTestTool gcd_groupTest1];
     } else if (sender.tag == 11) { //栅栏
-//        [MMGCDTestTool gcd_barrier_test];
+        [self.testModel kindTest];
     } else if (sender.tag == 12) { //栅栏
-//        [MMGCDTestTool gcd_barrier_test_2];
     }
 }
 

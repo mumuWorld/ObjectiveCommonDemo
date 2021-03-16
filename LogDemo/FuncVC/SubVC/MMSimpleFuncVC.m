@@ -33,6 +33,8 @@
 @property (nonatomic, strong) UIWindow *window;
 
 @property (nonatomic, strong) MMSimpleFuncModel *funcModel;
+
+@property (nonatomic, strong) MMSimpleFuncTestTool *testTool;
 @end
 
 @implementation MMSimpleFuncVC
@@ -49,6 +51,11 @@ __weak id reference = nil;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.navigationController dismissViewControllerAnimated:YES completion:^{
+            NSLog(@"完成");
+        }];
+    });
 //    NSLog(@"reference=%@", reference); // Console: (null)
 }
 
@@ -64,7 +71,41 @@ __weak id reference = nil;
         reference = obj;
 //    NSLog(@"reference=%@", reference); // Console: (null)
 
-  
+//    [self animationBLockTest];
+    [self test];
+//    NSLog(@"%@",self.navigationController.presentedViewController);
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.navigationController.presentedViewController dismissViewControllerAnimated:YES completion:nil];
+//    });
+    
+}
+
+- (void)test {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"test" message:@"test" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *act = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        NSLog(@"点击");
+//        [alert dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alert addAction:act];
+    [self.navigationController presentViewController:alert animated:YES completion:nil];
+}
+
+- (IBAction)handleClick:(UIButton *)sender {
+    switch (sender.tag) {
+        case 1:
+            [self.testTool kvoRegister];
+            break;
+        case 2:
+            [self.testTool kvoTest];
+            break;
+        case 3:
+            [self.testTool kvoSet];
+            break;
+        case 4:
+            [self.testTool taskTest];
+        default:
+            break;
+    }
 }
 
 - (void)releaseTest {
@@ -475,6 +516,13 @@ __weak id reference = nil;
     self.timer = [NSTimer timerWithTimeInterval:3 target:self selector:@selector(handleTimerInvoke:) userInfo:nil repeats:true];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     [self.timer fire];
+}
+
+- (MMSimpleFuncTestTool *)testTool {
+    if (!_testTool) {
+        _testTool = [MMSimpleFuncTestTool shareInstance];
+    }
+    return _testTool;
 }
 
 

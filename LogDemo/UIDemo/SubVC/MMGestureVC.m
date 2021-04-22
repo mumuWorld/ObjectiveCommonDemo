@@ -11,7 +11,7 @@
 #import "MMTouchButton.h"
 #import "MMTouchControl.h"
 
-@interface MMGestureVC ()
+@interface MMGestureVC ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *btn_1;
 @property (weak, nonatomic) IBOutlet UIButton *btn2;
 @property (weak, nonatomic) IBOutlet UIButton *btn3;
@@ -72,5 +72,10 @@
 }
 - (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"%zd",event.type);
+}
+
+- (void)textViewDidChange:(UITextView *)textView {
+    NSLog(@"输入中-%@-%@",textView.text,textView.markedTextRange);
+    
 }
 @end

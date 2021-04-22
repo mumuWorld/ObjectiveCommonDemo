@@ -169,6 +169,7 @@ void testFunc(void *context) {
     });
 
 }
+
 + (void)threadTest {
     [[AVAudioSession sharedInstance] requestRecordPermission:^(BOOL granted) {
         NSLog(@"current=%@",[NSThread currentThread]);

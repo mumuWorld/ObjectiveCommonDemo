@@ -39,11 +39,13 @@
     self.subview_C_2.backgroundColor = [UIColor blueColor];
     [self.btn_B_2 addSubview:self.subview_C_2];
     
-    _subview_C_A_1 = [[UIControl alloc] initWithFrame:CGRectMake(0, 300, 25, 25)];
+    _subview_C_A_1 = [[UIControl alloc] initWithFrame:CGRectMake(0, 500, 60, 60)];
     _subview_C_A_1.backgroundColor = UIColor.cyanColor;
     [_subview_C_A_1 addTarget:self action:@selector(handleControl:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_subview_C_A_1];
 
+//    [_subview_C_A_1 addSubview:self.subView_B_2];
+    
     NSArray *arr = @[_bgView_A,_subView_B,_subView_B_2,_subVIew_C,_subview_C_2];
     for (UIView *view in arr) {
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGes:)];

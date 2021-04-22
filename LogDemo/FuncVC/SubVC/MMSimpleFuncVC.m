@@ -39,9 +39,12 @@
 
 @implementation MMSimpleFuncVC
 
-//- (void)dealloc {
+- (void)dealloc {
 //    NSLog(@"dealloc->%@",self.timer);
-//}
+    //objc[8207]: Cannot form weak reference to instance (0x7f8119431ce0) of class MMSimpleFuncVC. It is possible that this object was over-released, or is in the process of deallocation.
+//    __weak typeof(self) ws = self;
+//    NSLog(@"%@",ws);
+}
 __weak id reference = nil;
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -103,6 +106,8 @@ __weak id reference = nil;
             break;
         case 4:
             [self.testTool taskTest];
+        case 5:
+            [self.testTool blockCancel];
         default:
             break;
     }

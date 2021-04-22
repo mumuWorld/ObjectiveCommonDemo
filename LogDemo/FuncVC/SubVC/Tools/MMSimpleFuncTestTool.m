@@ -18,6 +18,12 @@ static NSHashTable *table = nil;
 
 static MMSimpleFuncTestTool *_share = nil;
 
+@interface MMSimpleFuncTestTool()
+
+@property (nonatomic, copy) dispatch_block_t transBlock;
+
+@end
+
 @implementation MMSimpleFuncTestTool
 
 + (void)initialize {
@@ -395,6 +401,23 @@ return string;
     [MMSimpleFuncTestTool requestEnd:^{
         //刷新view
     }];
+}
+
+- (void)blockCancel {
+    self.transBlock = dispatch_block_create(0, ^{
+        NSLog(@"执行block");
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 *NSEC_PER_SEC), dispatch_get_global_queue(0, 0), ^{
+            NSLog(@"三秒后");
+        });
+//        sleep(4);
+//        NSLog(@"四秒后");
+    });
+//    block();
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 *NSEC_PER_SEC), dispatch_get_main_queue(), self.transBlock);
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        dispatch_block_cancel(self.transBlock);
+//    });
+    NSLog(@"结束取消");
 }
 
 //内部处理

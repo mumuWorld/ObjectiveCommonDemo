@@ -56,6 +56,7 @@ extern void notifyFinish();
 + (void)requestStart;
 + (void)addRequest:(void(^)(void *notify))finish;
 
+- (void)blockCancel;
 @end
 
 NS_ASSUME_NONNULL_END

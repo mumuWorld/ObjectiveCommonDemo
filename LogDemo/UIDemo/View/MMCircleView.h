@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MMCircleView : UIView
 
+@property (nonatomic, assign) CGFloat cur_raidus;
+
+@property (nonatomic, assign) CGFloat cur_width;
+
 @end
 
 NS_ASSUME_NONNULL_END

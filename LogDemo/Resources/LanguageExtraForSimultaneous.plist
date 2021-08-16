@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>阿拉伯文（埃及）</string>
+	<string>阿拉伯文（沙特阿拉伯）</string>
+	<string>法文（加拿大）</string>
+	<string>葡萄牙文（巴西）</string>
+	<string>西班牙文（拉丁美洲）</string>
+	<string>英文（澳大利亚）</string>
+	<string>英文（英国）</string>
+	<string>英文（印度）</string>
+	<string>中文（中国台湾）</string>
+</array>
+</plist>

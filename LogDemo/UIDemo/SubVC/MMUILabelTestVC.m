@@ -7,10 +7,13 @@
 //
 
 #import "MMUILabelTestVC.h"
+#import "MMSimpleFuncModel.h"
 
 @interface MMUILabelTestVC ()
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *attriLabel;
 
+@property (nonatomic, strong)  MMSimpleFuncModel *funcModel;
 @end
 
 @implementation MMUILabelTestVC
@@ -29,16 +32,43 @@
     _titleLabel.layer.cornerRadius = 10;
     _titleLabel.layer.masksToBounds = true;
     NSLog(@"size");
+    
+    NSMutableAttributedString *attr = [[NSMutableAttributedString alloc] initWithString:self.attriLabel.text];
+    [attr addAttributes:@{
+        NSBackgroundColorAttributeName: UIColor.greenColor,
+        NSForegroundColorAttributeName: UIColor.blueColor
+    } range:NSMakeRange(0, attr.length)];
+    self.attriLabel.attributedText = attr;
+    
+    MMSimpleFuncModel *obj = [MMSimpleFuncModel new];
+    __weak typeof(obj) wObj = obj;
+    MMSimpleFuncModel *sObj = obj;
+    NSLog(@"joeLog->ws=%@",wObj);
+    obj = nil;
+    NSLog(@"joeLog->ws=%@",wObj);
+    
+    self.funcModel = [MMSimpleFuncModel new];
+    __weak typeof(_funcModel) wObj_2 = _funcModel;
+    NSLog(@"joeLog->ws=%@",wObj_2);
+    self.funcModel = nil;
+    NSLog(@"joeLog->ws=%@",wObj_2);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    self.funcModel = [MMSimpleFuncModel new];
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        if ([self.funcModel respondsToSelector:@selector(postNotify)]) {
+//            [self.funcModel postNotify];
+//        }
+//    });
+//    self.funcModel = nil;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([self.funcModel respondsToSelector:@selector(postNotify)]) {
+            [self.funcModel postNotify];
+        }
+    });
+    [self.navigationController popViewControllerAnimated:true];
 }
-*/
 
 @end

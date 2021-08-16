@@ -35,12 +35,14 @@
 @property (nonatomic, strong) MMSimpleFuncModel *funcModel;
 
 @property (nonatomic, strong) MMSimpleFuncTestTool *testTool;
+
+@property (nonatomic, copy) dispatch_block_t emptyBlock;
 @end
 
 @implementation MMSimpleFuncVC
 
 - (void)dealloc {
-//    NSLog(@"dealloc->%@",self.timer);
+    NSLog(@"dealloc->%@",self);
     //objc[8207]: Cannot form weak reference to instance (0x7f8119431ce0) of class MMSimpleFuncVC. It is possible that this object was over-released, or is in the process of deallocation.
 //    __weak typeof(self) ws = self;
 //    NSLog(@"%@",ws);
@@ -54,11 +56,11 @@ __weak id reference = nil;
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.navigationController dismissViewControllerAnimated:YES completion:^{
-            NSLog(@"完成");
-        }];
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [self.navigationController dismissViewControllerAnimated:YES completion:^{
+//            NSLog(@"完成");
+//        }];
+//    });
 //    NSLog(@"reference=%@", reference); // Console: (null)
 }
 
@@ -73,9 +75,11 @@ __weak id reference = nil;
     // str是一个autorelease对象，设置一个weak的引用来观察它
         reference = obj;
 //    NSLog(@"reference=%@", reference); // Console: (null)
-
+    CGFloat testF = 0002.0;
+    NSString *result = [NSString stringWithFormat:@"%03.1f",testF];
+    NSLog(@"reference=%@", result);
 //    [self animationBLockTest];
-    [self test];
+//    [self test];
 //    NSLog(@"%@",self.navigationController.presentedViewController);
 //    dispatch_async(dispatch_get_main_queue(), ^{
 //        [self.navigationController.presentedViewController dismissViewControllerAnimated:YES completion:nil];
@@ -106,8 +110,46 @@ __weak id reference = nil;
             break;
         case 4:
             [self.testTool taskTest];
+            break;
         case 5:
             [self.testTool blockCancel];
+            break;
+        case 6:
+            [self.testTool createPlist];
+            break;
+        case 7:
+            [self.testTool modifyPlist];
+            break;
+        case 8: {
+//            __weak typeof(self) ws = self;
+//            self.emptyBlock = ^{
+//                NSLog(@"进入block");
+////                __strong typeof(ws) ss = ws;
+////                __strong typeof(ws) self = ws;
+//                __strong MMSimpleFuncVC *ss = ws;
+//
+//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+////                    NSLog(@"self->%@",self);
+//                    NSLog(@"self->%@",ss);
+//
+//                });
+//            };
+//            self.emptyBlock();
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            //                    NSLog(@"self->%@",self);
+                                NSLog(@"self->%@",self);
+                if([self respondsToSelector:@selector(viewDidLoad)]) {
+                    NSLog(@"self->%@",self);
+                }
+            });
+            break;
+        }
+        case  9: {
+            MMSimpleFuncTestTool *tool = [MMSimpleFuncTestTool new];
+            [tool doSomethingBack:^{
+                NSLog(@"self");
+            }];
+        }
         default:
             break;
     }

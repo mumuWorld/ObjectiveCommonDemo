@@ -59,7 +59,17 @@
 		B45CF50923A9D79D00345FB5 /* MMHomeListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B45CF50823A9D79D00345FB5 /* MMHomeListModel.m */; };
 		B45CF50B23A9F34300345FB5 /* home_list.plist in Resources */ = {isa = PBXBuildFile; fileRef = B45CF50A23A9F34300345FB5 /* home_list.plist */; };
 		B46B94A024484BBD00F2F480 /* MMCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = B46B949F24484BBD00F2F480 /* MMCircleView.m */; };
+		B488C7D22644E96C004BE996 /* Location.gpx in Resources */ = {isa = PBXBuildFile; fileRef = B488C7D12644E96C004BE996 /* Location.gpx */; };
+		B488C7D62644E97C004BE996 /* LanguageForMain.plist in Resources */ = {isa = PBXBuildFile; fileRef = B488C7D52644E97B004BE996 /* LanguageForMain.plist */; };
+		B488C7DA2644EB1C004BE996 /* LanguageCodeForMain.plist in Resources */ = {isa = PBXBuildFile; fileRef = B488C7D92644EB1C004BE996 /* LanguageCodeForMain.plist */; };
 		B493353E25C2655F0091F672 /* MMRunHelpTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B493353D25C2655F0091F672 /* MMRunHelpTest.m */; };
+		B4962C87264E59B700249A7B /* ocr_lang.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4962C85264E59B700249A7B /* ocr_lang.plist */; };
+		B4962C88264E59B700249A7B /* camera_lang.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4962C86264E59B700249A7B /* camera_lang.plist */; };
+		B4977B04265E7666009450D0 /* LanguageCodeExtraForSimultaneous.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4977B02265E7665009450D0 /* LanguageCodeExtraForSimultaneous.plist */; };
+		B4977B05265E7666009450D0 /* LanguageExtraForSimultaneous.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4977B03265E7666009450D0 /* LanguageExtraForSimultaneous.plist */; };
+		B4977B09265E766B009450D0 /* LanguageNameCodeForSimultaneous.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4977B08265E766B009450D0 /* LanguageNameCodeForSimultaneous.plist */; };
+		B4977B0D265E7856009450D0 /* Simultaneous.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4977B0C265E7856009450D0 /* Simultaneous.plist */; };
+		B4977B13265E787F009450D0 /* main_lang.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4977B12265E787F009450D0 /* main_lang.plist */; };
 		B498BA8024EE6B7200090564 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B498BA7F24EE6B7200090564 /* UIKit.framework */; };
 		B498BA9924EE6BC900090564 /* TPRecordCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B498BA8724EE6BC800090564 /* TPRecordCell.m */; };
 		B498BA9A24EE6BC900090564 /* hookObjcMsgSend-arm64.s in Sources */ = {isa = PBXBuildFile; fileRef = B498BA8924EE6BC800090564 /* hookObjcMsgSend-arm64.s */; };
@@ -181,7 +191,6 @@
 		43CD16A3808A6B27A5F32A7F /* Pods-LogDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogDemo.release.xcconfig"; path = "Target Support Files/Pods-LogDemo/Pods-LogDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4DD0BEE986D3F1BA42319172 /* Pods-LogDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-LogDemoTests/Pods-LogDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8B0AD282B11FA965AA8B737D /* Pods-LogDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LogDemo.debug.xcconfig"; path = "Target Support Files/Pods-LogDemo/Pods-LogDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		B4095724248BEB7700D5DC56 /* Location.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
 		B418BB1F23D42B9D00374BEF /* MMCollectionDecorationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMCollectionDecorationView.h; sourceTree = "<group>"; };
 		B418BB2023D42B9D00374BEF /* MMCollectionDecorationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMCollectionDecorationView.m; sourceTree = "<group>"; };
 		B418BB2323D4303800374BEF /* MMCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCollectionReusableView.h; sourceTree = "<group>"; };
@@ -265,8 +274,18 @@
 		B45CF50A23A9F34300345FB5 /* home_list.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = home_list.plist; sourceTree = "<group>"; };
 		B46B949E24484BBD00F2F480 /* MMCircleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCircleView.h; sourceTree = "<group>"; };
 		B46B949F24484BBD00F2F480 /* MMCircleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCircleView.m; sourceTree = "<group>"; };
+		B488C7D12644E96C004BE996 /* Location.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Location.gpx; sourceTree = "<group>"; };
+		B488C7D52644E97B004BE996 /* LanguageForMain.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LanguageForMain.plist; sourceTree = "<group>"; };
+		B488C7D92644EB1C004BE996 /* LanguageCodeForMain.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LanguageCodeForMain.plist; sourceTree = "<group>"; };
 		B493353C25C2655F0091F672 /* MMRunHelpTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMRunHelpTest.h; sourceTree = "<group>"; };
 		B493353D25C2655F0091F672 /* MMRunHelpTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMRunHelpTest.m; sourceTree = "<group>"; };
+		B4962C85264E59B700249A7B /* ocr_lang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ocr_lang.plist; sourceTree = "<group>"; };
+		B4962C86264E59B700249A7B /* camera_lang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = camera_lang.plist; sourceTree = "<group>"; };
+		B4977B02265E7665009450D0 /* LanguageCodeExtraForSimultaneous.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LanguageCodeExtraForSimultaneous.plist; sourceTree = "<group>"; };
+		B4977B03265E7666009450D0 /* LanguageExtraForSimultaneous.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LanguageExtraForSimultaneous.plist; sourceTree = "<group>"; };
+		B4977B08265E766B009450D0 /* LanguageNameCodeForSimultaneous.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LanguageNameCodeForSimultaneous.plist; sourceTree = "<group>"; };
+		B4977B0C265E7856009450D0 /* Simultaneous.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Simultaneous.plist; sourceTree = "<group>"; };
+		B4977B12265E787F009450D0 /* main_lang.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = main_lang.plist; sourceTree = "<group>"; };
 		B498BA7F24EE6B7200090564 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B498BA8224EE6BC800090564 /* TimeProfiler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeProfiler.h; sourceTree = "<group>"; };
 		B498BA8424EE6BC800090564 /* TPRecordHierarchyModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPRecordHierarchyModel.h; sourceTree = "<group>"; };
@@ -473,8 +492,8 @@
 		401FFC061E11189300E46787 /* LogDemo */ = {
 			isa = PBXGroup;
 			children = (
+				B488C7D02644E96C004BE996 /* Resources */,
 				B498BA4124EE49D100090564 /* 3thLib */,
-				B4AEA5D8248CFAC100EDE97A /* Resource */,
 				B4F4BA7F23CF285F00ACFC52 /* BaseFile */,
 				B45CF4F323A9CC9500345FB5 /* Home */,
 				401FFC2C1E1118A000E46787 /* Category */,
@@ -775,6 +794,23 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		B488C7D02644E96C004BE996 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B4977B12265E787F009450D0 /* main_lang.plist */,
+				B4977B08265E766B009450D0 /* LanguageNameCodeForSimultaneous.plist */,
+				B4977B02265E7665009450D0 /* LanguageCodeExtraForSimultaneous.plist */,
+				B4977B03265E7666009450D0 /* LanguageExtraForSimultaneous.plist */,
+				B4962C86264E59B700249A7B /* camera_lang.plist */,
+				B4962C85264E59B700249A7B /* ocr_lang.plist */,
+				B488C7D92644EB1C004BE996 /* LanguageCodeForMain.plist */,
+				B488C7D52644E97B004BE996 /* LanguageForMain.plist */,
+				B488C7D12644E96C004BE996 /* Location.gpx */,
+				B4977B0C265E7856009450D0 /* Simultaneous.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B498BA4024EE49B700090564 /* HookmsgSend */ = {
 			isa = PBXGroup;
 			children = (
@@ -875,14 +911,6 @@
 				B4ADCB1725C14AF700B540F0 /* MMRuntimeTestViewController.xib */,
 			);
 			path = SubVC;
-			sourceTree = "<group>";
-		};
-		B4AEA5D8248CFAC100EDE97A /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				B4095724248BEB7700D5DC56 /* Location.gpx */,
-			);
-			name = Resource;
 			sourceTree = "<group>";
 		};
 		B4BAA352241F62910049DFEE /* webVC */ = {
@@ -1170,15 +1198,20 @@
 			files = (
 				B4CE051825E4A62A0086DDD0 /* MMSimpleFuncVC.xib in Resources */,
 				401FFC171E11189300E46787 /* LaunchScreen.storyboard in Resources */,
+				B4977B04265E7666009450D0 /* LanguageCodeExtraForSimultaneous.plist in Resources */,
 				B4CB4AD6246D2C5F00E25C74 /* MMGCDTestVC.xib in Resources */,
 				B4B515FE255B7FA2006DE90F /* string.json in Resources */,
 				B42C1E1423D011CB00D27E62 /* ui_demo_list.plist in Resources */,
 				B44E09E523C71634001CAFE5 /* animation_list.plist in Resources */,
+				B4977B09265E766B009450D0 /* LanguageNameCodeForSimultaneous.plist in Resources */,
 				401FFC141E11189300E46787 /* Assets.xcassets in Resources */,
+				B4977B0D265E7856009450D0 /* Simultaneous.plist in Resources */,
 				B4F9F4722453036200097200 /* MMTouchPriorityVC.xib in Resources */,
+				B488C7DA2644EB1C004BE996 /* LanguageCodeForMain.plist in Resources */,
 				B49F8BBA24937D8800D05E43 /* Property List.plist in Resources */,
 				B4B5160C255BE6C1006DE90F /* MMCornerImgCell.xib in Resources */,
 				B45CF50B23A9F34300345FB5 /* home_list.plist in Resources */,
+				B4977B13265E787F009450D0 /* main_lang.plist in Resources */,
 				B44E09DC23C46C8B001CAFE5 /* 未使用图片.txt in Resources */,
 				B4C8F44B25D10935004B9696 /* MMGestureVC.xib in Resources */,
 				B45CF4FC23A9D06C00345FB5 /* MMHomeListTableViewCell.xib in Resources */,
@@ -1189,13 +1222,18 @@
 				B4FF16702494F15300D5E3C7 /* MMUILabelTestVC.xib in Resources */,
 				B4B9BE6C2462B8CD00AD0F9B /* MMSImpleXibUIVC.xib in Resources */,
 				B4BAA364241F62910049DFEE /* SettingView.xib in Resources */,
+				B488C7D62644E97C004BE996 /* LanguageForMain.plist in Resources */,
+				B488C7D22644E96C004BE996 /* Location.gpx in Resources */,
 				B4EBD92524CF394C006AF0E6 /* MMUIDynamicVC.xib in Resources */,
 				B499F9A224E2650A0050B2A6 /* MMLayoutPriorityVC.xib in Resources */,
+				B4977B05265E7666009450D0 /* LanguageExtraForSimultaneous.plist in Resources */,
 				B4ADCB1925C14AF700B540F0 /* MMRuntimeTestViewController.xib in Resources */,
 				B49F268824EF97D800EAA9D1 /* MMLayerTestVC.xib in Resources */,
 				B4F4BA8423CF28F900ACFC52 /* collection_layout_list.plist in Resources */,
+				B4962C87264E59B700249A7B /* ocr_lang.plist in Resources */,
 				B499FFDF249BA65C006C3274 /* detail.json in Resources */,
 				401FFC121E11189300E46787 /* Main.storyboard in Resources */,
+				B4962C88264E59B700249A7B /* camera_lang.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1250,7 +1288,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1585,6 +1623,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 5P22WNNVB5;
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = LogDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = efyj.LogDemoTests;
@@ -1599,6 +1638,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 5P22WNNVB5;
+				GCC_INPUT_FILETYPE = automatic;
 				INFOPLIST_FILE = LogDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = efyj.LogDemoTests;

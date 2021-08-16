@@ -57,6 +57,11 @@ extern void notifyFinish();
 + (void)addRequest:(void(^)(void *notify))finish;
 
 - (void)blockCancel;
+
+- (void)createPlist;
+- (void)modifyPlist;
+
+- (void)doSomethingBack:(dispatch_block_t)back;
 @end
 
 NS_ASSUME_NONNULL_END

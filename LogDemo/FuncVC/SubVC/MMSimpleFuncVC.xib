@@ -19,6 +19,54 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WEX-uy-bsj">
+                    <rect key="frame" x="0.0" y="104" width="301" height="30"/>
+                    <subviews>
+                        <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThX-t5-JoH">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="plist"/>
+                            <connections>
+                                <action selector="handleClick:" destination="-1" eventType="touchUpInside" id="gBc-E7-DdV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFN-eT-BaY">
+                            <rect key="frame" x="38" y="0.0" width="84" height="30"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="modify_plist"/>
+                            <connections>
+                                <action selector="handleClick:" destination="-1" eventType="touchUpInside" id="qSt-cE-pkV"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ojf-7K-vUi">
+                            <rect key="frame" x="130" y="0.0" width="45" height="30"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="strong"/>
+                            <connections>
+                                <action selector="handleClick:" destination="-1" eventType="touchUpInside" id="w9t-dt-SaC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3p-Mi-bgs">
+                            <rect key="frame" x="183" y="0.0" width="46" height="30"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="作用域"/>
+                            <connections>
+                                <action selector="handleClick:" destination="-1" eventType="touchUpInside" id="wmd-Ya-4le"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftT-Zr-jgk">
+                            <rect key="frame" x="237" y="0.0" width="64" height="30"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="task_test"/>
+                            <connections>
+                                <action selector="handleClick:" destination="-1" eventType="touchUpInside" id="kBZ-By-lW9"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="PGf-cg-ERm"/>
+                    </constraints>
+                </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZfZ-rt-5Dk">
                     <rect key="frame" x="0.0" y="64" width="352" height="30"/>
                     <subviews>
@@ -72,6 +120,9 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="ZfZ-rt-5Dk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="35z-La-iCQ"/>
+                <constraint firstItem="WEX-uy-bsj" firstAttribute="leading" secondItem="ZfZ-rt-5Dk" secondAttribute="leading" id="B91-80-7x3"/>
+                <constraint firstItem="WEX-uy-bsj" firstAttribute="top" secondItem="ZfZ-rt-5Dk" secondAttribute="bottom" constant="10" id="BnW-xc-9vh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WEX-uy-bsj" secondAttribute="trailing" constant="10" id="Geg-Ge-S6j"/>
                 <constraint firstItem="ZfZ-rt-5Dk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="MSh-rd-duk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZfZ-rt-5Dk" secondAttribute="trailing" id="lQZ-GQ-umO"/>
             </constraints>

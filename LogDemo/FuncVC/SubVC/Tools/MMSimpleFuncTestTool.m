@@ -452,4 +452,127 @@ void notifyFinish() {
     NSLog(@"执行后续-%@",[NSThread currentThread]);
 }
 
+
+- (void)createPlist {
+//    [self combine];
+//    return;
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"main_lang" ofType:@"plist"];
+//    NSString *code_path = [[NSBundle mainBundle] pathForResource:@"LanguageCodeExtraForSimultaneous" ofType:@"plist"];
+//    NSString *path = @"/Users/mumu/Desktop/二维码/test/SimultaneousLeft.plist";
+//    NSString *right_path = @"/Users/mumu/Desktop/二维码/test/Simultaneousrgith.plist";
+//    NSArray *names = [NSArray arrayWithContentsOfFile:path];
+//    NSArray *codes = [NSArray arrayWithContentsOfFile:code_path];
+    NSDictionary *left_dict = [NSDictionary dictionaryWithContentsOfFile:path];
+//    NSDictionary *camera = [MMSimpleFuncTestTool transDirectionDic];
+//    NSDictionary *right_dict = [NSDictionary dictionaryWithContentsOfFile:right_path];
+
+    NSMutableDictionary *new = [NSMutableDictionary dictionary];
+//    [right_dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+//        NSDictionary * left = left_dict[key];
+//        NSInteger support = 2;
+//        if (left) {
+//            support = 0;
+//        }
+//        NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:obj];
+//        dict[@"supportType"] = @(support);
+////        NSDictionary *dic = @{@"name":key, @"code": obj};
+//        new[key] = dict;
+//    }];
+    NSArray *toUser = @[@"中文", @"英文", @"日文", @"韩文", @"俄文"];
+    [left_dict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+//        NSDictionary * right = right_dict[key];
+        NSInteger historyDefault = 0;
+        NSString *name = obj[@"name"];
+        if ([toUser containsObject:name]) {
+            historyDefault = [toUser indexOfObject:name];
+            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:obj];
+            dict[@"historyDefault"] = @(historyDefault + 1);
+    //        NSDictionary *dic = @{@"name":key, @"code": obj};
+            new[key] = dict;
+        }
+    }];
+    
+    [new writeToFile:@"/Users/mumu/Desktop/二维码/test/web_lang.plist" atomically:YES];
+}
+
+- (void)combine {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"main_lang" ofType:@"plist"];
+    NSMutableDictionary *codeMap = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+    NSString *SimuPath = [[NSBundle mainBundle] pathForResource:@"Simultaneous" ofType:@"plist"];
+    NSDictionary *SimuMap = [NSDictionary dictionaryWithContentsOfFile:SimuPath];
+    
+    [codeMap addEntriesFromDictionary:SimuMap];
+    
+    NSLog(@"codeMap");
+    [codeMap writeToFile:@"/Users/mumu/Desktop/二维码/test/SimultaneousPlus.plist" atomically:YES];
+
+}
+
+- (void)modifyPlist {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"ocr_lang" ofType:@"plist"];
+    NSMutableDictionary *codeMap = [NSMutableDictionary dictionaryWithContentsOfFile:path];
+//    toUser = ["中文", "英文", "日文", "韩文", "俄文"]
+    //        } else {
+//    NSArray *toUser = @[@"中文", @"英文", @"日文", @"韩文", @"法文"];
+    [codeMap enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+//        NSString *name = obj[@"name"];
+//        if ([toUser containsObject:name]) {
+            NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:obj];
+            dict[@"supportType"] = @(1);
+            codeMap[key]= dict;
+//        }
+    }];
+    [codeMap writeToFile:@"/Users/mumu/Desktop/二维码/test/new_ocr_lang.plist" atomically:YES];
+}
+
++ (NSDictionary *)transDirectionDic
+{
+    return @{
+             @"自动检测语言":@"auto",
+             @"英文":@"en",
+             @"日文":@"ja",
+             @"韩文":@"ko",
+             @"法文":@"fr",
+             @"俄文":@"ru",
+             @"西班牙文":@"es",
+             @"丹麦文":@"da",
+             @"荷兰文":@"nl",
+             @"德文":@"de",
+             @"希腊文":@"el",
+             @"匈牙利文":@"hu",
+             @"意大利文":@"it",
+             @"葡萄牙文":@"pt",
+             @"中文(简体)":@"zh-CHS",
+             @"中文(繁体)":@"zh-CHT",
+             @"捷克文":@"cs",
+             @"芬兰文":@"fi",
+             @"挪威文":@"no",
+             @"波兰文":@"pl",
+             @"瑞典文":@"sv",
+             @"土耳其文":@"tr",
+             
+             @"越南文" : @"vi",
+             @"印度尼西亚文" : @"id",
+             @"印地文" : @"hi",
+             @"泰米尔文" : @"ta",
+             @"孟加拉文" : @"bn",
+             @"马拉地文" : @"mr",
+             @"乌尔都文" : @"ur",
+             @"菲律宾文" : @"tl",
+             @"尼泊尔文" : @"ne"
+             };
+}
+
+- (void)doSomethingBack:(dispatch_block_t)back {
+    NSLog(@"调用方法");
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_global_queue(0, 0), ^{
+        NSLog(@"三秒结束");
+        back();
+    });
+}
+
+- (void)dealloc {
+    NSLog(@"消失");
+}
 @end

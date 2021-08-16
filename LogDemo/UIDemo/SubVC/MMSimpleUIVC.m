@@ -34,6 +34,15 @@
 @property (nonatomic, strong) MMTestView *guideView;
 @property (nonatomic, strong) UIView *maskView;
 
+@property (nonatomic, assign) CGFloat cur_raidus;
+@property (nonatomic, strong) UISlider *radius;
+@property (nonatomic, strong) UILabel *radiusValue;
+
+@property (nonatomic, assign) CGFloat cur_width;
+@property (nonatomic, strong) UISlider *circleWidth;
+@property (nonatomic, strong) UILabel *circleWidthValue;
+
+
 @end
 
 @implementation MMSimpleUIVC
@@ -91,10 +100,16 @@
 //        }];
 //    });
     
-//    self.circleView = [[MMCircleView alloc] initWithFrame:CGRectMake(50, 200, 0, 0)];
-//    self.circleView.backgroundColor = UIColor.cyanColor;
-//    [self.view addSubview:self.circleView];
+    self.circleView = [[MMCircleView alloc] initWithFrame:CGRectMake(50, 200, 0, 0)];
+    self.circleView.backgroundColor = UIColor.cyanColor;
+    [self.view addSubview:self.circleView];
+    [self createSlider];
     
+    [self.circleView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(self.view).offset(50);
+            make.top.equalTo(self.view).offset(200);
+            make.size.mas_equalTo(CGSizeMake(100, 100));
+    }];
 //    UIView *bottom = [[UIView alloc] initWithFrame:CGRectMake(0, 500, ScreenWidth, 200)];
 //    bottom.backgroundColor = UIColor.clearColor;
 //    UIColor *firstColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0.0f];
@@ -286,6 +301,63 @@ static int test = 0;
     [btn_2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.width.mas_equalTo(50);
     }];
+}
+
+- (void)createSlider {
+    _radius = [[UISlider alloc] init];
+    _radius.minimumValue = 0;
+    _radius.maximumValue = 50;
+    _radius.value = self.cur_raidus;
+    _radiusValue = [UILabel new];
+    _radiusValue.text = [NSString stringWithFormat:@"%f",_radius.value];
+    [_radius addTarget:self action:@selector(handleValueChange:) forControlEvents:UIControlEventValueChanged];
+    
+    _circleWidth = [[UISlider alloc] init];
+    _circleWidth.minimumValue = 0;
+    _circleWidth.maximumValue = 50;
+    _circleWidth.value = self.cur_width;
+
+    [_circleWidth addTarget:self action:@selector(handleValueChange:) forControlEvents:UIControlEventValueChanged];
+
+    _circleWidthValue = [UILabel new];
+    _circleWidthValue.text = [NSString stringWithFormat:@"%f",_circleWidth.value];
+
+    [self.view addSubview:_radius];
+    [self.view addSubview:_radiusValue];
+    [self.view addSubview:_circleWidth];
+    [self.view addSubview:_circleWidthValue];
+    
+    [_radius mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.leading.equalTo(self.view).offset(20);
+        make.trailing.equalTo(self.view).offset(-20);
+            make.top.equalTo(self.view).offset(500);
+    }];
+    [_radiusValue mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.view);
+            make.top.equalTo(self.radius.mas_bottom).offset(5);
+    }];
+    [_circleWidth mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(self.view).offset(20);
+    make.trailing.equalTo(self.view).offset(-20);
+            make.top.equalTo(self.radiusValue.mas_bottom).offset(10);
+    }];
+    [_circleWidthValue mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.equalTo(self.view);
+            make.top.equalTo(self.circleWidth.mas_bottom).offset(5);
+    }];
+}
+
+- (void)handleValueChange:(UISlider *)sender {
+    if (sender == _radius) {
+        self.cur_raidus = sender.value;
+        _radiusValue.text = [NSString stringWithFormat:@"%f",_radius.value];
+    } else {
+        self.cur_width = sender.value;
+        _circleWidthValue.text = [NSString stringWithFormat:@"%f",_circleWidth.value];
+    }
+    self.circleView.cur_raidus = self.cur_raidus;
+    self.circleView.cur_width = self.cur_width;
+    [self.circleView setNeedsDisplay];
 }
 
 - (void)handleGesture:(UITapGestureRecognizer *)sender {

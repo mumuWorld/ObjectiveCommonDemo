@@ -10,6 +10,8 @@
 
 @implementation MMSimpleFuncModel
 
+@synthesize onDebugInfo, testKey;
+
 - (BOOL)isEqual:(id)object {
     if (![object isKindOfClass:[MMSimpleFuncModel class]]) {
         return false;
@@ -113,6 +115,11 @@
              @"ne" : @"尼泊尔文"
              };
 }
+- (void)sayHello:(void(^)())callback {
+    self.helloBlock = callback;
+    NSLog(@"hello");
+}
+
 - (void)dealloc {
     NSLog(@"%@",[NSThread currentThread]);
 }

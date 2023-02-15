@@ -13,6 +13,8 @@
 #include <sys/time.h>
 #import "MMSimpleFuncModel.h"
 #import "MMUIKitTool.h"
+#import "LogDemo-Swift.h"
+#import "AppDelegate.h"
 
 static NSHashTable *table = nil;
 
@@ -21,6 +23,8 @@ static MMSimpleFuncTestTool *_share = nil;
 @interface MMSimpleFuncTestTool()
 
 @property (nonatomic, copy) dispatch_block_t transBlock;
+
+@property (nonatomic, strong) SwiftClass *sc;
 
 @end
 
@@ -375,13 +379,6 @@ return string;
     NSLog(@"key=%@,obj=%@, change=%@, context=%@",keyPath,object,change,context);
 }
 
-- (MMSimpleFuncModel *)simpleModel {
-    if (!_simpleModel) {
-        _simpleModel = [MMSimpleFuncModel new];
-    }
-    return _simpleModel;
-}
-
 //外部调动
 - (void)taskTest {
     [MMSimpleFuncTestTool requestStart];
@@ -526,6 +523,29 @@ void notifyFinish() {
     [codeMap writeToFile:@"/Users/mumu/Desktop/二维码/test/new_ocr_lang.plist" atomically:YES];
 }
 
+- (void)callSwift {
+//    @weakify(self)
+//    [self.sc sayHelloWithCallBack:^{
+//        @strongify(self)
+//        NSLog(@"print->%@", self);
+////        @weakify(self)
+//        [self.simpleModel sayHello:^{
+//            @strongify(self)
+//            NSLog(@"print->%@", self);
+//        }];
+//    }];
+    
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+//        self.sc._callback();
+//    });
+//    [self.simpleModel sayHello:^{
+//        @strongify(self)
+//        NSLog(@"print->%@", self);
+//    }];
+    
+    [self.sc callOC];
+}
+
 + (NSDictionary *)transDirectionDic
 {
     return @{
@@ -574,5 +594,19 @@ void notifyFinish() {
 
 - (void)dealloc {
     NSLog(@"消失");
+}
+
+- (SwiftClass *)sc {
+    if (!_sc) {
+        _sc = [[SwiftClass alloc] init];
+    }
+    return _sc;
+}
+
+- (MMSimpleFuncModel *)simpleModel {
+    if(!_simpleModel) {
+        _simpleModel = [MMSimpleFuncModel new];
+    }
+    return _simpleModel;
 }
 @end

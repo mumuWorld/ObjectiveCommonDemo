@@ -10,7 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MMSimpleFuncModel : NSObject<NSCopying>
+@protocol MMSimpleFuncProtocol <NSObject>
+
+@property (nonatomic, copy) NSString *testKey;
+
+@property (nonatomic, copy, nullable) void(^onDebugInfo)(NSString *info);
+
+@end
+
+@interface MMSimpleFuncModel : NSObject<NSCopying, MMSimpleFuncProtocol>
 @property (nonatomic, assign) NSInteger type;
 @property (nonatomic, copy) NSString *keyType;
 @property (nonatomic, copy) NSString *content;
@@ -20,6 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy, readonly) NSString *readStr;
 
+@property (nonatomic, copy, nullable) void(^nullBlock)(NSString *info);
+
+@property (nonatomic, copy, nullable) void(^helloBlock)();
+
 - (void)postNotify;
 
 - (void)receviewNofitfy:(id)sender;
@@ -28,6 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)testSetReadStr;
 
+- (void)sayHello:(void(^)())callback;
 @end
 
 

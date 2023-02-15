@@ -36,6 +36,8 @@
 
 @property (nonatomic, strong) MMSimpleFuncTestTool *testTool;
 
+@property (nonatomic, strong) MMSimpleFuncTestTool *testToolNoShared;
+
 @property (nonatomic, copy) dispatch_block_t emptyBlock;
 @end
 
@@ -135,13 +137,13 @@ __weak id reference = nil;
 //                });
 //            };
 //            self.emptyBlock();
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            //                    NSLog(@"self->%@",self);
-                                NSLog(@"self->%@",self);
-                if([self respondsToSelector:@selector(viewDidLoad)]) {
-                    NSLog(@"self->%@",self);
-                }
-            });
+//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//            //                    NSLog(@"self->%@",self);
+//                                NSLog(@"self->%@",self);
+//                if([self respondsToSelector:@selector(viewDidLoad)]) {
+//                    NSLog(@"self->%@",self);
+//                }
+//            });
             break;
         }
         case  9: {
@@ -150,6 +152,9 @@ __weak id reference = nil;
                 NSLog(@"self");
             }];
         }
+        case 10:
+            [self.testToolNoShared callSwift];
+            break;
         default:
             break;
     }
@@ -572,5 +577,11 @@ __weak id reference = nil;
     return _testTool;
 }
 
+- (MMSimpleFuncTestTool *)testToolNoShared {
+    if (!_testToolNoShared) {
+        _testToolNoShared = [MMSimpleFuncTestTool new];
+    }
+    return _testToolNoShared;
+}
 
 @end

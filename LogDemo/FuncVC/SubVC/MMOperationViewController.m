@@ -7,11 +7,13 @@
 //
 
 #import "MMOperationViewController.h"
+#import "MMSimpleFuncModel.h"
 
 @interface MMOperationViewController ()
 @property (nonatomic, strong) UIButton *blockOperation;
 @property (nonatomic, strong) UIButton *priorityOperationBtn;
 @property (nonatomic, strong) UIButton *queueBtn;
+@property (nonatomic, strong) UIButton *mainQueueBtn;
 
 @property (nonatomic, strong) NSBlockOperation *blockO;
 
@@ -20,6 +22,8 @@
 @property (nonatomic, strong) NSObject *obj;
 
 @property (nonatomic, strong) NSCache *cache;
+
+@property (nonatomic, strong) MMSimpleFuncModel *funcModel;
 
 @end
 
@@ -54,6 +58,11 @@
     self.queueBtn.x = 10 + CGRectGetMaxX(self.priorityOperationBtn.frame);
     self.queueBtn.y = NavigationBarHeight;
     [self.view addSubview:self.queueBtn];
+    
+    self.mainQueueBtn = [self createBtn:@"queue测试" tag:4];
+    self.mainQueueBtn.x = 10 + CGRectGetMaxX(self.queueBtn.frame);
+    self.mainQueueBtn.y = NavigationBarHeight;
+    [self.view addSubview:self.mainQueueBtn];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -61,6 +70,7 @@
     NSLog(@"obj->%@",self.obj);
     NSLog(@"cache->%@",self.cache);
 }
+
 - (void)handleBtnClick:(UIButton *)sender {
     switch (sender.tag) {
         case 1:
@@ -116,6 +126,11 @@
                 [operationQueue addOperation:lastBlockOperation];
             }
             break;
+            
+        case 4: {
+            [self btn4Click];
+            break;
+        }
         default:
             break;
     }
@@ -134,4 +149,27 @@
 }
 
 
+- (void)btn4Click {
+//    NSLog(@"test->%@",self.funcModel.testKey);
+    NSLog(@"test->%@",self.funcModel.onDebugInfo);
+//    self.funcModel.onDebugInfo(@"test->str");
+    NSLog(@"test->%@",self.funcModel.nullBlock);
+
+    self.funcModel.nullBlock(@"test->");
+//    self.funcModel.testKey = @"";
+    //立即调用
+//    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//        self.funcModel.onDebugInfo(@"test->str");
+//    }];
+}
+
+- (MMSimpleFuncModel *)funcModel {
+    if (!_funcModel){
+        _funcModel = [[MMSimpleFuncModel alloc] init];
+//        _funcModel.onDebugInfo = ^(NSString * info){
+//            NSLog(@"test->%@",info);
+//        };
+    }
+    return _funcModel;
+}
 @end

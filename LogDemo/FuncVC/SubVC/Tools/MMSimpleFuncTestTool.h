@@ -51,6 +51,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)taskTest;
 
+- (void)callSwift;
+
 extern void notifyFinish();
 
 + (void)requestStart;

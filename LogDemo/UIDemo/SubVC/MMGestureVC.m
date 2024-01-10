@@ -10,12 +10,14 @@
 #import "MMTouchView.h"
 #import "MMTouchButton.h"
 #import "MMTouchControl.h"
+#import "MMLayerTestViewController.h"
 
 @interface MMGestureVC ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *btn_1;
 @property (weak, nonatomic) IBOutlet UIButton *btn2;
 @property (weak, nonatomic) IBOutlet UIButton *btn3;
 
+@property (strong, nonatomic) UITextView *textView;
 @end
 
 @implementation MMGestureVC
@@ -51,6 +53,42 @@
     
     //1 按钮中有taget 和手势时， 手势优先响应
     //2 按钮子视图中有手势， 子视图手势优先响应
+    
+    
+    MMLayerTestViewController *vc = [[MMLayerTestViewController alloc] init];
+    [self addChildViewController:vc];
+    vc.view.frame = CGRectMake(10, 300, 300, 300);
+    vc.view.backgroundColor = [UIColor cyanColor];
+    [self.view addSubview:vc.view];
+    [vc didMoveToParentViewController:self];
+    
+//    [vc.view addSubview:self.textView];
+    [self.view addSubview:self.textView];
+    [self.textView becomeFirstResponder];
+    [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(self.view);
+        make.top.equalTo(self.view).offset(250);
+        make.height.mas_equalTo(100);
+    }];
+    
+    [vc.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(self.view).inset(20);
+        make.height.mas_equalTo(300);
+        make.top.equalTo(self.textView.mas_top).offset(10);
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 3 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        NSLog(@"发送2");
+        [self removeChildVC];
+    });
+}
+
+- (void)removeChildVC {
+    MMLayerTestViewController *vc = self.childViewControllers.firstObject;
+//    [vc willMoveToParentViewController:nil];
+    [vc.view removeFromSuperview];
+//    [vc removeFromParentViewController];
+    NSLog(@"已经移除");
 }
 
 - (void)handleGesture:(UIGestureRecognizer *)sender {
@@ -77,5 +115,14 @@
 - (void)textViewDidChange:(UITextView *)textView {
     NSLog(@"输入中-%@-%@",textView.text,textView.markedTextRange);
     
+}
+
+- (UITextView *)textView {
+    if(!_textView) {
+        _textView = [[UITextView alloc] initWithFrame:CGRectMake(10, 350, 350, 100)];
+        _textView.backgroundColor = [UIColor grayColor];
+        _textView.delegate = self;
+    }
+    return _textView;
 }
 @end

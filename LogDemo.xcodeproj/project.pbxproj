@@ -1173,7 +1173,7 @@
 				TargetAttributes = {
 					401FFC031E11189300E46787 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = T6H68KJ4WD;
+						DevelopmentTeam = HUW3H8NBU9;
 						LastSwiftMigration = 1420;
 						ProvisioningStyle = Automatic;
 					};
@@ -1558,7 +1558,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = T6H68KJ4WD;
+				DEVELOPMENT_TEAM = HUW3H8NBU9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LogDemo/3thLib",
@@ -1574,6 +1574,7 @@
 				);
 				INFOPLIST_FILE = LogDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "-fsanitize-coverage=trace-pc-guard";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1589,10 +1590,13 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mumu.base.signTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "LogDemo/SwitTest/LogDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1602,7 +1606,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = T6H68KJ4WD;
+				DEVELOPMENT_TEAM = HUW3H8NBU9;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LogDemo/3thLib",
@@ -1618,6 +1622,7 @@
 				);
 				INFOPLIST_FILE = LogDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "-fsanitize-coverage=trace-pc-guard";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -1633,9 +1638,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mumu.base.signTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "LogDemo/SwitTest/LogDemo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

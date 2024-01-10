@@ -279,6 +279,28 @@ return string;
     NSLog(@"%@",tmp);
 }
 
++ (void)arrayTest {
+    NSMutableArray *array = [NSMutableArray array];
+    // 不会crash
+    [array insertObject:@"test" atIndex:0];
+    
+    
+    NSDictionary *dict = [NSDictionary dictionary];
+    NSMutableArray *array_1 = [[dict objectForKey:@"test"] mutableCopy];
+    
+    NSMutableArray *nullArray = nil;
+//    test->judge:0 , 1, 0
+    NSLog(@"test->judge:%d , %d, %d", nullArray.count > 0, nullArray.count == 0, nullArray.count < 0);
+    
+    [nullArray insertObject:@"test" atIndex:0];
+
+    if (array == nil || nullArray == nil || (array.count != nullArray.count)) {
+        NSLog(@"test->数组判断 空");
+        return;
+    }
+    NSLog(@"插入成功: %@", array);
+}
+
 + (void)sizeTest {
     NSObject *obj = [NSObject new];
     MMSimpleFuncModel *model = [MMSimpleFuncModel new];
@@ -592,6 +614,18 @@ void notifyFinish() {
     });
 }
 
+- (void)crashTest {
+    MyObject *obj = [MyObject new];
+    MyOtherObject *otherObj = [MyOtherObject new];
+    
+    obj.otherObject = otherObj;
+    otherObj.myObject = obj;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        obj.otherObject = nil;
+    });
+}
+
 - (void)dealloc {
     NSLog(@"消失");
 }
@@ -608,5 +642,27 @@ void notifyFinish() {
         _simpleModel = [MMSimpleFuncModel new];
     }
     return _simpleModel;
+}
+@end
+
+
+
+
+
+@implementation MyObject
+@synthesize otherObject;
+
+- (void)dealloc {
+    NSLog(@"MyObject deallocated");
+}
+@end
+
+
+
+@implementation MyOtherObject
+@synthesize myObject;
+
+- (void)dealloc {
+    NSLog(@"MyOtherObject deallocated");
 }
 @end

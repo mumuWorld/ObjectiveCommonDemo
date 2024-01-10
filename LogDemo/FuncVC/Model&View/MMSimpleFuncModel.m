@@ -72,12 +72,6 @@
     _readStr = @"test";
 }
 
-//- (void)setReadStr:(NSString * _Nonnull)readStr {
-//    _readStr = readStr;
-//    NSLog(@"read=%@",readStr);
-//}
-
-
 + (NSDictionary *)transNameDirectionDic
 {
     return @{

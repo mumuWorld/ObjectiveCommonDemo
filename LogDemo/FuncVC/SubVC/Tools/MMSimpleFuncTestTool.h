@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MMSimpleFuncTestTool : NSObject
 
 @property (nonatomic, strong) MMSimpleFuncModel *simpleModel;
+@property (nonatomic, strong) UIViewController *simpleVC;
 
 + (instancetype)shareInstance;
 
@@ -39,7 +40,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (void)crashTest;
 
-+ (void)arraySortTest;
 
 + (void)sizeTest;
 
@@ -64,6 +64,20 @@ extern void notifyFinish();
 - (void)modifyPlist;
 
 - (void)doSomethingBack:(dispatch_block_t)back;
+
+- (void)crashTest;
+
++ (void)arraySortTest;
++ (void)arrayTest;
 @end
 
+@class MyOtherObject;
+
+@interface MyObject : NSObject
+@property (nonatomic, strong, nullable) MyOtherObject *otherObject;
+@end
+
+@interface MyOtherObject : NSObject
+@property (nonatomic, strong, nullable) MyObject *myObject;
+@end
 NS_ASSUME_NONNULL_END

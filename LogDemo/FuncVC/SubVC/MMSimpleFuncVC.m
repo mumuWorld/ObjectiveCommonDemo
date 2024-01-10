@@ -18,6 +18,8 @@
 #import "MMPresentTestVC.h"
 #import "MMGCDTestVC.h"
 #import "MMSimpleFuncModel+MMExtension.h"
+#import "FBRetainCycleDetector.h"
+#import <AVFAudio/AVFAudio.h>
 
 @interface MMSimpleFuncVC ()
 @property (nonatomic, strong) NSArray *strongArray;
@@ -151,10 +153,43 @@ __weak id reference = nil;
             [tool doSomethingBack:^{
                 NSLog(@"self");
             }];
-        }
-        case 10:
-            [self.testToolNoShared callSwift];
             break;
+        }
+        case 10: {
+            //test->105553173940672
+            NSLog(@"test->%zu",(size_t)self.testToolNoShared);
+            FBRetainCycleDetector *detecotr = [FBRetainCycleDetector new];
+            [detecotr addCandidate:self.testToolNoShared];
+            NSSet<NSArray<FBObjectiveCGraphElement *> *> * set = [detecotr findRetainCyclesWithMaxCycleLength:20];
+            NSLog(@"test->%@",set);
+//            [self.testToolNoShared callSwift];
+            break;
+        }
+        case 11: {
+            [[AVAudioSession sharedInstance] setActive:true error:nil];
+            [[AVAudioSession sharedInstance] setActive:true withOptions:nil error:nil];
+
+            break;
+        }
+        case 12: {
+            MMSimpleFuncTestTool *tool = [MMSimpleFuncTestTool new];
+            __weak typeof(MMSimpleFuncTestTool *) weaktool = tool;
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 2 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+                [weaktool taskTest];
+            });
+//            tool = nil;
+            
+            NSString *str = nil;
+            [str length];
+            
+//            NSString *str = nil;
+            [str characterAtIndex:0];
+            
+            [tool crashTest];
+        }
+        case 13: {
+            [MMSimpleFuncTestTool arrayTest];
+        }
         default:
             break;
     }
@@ -580,6 +615,7 @@ __weak id reference = nil;
 - (MMSimpleFuncTestTool *)testToolNoShared {
     if (!_testToolNoShared) {
         _testToolNoShared = [MMSimpleFuncTestTool new];
+        _testToolNoShared.simpleVC = self;
     }
     return _testToolNoShared;
 }

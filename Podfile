@@ -22,7 +22,9 @@ target 'LogDemo' do
   # pod 'TCELHourlyHotel', :path => '../../../EL&TC_Pro/ELHourlyHotel'
 
   # Pods for LogDemo
-
+  
+  pod 'MLeaksFinder', :configurations => ['Debug']
+  pod 'FBRetainCycleDetector', :git => 'git@gitlab.corp.youdao.com:lunafork/FBRetainCycleDetector.git', :branch => 'feature/yd_dev'
   target 'LogDemoTests' do
     inherit! :search_paths
     # Pods for testing
